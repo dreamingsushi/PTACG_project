@@ -2,32 +2,130 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;   // Movement speed
-    public float jumpForce = 5f;   // Jump force
-    public float gravityMultiplier = 2f; // Gravity strength
+    [Header("Movement")]
+    public float moveSpeed;
 
-    private Rigidbody rb;           // Reference to Rigidbody
+    public float groundDrag;
 
-    void Start()
+    public float jumpForce;
+    public float jumpCooldown;
+    public float airMultiplier;
+    bool readyToJump;
+
+    [HideInInspector] public float walkSpeed;
+    [HideInInspector] public float sprintSpeed;
+
+    [Header("Keybinds")]
+    public KeyCode jumpKey = KeyCode.Space;
+
+    [Header("Ground Check")]
+    public float playerHeight;
+    public LayerMask whatIsGround;
+    bool grounded;
+
+    public Transform orientation;
+
+    float horizontalInput;
+    float verticalInput;
+
+    Vector3 moveDirection;
+
+    Rigidbody rb;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+
+        readyToJump = true;
     }
 
-    void Update()
+    private void Update()
     {
-        // Handle player movement
-        float moveX = Input.GetAxis("Horizontal"); // A/D or Left/Right Arrow
-        float moveZ = Input.GetAxis("Vertical");   // W/S or Up/Down Arrow
+        MyInput();
+        SpeedControl();
 
-        Vector3 move = transform.right * moveX + transform.forward * moveZ;
+        // handle drag
+        if (grounded)
+            rb.drag = groundDrag;
+        else
+            rb.drag = 0;
+    }
 
-        // Apply movement
-        rb.MovePosition(rb.position + move * moveSpeed * Time.deltaTime);
-
-        // Handle jumping
-        if (Input.GetButtonDown("Jump"))
+    private void OnCollisionStay(Collision collision)
+    {
+        // Check if the object is on the 'Ground' layer
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            grounded = true;
         }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        // Reset grounded when leaving ground
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            grounded = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    private void MyInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+
+        // when to jump
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
+        {
+            readyToJump = false;
+
+            Jump();
+
+            Invoke(nameof(ResetJump), jumpCooldown);
+        }
+    }
+
+    private void MovePlayer()
+    {
+        // calculate movement direction
+        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+        // on ground
+        if (grounded)
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
+        // in air
+        else if (!grounded)
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+    }
+
+    private void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        // limit velocity if needed
+        if (flatVel.magnitude > moveSpeed)
+        {
+            Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
+
+    private void Jump()
+    {
+        // reset y velocity
+        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    }
+    private void ResetJump()
+    {
+        readyToJump = true;
     }
 }
