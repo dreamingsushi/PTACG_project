@@ -18,11 +18,11 @@ public class ThirdPersonScript : MonoBehaviour
     public GameObject combatCam;
 
     public CameraStyle currentStyle;
+    public bool isAttacking;
     public enum CameraStyle
     {
         Basic,
-        Combat,
-        Topdown
+        Combat
     }
 
     private void Start()
@@ -33,6 +33,14 @@ public class ThirdPersonScript : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Attack();
+        }
+
+        if (isAttacking) return;
+
+
         // switch styles
         if (Input.GetKeyDown(KeyCode.Alpha1)) SwitchCameraStyle(CameraStyle.Basic);
         if (Input.GetKeyDown(KeyCode.Alpha2)) SwitchCameraStyle(CameraStyle.Combat);
@@ -41,7 +49,7 @@ public class ThirdPersonScript : MonoBehaviour
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDir.normalized;
 
-        // roate player object
+        // rotate player object
         if (currentStyle == CameraStyle.Basic)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
@@ -70,5 +78,26 @@ public class ThirdPersonScript : MonoBehaviour
         if (newStyle == CameraStyle.Combat) combatCam.SetActive(true);
 
         currentStyle = newStyle;
+    }
+
+    private void Attack()
+    {
+        StartCoroutine(HandleAttack());
+    }
+    private IEnumerator HandleAttack()
+    {
+        isAttacking = true;
+
+        // Lock player to face forward during the attack
+        Vector3 forwardDir = orientation.forward;
+        forwardDir.y = 0f;
+        playerObj.rotation = Quaternion.LookRotation(forwardDir);
+
+        Debug.Log("Attacking...");
+
+        // Simulate attack duration
+        yield return new WaitForSeconds(0.5f);
+
+        isAttacking = false;
     }
 }
