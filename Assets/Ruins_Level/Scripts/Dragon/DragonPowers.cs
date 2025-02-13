@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class DragonPowers : MonoBehaviour
 {
+    public int currentPhase;
     public GameObject fireball;
     public Transform _firePoint;
+    public PlayableDirector cutscenePhase3;
+    private Animator animator;
+    
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -18,6 +23,11 @@ public class DragonPowers : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F)){
             FireBallAttack();
+        }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            ChangePhase();
         }
     }
 
@@ -36,5 +46,12 @@ public class DragonPowers : MonoBehaviour
 
         GameObject fireProjectile = Instantiate(fireball, _firePoint.position, _firePoint.rotation);
         //fireProjectile.transform.up = _hit.normal;
+    }
+
+    public void ChangePhase()
+    {
+        animator.SetTrigger("Phase");
+        cutscenePhase3.Play();
+        this.gameObject.GetComponent<BossMovement>().enabled = false;
     }
 }
