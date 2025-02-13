@@ -13,7 +13,7 @@ public class Fireball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = -this.transform.forward * Time.deltaTime;
+        this.transform.position = this.transform.position - (this.transform.forward *8f* Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other) {
