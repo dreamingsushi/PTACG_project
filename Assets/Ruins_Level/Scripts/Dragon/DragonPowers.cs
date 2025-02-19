@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -9,6 +10,12 @@ public class DragonPowers : MonoBehaviour
     public GameObject fireball;
     public Transform _firePoint;
     public PlayableDirector cutscenePhase3;
+    public GameObject focusPointCamera;
+
+
+    public int dragonMeter;
+    public GameObject evolveText;
+
     private Animator animator;
     
     
@@ -25,9 +32,15 @@ public class DragonPowers : MonoBehaviour
             FireBallAttack();
         }
 
-        if(Input.GetKeyDown(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.P) && dragonMeter >=3)
         {
             ChangePhase();
+            evolveText.SetActive(false);
+        }
+
+        if(dragonMeter >=3)
+        {
+            evolveText.SetActive(true);
         }
     }
 
@@ -40,11 +53,11 @@ public class DragonPowers : MonoBehaviour
 	    { 
                 Debug.Log(_hit.collider.gameObject.name);
         } 
-               
+        
+        Quaternion fireballAngle = Quaternion.Euler(-focusPointCamera.transform.rotation.eulerAngles.x,focusPointCamera.transform.parent.rotation.eulerAngles.y - 180, fireball.transform.rotation.eulerAngles.z);
 
 
-
-        GameObject fireProjectile = Instantiate(fireball, _firePoint.position, _firePoint.rotation);
+        GameObject fireProjectile = Instantiate(fireball, _firePoint.position, fireballAngle);
         //fireProjectile.transform.up = _hit.normal;
     }
 
@@ -52,6 +65,6 @@ public class DragonPowers : MonoBehaviour
     {
         animator.SetTrigger("Phase");
         cutscenePhase3.Play();
-        this.gameObject.GetComponent<BossMovement>().enabled = false;
+        this.gameObject.GetComponentInChildren<BossMovement>().enabled = false;
     }
 }

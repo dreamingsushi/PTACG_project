@@ -18,7 +18,7 @@ public class VeryQuickDeath : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.GetComponentInParent<PlayerMovement>() != null)
+        if(other.gameObject.GetComponent<BossController>())
         {
             EditorApplication.isPlaying = false;
         }

@@ -8,13 +8,17 @@ public class BossMovement : MonoBehaviour
     public float gravityMultiplier = 2f; // Gravity strength
     public bool isGrounded;
     public bool canJump;
+    public float turnMultiplier = 100f;
 
     private Rigidbody rb;           // Reference to Rigidbody
     private float movementBlendSpeed = 0f;
+    private BossController bossController;
+    
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        bossController = GetComponent<BossController>();
     }
 
     void Update()
@@ -35,9 +39,13 @@ public class BossMovement : MonoBehaviour
             movementBlendSpeed = 1f;
         }
 
-        if(moveX >= 0.001f || moveZ >= 0.001f ){
+        if(moveX != 0 || moveZ != 0 ){
             animator.SetBool("isWalking", true);
             movementBlendSpeed += 2f*Time.deltaTime;
+
+            transform.Rotate(-transform.up * turnMultiplier *bossController.turnDirection * Time.deltaTime);
+            bossController.focusPoint.transform.parent.Rotate(transform.up * -turnMultiplier *bossController.turnDirection * Time.deltaTime);
+            
             
         }
         else if(moveX <= 0.001f || moveZ <= 0.001f && movementBlendSpeed >= 1f)
@@ -74,7 +82,7 @@ public class BossMovement : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.layer == 6 && !isGrounded)
+        if(other.gameObject.layer == 6)
         {
             isGrounded = true;
         }
