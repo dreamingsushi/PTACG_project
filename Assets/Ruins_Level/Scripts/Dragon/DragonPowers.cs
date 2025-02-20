@@ -34,8 +34,9 @@ public class DragonPowers : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.P) && dragonMeter >=3)
         {
-            ChangePhase();
             evolveText.SetActive(false);
+            ChangePhase();
+            
         }
 
         if(dragonMeter >=3)

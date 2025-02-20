@@ -94,4 +94,10 @@ public class BossMovement : MonoBehaviour
             isGrounded = false;
         }
     }
+
+    public void JumpingWithForce()
+    {
+
+        rb.AddForce(Vector3.up * jumpForce*5, ForceMode.Impulse);
+    }
 }

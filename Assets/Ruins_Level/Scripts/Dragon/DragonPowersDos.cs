@@ -18,7 +18,10 @@ public class DragonPowersDos : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Instantiate(flamethrowerPrefab, flamePoint.transform.position, flamePoint.transform.rotation);
+            GameObject flaming = Instantiate(flamethrowerPrefab, flamePoint.transform.position, flamePoint.transform.rotation);
+            flaming.transform.parent = this.transform;
         }
     }
+
+    
 }
