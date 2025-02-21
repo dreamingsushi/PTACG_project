@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement Settings")]
     public float moveSpeed;
+    public float rotationSpeed = 5;
     public float gravity = -9.81f;
     
     [Header("Jump Settings")]
@@ -23,12 +25,18 @@ public class PlayerController : MonoBehaviour
     public Transform orientation;
 
     private CharacterController controller;
-    private Vector2 m_Direction;
+    public Vector2 m_Direction;
     private Vector3 moveDirection;
     private Vector3 velocity;
 
     bool isGrounded;
     bool readyToJump;
+    public bool isAttacking;
+    public bool isJumping;
+
+    public event Action OnJumpEvent;
+    public event Action OnAttackEvent;
+    private PlayerInputs inputActions;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -38,6 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed && isGrounded)
         {
+            isJumping = true;
             readyToJump = false;
             Jump();
             Invoke(nameof(ResetJump), jumpCooldown);
@@ -47,12 +56,32 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-
+            isAttacking = true;
+            Attack();
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        inputActions.Player.Enable();
+        inputActions.Player.Move.performed += OnMove;
+        inputActions.Player.Move.canceled += OnMove;
+        inputActions.Player.Jump.performed += OnJump;
+        inputActions.Player.Attack.performed += OnAttack;
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Player.Move.performed -= OnMove;
+        inputActions.Player.Move.canceled -= OnMove;
+        inputActions.Player.Jump.performed -= OnJump;
+        inputActions.Player.Attack.performed -= OnAttack;
+        inputActions.Player.Disable();
+    }
+
+    private void Awake()
+    {
+        inputActions = new PlayerInputs();
         controller = GetComponent<CharacterController>();
     }
 
@@ -60,6 +89,7 @@ public class PlayerController : MonoBehaviour
     {
         GroundCheck();
         MovePlayer();
+        RotatePlayer();
         ApplyGravity();
     }
 
@@ -81,6 +111,18 @@ public class PlayerController : MonoBehaviour
         float speed = isGrounded ? moveSpeed : moveSpeed * airMultiplier;
 
         controller.Move(moveDirection * speed * Time.deltaTime);
+    }
+
+    private void RotatePlayer()
+    {
+        Vector3 forward = orientation.forward;
+        Vector3 right = orientation.right;
+        moveDirection = forward.normalized * m_Direction.y + right.normalized * m_Direction.x;
+
+        if (moveDirection != Vector3.zero)
+        {
+            transform.forward = Vector3.Slerp(transform.forward, moveDirection.normalized, Time.deltaTime * rotationSpeed);
+        }
     }
 
     private void ApplyGravity()
@@ -106,5 +148,15 @@ public class PlayerController : MonoBehaviour
     {
         readyToJump = true;
     }
+
+    private void Attack()
+    {
+        Vector3 forwardDir = orientation.forward;
+        forwardDir.y = 0f;
+        transform.rotation = Quaternion.LookRotation(forwardDir);
+    }
+
+    public void ResetJump2() => isJumping = false; // Reset after jumping
+    public void ResetAttack() => isAttacking = false; // Reset after attacking
     
 }

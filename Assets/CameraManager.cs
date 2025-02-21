@@ -1,27 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
+    [SerializeField] float mouseSense = 1;
     public Cinemachine.AxisState xAxis, yAxis;
     [SerializeField] Transform camFollowPos;
-
-    void Start()
-    {
-        
-    }
-
+    [SerializeField] private Transform orientation;
     void Update()
     {
+        float mouseX = Input.GetAxis("Mouse X") * mouseSense; // Scale X input
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSense; // Scale Y input
+
+        xAxis.Value += mouseX;  // Apply sensitivity to X
+        yAxis.Value -= mouseY;  // Invert Y-axis movement for natural look
+
         xAxis.Update(Time.deltaTime);
         yAxis.Update(Time.deltaTime);
     }
 
     private void LateUpdate()
     {
-        camFollowPos.localEulerAngles = new Vector3(yAxis.Value, camFollowPos.localEulerAngles.y, camFollowPos.localEulerAngles.z);
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, xAxis.Value, transform.eulerAngles.z);
+        camFollowPos.localEulerAngles = new Vector3(yAxis.Value, 0f, 0f); // Only affect camera look-up/down
+        orientation.rotation = Quaternion.Euler(0f, xAxis.Value, 0f); // Only rotate the camera pivot (not player)
     }
 }
