@@ -20,10 +20,10 @@ public class PlayerStateMachine : MonoBehaviour
         currentState?.UpdateState(); // Call current state's Update
 
         float movementSpeed = controller.m_Direction.magnitude; // Get movement intensity
-        animator.SetFloat("Speed", movementSpeed, 0.1f, Time.deltaTime); // Smooth transition
-
-        animator.SetFloat("Horizontal", controller.m_Direction.x);
-        animator.SetFloat("Vertical", controller.m_Direction.y);
+        float dampTime = 0.1f; // Adjust damping for smoothness
+        animator.SetFloat("Speed", movementSpeed, dampTime, Time.deltaTime);
+        animator.SetFloat("Horizontal", Mathf.Lerp(animator.GetFloat("Horizontal"), controller.m_Direction.x, dampTime));
+        animator.SetFloat("Vertical", Mathf.Lerp(animator.GetFloat("Vertical"), controller.m_Direction.y, dampTime));
     }
 
     public void TransitionToState(BaseState newState)

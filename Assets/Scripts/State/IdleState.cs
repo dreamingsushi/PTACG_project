@@ -29,6 +29,10 @@ public class IdleState : BaseState
         {
             player.TransitionToState(new AttackState(player));
         }
+        else if (player.controller.isGuarding)
+        {
+            player.TransitionToState(new GuardState(player));
+        }
     }
 
     public override BaseState GetNextState()

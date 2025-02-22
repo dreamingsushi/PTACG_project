@@ -6,7 +6,15 @@ public class RunningState : BaseState
     public override void EnterState()
     {
         Debug.Log("Entered Running State");
-        player.animator.SetBool("isWalking",true);
+        if (player.controller.isAiming)
+        {
+            player.animator.SetBool("isAiming", true);
+        }
+        else
+        {
+            player.animator.SetBool("isWalking",true);
+        }
+
     }
 
     public override void ExitState()
@@ -28,6 +36,10 @@ public class RunningState : BaseState
         else if (player.controller.isAttacking)
         {
             player.TransitionToState(new AttackState(player));
+        }
+        else if (player.controller.isGuarding)
+        {
+            player.TransitionToState(new GuardState(player));
         }
     }
 

@@ -21,7 +21,6 @@ public class CameraManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        camFollowPos.localEulerAngles = new Vector3(yAxis.Value, 0f, 0f); // Only affect camera look-up/down
-        orientation.rotation = Quaternion.Euler(0f, xAxis.Value, 0f); // Only rotate the camera pivot (not player)
+        orientation.rotation = Quaternion.Euler(yAxis.Value, xAxis.Value, 0f); // Only rotate the camera pivot (not player)
     }
 }

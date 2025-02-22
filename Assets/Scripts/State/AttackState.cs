@@ -25,9 +25,13 @@ public class AttackState : BaseState
         {
             player.TransitionToState(new JumpingState(player));
         }
-        if (player.controller.m_Direction.magnitude > 0.1f)
+        else if (player.controller.m_Direction.magnitude > 0.1f)
         {
             player.TransitionToState(new RunningState(player));
+        }
+                else if (player.controller.isGuarding)
+        {
+            player.TransitionToState(new GuardState(player));
         }
     }
 
