@@ -98,6 +98,6 @@ public class BossMovement : MonoBehaviour
     public void JumpingWithForce()
     {
 
-        rb.AddForce(Vector3.up * jumpForce*5, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * jumpForce*1.8f, ForceMode.Impulse);
     }
 }

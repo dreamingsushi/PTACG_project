@@ -7,7 +7,7 @@ public class BossControllerDos : MonoBehaviour
 {
     public GameObject focusPoint;
     public float turnDirection;
-    public float sens = 10f;
+    public float sens = 1f;
     public float maxAngle;
     public float minAngle;
 

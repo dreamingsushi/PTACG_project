@@ -28,7 +28,11 @@ public class Fireball : MonoBehaviour
             dragonPowers.dragonMeter ++;
 
             Destroy(other.gameObject);
+            
         }
+
+        if(!other.gameObject.CompareTag("Dragon"))
+            this.gameObject.SetActive(false);
     }
 
     // void OnTriggerExit(Collider other)
