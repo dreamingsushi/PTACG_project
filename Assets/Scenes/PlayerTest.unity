@@ -2583,6 +2583,7 @@ MonoBehaviour:
   isAttacking: 0
   isJumping: 0
   isGuarding: 0
+  isAiming: 0
 --- !u!114 &1155455486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,7 +3410,7 @@ Transform:
   m_GameObject: {fileID: 1776221882}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4089868, y: -5.224676, z: -31.939072}
+  m_LocalPosition: {x: -1.8857577, y: -12.246763, z: -24.658035}
   m_LocalScale: {x: 3.0464585, y: 3.0464585, z: 3.0464585}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3532,11 +3533,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 50
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 60.000004
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
