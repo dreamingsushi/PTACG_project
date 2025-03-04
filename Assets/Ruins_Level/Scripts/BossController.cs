@@ -30,10 +30,23 @@ public class BossController : MonoBehaviour
         //vert
         focusPoint.transform.eulerAngles = new Vector3(focusPoint.transform.eulerAngles.x + -Input.GetAxis("Mouse Y"), focusPoint.transform.eulerAngles.y,0);
 
+        //limit rotation
+        float xRotation = focusPoint.transform.eulerAngles.x;
+
+        if (xRotation > 180) 
+        {
+            // Convert from 360-degree system to a -180 to 180 range
+            xRotation -= 360;
+        }
+
+        // Clamp the rotation between -80 and 80 degrees
+        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
+
+        focusPoint.transform.eulerAngles = new Vector3(xRotation, focusPoint.transform.eulerAngles.y, 0);
 
         //horiz
         focusPoint.transform.parent.Rotate(transform.up*Input.GetAxis("Mouse X")*Time.deltaTime*100);
-
+        
         
         
     }
