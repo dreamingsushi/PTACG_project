@@ -2,20 +2,28 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
-
-
+    public PlayerClass currentClass;
+    public enum PlayerClass
+    {
+        Knight, Mage, Support
+    }
+    [Header("Components to Assign")]
+    public Transform orientation;
+    public CinemachineVirtualCamera cam;
+    
     [Header("Movement Settings")]
-    public float moveSpeed;
+    public float moveSpeed = 10;
     public float rotationSpeed = 5;
     public float gravity = -9.81f;
     
     [Header("Jump Settings")]
-    public float jumpForce;
-    public float jumpCooldown;
-    public float airMultiplier;
+    public float jumpForce = 4;
+    public float jumpCooldown = 0.2f;
+    public float airMultiplier = 1;
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -25,25 +33,42 @@ public class PlayerController : MonoBehaviour
     [Header("Attack Settings")]
     public float attackDuration = 0.2f;
 
+    [Header("Mage Settings")]
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] public Transform staffTip;
+    [SerializeField] private float projectileSpeed = 20f;
 
-    public Transform orientation;
-
-    private CharacterController controller;
+    [Header("Player Information (u dont have to edit :3)")]
+    public bool isGrounded;
+    public bool readyToJump;
     public Vector2 m_Direction;
-    private Vector3 moveDirection;
-    private Vector3 velocity;
-
-    bool isGrounded;
-    bool readyToJump;
     public bool canAttack;
     public bool isAttacking;
     public bool isJumping;
     public bool isGuarding;
     public bool isAiming;
+    public bool isFalling;
 
+    private CharacterController controller;
+    private Vector3 moveDirection;
+    private Vector3 velocity;
+    private PlayerInputs inputActions;
     public event Action OnJumpEvent;
     public event Action OnAttackEvent;
-    private PlayerInputs inputActions;
+    public static PlayerController Instance;
+    
+    public void Shoot()
+    {
+        if (projectilePrefab == null || staffTip == null) return;
+        Vector3 shootDirection = CameraManager.Instance.GetAimDirection();
+        GameObject projectile = Instantiate(projectilePrefab, staffTip.position, Quaternion.LookRotation(shootDirection));
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = shootDirection * projectileSpeed;
+        }
+    }
+
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -68,7 +93,6 @@ public class PlayerController : MonoBehaviour
                 isAttacking = true;
                 Attack();
             }
-
         }
     }
     public void OnSpecial(InputAction.CallbackContext context)
@@ -79,12 +103,14 @@ public class PlayerController : MonoBehaviour
             isGuarding = true;
             canAttack = false;
             isAiming = true;
+            AimCameraZoom();
         }
         else if (context.canceled)
         {
             isGuarding = false;
             canAttack = true;
             isAiming = false;
+            AimCameraRelease();
         }
     }
 
@@ -110,6 +136,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         inputActions = new PlayerInputs();
         controller = GetComponent<CharacterController>();
     }
@@ -122,8 +149,9 @@ public class PlayerController : MonoBehaviour
         {
             RotatePlayer();
         }
-
         ApplyGravity();
+        
+        isFalling = !isGrounded && velocity.y < 0;
     }
 
     private void GroundCheck()
@@ -133,7 +161,6 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        // Get movement direction, but ignore Y to prevent unwanted vertical movement
         Vector3 forward = orientation.forward;
         Vector3 right = orientation.right;
 
@@ -182,8 +209,12 @@ public class PlayerController : MonoBehaviour
     private void Attack()
     {
         canAttack = false;
-
         LookInfront();
+
+        if (currentClass == PlayerClass.Mage)
+        {
+            Shoot();
+        }
 
         StartCoroutine(ResetAttackCooldown());
     }
@@ -193,7 +224,7 @@ public class PlayerController : MonoBehaviour
         canAttack = true;
     }
 
-    private void LookInfront()
+    public void LookInfront()
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit hit;
@@ -215,6 +246,33 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(lookDirection);
         }
+    }
+
+    
+    public void AimCameraZoom()
+    {
+        StartCoroutine(SmoothZoom(30f));
+    }
+
+    public void AimCameraRelease()
+    {
+        StartCoroutine(SmoothZoom(60f));
+    }
+
+    private IEnumerator SmoothZoom(float targetFOV)
+    {
+        float startFOV = cam.m_Lens.FieldOfView;
+        float duration = 0.3f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            cam.m_Lens.FieldOfView = Mathf.Lerp(startFOV, targetFOV, elapsed / duration);
+            yield return null;
+        }
+
+        cam.m_Lens.FieldOfView = targetFOV;
     }
 
     private void Guard()

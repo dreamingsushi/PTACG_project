@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerStateMachine : MonoBehaviour
 {
     public PlayerController controller;
+    public PlayerHealth health;
     public Animator animator;
     private BaseState currentState;
     private float stateTimer;
