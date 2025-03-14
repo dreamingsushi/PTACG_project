@@ -35,7 +35,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Mage Settings")]
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject supportProjectilePrefab;
     [SerializeField] public Transform staffTip;
+    [SerializeField] public Transform supportHand;
     [SerializeField] private float projectileSpeed = 20f;
 
     [Header("Player Information (u dont have to edit :3)")]
@@ -43,11 +45,13 @@ public class PlayerController : MonoBehaviour
     public bool readyToJump;
     public Vector2 m_Direction;
     public bool canAttack;
+    public bool canRotate;
     public bool isAttacking;
     public bool isJumping;
     public bool isGuarding;
     public bool isAiming;
     public bool isFalling;
+    public bool isDead;
 
     private CharacterController controller;
     private Vector3 moveDirection;
@@ -59,14 +63,29 @@ public class PlayerController : MonoBehaviour
     
     public void Shoot()
     {
-        if (projectilePrefab == null || staffTip == null) return;
-        Vector3 shootDirection = CameraManager.Instance.GetAimDirection();
-        GameObject projectile = Instantiate(projectilePrefab, staffTip.position, Quaternion.LookRotation(shootDirection));
-        Rigidbody rb = projectile.GetComponent<Rigidbody>();
-        if (rb != null)
+        if (currentClass == PlayerClass.Mage)
         {
-            rb.velocity = shootDirection * projectileSpeed;
+            if (projectilePrefab == null || staffTip == null) return;
+            Vector3 shootDirection = CameraManager.Instance.GetAimDirection();
+            GameObject projectile = Instantiate(projectilePrefab, staffTip.position, Quaternion.LookRotation(shootDirection));
+            Rigidbody rb = projectile.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.velocity = shootDirection * projectileSpeed;
+            }
         }
+        if (currentClass == PlayerClass.Support)
+        {
+            if (supportProjectilePrefab == null || supportHand == null) return;
+            Vector3 shootDirection = CameraManager.Instance.GetAimDirection();
+            GameObject projectile = Instantiate(supportProjectilePrefab, supportHand.position, Quaternion.LookRotation(shootDirection));
+            Rigidbody rb = projectile.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.velocity = shootDirection * projectileSpeed;
+            }
+        }
+
     }
 
 
@@ -101,18 +120,27 @@ public class PlayerController : MonoBehaviour
         {
             LookInfront();
             isGuarding = true;
-            canAttack = false;
             isAiming = true;
             AimCameraZoom();
+
+            if (currentClass == PlayerClass.Knight) // Change this to match your system
+            {
+                canAttack = false;
+            }
         }
         else if (context.canceled)
         {
             isGuarding = false;
-            canAttack = true;
             isAiming = false;
             AimCameraRelease();
+
+            if (currentClass == PlayerClass.Knight)
+            {
+                canAttack = true;
+            }
         }
     }
+
 
     private void OnEnable()
     {
@@ -143,6 +171,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isDead)
+        {
+            inputActions.Player.Disable();
+            return;
+        }
         GroundCheck();
         MovePlayer();
         if (!isAiming)
@@ -175,6 +208,8 @@ public class PlayerController : MonoBehaviour
 
     private void RotatePlayer()
     {
+        if (!canRotate) return;
+
         if (moveDirection != Vector3.zero)
         {
             Vector3 lookDir = new Vector3(moveDirection.x, 0f, moveDirection.z); // Ignore Y
@@ -211,9 +246,9 @@ public class PlayerController : MonoBehaviour
         canAttack = false;
         LookInfront();
 
-        if (currentClass == PlayerClass.Mage)
+        if (currentClass == PlayerClass.Mage || currentClass == PlayerClass.Support)
         {
-            Shoot();
+            //Shoot();
         }
 
         StartCoroutine(ResetAttackCooldown());
@@ -246,6 +281,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(lookDirection);
         }
+        StartCoroutine(DisableRotationTemporarily(2f));
     }
 
     
@@ -275,9 +311,11 @@ public class PlayerController : MonoBehaviour
         cam.m_Lens.FieldOfView = targetFOV;
     }
 
-    private void Guard()
+    private IEnumerator DisableRotationTemporarily(float duration)
     {
-        
+        canRotate = false;
+        yield return new WaitForSeconds(duration);
+        canRotate = true;
     }
     
 

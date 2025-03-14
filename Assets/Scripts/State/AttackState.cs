@@ -37,6 +37,10 @@ public class AttackState : BaseState
         {
             player.TransitionToState(new AttackState(player));
         }
+        else if (player.health.currentHealth <= 0)
+        {
+            player.TransitionToState(new DeadState(player));
+        }
     }
 
     public override BaseState GetNextState()

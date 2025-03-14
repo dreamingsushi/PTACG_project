@@ -32,6 +32,10 @@ public class GuardState : BaseState
             {
                 player.TransitionToState(new RunningState(player));
             }
+            else if (player.health.currentHealth <= 0)
+            {
+                player.TransitionToState(new DeadState(player));
+            }
         }
 
     }

@@ -36,6 +36,10 @@ public class JumpingState : BaseState
         {
             player.TransitionToState(new JumpingState(player));
         }
+        else if (player.health.currentHealth <= 0)
+        {
+            player.TransitionToState(new DeadState(player));
+        }
     }
 
     public override BaseState GetNextState()

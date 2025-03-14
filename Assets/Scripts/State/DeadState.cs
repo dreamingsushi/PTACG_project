@@ -6,7 +6,7 @@ public class DeadState : BaseState
 
     public override void EnterState()
     {
-        player.animator.SetBool("isDead",true);
+        player.animator.SetTrigger("isDead");
     }
 
     public override void ExitState()

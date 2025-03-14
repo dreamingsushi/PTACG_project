@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth;
 
     [Header("Armor Settings")]
     public int armor = 0; // Reduces damage taken
@@ -27,35 +27,47 @@ public class PlayerHealth : MonoBehaviour
     public event Action<int> OnHealthChanged; // Event for UI updates
     public event Action OnPlayerDeath;
 
-    [Header("Blood Effect Assign yi xia hehehehehehehheheh :P ")]
+    [Header("Blood Effect Assign yi xia heheheheh :P ")]
     [SerializeField] private GameObject bloodEffect;
     private Coroutine regenCoroutine;
     private CharacterController characterController;
+
+    [Header("HealthBar Assign tooooooo <3")]
+    [SerializeField] private HealthBar healthBar;
 
 
     void Start()
     {
         currentHealth = maxHealth;
         characterController = GetComponent<CharacterController>();
+        healthBar.SetHealth(currentHealth);
 
         if (canRegenerate)
             regenCoroutine = StartCoroutine(HealthRegeneration());
         
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            TakeDamage(10, transform.position);
+        }
+    }
+
     public void TakeDamage(int damage, Vector3 hitDirection)
     {
         if (isInvincible) return;
 
-        // Apply armor reduction
         int effectiveDamage = Mathf.Max(0, damage - armor);
         effectiveDamage = Mathf.RoundToInt(effectiveDamage * (1 - damageReductionPercent));
 
         currentHealth -= effectiveDamage;
         OnHealthChanged?.Invoke(currentHealth);
 
-        // Apply Knockback
         ApplyKnockback(hitDirection);
+
+        healthBar.SetHealth(currentHealth);
         
         StartCoroutine(DamageEffect());
         DamagePopUpText.Instance.ShowDamageNumber(transform.position, damage.ToString());
@@ -74,6 +86,8 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         OnHealthChanged?.Invoke(currentHealth);
+
+        healthBar.SetHealth(currentHealth);
     }
 
     IEnumerator DamageEffect()
@@ -112,6 +126,7 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player Died");
+        PlayerController.Instance.isDead = true;
         OnPlayerDeath?.Invoke();
     }
 }

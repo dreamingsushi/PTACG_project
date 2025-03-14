@@ -173,7 +173,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isDead
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5746006708847472063}
   m_Solo: 0
@@ -285,6 +288,12 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: isAiming
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: isDead
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -568,8 +577,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -3198642012051208539, guid: 61200d85dea61d8449dd880349f0af1a,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 6f0af45b4611e1b4698134c92a2365f4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
