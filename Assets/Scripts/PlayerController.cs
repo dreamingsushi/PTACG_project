@@ -126,24 +126,24 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             LookInfront();
-            isGuarding = true;
             isAiming = true;
             AimCameraZoom();
 
             if (currentClass == PlayerClass.Knight) // Change this to match your system
             {
                 canAttack = false;
+                isGuarding = true;
             }
         }
         else if (context.canceled)
         {
-            isGuarding = false;
             isAiming = false;
             AimCameraRelease();
 
             if (currentClass == PlayerClass.Knight)
             {
                 canAttack = true;
+                isGuarding = false;
             }
         }
     }
