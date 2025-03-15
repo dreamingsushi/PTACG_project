@@ -1155,7 +1155,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2.72
+  m_Height: 2.51
   m_Radius: 0.45
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1182,7 +1182,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.22
-  m_Height: 2.5346475
+  m_Height: 2.041069
   m_Direction: 1
   m_Center: {x: 0, y: 0.30694583, z: 0}
 --- !u!114 &5399087933681727931
@@ -1202,27 +1202,29 @@ MonoBehaviour:
   cam: {fileID: 3462306491486447374}
   moveSpeed: 10
   rotationSpeed: 5
-  gravity: -9.81
-  jumpForce: 4
+  gravity: -15
+  jumpForce: 7
   jumpCooldown: 0.2
-  airMultiplier: 1
-  groundCheck: {fileID: 6475478040181903983}
-  groundDistance: 0.2
+  airMultiplier: 0.8
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   attackDuration: 1
   projectilePrefab: {fileID: 0}
+  staffTip: {fileID: 0}
   supportProjectilePrefab: {fileID: 1470278565100588117, guid: 1b834201c45aeec439251b4dc1ea04db,
     type: 3}
-  staffTip: {fileID: 0}
   supportHand: {fileID: 7036262121539234471}
   projectileSpeed: 20
+  isOnIce: 0
+  iceMap: 0
+  iceFriction: 0.98
+  iceAcceleration: 0.05
   isGrounded: 0
   readyToJump: 0
   m_Direction: {x: 0, y: 0}
   canAttack: 1
-  canRotate: 0
+  canRotate: 1
   isAttacking: 0
   isJumping: 0
   isGuarding: 0

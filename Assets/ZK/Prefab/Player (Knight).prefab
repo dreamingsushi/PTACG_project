@@ -2289,7 +2289,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5243550314296155389}
   m_Father: {fileID: 5153140448534225352}
@@ -3615,7 +3615,7 @@ Transform:
   m_GameObject: {fileID: 7519970165151547645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.9999999, z: -7.61}
+  m_LocalPosition: {x: 0.5, y: 2, z: -7.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3725,7 +3725,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.87, z: 2.519}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3854872662847703988}
   - {fileID: 2140937232103691582}
@@ -3754,7 +3754,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2.72
+  m_Height: 2.51
   m_Radius: 0.45
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -3781,9 +3781,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.22
-  m_Height: 2.5346475
+  m_Height: 2.0410688
   m_Direction: 1
-  m_Center: {x: 0, y: 0.30694583, z: 0}
+  m_Center: {x: 0, y: 0.55373514, z: 0}
 --- !u!114 &4390803326572901666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3801,26 +3801,28 @@ MonoBehaviour:
   cam: {fileID: 6168271605904460606}
   moveSpeed: 10
   rotationSpeed: 5
-  gravity: -9.81
-  jumpForce: 4
+  gravity: -15
+  jumpForce: 7
   jumpCooldown: 0.2
-  airMultiplier: 1
-  groundCheck: {fileID: 2140937232103691582}
-  groundDistance: 0.2
+  airMultiplier: 0.8
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   attackDuration: 1
   projectilePrefab: {fileID: 0}
-  supportProjectilePrefab: {fileID: 0}
   staffTip: {fileID: 0}
+  supportProjectilePrefab: {fileID: 0}
   supportHand: {fileID: 0}
   projectileSpeed: 20
+  isOnIce: 0
+  iceMap: 0
+  iceFriction: 0.98
+  iceAcceleration: 0.05
   isGrounded: 0
   readyToJump: 0
   m_Direction: {x: 0, y: 0}
   canAttack: 1
-  canRotate: 0
+  canRotate: 1
   isAttacking: 0
   isJumping: 0
   isGuarding: 0
@@ -3850,7 +3852,7 @@ MonoBehaviour:
   regenInterval: 2
   knockbackForce: 5
   bloodEffect: {fileID: 1270593167705055543}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 968200303969565526}
 --- !u!114 &4531573354049962287
 MonoBehaviour:
   m_ObjectHideFlags: 0

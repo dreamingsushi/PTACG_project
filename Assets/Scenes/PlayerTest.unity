@@ -2542,17 +2542,19 @@ MonoBehaviour:
   jumpForce: 4
   jumpCooldown: 0.2
   airMultiplier: 1
-  groundCheck: {fileID: 1184426485}
-  groundDistance: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   attackDuration: 1
   projectilePrefab: {fileID: 0}
-  supportProjectilePrefab: {fileID: 0}
   staffTip: {fileID: 0}
+  supportProjectilePrefab: {fileID: 0}
   supportHand: {fileID: 0}
   projectileSpeed: 20
+  isOnIce: 0
+  iceMap: 0
+  iceFriction: 1
+  iceAcceleration: 0.05
   isGrounded: 0
   readyToJump: 0
   m_Direction: {x: 0, y: 0}
@@ -4588,10 +4590,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (Support)
       objectReference: {fileID: 0}
+    - target: {fileID: 2251843879296387744, guid: 52e70dcc8f403974ab3b9021e4ed27e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6525295065084253952, guid: 52e70dcc8f403974ab3b9021e4ed27e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.94
       objectReference: {fileID: 0}
     - target: {fileID: 6525295065084253952, guid: 52e70dcc8f403974ab3b9021e4ed27e8,
         type: 3}
@@ -4722,6 +4729,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (Knight)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983749676600273497, guid: e12b03f0f4ad00e42a87abf167a33197,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4864,6 +4876,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (Mage)
+      objectReference: {fileID: 0}
+    - target: {fileID: 892799217304424858, guid: fd0f6583b722be842b93a9073de4bafa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3982858476079909596, guid: fd0f6583b722be842b93a9073de4bafa,
         type: 3}

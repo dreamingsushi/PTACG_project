@@ -26,8 +26,6 @@ public class PlayerController : MonoBehaviour
     public float airMultiplier = 1;
 
     [Header("Ground Check")]
-    public Transform groundCheck;
-    public float groundDistance = 0.2f;
     public LayerMask groundLayer;
 
     [Header("Attack Settings")]
@@ -35,17 +33,26 @@ public class PlayerController : MonoBehaviour
 
     [Header("Mage Settings")]
     [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private GameObject supportProjectilePrefab;
     [SerializeField] public Transform staffTip;
+
+    [Header("Support Settings")]
+    [SerializeField] private GameObject supportProjectilePrefab;
     [SerializeField] public Transform supportHand;
     [SerializeField] private float projectileSpeed = 20f;
+
+    [Header ("Zhe King Ice Map Exclusive Settings")]
+    public bool isOnIce;
+    public bool iceMap;
+    private Vector3 iceVelocity = Vector3.zero;
+    [SerializeField] private float iceFriction = 1f;
+    [SerializeField] private float iceAcceleration = 0.05f;
 
     [Header("Player Information (u dont have to edit :3)")]
     public bool isGrounded;
     public bool readyToJump;
     public Vector2 m_Direction;
-    public bool canAttack;
-    public bool canRotate;
+    public bool canAttack = true;
+    public bool canRotate = true;
     public bool isAttacking;
     public bool isJumping;
     public bool isGuarding;
@@ -189,7 +196,21 @@ public class PlayerController : MonoBehaviour
 
     private void GroundCheck()
     {
-        isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, groundDistance, groundLayer);
+
+        isGrounded = controller.isGrounded;
+
+        if (isGrounded)
+        {
+            // Raycast down to check what type of surface we're on
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1.5f, groundLayer))
+            {
+                isOnIce = hit.collider.CompareTag("IcyGround");
+            }
+            else
+            {
+                isOnIce = false;
+            }
+        }
     }
 
     private void MovePlayer()
@@ -203,7 +224,14 @@ public class PlayerController : MonoBehaviour
         moveDirection = forward.normalized * m_Direction.y + right.normalized * m_Direction.x;
         float speed = isGrounded ? moveSpeed : moveSpeed * airMultiplier;
 
-        controller.Move(moveDirection * speed * Time.deltaTime);
+        if (isOnIce)
+        {
+            HandleIceMovement(speed);
+        }
+        else
+        {
+            controller.Move(moveDirection * speed * Time.deltaTime);
+        }
     }
 
     private void RotatePlayer()
@@ -228,6 +256,10 @@ public class PlayerController : MonoBehaviour
             velocity.y = -2f;
         }
 
+        if (!isGrounded && iceMap)
+        {
+            controller.Move(iceVelocity * Time.deltaTime);
+        }
         controller.Move(velocity * Time.deltaTime);
     }
 
@@ -316,6 +348,20 @@ public class PlayerController : MonoBehaviour
         canRotate = false;
         yield return new WaitForSeconds(duration);
         canRotate = true;
+    }
+
+    private void HandleIceMovement(float speed)
+    {
+        if (moveDirection != Vector3.zero)
+        {
+            // Smooth acceleration on ice
+            iceVelocity = Vector3.Lerp(iceVelocity, moveDirection * speed, iceAcceleration);
+        }
+        // Apply friction when no input is given
+        iceVelocity *= iceFriction; 
+
+        // Move using stored ice velocity
+        controller.Move(iceVelocity * Time.deltaTime);
     }
     
 

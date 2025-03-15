@@ -682,7 +682,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2.72
+  m_Height: 2.51
   m_Radius: 0.45
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -709,7 +709,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.22
-  m_Height: 2.2966046
+  m_Height: 2.041069
   m_Direction: 1
   m_Center: {x: 0, y: 0.18792441, z: 0}
 --- !u!114 &597832666997368370
@@ -729,27 +729,29 @@ MonoBehaviour:
   cam: {fileID: 5866570600252652318}
   moveSpeed: 10
   rotationSpeed: 5
-  gravity: -9.81
-  jumpForce: 4
+  gravity: -15
+  jumpForce: 7
   jumpCooldown: 0.2
-  airMultiplier: 1
-  groundCheck: {fileID: 1389391438929069721}
-  groundDistance: 0.2
+  airMultiplier: 0.8
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   attackDuration: 1
   projectilePrefab: {fileID: 2831442389130056590, guid: 8b879a3035ed0f749835da5324335210,
     type: 3}
-  supportProjectilePrefab: {fileID: 0}
   staffTip: {fileID: 5654043987905009084}
+  supportProjectilePrefab: {fileID: 0}
   supportHand: {fileID: 0}
   projectileSpeed: 20
+  isOnIce: 0
+  iceMap: 0
+  iceFriction: 0.98
+  iceAcceleration: 0.05
   isGrounded: 0
   readyToJump: 0
   m_Direction: {x: 0, y: 0}
   canAttack: 1
-  canRotate: 0
+  canRotate: 1
   isAttacking: 0
   isJumping: 0
   isGuarding: 0
@@ -779,7 +781,7 @@ MonoBehaviour:
   regenInterval: 2
   knockbackForce: 5
   bloodEffect: {fileID: 2825906675213888750}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1443380367265289154}
 --- !u!114 &4604884306856527129
 MonoBehaviour:
   m_ObjectHideFlags: 0
