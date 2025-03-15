@@ -21,6 +21,20 @@ public class TideHeightManager : MonoBehaviour
         Vector3 position = transform.position;
         position.y = height;
         transform.position = position;
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            TurnToLowTide();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            TurnToLowTide();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            TurnToLowTide();
+        }
+
     }
     public void ResetToOriginalHeight()
     {
