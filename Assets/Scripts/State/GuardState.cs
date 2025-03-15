@@ -36,6 +36,10 @@ public class GuardState : BaseState
             {
                 player.TransitionToState(new DeadState(player));
             }
+            else if (player.controller.isAttacking)
+            {
+                player.TransitionToState(new AttackState(player));
+            }
         }
 
     }
