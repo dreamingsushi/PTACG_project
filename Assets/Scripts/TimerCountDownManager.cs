@@ -19,6 +19,7 @@ public class TimeCountDownManager : MonoBehaviourPun
     void Start()
     {
         GetComponent<PlayerController>().enabled = false;
+        timeUIText.enabled = true;
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class TimeCountDownManager : MonoBehaviourPun
             }
             else if (timeToStartRace < 0.0f)
             {
-                photonView.RPC("StartTheRace", RpcTarget.AllBuffered);
+                photonView.RPC("StartTheGame", RpcTarget.AllBuffered);
             }
         }
     }
@@ -54,7 +55,7 @@ public class TimeCountDownManager : MonoBehaviourPun
     }
 
     [PunRPC]
-    public void StartTheRace()
+    public void StartTheGame()
     {
         GetComponent<PlayerController>().enabled = true;
         this.enabled = false;

@@ -16,7 +16,7 @@ public class BossSetup : MonoBehaviourPunCallbacks
             GetComponentInChildren<BossMovement>().enabled = true;                 
             PlayerCamera.enabled = true;
             GetComponent<DragonPowers>().enabled = true;
-            GetComponent<BossController>().enabled = true;
+            GetComponentInChildren<BossController>().enabled = true;
         }
     }
 

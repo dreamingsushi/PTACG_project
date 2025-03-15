@@ -73,7 +73,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             voteCounts.Add(0);         
         }
-        Debug.Log(voteCounts.Count);
+    
     }
 
     void Update()
@@ -132,7 +132,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 roomName = "Room" + Random.Range(1000, 10000);
             }
             RoomOptions roomOptions = new RoomOptions();
-            roomOptions.MaxPlayers = 4;
+            roomOptions.MaxPlayers = 2;
     
             //The following string is used to introduce game mode
             string[] roomPropsInLobby = { "gm" }; //gm = game mode
@@ -212,8 +212,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
  
     public override void OnJoinedRoom()
     {
-        characterSelectionPanel.SetActive(false);
-        bossSelectionPanel.SetActive(false);
+        
         Debug.Log(PhotonNetwork.LocalPlayer.NickName + " joined to "+ PhotonNetwork.CurrentRoom.Name+ "Player count:"+   
                    PhotonNetwork.CurrentRoom.PlayerCount);
 
@@ -261,21 +260,27 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             }
             
 
-            // foreach (Player player in PhotonNetwork.PlayerList)
-            // {
-            //     GameObject playerListGameObject = Instantiate(PlayerListPrefab);
-            //     playerListGameObject.transform.SetParent(PlayerListContent.transform);
-            //     playerListGameObject.transform.localScale = Vector3.one;
-            //     playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(player.ActorNumber, player.NickName);
+            foreach (Player player in PhotonNetwork.PlayerList)
+            {
+                
+                        GameObject playerListGameObject = Instantiate(PlayerListPrefab);
+                        playerListGameObject.transform.SetParent(PlayerListContent.transform);
+                        playerListGameObject.transform.localScale = Vector3.one;
+                        playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(player.ActorNumber, player.NickName);
+                        playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
+                        object isPlayerReady;
+                        if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady))
+                        {
+                            playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
+                            
 
-            //     object isPlayerReady;
-            //     if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady))
-            //     {
-		    //         playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
-            //     }
+                        }
 
-            //     playerListGameObjects.Add(player.ActorNumber, playerListGameObject);
-            // }              
+                        playerListGameObjects.Add(player.ActorNumber, playerListGameObject);
+                        Debug.Log(playerListGameObjects.Count);
+                  
+                
+            }              
         
         StartGameButton.SetActive(false);     
     }
@@ -290,8 +295,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameObject playerListGameObject = Instantiate(PlayerListPrefab);
         playerListGameObject.transform.SetParent(PlayerListContent.transform);
         playerListGameObject.transform.localScale = Vector3.one;
-       // playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
-
+        playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
+        playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
         playerListGameObjects.Add(newPlayer.ActorNumber, playerListGameObject);
         StartGameButton.SetActive(CheckPlayersReady());
     }
@@ -343,17 +348,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 roomName = "Room" + Random.Range(1000, 10000);
             }
             RoomOptions roomOptions = new RoomOptions();
-            roomOptions.MaxPlayers = 3;
-            string[] roomPropsInLobby = { "gm" }; //gm = game mode
+            roomOptions.MaxPlayers = 2;
+            //string[] roomPropsInLobby = { "gm" }; //gm = game mode
 
             //two game modes
             //1. racing = "rc"
             //2. death race = "dr"
 
-            ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
+            // ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
 
-            roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;
-            roomOptions.CustomRoomProperties = customRoomProperties;
+            // roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;
+            // roomOptions.CustomRoomProperties = customRoomProperties;
 
             PhotonNetwork.CreateRoom(roomName, roomOptions);
         }                     
@@ -365,10 +370,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameObject playerListGameObject;
         if (playerListGameObjects.TryGetValue(target.ActorNumber,out playerListGameObject ))
         {
+            playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
             object isPlayerReady;
             if (changedProps.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady ))
             {
                 playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
+                playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
             }
         }  
         StartGameButton.SetActive(CheckPlayersReady());      
@@ -378,6 +385,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #endregion 
 
     #region Public Methods
+    [PunRPC]
     public void ActivatePanel(string panelNameToBeActivated)
     {
         LoginUIPanel.SetActive(LoginUIPanel.name.Equals(panelNameToBeActivated));
@@ -390,76 +398,104 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MapSelectUIRoomPanel.SetActive(MapSelectUIRoomPanel.name.Equals(panelNameToBeActivated));
     }
 
+    public void GoToMapSelect()
+    {
+        photonView.RPC("ActivatePanel", RpcTarget.AllBuffered, "MapSelectUIRoomPanel");
+    }
+    
+
     public void SetGameMode(string _gameMode)
     {
         GameMode = _gameMode;
     }
 
+    
     public void JoinWarriorTeam()
     {
-        foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
-        {
-            if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
-            {
-                playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
-                Destroy(playerObj.gameObject);
-            }
-        }
-        lockedinButton.GetComponent<Image>().enabled = true;
-        lockedinButton.GetComponent<Button>().enabled = true;
-        lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
-        bossSelectionPanel.SetActive(false);
-        GameObject playerListedGameobject = Instantiate(PlayerListPrefab);
-        playerListedGameobject.transform.SetParent(PlayerListContent.transform);
-        playerListedGameobject.transform.localScale = Vector3.one;
-        playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
-        joinWarriorButton.transform.SetAsLastSibling();
-        characterSelectionPanel.SetActive(true);
-        playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
-        this.GetComponent<PlayerSelection>().playerSelectionNumber = 0;
-        this.GetComponent<PlayerSelection>().ActivatePlayer(0);
-
-        if(PlayerListContent.transform.childCount > 4)
-        {
-            joinWarriorButton.SetActive(false);
-        }
-
-        if(BossListContent.transform.childCount != 1)
-        {
-            joinBossButton.SetActive(true);
-        }
-
         
+            foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
+            {
+                if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
+                {
+                    playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
+                    Destroy(playerObj.gameObject);
+                }
+            }
+            lockedinButton.GetComponent<Image>().enabled = true;
+            lockedinButton.GetComponent<Button>().enabled = true;
+            lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
+            bossSelectionPanel.SetActive(false);
+
+
+            GameObject playerListedGameobject = PhotonNetwork.Instantiate("PlayersInLobbyPrefab", PlayerListContent.transform.position, Quaternion.identity);
+            
+            playerListedGameobject.transform.SetParent(PlayerListContent.transform, true);
+            playerListedGameobject.transform.localScale = Vector3.one;
+            playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
+            joinWarriorButton.transform.SetAsLastSibling();
+            characterSelectionPanel.SetActive(true);
+            playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
+
+
+            this.GetComponent<PlayerSelection>().playerSelectionNumber = 0;
+            this.GetComponent<PlayerSelection>().ActivatePlayer(0);
+            
+        
+
+            if(PlayerListContent.transform.childCount > 4)
+            {
+                joinWarriorButton.SetActive(false);
+            }
+
+            if(BossListContent.transform.childCount != 1)
+            {
+                joinBossButton.SetActive(true);
+            }
+          
     }
 
+    
     public void JoinBossTeam()
     {
-        foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
-        {
-            if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
+        
+            foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
             {
-                playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
+                if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
+                {
+                    playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
 
-                Destroy(playerObj.gameObject);
-            }     
-        }
-        lockedinButton.GetComponent<Image>().enabled = true;
-        lockedinButton.GetComponent<Button>().enabled = true;
-        lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
-        characterSelectionPanel.SetActive(false);
-        GameObject playerListedGameobject = Instantiate(PlayerListPrefab);
-        playerListedGameobject.transform.SetParent(BossListContent.transform);
-        playerListedGameobject.transform.localScale = Vector3.one;
-        playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
-        joinBossButton.SetActive(false);
-        bossSelectionPanel.SetActive(true);
-        playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
-        
-        this.GetComponent<PlayerSelection>().playerSelectionNumber = 3;
-        
+                    Destroy(playerObj.gameObject);
+                }     
+            }
+            lockedinButton.GetComponent<Image>().enabled = true;
+            lockedinButton.GetComponent<Button>().enabled = true;
+            lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
+            characterSelectionPanel.SetActive(false);
+            GameObject playerListedGameobject = PhotonNetwork.Instantiate("PlayersInLobbyPrefab", PlayerListContent.transform.position, Quaternion.identity);
+            PhotonView photonView = playerListedGameobject.GetComponent<PhotonView>();
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
 
+            playerListedGameobject.transform.SetParent(BossListContent.transform, true);   
+            playerListedGameobject.transform.localScale = Vector3.one;
+            playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
+            joinBossButton.SetActive(false);
+            bossSelectionPanel.SetActive(true);
+            playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
+            
+            this.GetComponent<PlayerSelection>().playerSelectionNumber = 3;
         
+    
     }
+
+    // public void SyncWarriors()
+    // {
+    //     photonView.RPC("JoinWarriorTeam", RpcTarget.AllBuffered);
+    // }
+
+    // public void SyncBoss()
+    // {
+    //     photonView.RPC("JoinBossTeam", RpcTarget.AllBuffered);
+    // }
 
     public void SelectMap(string map)
     {

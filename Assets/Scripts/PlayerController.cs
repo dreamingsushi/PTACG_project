@@ -64,8 +64,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 velocity;
     private PlayerInputs inputActions;
-    public event Action OnJumpEvent;
-    public event Action OnAttackEvent;
+    // public event Action OnJumpEvent;
+    // public event Action OnAttackEvent;
     public static PlayerController Instance;
     
     public void Shoot()

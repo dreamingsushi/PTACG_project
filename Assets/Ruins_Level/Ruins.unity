@@ -1727,7 +1727,6 @@ GameObject:
   - component: {fileID: 129538847}
   - component: {fileID: 129538846}
   - component: {fileID: 129538849}
-  - component: {fileID: 129538850}
   m_Layer: 0
   m_Name: death
   m_TagString: Untagged
@@ -1822,18 +1821,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &129538850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129538844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e405260ac3a9f7d4daaaea889aba77f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &130448614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6810913556735356764, guid: 0db440a0f89fb354cbf5c66edd3d1467,
@@ -27295,7 +27282,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400325013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -45173,6 +45160,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1204126031066382781, guid: e45a2ae88b4206d4098cd1449b4491fc,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1180743227216956005, guid: e45a2ae88b4206d4098cd1449b4491fc,
         type: 3}
       propertyPath: m_SceneBindings.Array.data[2].value

@@ -8,19 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LobbyScene.unity
     guid: 3adb158719a2fde47b23f83f67d010c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beach.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Ruins_Level/Ruins.unity
     guid: ebc96c155a000694798318c1419d3508
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Alvin_Scene.unity
     guid: be3359578a56ded489807bcadefba48b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Candyland.unity
     guid: b60ade0789f7a31409cab9831258fc89
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Snow.unity
     guid: 967ca49ce4bceb7448bd40c34f19732e
   m_configObjects: {}

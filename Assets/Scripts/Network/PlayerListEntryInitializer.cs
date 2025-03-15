@@ -5,19 +5,22 @@ using UnityEngine.UI;
 using Photon.Pun;
 using TMPro;
 
-public class PlayerListEntryInitializer : MonoBehaviour
+public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
 {
     [Header("UI References")]
     public TMP_Text PlayerNameText;
     public Button PlayerReadyButton;
     public Image PlayerReadyImage;
+    public TMP_Text SelectedClass;
 
     private bool isPlayerReady = false;
 
-    public void Awake()
+    void Update()
     {
+        
+        
 
-        PlayerReadyButton = GameObject.Find("lockedin").GetComponent<Button>();
+        
     }
 
     public void Initialize(int playerID, string playerName)
@@ -30,21 +33,23 @@ public class PlayerListEntryInitializer : MonoBehaviour
         else
         {
             //I am the local player
-            //ExitGames.Client.Photon.Hashtable initialProps = new ExitGames.Client.Photon.Hashtable(){{MultiplayerRacingGame.PLAYER_READY,isPlayerReady}};
-            //PhotonNetwork.LocalPlayer.SetCustomProperties(initialProps);
-
+            ExitGames.Client.Photon.Hashtable initialProps = new ExitGames.Client.Photon.Hashtable(){{CharacterSelect.PLAYER_READY,isPlayerReady}};
+            PhotonNetwork.LocalPlayer.SetCustomProperties(initialProps);
+            
             PlayerReadyButton.onClick.AddListener(() =>
             {
+                ChangeClassName();
                 isPlayerReady = !isPlayerReady;
                 SetPlayerReady(isPlayerReady);
 
-                //ExitGames.Client.Photon.Hashtable newProps = new ExitGames.Client.Photon.Hashtable(){{MultiplayerRacingGame.PLAYER_READY,isPlayerReady}};
-                //PhotonNetwork.LocalPlayer.SetCustomProperties(newProps);
+                ExitGames.Client.Photon.Hashtable newProps = new ExitGames.Client.Photon.Hashtable(){{CharacterSelect.PLAYER_READY,isPlayerReady}};
+                PhotonNetwork.LocalPlayer.SetCustomProperties(newProps);
             });
         }
 
 
     }
+
     public void SetPlayerReady(bool playerReady)
     {
         PlayerReadyImage.enabled = playerReady;
@@ -57,6 +62,35 @@ public class PlayerListEntryInitializer : MonoBehaviour
         {
             PlayerReadyButton.GetComponentInChildren<TMP_Text>().text = "Lock in";
         }
+    }
+
+    public void ChangeClassName()
+    {
+            object playerSelectionNumber;
+            if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNumber))
+            {
+                switch((int)playerSelectionNumber)
+                {
+                    case 0:
+                        SelectedClass.text = "Knight";
+                        break;
+                        case 1:
+                        SelectedClass.text = "Mage";
+                        break;
+                        case 2:
+                        SelectedClass.text = "Healer";
+                        break;
+                        case 3:
+                        SelectedClass.text = "Dragon";
+                        break;
+                }
+            }           
+    }
+
+    [PunRPC]
+    public void ReadyorNot(bool playerReady)
+    {
+        PlayerReadyImage.enabled = playerReady;
     }
 
 }
