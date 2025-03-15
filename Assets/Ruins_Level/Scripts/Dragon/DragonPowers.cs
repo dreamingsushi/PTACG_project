@@ -15,13 +15,16 @@ public class DragonPowers : MonoBehaviour
 
     public int dragonMeter;
     public GameObject evolveText;
+    
 
     private Animator animator;
+    private GameStartManager gameManager;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameStartManager.instance;
         animator = GetComponentInChildren<Animator>();
     }
 
@@ -32,14 +35,14 @@ public class DragonPowers : MonoBehaviour
             FireBallAttack();
         }
 
-        if(Input.GetKeyDown(KeyCode.P) && dragonMeter >=3)
+        if(Input.GetKeyDown(KeyCode.P) && dragonMeter >=12)
         {
             evolveText.SetActive(false);
             ChangePhase();
             
         }
 
-        if(dragonMeter >=3)
+        if(dragonMeter >=12)
         {
             evolveText.SetActive(true);
         }
@@ -64,6 +67,7 @@ public class DragonPowers : MonoBehaviour
 
     public void ChangePhase()
     {
+        gameManager.BossNextPhase();
         animator.SetTrigger("Phase");
         cutscenePhase3.Play();
         this.gameObject.GetComponentInChildren<BossMovement>().enabled = false;

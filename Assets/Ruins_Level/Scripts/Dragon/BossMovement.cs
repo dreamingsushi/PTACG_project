@@ -51,7 +51,7 @@ public class BossMovement : MonoBehaviour
             transform.Rotate(-transform.up * turnMultiplier *bossController.turnDirection);
             
             
-            //bossController.focusPoint.transform.parent.Rotate(transform.up * -turnMultiplier *bossController.turnDirection * Time.deltaTime);
+            bossController.focusPoint.transform.parent.Rotate(transform.up * turnMultiplier*100 *bossController.turnDirection * Time.deltaTime);
             
             
         }

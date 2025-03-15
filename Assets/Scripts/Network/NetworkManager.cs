@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
+using UnityEngine.Playables;
+using System.Linq;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -37,23 +41,53 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public GameObject bossSelectionPanel;
     public GameObject joinWarriorButton;
     public GameObject joinBossButton;
+    
+    [Header("Map Select Room Panel")]
+    public GameObject MapSelectUIRoomPanel; 
+    public List<GameObject> mapSelection;
+    public List<TMP_Text> voteTexts;
+    public TMP_Text timerText;
+    private List<int> voteCounts = new List<int>();
+
 
     // public DeathRacePlayer[] DeathRacePlayers;
     // public RacingPlayer[] RacingPlayers;
     //public GameObject[] PlayerSelectionUIGameObjects;
     private Dictionary<int, GameObject> playerListGameObjects;
- 
+    private float timeLeft = 10f;
+    private int highestVotes;
+    private int highestVotedMap;
+
+
+    public enum Maps {
+        Cave, Beach, Candy, Ruins
+    }
+    
     #region UNITY Methods
     // Start is called before the first frame update
     void Start()
     {
         ActivatePanel(LoginUIPanel.name);
         PhotonNetwork.AutomaticallySyncScene = true; 
+        foreach(TMP_Text t in voteTexts)
+        {
+            voteCounts.Add(0);         
+        }
+        Debug.Log(voteCounts.Count);
+    }
+
+    void Update()
+    {
+        if(MapSelectUIRoomPanel.activeInHierarchy)
+        {
+            photonView.RPC("TimerDownForMapSelect", RpcTarget.AllBuffered);
+            
+        }
     }
 
 
     #endregion
- 
+
     #region UI Callback Methods
     public void OnLoginButtonClicked()
     {
@@ -353,6 +387,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameOptionsUIPanel.SetActive(GameOptionsUIPanel.name.Equals(panelNameToBeActivated));
         //JoinRandomRoomUIPanel.SetActive(JoinRandomRoomUIPanel.name.Equals(panelNameToBeActivated));
         InsideRoomUIPanel.SetActive(InsideRoomUIPanel.name.Equals(panelNameToBeActivated));
+        MapSelectUIRoomPanel.SetActive(MapSelectUIRoomPanel.name.Equals(panelNameToBeActivated));
     }
 
     public void SetGameMode(string _gameMode)
@@ -426,6 +461,46 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         
     }
 
+    public void SelectMap(string map)
+    {
+        
+        for(int i = 0; i<voteCounts.Count; i++)
+        {
+            mapSelection[i].SetActive(true);
+            
+            if(voteCounts[i] > 0)
+            {
+                voteCounts[i] --;
+            }            
+            
+        }
+
+        switch(map)
+        {
+            case "Cave":
+                voteCounts[0]++;
+                mapSelection[0].SetActive(false);
+                break;
+            
+            case "Beach":
+                voteCounts[1]++;
+                mapSelection[1].SetActive(false);
+                break;
+            
+            case "Candy":
+                voteCounts[2]++;
+                mapSelection[2].SetActive(false);
+                break;
+
+            case "Ruins":
+                voteCounts[3]++;
+                mapSelection[3].SetActive(false);
+                break;
+        }
+    
+        photonView.RPC("SyncVotes", RpcTarget.AllBuffered);
+    }
+
     
 
     #endregion
@@ -454,6 +529,85 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
          return true;
     }
+
+    [PunRPC]
+    private void SyncVotes()
+    {
+        for(int i = 0; i<voteTexts.Count; i++)
+        {
+            voteTexts[i].text = voteCounts[i].ToString();
+        }
+    }
+
+    [PunRPC]
+    public void TimerDownForMapSelect()
+    {
+        if(!MapSelectUIRoomPanel.activeInHierarchy)
+        {
+            return;
+        }
+        else
+        {
+            timeLeft -= Time.deltaTime;
+            if(timeLeft < 0)
+            {
+                highestVotes = voteCounts[0];
+                highestVotedMap = 0;
+
+                for(int i = 0; i<voteCounts.Count; i++)
+                {
+                    if(voteCounts[i] > highestVotes)
+                    {
+                        highestVotes = voteCounts[i];
+                        highestVotedMap = i;
+
+                    }
+                    else if(voteCounts[i] == highestVotes)
+                    {
+                        List<int> sameVotes = new List<int>();
+                        sameVotes.Add(voteCounts[i]);
+                        
+                        highestVotedMap = Random.Range(sameVotes[0], sameVotes.Count);
+                    }
+                }
+                
+            }
+            timerText.text = timeLeft.ToString("F1");
+            StartCoroutine(SelectMapStartGame());
+        }   
+    }
+
+    private IEnumerator SelectMapStartGame()
+    {
+        if(timeLeft < 0)
+        {
+            switch(highestVotedMap)
+            {
+                case 0:
+                    timerText.text = "Voted Map: Cave";
+                    yield return new WaitForSeconds(4f);
+                    Debug.Log("Go to Cave Scene");
+                    // SceneManager.LoadScene("Cave");
+                    break; 
+                case 1:
+                    timerText.text = "Voted Map: Beach";
+                    yield return new WaitForSeconds(4f);
+                    SceneManager.LoadScene("Beach");
+                    break; 
+                case 2:
+                    timerText.text = "Voted Map: Candy";
+                    Debug.Log("Go to Candy Scene");
+                    break; 
+                case 3:
+                    timerText.text = "Voted Map: Ruins";
+                    SceneManager.LoadScene("Ruins");
+                    break; 
+            }
+
+            
+        }
+    }
+
     #endregion
 
 }

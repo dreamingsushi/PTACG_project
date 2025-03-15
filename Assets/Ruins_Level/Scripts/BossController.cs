@@ -17,11 +17,12 @@ public class BossController : MonoBehaviour
 
     private void mouseLook()
     {
-        if(Input.GetKeyDown(KeyCode.L)) cursorLocked = cursorLocked ? false : true;
-        if(!cursorLocked)return;
+        // if(Input.GetKeyDown(KeyCode.L)) cursorLocked = cursorLocked ? false : true;
+        // if(!cursorLocked)return;
 
-        Cursor.lockState = cursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
+        //Cursor.lockState = cursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
 
+        Cursor.lockState = CursorLockMode.Locked;
         relativeVector = transform.InverseTransformPoint(focusPoint.transform.position);
         relativeVector /= relativeVector.magnitude;
         turnDirection = relativeVector.x / relativeVector.magnitude;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Fireball : MonoBehaviour
@@ -7,6 +8,7 @@ public class Fireball : MonoBehaviour
     
     public float speed = 12.0f;
     public DragonPowers dragonPowers;
+    public GameObject flamesPrefab;
 
     void OnEnable()
     {
@@ -22,17 +24,26 @@ public class Fireball : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         
-        if(other.gameObject.CompareTag("Power"))
+        if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {
             Debug.Log("Hit");
             dragonPowers.dragonMeter ++;
 
             Destroy(other.gameObject);
+        }
+        if(other.gameObject.CompareTag("Power"))
+        {
+            
             
         }
 
         if(!other.gameObject.CompareTag("Dragon"))
             this.gameObject.SetActive(false);
+
+        if(other.gameObject.layer == 6)
+        {
+            Instantiate(flamesPrefab, this.transform.position, quaternion.identity);
+        }
     }
 
     // void OnTriggerExit(Collider other)
