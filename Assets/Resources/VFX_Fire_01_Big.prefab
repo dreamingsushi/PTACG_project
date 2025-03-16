@@ -34066,6 +34066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flameDamage: 5
+  dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
 --- !u!1 &8829451551789304542
 GameObject:
   m_ObjectHideFlags: 0
@@ -39044,7 +39045,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 5977627140781981576}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

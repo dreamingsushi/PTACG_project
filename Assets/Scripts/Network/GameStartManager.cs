@@ -18,6 +18,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public bool canStartGame;
     public float timeLeft = 600f;
     public TMP_Text timerDown;
+    private string currentTimer;
 
     void Awake()
     {
@@ -56,8 +57,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
                 }
-
-                if((int) playerSelectionNumber == 3)
+                else if((int) playerSelectionNumber == 3)
                 {
                     Debug.Log((int)playerSelectionNumber);
                     Vector3 instantiatePosition = bossInstantiatePosition.position;
@@ -74,14 +74,16 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if(PhotonNetwork.IsMasterClient)
+        
+        if(PhotonNetwork.LocalPlayer.IsMasterClient)
         {
-            photonView.RPC("TimerDownForGame", RpcTarget.AllBuffered);
+            TimerDownForGame();
+            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, currentTimer);
         }
+        
     }
 
 
-    [PunRPC]
     public void TimerDownForGame()
     {
         if(!canStartGame)
@@ -99,9 +101,15 @@ public class GameStartManager : MonoBehaviourPunCallbacks
                 Debug.Log("time left is halved");
                 
             }
-            timerDown.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            currentTimer = string.Format("{0:00}:{1:00}", minutes, seconds);
             
         }   
+    }
+
+    [PunRPC]
+    public void SyncCountdownTimer(string timer)
+    {
+        timerDown.text = timer;
     }
 
     public void BossNextPhase()

@@ -9,6 +9,7 @@ public class TimeCountDownManager : MonoBehaviourPun
 {
     private TMP_Text timeUIText;
     private float timeToStartRace = 2.5f;
+    private bool timerDone;
     
 
     private void Awake()
@@ -19,13 +20,14 @@ public class TimeCountDownManager : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        if(GetComponent<PlayerSetup>() != null)
+        if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
         {
             GetComponent<PlayerController>().enabled = false;
         }
-        else if(GetComponent<BossSetup>() != null)
+
+        if(GetComponent<BossSetup>() != null && photonView.IsMine)
         {
-            GetComponentInChildren<BossController>().enabled = false;
+            GetComponent<BossController>().enabled = false;
         }
         
         timeUIText.enabled = true;
@@ -44,9 +46,12 @@ public class TimeCountDownManager : MonoBehaviourPun
             }
             else if (timeToStartRace < 0.0f)
             {
-                photonView.RPC("StartTheGame", RpcTarget.AllBuffered);
+                timerDone = true;
+                photonView.RPC("StartTheGame", RpcTarget.AllBuffered, timerDone);
             }
         }
+
+        
     }
  
     [PunRPC]
@@ -64,17 +69,18 @@ public class TimeCountDownManager : MonoBehaviourPun
     }
 
     [PunRPC]
-    public void StartTheGame()
+    public void StartTheGame(bool canstart)
     {
-        if(GetComponent<PlayerSetup>() != null)
+        if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
         {
             GetComponent<PlayerController>().enabled = true;
         }
-        else if(GetComponent<BossSetup>() != null)
+
+        if(GetComponent<BossSetup>() != null && photonView.IsMine)
         {
-            GetComponentInChildren<BossController>().enabled = true;
+            GetComponent<BossController>().enabled = true;
         }
-        GameStartManager.instance.canStartGame = true;
+        GameStartManager.instance.canStartGame = canstart;
         this.enabled = false;
     }
 }

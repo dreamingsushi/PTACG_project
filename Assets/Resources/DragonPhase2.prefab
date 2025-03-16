@@ -2248,6 +2248,11 @@ GameObject:
   - component: {fileID: 1653134989951855087}
   - component: {fileID: 2055244043967367664}
   - component: {fileID: 138066341012047192}
+  - component: {fileID: 5743569068230086774}
+  - component: {fileID: 8400758154965337572}
+  - component: {fileID: 2314516197255343930}
+  - component: {fileID: 4863716049894242901}
+  - component: {fileID: 1256668023350360453}
   m_Layer: 0
   m_Name: dragon P2
   m_TagString: Dragon
@@ -2381,6 +2386,109 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &5743569068230086774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514341982820437258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 8400758154965337572}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &8400758154965337572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514341982820437258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1
+  m_UseLocal: 1
+--- !u!114 &2314516197255343930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514341982820437258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64216575b2e260e458abc12fadef3616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4863716049894242901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514341982820437258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972df260f0d084343857a062f11e5821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCamera: {fileID: 3976236393156100283}
+--- !u!114 &1256668023350360453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5514341982820437258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 2
+    Name: isWalking
+  - Type: 9
+    SynchronizeType: 2
+    Name: jump
+  - Type: 1
+    SynchronizeType: 2
+    Name: movement
+  - Type: 4
+    SynchronizeType: 1
+    Name: isJumping
+  - Type: 9
+    SynchronizeType: 1
+    Name: Phase
+  - Type: 9
+    SynchronizeType: 2
+    Name: swipe1
+  - Type: 9
+    SynchronizeType: 2
+    Name: swipe2
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
 --- !u!1 &5561973550101615935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,11 +3027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4223761922657865267}
   - component: {fileID: 7365782212606552012}
-  - component: {fileID: 5155647251124810063}
-  - component: {fileID: -1204126031066382781}
-  - component: {fileID: 4917949400977609305}
   - component: {fileID: 853152185029685603}
-  - component: {fileID: 8982989782712744513}
   m_Layer: 0
   m_Name: DragonPhase2
   m_TagString: Dragon
@@ -2969,58 +3073,6 @@ MonoBehaviour:
   focusPointCamera: {fileID: 7851448437348521733}
   dragonMeter: 0
   evolveText: {fileID: 8093554763773296428}
---- !u!114 &5155647251124810063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6689456769447807126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 972df260f0d084343857a062f11e5821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerCamera: {fileID: 3976236393156100283}
---- !u!114 &-1204126031066382781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6689456769447807126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 0
-  ObservedComponents:
-  - {fileID: 4917949400977609305}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &4917949400977609305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6689456769447807126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 1
-  m_UseLocal: 1
 --- !u!114 &853152185029685603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3037,18 +3089,6 @@ MonoBehaviour:
   currentBossHP: 0
   dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
   healthBar: {fileID: 1998573567251989643}
---- !u!114 &8982989782712744513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6689456769447807126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64216575b2e260e458abc12fadef3616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6755992475604559000
 GameObject:
   m_ObjectHideFlags: 0

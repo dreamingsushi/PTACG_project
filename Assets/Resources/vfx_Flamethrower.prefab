@@ -4887,7 +4887,7 @@ GameObject:
   - component: {fileID: 3507629260575947747}
   - component: {fileID: 6151190266064709901}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: damagepart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

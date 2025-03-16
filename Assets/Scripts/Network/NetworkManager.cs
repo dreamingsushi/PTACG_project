@@ -80,11 +80,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if(MapSelectUIRoomPanel.activeInHierarchy && PhotonNetwork.IsMasterClient && isMapSelecting)
+        
+        if(MapSelectUIRoomPanel.activeInHierarchy && PhotonNetwork.LocalPlayer.IsMasterClient && isMapSelecting)
         {
-            photonView.RPC("TimerDownForMapSelect", RpcTarget.AllBuffered);
-            
-            photonView.RPC("SyncVotes", RpcTarget.AllBuffered);
+            TimerDownForMapSelect();
+        }
+        if(PhotonNetwork.LocalPlayer.IsMasterClient)
+        {
+            photonView.RPC("SyncTimerForMapSelect", RpcTarget.AllBuffered, timeLeft.ToString("F1"));
         }
     }
 
@@ -508,10 +511,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             mapSelection[i].SetActive(true);
             
-            if(voteCounts[i] > 0)
-            {
-                voteCounts[i] --;
-            }            
+                       
             
         }
 
@@ -519,25 +519,80 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             case "Cave":
                 voteCounts[0]++;
-                mapSelection[0].SetActive(false);
+                voteCounts[1]--;
+                voteCounts[2]--;
+                voteCounts[3]--;
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[0].SetActive(false);
+                    }
+                }
+                
                 break;
             
             case "Beach":
                 voteCounts[1]++;
-                mapSelection[1].SetActive(false);
+                voteCounts[0]--;
+                voteCounts[2]--;
+                voteCounts[3]--;
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[1].SetActive(false);
+                    }
+                }
+                
                 break;
             
             case "Candy":
                 voteCounts[2]++;
-                mapSelection[2].SetActive(false);
+                voteCounts[1]--;
+                voteCounts[0]--;
+                voteCounts[3]--;
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[2].SetActive(false);
+                    }
+                }
+                
                 break;
 
             case "Ruins":
                 voteCounts[3]++;
-                mapSelection[3].SetActive(false);
+                voteCounts[1]--;
+                voteCounts[2]--;
+                voteCounts[0]--;
+                Debug.Log(voteCounts[3]);
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        
+                        mapSelection[3].SetActive(false);
+                    }
+                }
+                
+                
                 break;
         }
-    
+        for(int j = 0; j<voteCounts.Count; j++)
+        {
+            if(voteCounts[j] <0)
+            {
+                voteCounts[j] = 0;
+            }
+            photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+
+        }
         
     }
 
@@ -571,15 +626,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void SyncVotes()
+    public void SyncVotes(int index, int voteCountNum)
     {
-        for(int i = 0; i<voteTexts.Count; i++)
-        {
-            voteTexts[i].text = voteCounts[i].ToString();
-        }
+        voteCounts[index] = voteCountNum;
+        voteTexts[index].text = voteCountNum.ToString();
+        
+            
+        
     }
 
-    [PunRPC]
+    
     public void TimerDownForMapSelect()
     {
         if(!MapSelectUIRoomPanel.activeInHierarchy)
@@ -618,6 +674,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }   
     }
 
+    [PunRPC]
+    public void SyncTimerForMapSelect(string timerLeftText)
+    {
+        timerText.text = timerLeftText;
+    }
+
     private IEnumerator SelectMapStartGame()
     {
         if(timeLeft < 0)
@@ -633,7 +695,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 case 1:
                     timerText.text = "Voted Map: Beach";
                     yield return new WaitForSeconds(4f);
-                    SceneManager.LoadScene("Beach");
+                    Debug.Log("Go to Beach Scene");
+                    //SceneManager.LoadScene("Beach");
                     break; 
                 case 2:
                     timerText.text = "Voted Map: Candy";

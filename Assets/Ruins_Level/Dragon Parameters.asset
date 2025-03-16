@@ -16,5 +16,6 @@ MonoBehaviour:
   flamesDamage: 5
   clawDamage: 10
   punchDamage: 3
-  flamethrowerDamage: 20
+  flamethrowerDamage: 2
   meteorDamage: 8
+  takenDamage: 0

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Flames : MonoBehaviour
 {
-    public int flameDamage = 5;
+    public int flameDamage;
+    public DragonScaling dragonNumbers;
     private PlayerHealth playerEntered;
 
     private bool canFlameDamage;
@@ -12,6 +13,7 @@ public class Flames : MonoBehaviour
     void OnEnable()
     {
         Invoke("DisappearAfterTime", 6);
+        flameDamage = (int)dragonNumbers.flamesDamage;
     }
 
     void Update()

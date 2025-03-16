@@ -4885,7 +4885,7 @@ MonoBehaviour:
   dragonPowers: {fileID: 0}
   flamesPrefab: {fileID: 8829451551789304542, guid: 02180aff7bdaab84f9d1aa30a3ad1b9a,
     type: 3}
-  dragonNumbers: {fileID: 0}
+  dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
 --- !u!199 &6833008032728603539
 ParticleSystemRenderer:
   serializedVersion: 6

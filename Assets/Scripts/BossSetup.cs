@@ -14,19 +14,19 @@ public class BossSetup : MonoBehaviourPunCallbacks
         
         if(photonView.IsMine)
         {
-            GetComponentInChildren<BossMovement>().enabled = true;                 
+            GetComponent<BossMovement>().enabled = true;                 
             PlayerCamera.enabled = true;
-            GetComponent<DragonPowers>().enabled = true;
-            GetComponentInChildren<BossController>().enabled = true;
-            GetComponentInChildren<HealthBar>().enabled = true;
+            GetComponentInParent<DragonPowers>().enabled = true;
+            GetComponent<BossController>().enabled = true;
+            transform.parent.gameObject.GetComponentInChildren<HealthBar>().enabled = true;
         }
         else
         {
-            GetComponentInChildren<BossMovement>().enabled = false;                 
+            GetComponent<BossMovement>().enabled = false;                 
             PlayerCamera.enabled = false;
-            GetComponent<DragonPowers>().enabled = false;
-            GetComponentInChildren<BossController>().enabled = false;
-            GetComponentInChildren<HealthBar>().enabled = false;
+            GetComponentInParent<DragonPowers>().enabled = false;
+            GetComponent<BossController>().enabled = false;
+            transform.parent.gameObject.GetComponentInChildren<HealthBar>().enabled = false;
         }
     }
 
