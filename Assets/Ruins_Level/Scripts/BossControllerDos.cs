@@ -3,6 +3,7 @@ using Photon.Pun;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossControllerDos : MonoBehaviour
 {
@@ -19,8 +20,22 @@ public class BossControllerDos : MonoBehaviour
     {
         if(GetComponent<PhotonView>().IsMine)
         {
+            GetComponent<DragonPowersDos>().enabled = true;
+            
+            healthBar.GetComponentInParent<Image>().enabled = true;
             healthBar.SetActive(true);
+
         }
+        else
+        {
+            GetComponent<DragonPowersDos>().enabled = false;
+            healthBar.GetComponentInParent<Image>().enabled = false;
+            healthBar.SetActive(false);
+            this.enabled = false;
+            return;
+
+        }
+
     }
 
     private void Update() {

@@ -270,11 +270,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             foreach (Player player in PhotonNetwork.PlayerList)
             {
                 
-                        GameObject playerListGameObject = Instantiate(PlayerListPrefab);
+                        GameObject playerListGameObject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
                         playerListGameObject.transform.SetParent(PlayerListContent.transform);
                         playerListGameObject.transform.localScale = Vector3.one;
                         playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(player.ActorNumber, player.NickName);
-                        playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
+                        //playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, playerListGameObject.GetComponent<PlayerListEntryInitializer>().SelectedClass.text);
                         object isPlayerReady;
                         if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady))
                         {
@@ -299,11 +299,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                   PhotonNetwork.CurrentRoom.PlayerCount + " / " +
                   PhotonNetwork.CurrentRoom.MaxPlayers;
 
-        GameObject playerListGameObject = Instantiate(PlayerListPrefab);
+        GameObject playerListGameObject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
         playerListGameObject.transform.SetParent(PlayerListContent.transform);
         playerListGameObject.transform.localScale = Vector3.one;
         playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
-        playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
+        //playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
         playerListGameObjects.Add(newPlayer.ActorNumber, playerListGameObject);
         StartGameButton.SetActive(CheckPlayersReady());
     }
@@ -377,12 +377,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameObject playerListGameObject;
         if (playerListGameObjects.TryGetValue(target.ActorNumber,out playerListGameObject ))
         {
-            playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
+            playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[GetComponent<PlayerSelection>().playerSelectionNumber].name);
             object isPlayerReady;
             if (changedProps.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady ))
             {
                 playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
-                playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
+                //playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
             }
         }  
         StartGameButton.SetActive(CheckPlayersReady());      

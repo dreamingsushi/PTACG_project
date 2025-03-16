@@ -38,7 +38,7 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
             
             PlayerReadyButton.onClick.AddListener(() =>
             {
-                ChangeClassName();
+                photonView.RPC("ChangeClassName", RpcTarget.AllBuffered, SelectedClass.text);
                 isPlayerReady = !isPlayerReady;
                 SetPlayerReady(isPlayerReady);
 
@@ -64,27 +64,33 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
         }
     }
 
-    public void ChangeClassName()
+    [PunRPC]
+    public void ChangeClassName(string classText)
     {
-            object playerSelectionNumber;
-            if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNumber))
-            {
-                switch((int)playerSelectionNumber)
-                {
-                    case 0:
-                        SelectedClass.text = "Knight";
-                        break;
-                        case 1:
-                        SelectedClass.text = "Mage";
-                        break;
-                        case 2:
-                        SelectedClass.text = "Healer";
-                        break;
-                        case 3:
-                        SelectedClass.text = "Dragon";
-                        break;
-                }
-            }           
+        SelectedClass.text = classText;
+            // object playerSelectionNumber;
+            // if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNumber))
+            // {
+                
+            //     switch((int)playerSelectionNumber)
+            //     {
+            //         case 0:
+            //             SelectedClass.text = classText;
+            //             break;
+            //             case 1:
+            //             SelectedClass.text = classText;
+            //             break;
+            //             case 2:
+            //             SelectedClass.text = classText;
+            //             break;
+            //             case 3:
+            //             SelectedClass.text = classText;
+            //             break;
+            //     }
+                
+            // } 
+            
+               
     }
 
     

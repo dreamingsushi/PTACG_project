@@ -122,7 +122,7 @@ PlayableDirector:
   - key: {fileID: -943594583245144827, guid: bafe29d7a82296341a2a8eb1a54caa2c, type: 2}
     value: {fileID: 5499793734427319219}
   - key: {fileID: -5093035349294210716, guid: bafe29d7a82296341a2a8eb1a54caa2c, type: 2}
-    value: {fileID: 6689456769447807126}
+    value: {fileID: 0}
   - key: {fileID: 3296004589206097296, guid: bafe29d7a82296341a2a8eb1a54caa2c, type: 2}
     value: {fileID: 5514341982820437258}
   - key: {fileID: 4508284619407840221, guid: bafe29d7a82296341a2a8eb1a54caa2c, type: 2}

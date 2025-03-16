@@ -62,6 +62,12 @@ public class DragonPowers : MonoBehaviour
         {
             evolveText.SetActive(true);
         }
+
+        if(cutscenePhase3.state == PlayState.Playing)
+        {
+            Debug.Log("Done");
+            this.gameObject.SetActive(false);
+        }
     }
 
     public void FireBallAttack()

@@ -16,6 +16,7 @@ public class BossHealth : MonoBehaviour
 
     void Awake()
     {
+        dragonNumbers.takenDamage = 0f;
         if(GetComponentInChildren<BossController>() != null)
         {
             maxBossHP = 300f;

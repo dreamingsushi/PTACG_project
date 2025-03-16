@@ -8,7 +8,7 @@ using TMPro;
 public class TimeCountDownManager : MonoBehaviourPun
 {
     private TMP_Text timeUIText;
-    private float timeToStartRace = 2.5f;
+    private float timeToStartRace = 3.5f;
     private bool timerDone;
     
 
@@ -59,7 +59,16 @@ public class TimeCountDownManager : MonoBehaviourPun
     {
         if (time > 0.0f)
         {
-            timeUIText.text = "Defeat the Boss";
+            if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
+            {
+                timeUIText.text = "Defeat the Boss";
+            }
+
+            if(GetComponent<BossSetup>() != null && photonView.IsMine)
+            {
+                timeUIText.text = "Defeat All Warriors";
+            }
+            
         }
         else
         {
