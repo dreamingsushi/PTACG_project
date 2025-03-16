@@ -138,7 +138,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 roomName = "Room" + Random.Range(1000, 10000);
             }
             RoomOptions roomOptions = new RoomOptions();
-            roomOptions.MaxPlayers = 2;
+            roomOptions.MaxPlayers = 4;
     
             //The following string is used to introduce game mode
             string[] roomPropsInLobby = { "gm" }; //gm = game mode
@@ -354,7 +354,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 roomName = "Room" + Random.Range(1000, 10000);
             }
             RoomOptions roomOptions = new RoomOptions();
-            roomOptions.MaxPlayers = 2;
+            roomOptions.MaxPlayers = 4;
             //string[] roomPropsInLobby = { "gm" }; //gm = game mode
 
             //two game modes
