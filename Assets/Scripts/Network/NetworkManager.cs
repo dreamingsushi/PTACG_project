@@ -81,6 +81,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     void Update()
     {
         
+        
         if(MapSelectUIRoomPanel.activeInHierarchy && PhotonNetwork.LocalPlayer.IsMasterClient && isMapSelecting)
         {
             TimerDownForMapSelect();

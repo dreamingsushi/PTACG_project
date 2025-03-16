@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using System;
+using Photon.Pun;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -92,9 +93,13 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator DamageEffect()
     {
-        bloodEffect.SetActive(true);
-        yield return new WaitForSeconds(0.25f);
-        bloodEffect.SetActive(false);
+        if(GetComponent<PhotonView>().IsMine)
+        {
+            bloodEffect.SetActive(true);
+            yield return new WaitForSeconds(0.25f);
+            bloodEffect.SetActive(false);
+        }
+        
     }
 
     private void ApplyKnockback(Vector3 direction)

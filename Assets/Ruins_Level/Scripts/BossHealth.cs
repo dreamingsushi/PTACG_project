@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class BossHealth : MonoBehaviour
@@ -20,7 +21,7 @@ public class BossHealth : MonoBehaviour
             maxBossHP = 300f;
             currentBossHP = maxBossHP;
         }
-        else if(GetComponentInChildren<BossControllerDos>() != null)
+        else if(GetComponent<BossControllerDos>() != null)
         {
             maxBossHP = 1000f;
             currentBossHP = 1000f - dragonNumbers.takenDamage;
@@ -53,8 +54,14 @@ public class BossHealth : MonoBehaviour
 
         healthBar.SetHealth(currentBossHP);
         
-        
-        DamagePopUpText.Instance.ShowDamageNumber(transform.position, damage.ToString());
+        if(GetComponentInChildren<BossController>() != null && GetComponentInChildren<PhotonView>().IsMine)
+        {
+            DamagePopUpText.Instance.ShowDamageNumber(GetComponentInChildren<BossController>().transform.position, damage.ToString());
+        }
+        else if(GetComponent<BossController>() != null && GetComponent<PhotonView>().IsMine)
+        {
+            DamagePopUpText.Instance.ShowDamageNumber(GetComponent<BossControllerDos>().transform.position, damage.ToString());
+        }
 
         if (currentBossHP <= 0)
         {

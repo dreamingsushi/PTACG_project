@@ -4,11 +4,13 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class PlayerSetup : MonoBehaviourPunCallbacks
 {
     
     public CinemachineVirtualCamera playerCamera;
+    public GameObject imageHPUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,9 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             GetComponent<PlayerHealth>().enabled = true;
             GetComponent<PlayerInput>().enabled = true;
             GetComponent<TimeCountDownManager>().enabled = true;
-            GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
+            imageHPUI.GetComponentInParent<Image>().enabled = true;
+            imageHPUI.SetActive(true);
+            //GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
             playerCamera.enabled = true;
         }
         else
@@ -30,7 +34,9 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             GetComponent<PlayerHealth>().enabled = false;
             GetComponent<PlayerInput>().enabled = false;
             GetComponent<TimeCountDownManager>().enabled = false;
-            GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
+            imageHPUI.GetComponentInParent<Image>().enabled = false;
+            imageHPUI.SetActive(false);
+            //GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
             playerCamera.enabled = false;
         }
     }
