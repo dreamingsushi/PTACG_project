@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 10
+  canHitPlayer: 0
 --- !u!65 &4223632083692524196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 3944589481396111825}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

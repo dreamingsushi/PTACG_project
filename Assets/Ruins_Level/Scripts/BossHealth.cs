@@ -15,12 +15,12 @@ public class BossHealth : MonoBehaviour
 
     void Awake()
     {
-        if(GetComponent<BossController>() != null)
+        if(GetComponentInChildren<BossController>() != null)
         {
             maxBossHP = 300f;
             currentBossHP = maxBossHP;
         }
-        else if(GetComponent<BossControllerDos>() != null)
+        else if(GetComponentInChildren<BossControllerDos>() != null)
         {
             maxBossHP = 1000f;
             currentBossHP = 1000f - dragonNumbers.takenDamage;
@@ -46,6 +46,7 @@ public class BossHealth : MonoBehaviour
         effectiveDamage = Mathf.RoundToInt(effectiveDamage * (1 - damageReductionPercent));
 
         currentBossHP -= effectiveDamage;
+        dragonNumbers.takenDamage += effectiveDamage;
         OnHealthChanged?.Invoke(currentBossHP);
 
         

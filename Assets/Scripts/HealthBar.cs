@@ -17,6 +17,10 @@ public class HealthBar : MonoBehaviour
     private float maxHealth = 100f;
     private Coroutine delayedBarRoutine;
 
+    void Start()
+    {
+        
+    }
     public void SetMaxHealth(float maxHealthValue)
     {
         maxHealth = maxHealthValue;

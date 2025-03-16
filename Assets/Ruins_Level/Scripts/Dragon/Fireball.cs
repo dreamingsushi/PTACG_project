@@ -31,7 +31,7 @@ public class Fireball : MonoBehaviour
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)dragonNumbers.fireballDamage, this.transform.position);
             dragonPowers.dragonMeter ++;
 
-            Destroy(other.gameObject);
+            
         }
         
 

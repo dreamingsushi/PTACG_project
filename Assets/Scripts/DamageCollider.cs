@@ -9,21 +9,21 @@ public class DamageCollider : MonoBehaviour
 
     private void ApplyDamage(Collider other)
     {
-        EnemyHealth health = other.GetComponent<EnemyHealth>();
+        BossHealth health = other.GetComponentInParent<BossHealth>();
         if (health != null)
         {
             Vector3 hitDirection = (other.transform.position - transform.position).normalized;
-            health.TakeDamage(damageAmount, hitDirection);
+            health.TakeDamage((float)damageAmount);
         }
     }
 
     private void ApplyDamage(Collision collision)
     {
-        EnemyHealth health = collision.gameObject.GetComponent<EnemyHealth>();
+        BossHealth health = collision.gameObject.GetComponentInParent<BossHealth>();
         if (health != null)
         {
             Vector3 hitDirection = collision.contacts[0].normal;
-            health.TakeDamage(damageAmount, hitDirection);
+            health.TakeDamage((float)damageAmount);
         }
     }
 

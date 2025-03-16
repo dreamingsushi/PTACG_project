@@ -17,7 +17,8 @@ public class DragonPowers : MonoBehaviour
     public int dragonMeter;
     public GameObject evolveText;
     
-
+    public int evolveRequirement = 2;
+    private bool canEvolve;
     private Animator animator;
     private GameStartManager gameManager;
     
@@ -32,6 +33,10 @@ public class DragonPowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(dragonMeter >= evolveRequirement)
+        {
+            canEvolve = true;
+        }
         if(Input.GetKeyDown(KeyCode.F)){
             FireBallAttack();
         }
@@ -46,14 +51,14 @@ public class DragonPowers : MonoBehaviour
             ClawAttack2();
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && dragonMeter >=12)
+        if(Input.GetKeyDown(KeyCode.R) && canEvolve)
         {
             evolveText.SetActive(false);
             ChangePhase();
             
         }
 
-        if(dragonMeter >=12)
+        if(canEvolve)
         {
             evolveText.SetActive(true);
         }

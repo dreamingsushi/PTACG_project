@@ -20,7 +20,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             GetComponent<PlayerHealth>().enabled = true;
             GetComponent<PlayerInput>().enabled = true;
             GetComponent<TimeCountDownManager>().enabled = true;
-            GetComponentInChildren<HealthBar>().enabled = true;
+            GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
             playerCamera.enabled = true;
         }
         else
@@ -30,7 +30,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             GetComponent<PlayerHealth>().enabled = false;
             GetComponent<PlayerInput>().enabled = false;
             GetComponent<TimeCountDownManager>().enabled = false;
-            GetComponentInChildren<HealthBar>().enabled = false;
+            GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
             playerCamera.enabled = false;
         }
     }

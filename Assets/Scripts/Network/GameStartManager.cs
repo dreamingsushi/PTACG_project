@@ -114,7 +114,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     public void BossNextPhase()
     {
-        Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1], bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
+        PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
     }
 
 }

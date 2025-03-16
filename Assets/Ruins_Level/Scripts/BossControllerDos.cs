@@ -1,4 +1,5 @@
 
+using Photon.Pun;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,10 +11,17 @@ public class BossControllerDos : MonoBehaviour
     public float sens = 1f;
     public float maxAngle;
     public float minAngle;
-
+    public GameObject healthBar;
     private bool cursorLocked;
     private Vector3 relativeVector;
-    
+
+    void OnEnable()
+    {
+        if(GetComponent<PhotonView>().IsMine)
+        {
+            healthBar.SetActive(true);
+        }
+    }
 
     private void Update() {
         mouseLook();
@@ -23,10 +31,10 @@ public class BossControllerDos : MonoBehaviour
 
     private void mouseLook()
     {
-        if(Input.GetKeyDown(KeyCode.J)) cursorLocked = cursorLocked ? false : true;
-        if(!cursorLocked)return;
+        // if(Input.GetKeyDown(KeyCode.J)) cursorLocked = cursorLocked ? false : true;
+        // if(!cursorLocked)return;
 
-        Cursor.lockState = cursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
 
         relativeVector = transform.InverseTransformPoint(focusPoint.transform.position);
         relativeVector /= relativeVector.magnitude;

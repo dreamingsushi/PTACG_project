@@ -7595,6 +7595,7 @@ MonoBehaviour:
   sens: 0.3
   maxAngle: 212.5
   minAngle: 87.2
+  healthBar: {fileID: 0}
 --- !u!114 &3372303055204959793
 MonoBehaviour:
   m_ObjectHideFlags: 0
