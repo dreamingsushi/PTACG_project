@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageCollider : MonoBehaviour
 {
     public int damageAmount = 10;
+    public bool canHitPlayer;
 
     private void ApplyDamage(Collider other)
     {
@@ -26,13 +27,29 @@ public class DamageCollider : MonoBehaviour
         }
     }
 
+    private void ApplyDamageToPlayer(Collider collider)
+    {
+        PlayerHealth playerHealth = collider.gameObject.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            Vector3 hitDirection = (collider.transform.position - transform.position).normalized;
+            playerHealth.TakeDamage(damageAmount, hitDirection);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         ApplyDamage(other);
+
+        if (canHitPlayer)
+        {
+            ApplyDamageToPlayer(other);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         ApplyDamage(collision);
+
     }
 }

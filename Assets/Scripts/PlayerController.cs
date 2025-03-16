@@ -147,7 +147,13 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
+    public void OnOption(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            
+        }
+    }
 
     private void OnEnable()
     {
