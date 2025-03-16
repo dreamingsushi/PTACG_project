@@ -9,6 +9,7 @@ public class TimeCountDownManager : MonoBehaviourPun
 {
     private TMP_Text timeUIText;
     private float timeToStartRace = 2.5f;
+    
 
     private void Awake()
     {
@@ -18,7 +19,15 @@ public class TimeCountDownManager : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PlayerController>().enabled = false;
+        if(GetComponent<PlayerSetup>() != null)
+        {
+            GetComponent<PlayerController>().enabled = false;
+        }
+        else if(GetComponent<BossSetup>() != null)
+        {
+            GetComponentInChildren<BossController>().enabled = false;
+        }
+        
         timeUIText.enabled = true;
     }
 
@@ -57,7 +66,15 @@ public class TimeCountDownManager : MonoBehaviourPun
     [PunRPC]
     public void StartTheGame()
     {
-        GetComponent<PlayerController>().enabled = true;
+        if(GetComponent<PlayerSetup>() != null)
+        {
+            GetComponent<PlayerController>().enabled = true;
+        }
+        else if(GetComponent<BossSetup>() != null)
+        {
+            GetComponentInChildren<BossController>().enabled = true;
+        }
+        GameStartManager.instance.canStartGame = true;
         this.enabled = false;
     }
 }

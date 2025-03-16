@@ -87,10 +87,6 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
             }           
     }
 
-    [PunRPC]
-    public void ReadyorNot(bool playerReady)
-    {
-        PlayerReadyImage.enabled = playerReady;
-    }
+    
 
 }

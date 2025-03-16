@@ -6,7 +6,7 @@ using TMPro;
 using System.Linq;
 using Unity.Mathematics;
 
-public class GameStartManager : MonoBehaviour
+public class GameStartManager : MonoBehaviourPunCallbacks
 {
     public GameObject[] PlayerPrefabs;   
     public Transform[] InstantiatePositions; 
@@ -15,6 +15,9 @@ public class GameStartManager : MonoBehaviour
 
     public TMP_Text TimeUIText;
     public static GameStartManager instance = null;
+    public bool canStartGame;
+    public float timeLeft = 600f;
+    public TMP_Text timerDown;
 
     void Awake()
     {
@@ -25,11 +28,11 @@ public class GameStartManager : MonoBehaviour
         }
 
         //If not
-        // else if (instance != this)
-        // {
-        //     //Then, destroy this. This enforces our singleton pattern, meaning that there can only ever be one instance of a GameManager
-        //     Destroy(gameObject);
-        // }
+        else if (instance != this)
+        {
+            //Then, destroy this. This enforces our singleton pattern, meaning that there can only ever be one instance of a GameManager
+            Destroy(gameObject);
+        }
 
         //Don't destroy when reloading scene
         DontDestroyOnLoad(gameObject);
@@ -53,7 +56,8 @@ public class GameStartManager : MonoBehaviour
 
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
                 }
-                else
+
+                if((int) playerSelectionNumber == 3)
                 {
                     Debug.Log((int)playerSelectionNumber);
                     Vector3 instantiatePosition = bossInstantiatePosition.position;
@@ -68,9 +72,41 @@ public class GameStartManager : MonoBehaviour
        
     }
 
+    void Update()
+    {
+        if(PhotonNetwork.IsMasterClient)
+        {
+            photonView.RPC("TimerDownForGame", RpcTarget.AllBuffered);
+        }
+    }
+
+
+    [PunRPC]
+    public void TimerDownForGame()
+    {
+        if(!canStartGame)
+        {
+            return;
+        }
+        else
+        {
+            timeLeft -= Time.deltaTime;
+            float minutes = Mathf.FloorToInt(timeLeft / 60);
+            float seconds = Mathf.FloorToInt(timeLeft % 60);
+
+            if(timeLeft < 600/2)
+            {
+                Debug.Log("time left is halved");
+                
+            }
+            timerDown.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            
+        }   
+    }
+
     public void BossNextPhase()
     {
-        Instantiate(PlayerPrefabs[PlayerPrefabs.Length], bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
+        Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1], bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
     }
 
 }

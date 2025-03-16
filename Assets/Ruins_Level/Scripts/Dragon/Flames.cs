@@ -50,6 +50,6 @@ public class Flames : MonoBehaviour
 
     private void DisappearAfterTime()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject.transform.parent.gameObject);
     }
 }

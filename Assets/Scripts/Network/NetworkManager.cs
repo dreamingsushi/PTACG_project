@@ -48,6 +48,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public List<TMP_Text> voteTexts;
     public TMP_Text timerText;
     private List<int> voteCounts = new List<int>();
+    private bool isMapSelecting;
 
 
     // public DeathRacePlayer[] DeathRacePlayers;
@@ -67,6 +68,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        isMapSelecting = false;
         ActivatePanel(LoginUIPanel.name);
         PhotonNetwork.AutomaticallySyncScene = true; 
         foreach(TMP_Text t in voteTexts)
@@ -78,10 +80,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        if(MapSelectUIRoomPanel.activeInHierarchy)
+        if(MapSelectUIRoomPanel.activeInHierarchy && PhotonNetwork.IsMasterClient && isMapSelecting)
         {
             photonView.RPC("TimerDownForMapSelect", RpcTarget.AllBuffered);
             
+            photonView.RPC("SyncVotes", RpcTarget.AllBuffered);
         }
     }
 
@@ -401,6 +404,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void GoToMapSelect()
     {
         photonView.RPC("ActivatePanel", RpcTarget.AllBuffered, "MapSelectUIRoomPanel");
+        isMapSelecting = true;
     }
     
 
@@ -534,7 +538,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 break;
         }
     
-        photonView.RPC("SyncVotes", RpcTarget.AllBuffered);
+        
     }
 
     
@@ -587,6 +591,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             timeLeft -= Time.deltaTime;
             if(timeLeft < 0)
             {
+                isMapSelecting = false;
                 highestVotes = voteCounts[0];
                 highestVotedMap = 0;
 

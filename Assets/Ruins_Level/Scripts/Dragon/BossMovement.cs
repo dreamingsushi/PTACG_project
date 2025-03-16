@@ -93,12 +93,13 @@ public class BossMovement : MonoBehaviour
         rb.AddForce(gravityForce, ForceMode.Acceleration);
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionStay(Collision other) {
         if(other.gameObject.layer == 6)
         {
             isGrounded = true;
         }
     }
+    
 
     private void OnCollisionExit(Collision other) {
         if(other.gameObject.layer == 6 && isGrounded)

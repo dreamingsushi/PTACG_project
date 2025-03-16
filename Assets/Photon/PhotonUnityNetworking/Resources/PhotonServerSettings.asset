@@ -51,6 +51,7 @@ MonoBehaviour:
   - SetPlayerReady
   - ReadyorNot
   - StartTheGame
+  - TimerDownForGame
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
