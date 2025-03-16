@@ -28,11 +28,11 @@ public class TideHeightManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            TurnToLowTide();
+            ResetToOriginalHeight();
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            TurnToLowTide();
+            TurnToHighTide();
         }
 
     }
