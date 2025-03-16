@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -16,7 +17,8 @@ public class DragonPowers : MonoBehaviour
     public int dragonMeter;
     public GameObject evolveText;
     
-
+    public int evolveRequirement = 2;
+    private bool canEvolve;
     private Animator animator;
     private GameStartManager gameManager;
     
@@ -31,18 +33,32 @@ public class DragonPowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(dragonMeter >= evolveRequirement)
+        {
+            canEvolve = true;
+        }
         if(Input.GetKeyDown(KeyCode.F)){
             FireBallAttack();
         }
 
-        if(Input.GetKeyDown(KeyCode.P) && dragonMeter >=12)
+        if(Input.GetMouseButtonDown(0))
+        {
+            ClawAttack();
+        }
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            ClawAttack2();
+        }
+
+        if(Input.GetKeyDown(KeyCode.R) && canEvolve)
         {
             evolveText.SetActive(false);
             ChangePhase();
             
         }
 
-        if(dragonMeter >=12)
+        if(canEvolve)
         {
             evolveText.SetActive(true);
         }
@@ -60,8 +76,8 @@ public class DragonPowers : MonoBehaviour
         
         Quaternion fireballAngle = Quaternion.Euler(-focusPointCamera.transform.rotation.eulerAngles.x,focusPointCamera.transform.parent.rotation.eulerAngles.y - 180, fireball.transform.rotation.eulerAngles.z);
 
-
-        GameObject fireProjectile = Instantiate(fireball, _firePoint.position, fireballAngle);
+        PhotonNetwork.Instantiate(fireball.name, _firePoint.position, fireballAngle);
+        // GameObject fireProjectile = Instantiate(fireball, _firePoint.position, fireballAngle);
         //fireProjectile.transform.up = _hit.normal;
     }
 
@@ -71,5 +87,15 @@ public class DragonPowers : MonoBehaviour
         animator.SetTrigger("Phase");
         cutscenePhase3.Play();
         this.gameObject.GetComponentInChildren<BossMovement>().enabled = false;
+    }
+
+    public void ClawAttack()
+    {
+        animator.SetTrigger("swipe1");
+    }
+
+    public void ClawAttack2()
+    {
+        animator.SetTrigger("swipe2");
     }
 }

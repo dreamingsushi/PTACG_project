@@ -44,6 +44,16 @@ MonoBehaviour:
   - TimerDownForMapSelect
   - SetTime
   - StartTheRace
+  - JoinBossTeam
+  - JoinWarriorTeam
+  - ActivatePanel
+  - ChangeClassName
+  - SetPlayerReady
+  - ReadyorNot
+  - StartTheGame
+  - TimerDownForGame
+  - SyncTimerForMapSelect
+  - SyncCountdownTimer
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

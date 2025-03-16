@@ -7,6 +7,7 @@ TagManager:
   - Power
   - Dragon
   - IcyGround
+  - Water
   layers:
   - Default
   - TransparentFX

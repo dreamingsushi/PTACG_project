@@ -9,6 +9,8 @@ public class TimeCountDownManager : MonoBehaviourPun
 {
     private TMP_Text timeUIText;
     private float timeToStartRace = 2.5f;
+    private bool timerDone;
+    
 
     private void Awake()
     {
@@ -18,7 +20,17 @@ public class TimeCountDownManager : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PlayerController>().enabled = false;
+        if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
+        {
+            GetComponent<PlayerController>().enabled = false;
+        }
+
+        if(GetComponent<BossSetup>() != null && photonView.IsMine)
+        {
+            GetComponent<BossController>().enabled = false;
+        }
+        
+        timeUIText.enabled = true;
     }
 
     // Update is called once per frame
@@ -34,9 +46,12 @@ public class TimeCountDownManager : MonoBehaviourPun
             }
             else if (timeToStartRace < 0.0f)
             {
-                photonView.RPC("StartTheRace", RpcTarget.AllBuffered);
+                timerDone = true;
+                photonView.RPC("StartTheGame", RpcTarget.AllBuffered, timerDone);
             }
         }
+
+        
     }
  
     [PunRPC]
@@ -54,9 +69,18 @@ public class TimeCountDownManager : MonoBehaviourPun
     }
 
     [PunRPC]
-    public void StartTheRace()
+    public void StartTheGame(bool canstart)
     {
-        GetComponent<PlayerController>().enabled = true;
+        if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
+        {
+            GetComponent<PlayerController>().enabled = true;
+        }
+
+        if(GetComponent<BossSetup>() != null && photonView.IsMine)
+        {
+            GetComponent<BossController>().enabled = true;
+        }
+        GameStartManager.instance.canStartGame = canstart;
         this.enabled = false;
     }
 }

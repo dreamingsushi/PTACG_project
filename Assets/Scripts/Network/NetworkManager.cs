@@ -48,6 +48,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public List<TMP_Text> voteTexts;
     public TMP_Text timerText;
     private List<int> voteCounts = new List<int>();
+    private bool isMapSelecting;
 
 
     // public DeathRacePlayer[] DeathRacePlayers;
@@ -67,21 +68,26 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        isMapSelecting = false;
         ActivatePanel(LoginUIPanel.name);
         PhotonNetwork.AutomaticallySyncScene = true; 
         foreach(TMP_Text t in voteTexts)
         {
             voteCounts.Add(0);         
         }
-        Debug.Log(voteCounts.Count);
+    
     }
 
     void Update()
     {
-        if(MapSelectUIRoomPanel.activeInHierarchy)
+        
+        if(MapSelectUIRoomPanel.activeInHierarchy && PhotonNetwork.LocalPlayer.IsMasterClient && isMapSelecting)
         {
-            photonView.RPC("TimerDownForMapSelect", RpcTarget.AllBuffered);
-            
+            TimerDownForMapSelect();
+        }
+        if(PhotonNetwork.LocalPlayer.IsMasterClient)
+        {
+            photonView.RPC("SyncTimerForMapSelect", RpcTarget.AllBuffered, timeLeft.ToString("F1"));
         }
     }
 
@@ -212,8 +218,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
  
     public override void OnJoinedRoom()
     {
-        characterSelectionPanel.SetActive(false);
-        bossSelectionPanel.SetActive(false);
+        
         Debug.Log(PhotonNetwork.LocalPlayer.NickName + " joined to "+ PhotonNetwork.CurrentRoom.Name+ "Player count:"+   
                    PhotonNetwork.CurrentRoom.PlayerCount);
 
@@ -261,21 +266,27 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             }
             
 
-            // foreach (Player player in PhotonNetwork.PlayerList)
-            // {
-            //     GameObject playerListGameObject = Instantiate(PlayerListPrefab);
-            //     playerListGameObject.transform.SetParent(PlayerListContent.transform);
-            //     playerListGameObject.transform.localScale = Vector3.one;
-            //     playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(player.ActorNumber, player.NickName);
+            foreach (Player player in PhotonNetwork.PlayerList)
+            {
+                
+                        GameObject playerListGameObject = Instantiate(PlayerListPrefab);
+                        playerListGameObject.transform.SetParent(PlayerListContent.transform);
+                        playerListGameObject.transform.localScale = Vector3.one;
+                        playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(player.ActorNumber, player.NickName);
+                        playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
+                        object isPlayerReady;
+                        if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady))
+                        {
+                            playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
+                            
 
-            //     object isPlayerReady;
-            //     if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady))
-            //     {
-		    //         playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
-            //     }
+                        }
 
-            //     playerListGameObjects.Add(player.ActorNumber, playerListGameObject);
-            // }              
+                        playerListGameObjects.Add(player.ActorNumber, playerListGameObject);
+                        Debug.Log(playerListGameObjects.Count);
+                  
+                
+            }              
         
         StartGameButton.SetActive(false);     
     }
@@ -290,8 +301,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameObject playerListGameObject = Instantiate(PlayerListPrefab);
         playerListGameObject.transform.SetParent(PlayerListContent.transform);
         playerListGameObject.transform.localScale = Vector3.one;
-       // playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
-
+        playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
+        playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
         playerListGameObjects.Add(newPlayer.ActorNumber, playerListGameObject);
         StartGameButton.SetActive(CheckPlayersReady());
     }
@@ -343,17 +354,17 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 roomName = "Room" + Random.Range(1000, 10000);
             }
             RoomOptions roomOptions = new RoomOptions();
-            roomOptions.MaxPlayers = 3;
-            string[] roomPropsInLobby = { "gm" }; //gm = game mode
+            roomOptions.MaxPlayers = 4;
+            //string[] roomPropsInLobby = { "gm" }; //gm = game mode
 
             //two game modes
             //1. racing = "rc"
             //2. death race = "dr"
 
-            ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
+            // ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
 
-            roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;
-            roomOptions.CustomRoomProperties = customRoomProperties;
+            // roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;
+            // roomOptions.CustomRoomProperties = customRoomProperties;
 
             PhotonNetwork.CreateRoom(roomName, roomOptions);
         }                     
@@ -365,10 +376,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameObject playerListGameObject;
         if (playerListGameObjects.TryGetValue(target.ActorNumber,out playerListGameObject ))
         {
+            playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
             object isPlayerReady;
             if (changedProps.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady ))
             {
                 playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
+                playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
             }
         }  
         StartGameButton.SetActive(CheckPlayersReady());      
@@ -378,6 +391,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #endregion 
 
     #region Public Methods
+    [PunRPC]
     public void ActivatePanel(string panelNameToBeActivated)
     {
         LoginUIPanel.SetActive(LoginUIPanel.name.Equals(panelNameToBeActivated));
@@ -390,76 +404,105 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MapSelectUIRoomPanel.SetActive(MapSelectUIRoomPanel.name.Equals(panelNameToBeActivated));
     }
 
+    public void GoToMapSelect()
+    {
+        photonView.RPC("ActivatePanel", RpcTarget.AllBuffered, "MapSelectUIRoomPanel");
+        isMapSelecting = true;
+    }
+    
+
     public void SetGameMode(string _gameMode)
     {
         GameMode = _gameMode;
     }
 
+    
     public void JoinWarriorTeam()
     {
-        foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
-        {
-            if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
-            {
-                playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
-                Destroy(playerObj.gameObject);
-            }
-        }
-        lockedinButton.GetComponent<Image>().enabled = true;
-        lockedinButton.GetComponent<Button>().enabled = true;
-        lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
-        bossSelectionPanel.SetActive(false);
-        GameObject playerListedGameobject = Instantiate(PlayerListPrefab);
-        playerListedGameobject.transform.SetParent(PlayerListContent.transform);
-        playerListedGameobject.transform.localScale = Vector3.one;
-        playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
-        joinWarriorButton.transform.SetAsLastSibling();
-        characterSelectionPanel.SetActive(true);
-        playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
-        this.GetComponent<PlayerSelection>().playerSelectionNumber = 0;
-        this.GetComponent<PlayerSelection>().ActivatePlayer(0);
-
-        if(PlayerListContent.transform.childCount > 4)
-        {
-            joinWarriorButton.SetActive(false);
-        }
-
-        if(BossListContent.transform.childCount != 1)
-        {
-            joinBossButton.SetActive(true);
-        }
-
         
+            foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
+            {
+                if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
+                {
+                    playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
+                    Destroy(playerObj.gameObject);
+                }
+            }
+            lockedinButton.GetComponent<Image>().enabled = true;
+            lockedinButton.GetComponent<Button>().enabled = true;
+            lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
+            bossSelectionPanel.SetActive(false);
+
+
+            GameObject playerListedGameobject = PhotonNetwork.Instantiate("PlayersInLobbyPrefab", PlayerListContent.transform.position, Quaternion.identity);
+            
+            playerListedGameobject.transform.SetParent(PlayerListContent.transform, true);
+            playerListedGameobject.transform.localScale = Vector3.one;
+            playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
+            joinWarriorButton.transform.SetAsLastSibling();
+            characterSelectionPanel.SetActive(true);
+            playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
+
+
+            this.GetComponent<PlayerSelection>().playerSelectionNumber = 0;
+            this.GetComponent<PlayerSelection>().ActivatePlayer(0);
+            
+        
+
+            if(PlayerListContent.transform.childCount > 4)
+            {
+                joinWarriorButton.SetActive(false);
+            }
+
+            if(BossListContent.transform.childCount != 1)
+            {
+                joinBossButton.SetActive(true);
+            }
+          
     }
 
+    
     public void JoinBossTeam()
     {
-        foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
-        {
-            if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
+        
+            foreach(PlayerListEntryInitializer playerObj in FindObjectsOfType<PlayerListEntryInitializer>())
             {
-                playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
+                if(playerObj.PlayerNameText.text == PhotonNetwork.LocalPlayer.NickName)
+                {
+                    playerListGameObjects.Remove(PhotonNetwork.LocalPlayer.ActorNumber);
 
-                Destroy(playerObj.gameObject);
-            }     
-        }
-        lockedinButton.GetComponent<Image>().enabled = true;
-        lockedinButton.GetComponent<Button>().enabled = true;
-        lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
-        characterSelectionPanel.SetActive(false);
-        GameObject playerListedGameobject = Instantiate(PlayerListPrefab);
-        playerListedGameobject.transform.SetParent(BossListContent.transform);
-        playerListedGameobject.transform.localScale = Vector3.one;
-        playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
-        joinBossButton.SetActive(false);
-        bossSelectionPanel.SetActive(true);
-        playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
-        
-        this.GetComponent<PlayerSelection>().playerSelectionNumber = 3;
-        
+                    Destroy(playerObj.gameObject);
+                }     
+            }
+            lockedinButton.GetComponent<Image>().enabled = true;
+            lockedinButton.GetComponent<Button>().enabled = true;
+            lockedinButton.transform.GetChild(0).gameObject.SetActive(true);
+            characterSelectionPanel.SetActive(false);
+            GameObject playerListedGameobject = PhotonNetwork.Instantiate("PlayersInLobbyPrefab", PlayerListContent.transform.position, Quaternion.identity);
+            PhotonView photonView = playerListedGameobject.GetComponent<PhotonView>();
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
 
+            playerListedGameobject.transform.SetParent(BossListContent.transform, true);   
+            playerListedGameobject.transform.localScale = Vector3.one;
+            playerListedGameobject.GetComponent<PlayerListEntryInitializer>().Initialize(PhotonNetwork.LocalPlayer.ActorNumber, PhotonNetwork.LocalPlayer.NickName);
+            joinBossButton.SetActive(false);
+            bossSelectionPanel.SetActive(true);
+            playerListGameObjects.Add(PhotonNetwork.LocalPlayer.ActorNumber, playerListedGameobject); 
+            
+            this.GetComponent<PlayerSelection>().playerSelectionNumber = 3;
         
+    
     }
+
+    // public void SyncWarriors()
+    // {
+    //     photonView.RPC("JoinWarriorTeam", RpcTarget.AllBuffered);
+    // }
+
+    // public void SyncBoss()
+    // {
+    //     photonView.RPC("JoinBossTeam", RpcTarget.AllBuffered);
+    // }
 
     public void SelectMap(string map)
     {
@@ -468,10 +511,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             mapSelection[i].SetActive(true);
             
-            if(voteCounts[i] > 0)
-            {
-                voteCounts[i] --;
-            }            
+                       
             
         }
 
@@ -479,26 +519,81 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             case "Cave":
                 voteCounts[0]++;
-                mapSelection[0].SetActive(false);
+                voteCounts[1]--;
+                voteCounts[2]--;
+                voteCounts[3]--;
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[0].SetActive(false);
+                    }
+                }
+                
                 break;
             
             case "Beach":
                 voteCounts[1]++;
-                mapSelection[1].SetActive(false);
+                voteCounts[0]--;
+                voteCounts[2]--;
+                voteCounts[3]--;
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[1].SetActive(false);
+                    }
+                }
+                
                 break;
             
             case "Candy":
                 voteCounts[2]++;
-                mapSelection[2].SetActive(false);
+                voteCounts[1]--;
+                voteCounts[0]--;
+                voteCounts[3]--;
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[2].SetActive(false);
+                    }
+                }
+                
                 break;
 
             case "Ruins":
                 voteCounts[3]++;
-                mapSelection[3].SetActive(false);
+                voteCounts[1]--;
+                voteCounts[2]--;
+                voteCounts[0]--;
+                Debug.Log(voteCounts[3]);
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        
+                        mapSelection[3].SetActive(false);
+                    }
+                }
+                
+                
                 break;
         }
-    
-        photonView.RPC("SyncVotes", RpcTarget.AllBuffered);
+        for(int j = 0; j<voteCounts.Count; j++)
+        {
+            if(voteCounts[j] <0)
+            {
+                voteCounts[j] = 0;
+            }
+            photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+
+        }
+        
     }
 
     
@@ -531,15 +626,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void SyncVotes()
+    public void SyncVotes(int index, int voteCountNum)
     {
-        for(int i = 0; i<voteTexts.Count; i++)
-        {
-            voteTexts[i].text = voteCounts[i].ToString();
-        }
+        voteCounts[index] = voteCountNum;
+        voteTexts[index].text = voteCountNum.ToString();
+        
+            
+        
     }
 
-    [PunRPC]
+    
     public void TimerDownForMapSelect()
     {
         if(!MapSelectUIRoomPanel.activeInHierarchy)
@@ -551,6 +647,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             timeLeft -= Time.deltaTime;
             if(timeLeft < 0)
             {
+                isMapSelecting = false;
                 highestVotes = voteCounts[0];
                 highestVotedMap = 0;
 
@@ -577,6 +674,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }   
     }
 
+    [PunRPC]
+    public void SyncTimerForMapSelect(string timerLeftText)
+    {
+        timerText.text = timerLeftText;
+    }
+
     private IEnumerator SelectMapStartGame()
     {
         if(timeLeft < 0)
@@ -592,7 +695,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 case 1:
                     timerText.text = "Voted Map: Beach";
                     yield return new WaitForSeconds(4f);
-                    SceneManager.LoadScene("Beach");
+                    Debug.Log("Go to Beach Scene");
+                    //SceneManager.LoadScene("Beach");
                     break; 
                 case 2:
                     timerText.text = "Voted Map: Candy";

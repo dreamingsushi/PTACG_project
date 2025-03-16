@@ -6,7 +6,7 @@ using TMPro;
 using System.Linq;
 using Unity.Mathematics;
 
-public class GameStartManager : MonoBehaviour
+public class GameStartManager : MonoBehaviourPunCallbacks
 {
     public GameObject[] PlayerPrefabs;   
     public Transform[] InstantiatePositions; 
@@ -15,6 +15,10 @@ public class GameStartManager : MonoBehaviour
 
     public TMP_Text TimeUIText;
     public static GameStartManager instance = null;
+    public bool canStartGame;
+    public float timeLeft = 600f;
+    public TMP_Text timerDown;
+    private string currentTimer;
 
     void Awake()
     {
@@ -53,7 +57,7 @@ public class GameStartManager : MonoBehaviour
 
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
                 }
-                else
+                else if((int) playerSelectionNumber == 3)
                 {
                     Debug.Log((int)playerSelectionNumber);
                     Vector3 instantiatePosition = bossInstantiatePosition.position;
@@ -68,9 +72,49 @@ public class GameStartManager : MonoBehaviour
        
     }
 
+    void Update()
+    {
+        
+        if(PhotonNetwork.LocalPlayer.IsMasterClient)
+        {
+            TimerDownForGame();
+            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, currentTimer);
+        }
+        
+    }
+
+
+    public void TimerDownForGame()
+    {
+        if(!canStartGame)
+        {
+            return;
+        }
+        else
+        {
+            timeLeft -= Time.deltaTime;
+            float minutes = Mathf.FloorToInt(timeLeft / 60);
+            float seconds = Mathf.FloorToInt(timeLeft % 60);
+
+            if(timeLeft < 600/2)
+            {
+                Debug.Log("time left is halved");
+                
+            }
+            currentTimer = string.Format("{0:00}:{1:00}", minutes, seconds);
+            
+        }   
+    }
+
+    [PunRPC]
+    public void SyncCountdownTimer(string timer)
+    {
+        timerDown.text = timer;
+    }
+
     public void BossNextPhase()
     {
-        Instantiate(PlayerPrefabs[PlayerPrefabs.Length], bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
+        PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
     }
 
 }
