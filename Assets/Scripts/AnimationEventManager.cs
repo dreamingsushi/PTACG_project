@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class AnimationEventManager : MonoBehaviour
 {
+    public PlayerController playerController;
     public void MagicAttack()
     {
-        PlayerController.Instance.Shoot();
+        playerController.Shoot();
     }
 
     public void SupportAttack()
     {
-        PlayerController.Instance.Shoot();
+        playerController.Shoot();
     }
 }

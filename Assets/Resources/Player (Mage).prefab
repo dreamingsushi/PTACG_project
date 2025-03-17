@@ -5907,6 +5907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dda109495aa1c547be14b631c6ce6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 597832666997368370}
 --- !u!114 &3089697901060418117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5952,6 +5953,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 1
     Name: isDead
+  - Type: 9
+    SynchronizeType: 0
+    Name: Respawn
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0

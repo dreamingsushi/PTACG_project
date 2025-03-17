@@ -6,6 +6,7 @@ using Cinemachine;
 using Unity.VisualScripting;
 // using UnityEditor.Rendering.LookDev;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class PlayerController : MonoBehaviour
 {
@@ -90,7 +91,6 @@ public class PlayerController : MonoBehaviour
     private PlayerInputs inputActions;
     // public event Action OnJumpEvent;
     // public event Action OnAttackEvent;
-    public static PlayerController Instance;
     
     public void Shoot()
     {
@@ -218,7 +218,6 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
         inputActions = new PlayerInputs();
         controller = GetComponent<CharacterController>();
         cameraManager = GetComponent<CameraManager>(); 
