@@ -71,6 +71,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dodge"",
+                    ""type"": ""Button"",
+                    ""id"": ""29bc1be4-2141-4b56-9b47-7fe01bca410c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -227,6 +236,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Options"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e08c9dba-2a74-41a9-a3d7-0e7df675fa69"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dodge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -240,6 +260,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Special = m_Player.FindAction("Special", throwIfNotFound: true);
         m_Player_Options = m_Player.FindAction("Options", throwIfNotFound: true);
+        m_Player_Dodge = m_Player.FindAction("Dodge", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -306,6 +327,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Special;
     private readonly InputAction m_Player_Options;
+    private readonly InputAction m_Player_Dodge;
     public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
@@ -315,6 +337,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Special => m_Wrapper.m_Player_Special;
         public InputAction @Options => m_Wrapper.m_Player_Options;
+        public InputAction @Dodge => m_Wrapper.m_Player_Dodge;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -339,6 +362,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Options.started += instance.OnOptions;
             @Options.performed += instance.OnOptions;
             @Options.canceled += instance.OnOptions;
+            @Dodge.started += instance.OnDodge;
+            @Dodge.performed += instance.OnDodge;
+            @Dodge.canceled += instance.OnDodge;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -358,6 +384,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Options.started -= instance.OnOptions;
             @Options.performed -= instance.OnOptions;
             @Options.canceled -= instance.OnOptions;
+            @Dodge.started -= instance.OnDodge;
+            @Dodge.performed -= instance.OnDodge;
+            @Dodge.canceled -= instance.OnDodge;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -382,5 +411,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnSpecial(InputAction.CallbackContext context);
         void OnOptions(InputAction.CallbackContext context);
+        void OnDodge(InputAction.CallbackContext context);
     }
 }

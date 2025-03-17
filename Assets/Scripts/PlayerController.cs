@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using Cinemachine;
+using Unity.VisualScripting;
+using UnityEditor.Rendering.LookDev;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,15 +33,35 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack Settings")]
     public float attackDuration = 0.2f;
-
+    
+    [Header("Knight Settings")]
+    [SerializeField] private float sprintSpeedMultiplier = 2f;
+    [SerializeField] private float sprintDuration = 3f;
+    [SerializeField] private float sprintCooldown = 10f;
+    private float normalSpeed;
+    private bool isSprinting = false;
+    private bool canSprint = true;
+    [SerializeField] private Image knightShift_CD;
+    [SerializeField] private Image knightM1_CD;
+    [SerializeField] private GameObject speedEffect;
     [Header("Mage Settings")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] public Transform staffTip;
+    private bool canTeleport = true;
+    [SerializeField] private float teleportCooldown = 1.5f;
+    [SerializeField] private float teleportDistance = 5f;
+    [SerializeField] private Image mageShift_CD;
+    [SerializeField] private Image mageM1_CD;
 
     [Header("Support Settings")]
     [SerializeField] private GameObject supportProjectilePrefab;
     [SerializeField] public Transform supportHand;
     [SerializeField] private float projectileSpeed = 20f;
+    [SerializeField] private Image supportShift_CD;
+    [SerializeField] private Image supportM1_CD;
+    [SerializeField] private GameObject healingCircle;
+    [SerializeField] private bool canPlaceHealingCircle = true;
+    [SerializeField] public Transform supportLeg;
 
     [Header ("Zhe King Ice Map Exclusive Settings")]
     public bool isOnIce;
@@ -61,6 +84,7 @@ public class PlayerController : MonoBehaviour
     public bool isDead;
 
     private CharacterController controller;
+    private CameraManager cameraManager;
     private Vector3 moveDirection;
     private Vector3 velocity;
     private PlayerInputs inputActions;
@@ -73,7 +97,7 @@ public class PlayerController : MonoBehaviour
         if (currentClass == PlayerClass.Mage)
         {
             if (projectilePrefab == null || staffTip == null) return;
-            Vector3 shootDirection = CameraManager.Instance.GetAimDirection();
+            Vector3 shootDirection = cameraManager.GetAimDirection();
             GameObject projectile = Instantiate(projectilePrefab, staffTip.position, Quaternion.LookRotation(shootDirection));
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             if (rb != null)
@@ -84,7 +108,7 @@ public class PlayerController : MonoBehaviour
         if (currentClass == PlayerClass.Support)
         {
             if (supportProjectilePrefab == null || supportHand == null) return;
-            Vector3 shootDirection = CameraManager.Instance.GetAimDirection();
+            Vector3 shootDirection = cameraManager.GetAimDirection();
             GameObject projectile = Instantiate(supportProjectilePrefab, supportHand.position, Quaternion.LookRotation(shootDirection));
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             if (rb != null)
@@ -94,7 +118,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -155,6 +178,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnDodge(InputAction.CallbackContext context)
+    {
+        if (context.performed && isAiming && currentClass == PlayerClass.Mage)
+        {
+            TeleportForward();
+        }
+
+        if (context.performed && currentClass == PlayerClass.Knight)
+        {
+            StartCoroutine(Sprint());
+        }
+
+        if (context.performed && currentClass == PlayerClass.Support && canPlaceHealingCircle)
+        {
+            StartCoroutine(PlaceHealingCircle());
+        }
+    }
+
     private void OnEnable()
     {
         inputActions.Player.Enable();
@@ -180,13 +221,14 @@ public class PlayerController : MonoBehaviour
         Instance = this;
         inputActions = new PlayerInputs();
         controller = GetComponent<CharacterController>();
+        cameraManager = GetComponent<CameraManager>(); 
     }
 
     private void Update()
     {
         if (isDead)
         {
-            inputActions.Player.Disable();
+            OnDisable();
             return;
         }
         GroundCheck();
@@ -207,7 +249,6 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
-            // Raycast down to check what type of surface we're on
             if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 1.5f, groundLayer))
             {
                 isOnIce = hit.collider.CompareTag("IcyGround");
@@ -289,17 +330,59 @@ public class PlayerController : MonoBehaviour
     {
         canAttack = false;
         LookInfront();
-
-        if (currentClass == PlayerClass.Mage || currentClass == PlayerClass.Support)
-        {
-            //Shoot();
-        }
-
         StartCoroutine(ResetAttackCooldown());
     }
     private IEnumerator ResetAttackCooldown()
     {
-        yield return new WaitForSeconds(attackDuration);
+        float elapsedTime = 0f;
+
+        if (currentClass == PlayerClass.Knight)
+        {
+            knightM1_CD.fillAmount = 1f;
+        }
+        else if (currentClass == PlayerClass.Mage)
+        {
+            mageM1_CD.fillAmount = 1f;
+        }
+        else if (currentClass == PlayerClass.Support)
+        {
+            supportM1_CD.fillAmount = 1f;
+        }
+
+        while (elapsedTime < attackDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float fillAmount = 1f - (elapsedTime / attackDuration);
+
+            if (currentClass == PlayerClass.Knight)
+            {
+                knightM1_CD.fillAmount = fillAmount;
+            }
+            else if (currentClass == PlayerClass.Mage)
+            {
+                mageM1_CD.fillAmount = fillAmount;
+            }
+            else if (currentClass == PlayerClass.Support)
+            {
+                supportM1_CD.fillAmount = fillAmount;
+            }
+
+            yield return null;
+        }
+
+        if (currentClass == PlayerClass.Knight)
+        {
+            knightM1_CD.fillAmount = 0f;
+        }
+        else if (currentClass == PlayerClass.Mage)
+        {
+            mageM1_CD.fillAmount = 0f;
+        }
+        else if (currentClass == PlayerClass.Support)
+        {
+            supportM1_CD.fillAmount = 0f;
+        }
+
         canAttack = true;
     }
 
@@ -366,18 +449,106 @@ public class PlayerController : MonoBehaviour
     {
         if (moveDirection != Vector3.zero)
         {
-            // Smooth acceleration on ice
             iceVelocity = Vector3.Lerp(iceVelocity, moveDirection * speed, iceAcceleration);
         }
-        // Apply friction when no input is given
         iceVelocity *= iceFriction; 
-
-        // Move using stored ice velocity
         controller.Move(iceVelocity * Time.deltaTime);
     }
-    
 
-    public void ResetJump2() => isJumping = false; // Reset after jumping
-    public void ResetAttack() => isAttacking = false; // Reset after attacking
+    public void Teleport(Vector3 targetPosition)
+    {
+        controller.enabled = false;
+        transform.position = targetPosition;
+        controller.enabled = true;
+    }
+
+    public void TeleportForward()
+    {
+        if (!canTeleport) return;
+
+        Vector3 teleportPosition = transform.position + transform.forward * teleportDistance;
+
+        if (!Physics.Raycast(transform.position, transform.forward, teleportDistance))
+        {
+            controller.enabled = false;
+            transform.position = teleportPosition;
+            controller.enabled = true;
+        }
+        canTeleport = false;
+        StartCoroutine(ResetTeleportCooldown());
+    }
+
+    private IEnumerator ResetTeleportCooldown()
+    {
+        float elapsedTime = 0f;
+        mageShift_CD.fillAmount = 1f;
+
+        while (elapsedTime < teleportCooldown)
+        {
+            elapsedTime += Time.deltaTime;
+            mageShift_CD.fillAmount = 1f - (elapsedTime / teleportCooldown);
+            yield return null;
+        }
+        mageShift_CD.fillAmount = 0f;
+        canTeleport = true;
+    }
+
+    private IEnumerator Sprint()
+    {
+        if (!canSprint || isSprinting) yield break;
+
+        isSprinting = true;
+        canSprint = false;
+        speedEffect.SetActive(true);
+
+        normalSpeed = moveSpeed;
+        moveSpeed *= sprintSpeedMultiplier;
+        knightShift_CD.fillAmount = 1f;
+
+        yield return new WaitForSeconds(sprintDuration);
+        speedEffect.SetActive(false);
+        moveSpeed = normalSpeed;
+        isSprinting = false;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < sprintCooldown)
+        {
+            elapsedTime += Time.deltaTime;
+            knightShift_CD.fillAmount = 1f - (elapsedTime / sprintCooldown);
+            yield return null;
+        }
+
+        knightShift_CD.fillAmount = 0f;
+        canSprint = true;
+    }
+
+    private IEnumerator PlaceHealingCircle()
+    {
+        canPlaceHealingCircle = false;
+
+        GameObject healingCircleInstance = Instantiate(healingCircle, supportLeg.position, Quaternion.identity);
+
+        yield return new WaitForSeconds(10f);
+
+        Destroy(healingCircleInstance);
+
+        float elapsedTime = 0f;
+        supportShift_CD.fillAmount = 1f;
+
+        while (elapsedTime < 30f)
+        {
+            elapsedTime += Time.deltaTime;
+            supportShift_CD.fillAmount = 1f - (elapsedTime / 30f);
+            yield return null;
+        }
+
+        supportShift_CD.fillAmount = 0f;
+        canPlaceHealingCircle = true;
+    }
+
+
+    public void ResetJump2() => isJumping = false;
+    public void ResetAttack() => isAttacking = false;
     
 }

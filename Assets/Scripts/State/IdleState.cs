@@ -7,12 +7,12 @@ public class IdleState : BaseState
 
     public override void EnterState()
     {
-        Debug.Log("Entered Idle State");
+        player.animator.Play("Movement");
     }
 
     public override void ExitState()
     {
-        Debug.Log("Exited Idle State");
+
     }
 
     public override void UpdateState()
@@ -33,7 +33,7 @@ public class IdleState : BaseState
         {
             player.TransitionToState(new GuardState(player));
         }
-        else if (player.health.currentHealth <= 0)
+        else if (player.controller.isDead)
         {
             player.TransitionToState(new DeadState(player));
         }

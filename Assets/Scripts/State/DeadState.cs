@@ -11,12 +11,15 @@ public class DeadState : BaseState
 
     public override void ExitState()
     {
-
+        player.animator.SetTrigger("Respawn");
     }
 
     public override void UpdateState()
     {
-       
+        if (player.health.currentHealth > 0)
+        {
+            player.TransitionToState(new IdleState(player));
+        }
     }
 
     public override BaseState GetNextState()
