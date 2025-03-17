@@ -14,17 +14,28 @@ public class FireStoneController : MonoBehaviour
         {
             Debug.LogError("No animators assigned!");
         }
+        Invoke("FSTShoot", 20f);
+        
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    foreach (Animator anim in animators)
+        //    {
+        //        anim.SetTrigger("Start");
+        //        Invoke("FSEAnimation", delaytime);
+        //    }
+        //}
+    }
+
+    void FSTShoot()
+    {
+        foreach (Animator anim in animators)
         {
-            foreach (Animator anim in animators)
-            {
-                anim.SetTrigger("Start");
-                Invoke("FSEAnimation", delaytime);
-            }
+            anim.SetTrigger("Start");
+            Invoke("FSEAnimation", delaytime);
         }
     }
 
@@ -34,14 +45,15 @@ public class FireStoneController : MonoBehaviour
         {
             anim.SetTrigger("up");
         }
+        Invoke("FSTShoot", 50f);
     }
 
-    void FSEDAnimation()
-    {
-        foreach (Animator anim in Delayanimators)
-        {
-            anim.SetTrigger("down");
-        }
-    }
+    //void FSEDAnimation()
+    //{
+    //    foreach (Animator anim in Delayanimators)
+    //    {
+    //        anim.SetTrigger("down");
+    //    }
+    //}
 
 }
