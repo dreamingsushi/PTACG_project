@@ -37,6 +37,16 @@ public class DamageCollider : MonoBehaviour
         }
     }
 
+    private void ApplyDamageToPlayer2(Collision collision)
+    {
+        PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            Vector3 hitDirection = collision.contacts[0].normal;
+            playerHealth.TakeDamage(damageAmount, hitDirection);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         ApplyDamage(other);
@@ -50,6 +60,9 @@ public class DamageCollider : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         ApplyDamage(collision);
-
+        if (canHitPlayer)
+        {
+            ApplyDamageToPlayer2(collision);
+        }
     }
 }
