@@ -12,7 +12,7 @@ public class DragonPowersDos : MonoBehaviour
 
     public GameObject[] fireballSpawnPoints = new GameObject[3];
 
-    private float cd1 = 6f;
+    private float cd1 = 0.85f;
     private float cd2 = 13f;
 
     private bool canFlamethrower = true;
@@ -44,7 +44,7 @@ public class DragonPowersDos : MonoBehaviour
             cd1 -= Time.deltaTime;
             if(cd1 < 0)
             {
-                cd1 = 6f;
+                cd1 = 0.85f;
                 canFlamethrower = true;
             }
         }

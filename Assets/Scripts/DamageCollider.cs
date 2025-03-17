@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class DamageCollider : MonoBehaviour
@@ -13,7 +14,7 @@ public class DamageCollider : MonoBehaviour
         if (health != null)
         {
             Vector3 hitDirection = (other.transform.position - transform.position).normalized;
-            health.TakeDamage((float)damageAmount);
+            health.GetComponentInChildren<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, (float)damageAmount);
         }
     }
 
@@ -23,7 +24,7 @@ public class DamageCollider : MonoBehaviour
         if (health != null)
         {
             Vector3 hitDirection = collision.contacts[0].normal;
-            health.TakeDamage((float)damageAmount);
+            health.GetComponentInChildren<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, (float)damageAmount);
         }
     }
 

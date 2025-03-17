@@ -22,9 +22,10 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public GameObject Victory;
     public GameObject Defeat;
     public bool isSecondPhase;
-    public bool gameResulted;
+    public bool gameResulted = false;
     public List<GameObject> warriors;
     public GameObject bossPlayer;
+    public int currentDeaths;
     private string currentTimer;
 
     void Awake()
@@ -95,6 +96,22 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, "Sudden Death");
         }
         
+        if(isSecondPhase)
+        {
+            FindObjectOfType<DragonPowers>().gameObject.SetActive(false);
+        }
+
+        if(currentDeaths >= 3)
+        {
+            gameResulted = true;
+            //play timeline cutscene
+            if(GetComponent<PlayerController>().gameObject.GetComponent<PhotonView>().IsMine)
+            {
+                Defeat.SetActive(true);
+            }
+            else
+                Victory.SetActive(true);
+        }
     }
 
 
@@ -131,5 +148,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         isSecondPhase = true;
         PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
     }
+
+    
 
 }

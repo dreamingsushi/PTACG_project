@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 4701838224869611701}
   - component: {fileID: 5238359843926415634}
   - component: {fileID: 7287794868346449843}
+  - component: {fileID: 9166715427423390096}
   m_Layer: 7
   m_Name: Player Canvas New
   m_TagString: Untagged
@@ -688,6 +689,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &9166715427423390096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360544058883005844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e2de871ad60194fb1bab50ab9110cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragonPhase2: {fileID: 8996442266324507348}
 --- !u!1 &444024183953117245
 GameObject:
   m_ObjectHideFlags: 0
@@ -8657,6 +8671,12 @@ PrefabInstance:
 --- !u!224 &1759289412127606306 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4623223651811716578, guid: 86c48940a96d94849bb04ea76914ee9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6359853485882813376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8996442266324507348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2637831336257532180, guid: 86c48940a96d94849bb04ea76914ee9c,
     type: 3}
   m_PrefabInstance: {fileID: 6359853485882813376}
   m_PrefabAsset: {fileID: 0}

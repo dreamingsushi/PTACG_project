@@ -21,6 +21,9 @@ public class DragonPowers : MonoBehaviour
     private bool canEvolve;
     private Animator animator;
     private GameStartManager gameManager;
+    private bool canFireball;
+    private float fireballCD = 0f;
+    private bool canClaw;
     
     
     // Start is called before the first frame update
@@ -37,16 +40,16 @@ public class DragonPowers : MonoBehaviour
         {
             canEvolve = true;
         }
-        if(Input.GetKeyDown(KeyCode.F)){
+        if(Input.GetKeyDown(KeyCode.F) && canFireball){
             FireBallAttack();
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && canClaw)
         {
             ClawAttack();
         }
 
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetMouseButtonDown(1) && canClaw)
         {
             ClawAttack2();
         }
@@ -67,6 +70,25 @@ public class DragonPowers : MonoBehaviour
         {
             Debug.Log("Done");
             this.gameObject.SetActive(false);
+        }
+
+        if(canFireball == false)
+        {
+            fireballCD += Time.deltaTime;
+            if(fireballCD > 3f)
+            {
+                fireballCD = 0f;
+                canFireball = true;
+            }
+        }
+
+        if(GetComponent<BossMovement>().isGrounded)
+        {
+            canClaw = true;
+        }
+        else
+        {
+            canClaw = false;
         }
     }
 
