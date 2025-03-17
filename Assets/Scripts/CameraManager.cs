@@ -40,7 +40,7 @@ public class CameraManager : MonoBehaviour
         xAxis.Update(Time.deltaTime);
         yAxis.Update(Time.deltaTime);
 
-        if (PlayerController.Instance.currentClass == PlayerController.PlayerClass.Mage || PlayerController.Instance.currentClass == PlayerController.PlayerClass.Support)
+        if (controller.currentClass == PlayerController.PlayerClass.Mage || controller.currentClass == PlayerController.PlayerClass.Support)
         {
             GetAimDirection();
         }
@@ -66,19 +66,19 @@ public class CameraManager : MonoBehaviour
         Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f);
         Ray ray = cam.ScreenPointToRay(screenCenter);
         
-        if (PlayerController.Instance.currentClass == PlayerController.PlayerClass.Mage)
+        if (controller.currentClass == PlayerController.PlayerClass.Mage)
         {
             if (Physics.Raycast(ray, out RaycastHit hit, 999f, aimColliderLayerMask))
             {
-                return (hit.point - PlayerController.Instance.staffTip.position).normalized;
+                return (hit.point - controller.staffTip.position).normalized;
             }
         }
 
-        if (PlayerController.Instance.currentClass == PlayerController.PlayerClass.Support)
+        if (controller.currentClass == PlayerController.PlayerClass.Support)
         {
             if (Physics.Raycast(ray, out RaycastHit hit, 999f, aimColliderLayerMask))
             {
-                return (hit.point - PlayerController.Instance.supportHand.position).normalized;
+                return (hit.point - controller.supportHand.position).normalized;
             }
         }
 

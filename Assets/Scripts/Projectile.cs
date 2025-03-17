@@ -6,11 +6,8 @@ public class Projectile : MonoBehaviour
 {
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-
-        }
-        else
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.tag != "Player")
         {
             Destroy(gameObject);
         }
