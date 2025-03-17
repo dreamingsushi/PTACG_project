@@ -601,7 +601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9123943336770910173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -812,6 +812,10 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 0
+  playerName: {fileID: 0}
+  nicknames: []
+  warriorHealth: []
 --- !u!1 &509082055247728725
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +827,7 @@ GameObject:
   - component: {fileID: 4409342381091141892}
   - component: {fileID: 3308782631237752341}
   - component: {fileID: 676064693514473072}
+  - component: {fileID: 7820425541326667252}
   m_Layer: 7
   m_Name: HealthBarUI
   m_TagString: Untagged
@@ -908,6 +913,32 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 2
+  playerName: {fileID: 8310130771981922359}
+  nicknames: []
+  warriorHealth: []
+--- !u!114 &7820425541326667252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509082055247728725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &680969637539901308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1056,7 @@ GameObject:
   - component: {fileID: 3024874647495445327}
   - component: {fileID: 3883363143576280874}
   - component: {fileID: 4551324137631559401}
+  - component: {fileID: 770287252704181960}
   m_Layer: 7
   m_Name: HealthBarUI
   m_TagString: Untagged
@@ -1110,6 +1142,32 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 1
+  playerName: {fileID: 8953825602269160942}
+  nicknames: []
+  warriorHealth: []
+--- !u!114 &770287252704181960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775506670209678759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &919279503956495010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1313,7 @@ GameObject:
   - component: {fileID: 8945038145317208424}
   - component: {fileID: 3937488529312185127}
   - component: {fileID: 5572012364143195066}
+  - component: {fileID: 3604230744357043914}
   m_Layer: 7
   m_Name: HealthBarUI
   m_TagString: Untagged
@@ -1340,6 +1399,32 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 3
+  playerName: {fileID: 6882025656170451793}
+  nicknames: []
+  warriorHealth: []
+--- !u!114 &3604230744357043914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119990563977783511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1174439085724738069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,9 +1933,9 @@ RectTransform:
   - {fileID: 6674853583130925977}
   m_Father: {fileID: 4325671682668689086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2865956209752322822
@@ -2225,9 +2310,9 @@ RectTransform:
   - {fileID: 4448586485065613598}
   m_Father: {fileID: 4325671682668689086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &223095337246595667
@@ -3309,9 +3394,9 @@ RectTransform:
   - {fileID: 3501909303479684298}
   m_Father: {fileID: 4325671682668689086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7911849342294829056
@@ -3609,7 +3694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &912422031918199538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3913,7 +3998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2904442847241893502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6444,7 +6529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8634382061665805030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7444,7 +7529,7 @@ MonoBehaviour:
   regenInterval: 2
   knockbackForce: 5
   bloodEffect: {fileID: 1270593167705055543}
-  healthBar: {fileID: 968200303969565526}
+  healthBar: {fileID: 4551324137631559401}
 --- !u!114 &4531573354049962287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7639,7 +7724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 6168271605904460606}
-  imageHPUI: {fileID: 7415299875867046693}
+  hpUI: {fileID: 4701838224869611701}
 --- !u!114 &779515513592733021
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -953,6 +953,8 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 0
+  playerName: {fileID: 0}
 --- !u!1 &2066341239401942116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2561,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerCamera: {fileID: 3976236393156100283}
-  imageHPUI: {fileID: 3793582394714493}
 --- !u!114 &1256668023350360453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3297,7 +3298,7 @@ MonoBehaviour:
   dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
   deathCam: {fileID: 7638419365825521186}
   changeSphere: {fileID: 5571015360581967548}
-  dragonDeathMat: {fileID: 0}
+  dragonDeathMat: {fileID: 2100000, guid: 7d35aa2051994934abc62682e8e79657, type: 2}
   healthBar: {fileID: 1998573567251989643}
 --- !u!1 &6755992475604559000
 GameObject:

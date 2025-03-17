@@ -37,7 +37,7 @@ public class BossHealth : MonoBehaviour
     void Start()
     {
         dragonDeathMat.color = new Color(1,1,1,1);
-        StartCoroutine(StartDying());
+        
     }
 
     // Update is called once per frame
@@ -90,8 +90,10 @@ public class BossHealth : MonoBehaviour
 
     public void BossDie()
     {
-        GameStartManager.instance.gameResulted = true;
         Debug.Log("Boss is Dead");
+        GameStartManager.instance.gameResulted = true;
+        StartCoroutine(StartDying());
+        
     }
 
     public IEnumerator StartDying()

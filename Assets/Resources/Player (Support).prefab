@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 2187121363091028036}
   - component: {fileID: 5189813027729034999}
   - component: {fileID: 9175063710958321443}
+  - component: {fileID: 5752376221457779331}
   m_Layer: 7
   m_Name: HealthBarUI
   m_TagString: Untagged
@@ -344,6 +345,32 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 3
+  playerName: {fileID: 3662625809050946771}
+  nicknames: []
+  warriorHealth: []
+--- !u!114 &5752376221457779331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279102279042718254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &290022873947710533
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &140668812786362221
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1612,9 +1639,9 @@ RectTransform:
   - {fileID: 5912575517476398179}
   m_Father: {fileID: 5053913903784081560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5884150055917119228
@@ -1937,7 +1964,7 @@ MonoBehaviour:
   regenInterval: 2
   knockbackForce: 5
   bloodEffect: {fileID: 2885791272934474075}
-  healthBar: {fileID: 1020582261140895308}
+  healthBar: {fileID: 5481526643376401634}
 --- !u!114 &2672737092370772609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,7 +2159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 3462306491486447374}
-  imageHPUI: {fileID: 0}
+  hpUI: {fileID: 2772571799991855308}
 --- !u!114 &-3938719279337605815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4250,6 +4277,10 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 0
+  playerName: {fileID: 0}
+  nicknames: []
+  warriorHealth: []
 --- !u!1 &4322397680822826871
 GameObject:
   m_ObjectHideFlags: 0
@@ -4434,9 +4465,9 @@ RectTransform:
   - {fileID: 5001802541299291380}
   m_Father: {fileID: 5053913903784081560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &144070394660848517
@@ -6017,7 +6048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7432815585680885126
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7240,6 +7271,7 @@ GameObject:
   - component: {fileID: 1022144289794171973}
   - component: {fileID: 2932531565935131996}
   - component: {fileID: 9034827145570379406}
+  - component: {fileID: 1644734842133666053}
   m_Layer: 7
   m_Name: HealthBarUI
   m_TagString: Untagged
@@ -7325,6 +7357,32 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 2
+  playerName: {fileID: 627317478465348074}
+  nicknames: []
+  warriorHealth: []
+--- !u!114 &1644734842133666053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6968710403342773651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6991437686530767886
 GameObject:
   m_ObjectHideFlags: 0
@@ -7588,6 +7646,7 @@ GameObject:
   - component: {fileID: 7038295684876470127}
   - component: {fileID: 3551476976115226468}
   - component: {fileID: 5481526643376401634}
+  - component: {fileID: 3656326998839987337}
   m_Layer: 7
   m_Name: HealthBarUI
   m_TagString: Untagged
@@ -7673,6 +7732,32 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 1
+  playerName: {fileID: 8758953041831129586}
+  nicknames: []
+  warriorHealth: []
+--- !u!114 &3656326998839987337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145924024158119485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7188574805651083139
 GameObject:
   m_ObjectHideFlags: 0
@@ -8928,9 +9013,9 @@ RectTransform:
   - {fileID: 5763889085942144292}
   m_Father: {fileID: 5053913903784081560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7531003400725719705
