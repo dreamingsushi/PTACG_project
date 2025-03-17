@@ -8969,6 +8969,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animators:
   - {fileID: 1546452229}
+  - {fileID: 2113691119}
+  - {fileID: 1784699262}
   Delayanimators: []
   delaytime: 0
 --- !u!1 &986293871
@@ -11414,6 +11416,7 @@ GameObject:
   - component: {fileID: 1784699259}
   - component: {fileID: 1784699258}
   - component: {fileID: 1784699257}
+  - component: {fileID: 1784699262}
   m_Layer: 0
   m_Name: Smoke (1)
   m_TagString: Untagged
@@ -16267,6 +16270,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!95 &1784699262
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784699256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61347b0c6daab7b4fa94abb51d31a8fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1795847172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6807739794191376689, guid: 1317f9f9e8a5974489445bd8c7e972fe,
@@ -21800,6 +21824,7 @@ GameObject:
   - component: {fileID: 2113691116}
   - component: {fileID: 2113691115}
   - component: {fileID: 2113691114}
+  - component: {fileID: 2113691119}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -26653,6 +26678,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!95 &2113691119
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113691113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61347b0c6daab7b4fa94abb51d31a8fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2129869411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4212308595980947893, guid: 1317f9f9e8a5974489445bd8c7e972fe,
