@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scene1Phase2 : MonoBehaviour
+public class ScenePhase2 : MonoBehaviour
 {
     public Animator[] animators;
     public Animator[] Delayanimators;
@@ -18,7 +18,7 @@ public class Scene1Phase2 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             foreach (Animator anim in animators)
             {
