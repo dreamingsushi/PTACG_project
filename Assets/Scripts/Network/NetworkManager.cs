@@ -284,6 +284,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                         object isPlayerReady;
                         if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady))
                         {
+                            object playerSelectionNo;
+                            if(player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
+                            {
+                                playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[(int)playerSelectionNo].name);
+                            }
                             playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
                             
 
@@ -676,11 +681,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     {
                         
                         sameVotes.Add(voteCounts[i]);    
+                        highestVotedMap = Random.Range(sameVotes[0], sameVotes.Count);
                     }
                     
                 }
                 
-                highestVotedMap = Random.Range(sameVotes[0], sameVotes.Count);
+                
                 
             }
             timerText.text = timeLeft.ToString("F1");
@@ -733,4 +739,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     #endregion
 
+    public void LoadruinsNow()
+    {
+        SceneManager.LoadScene("Ruins");
+    }
 }

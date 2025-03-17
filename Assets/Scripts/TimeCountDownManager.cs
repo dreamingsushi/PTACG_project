@@ -14,12 +14,13 @@ public class TimeCountDownManager : MonoBehaviourPun
 
     private void Awake()
     {
-        timeUIText = GameStartManager.instance.TimeUIText;
+        
     }
  
     // Start is called before the first frame update
     void Start()
     {
+        timeUIText = GameStartManager.instance.TimeUIText;
         if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
         {
             GetComponent<PlayerController>().enabled = false;

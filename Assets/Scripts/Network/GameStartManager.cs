@@ -22,6 +22,8 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public GameObject Victory;
     public GameObject Defeat;
     public bool gameResulted;
+    public List<GameObject> warriors;
+    public GameObject bossPlayer;
     private string currentTimer;
 
     void Awake()
@@ -60,12 +62,14 @@ public class GameStartManager : MonoBehaviourPunCallbacks
                     Vector3 instantiatePosition = InstantiatePositions[actorNumber-1].position;
 
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
+                    
                 }
                 else if((int) playerSelectionNumber == 3)
                 {
                     Debug.Log((int)playerSelectionNumber);
                     Vector3 instantiatePosition = bossInstantiatePosition.position;
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
+
                 }    
                 
                 

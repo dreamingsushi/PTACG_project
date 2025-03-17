@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         playerController = GetComponent<PlayerController>();
         characterController = GetComponent<CharacterController>();
-        healthBar.SetHealth(currentHealth);
+        //healthBar.SetHealth(currentHealth);
 
         if (canRegenerate)
             regenCoroutine = StartCoroutine(HealthRegeneration());
@@ -58,6 +58,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    [PunRPC]
     public void TakeDamage(int damage, Vector3 hitDirection)
     {
         if (isInvincible) return;

@@ -10,7 +10,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
 {
     
     public CinemachineVirtualCamera playerCamera;
-    public GameObject imageHPUI;
+    public Canvas hpUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +19,12 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
         {
             GetComponent<CameraManager>().enabled = true;
             GetComponent<PlayerController>().enabled = true;
-            GetComponent<PlayerHealth>().enabled = true;
+            // GetComponent<PlayerHealth>().enabled = true;
             GetComponent<PlayerInput>().enabled = true;
             GetComponent<TimeCountDownManager>().enabled = true;
-            imageHPUI.GetComponentInParent<Image>().enabled = true;
-            imageHPUI.SetActive(true);
+            hpUI.enabled = true;
+            // imageHPUI.GetComponentInParent<Image>().enabled = true;
+            // imageHPUI.SetActive(true);
             //GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
             playerCamera.enabled = true;
         }
@@ -31,11 +32,12 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
         {
             GetComponent<CameraManager>().enabled = false;
             GetComponent<PlayerController>().enabled = false;
-            GetComponent<PlayerHealth>().enabled = false;
+            // GetComponent<PlayerHealth>().enabled = false;
             GetComponent<PlayerInput>().enabled = false;
             GetComponent<TimeCountDownManager>().enabled = false;
-            imageHPUI.GetComponentInParent<Image>().enabled = false;
-            imageHPUI.SetActive(false);
+            hpUI.enabled = false;
+            // imageHPUI.GetComponentInParent<Image>().enabled = false;
+            // imageHPUI.SetActive(false);
             //GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
             playerCamera.enabled = false;
         }
