@@ -13331,8 +13331,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1161724293}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
-        m_MethodName: ActivatePanel
-        m_Mode: 5
+        m_MethodName: OnLeaveGameButtonClicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

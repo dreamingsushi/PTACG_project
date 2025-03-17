@@ -21,6 +21,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public TMP_Text timerDown;
     public GameObject Victory;
     public GameObject Defeat;
+    public bool isSecondPhase;
     public bool gameResulted;
     public List<GameObject> warriors;
     public GameObject bossPlayer;
@@ -127,6 +128,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     public void BossNextPhase()
     {
+        isSecondPhase = true;
         PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
     }
 

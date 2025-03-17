@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 7452013915822224541}
   - component: {fileID: 799219679972372864}
   - component: {fileID: 3738846804265433766}
+  - component: {fileID: 7373621371709789979}
   m_Layer: 7
   m_Name: Icon
   m_TagString: Untagged
@@ -151,6 +152,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!114 &7373621371709789979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529327494462196262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e2de871ad60194fb1bab50ab9110cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragonPhase2: {fileID: 21300000, guid: 027b15399b01e734c9145649e7a57b3f, type: 3}
 --- !u!1 &2629189817763628071
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,9 +263,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2637831336257532180}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.66880184, y: 0.66880184, z: 0.66880184}
+  m_LocalScale: {x: 0.85855, y: 0.85855, z: 0.85855}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 938763110637355180}
@@ -755,6 +769,10 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 4
+  playerName: {fileID: 5978930804238581566}
+  nicknames: []
+  warriorHealth: []
 --- !u!1 &8711549212539103836
 GameObject:
   m_ObjectHideFlags: 0

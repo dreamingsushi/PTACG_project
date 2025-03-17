@@ -51,8 +51,17 @@ public class HealthBar : MonoBehaviourPunCallbacks
 
         }
 
+        nicknames.Add(FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName);
+
+
         playerName.text = nicknames[playerNumber -1];
-        photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, warriorHealth[playerNumber -1].currentHealth);
+        if(playerNumber == 4)
+        {
+            photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, FindObjectOfType<BossSetup>().GetComponent<BossHealth>().currentBossHP);
+        }
+        else
+            photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, warriorHealth[playerNumber -1].currentHealth);
+        
     }
 
     void Update()

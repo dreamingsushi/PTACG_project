@@ -54,7 +54,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            TakeDamage(10, transform.position);
+            //TakeDamage(10, transform.position);
+            GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, 10, transform.position);
         }
     }
 
