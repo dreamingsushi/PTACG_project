@@ -344,9 +344,7 @@ RectTransform:
   m_LocalScale: {x: 3.99, y: 0.49, z: 0.73888886}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6698460233207032724}
-  - {fileID: 300027099204269799}
-  - {fileID: 630507787253398034}
+  - {fileID: 4275577522730643857}
   m_Father: {fileID: 912422031918199538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -668,10 +666,10 @@ RectTransform:
   m_GameObject: {fileID: 1482502678531178805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.96481484, y: 0.75555956, z: 1}
+  m_LocalScale: {x: 0.96481484, y: 0.7555596, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4620683493221004266}
+  m_Father: {fileID: 4275577522730643857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2955,10 +2953,10 @@ RectTransform:
   m_GameObject: {fileID: 6283369508407130780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.96481484, y: 0.75555956, z: 1}
+  m_LocalScale: {x: 0.96481484, y: 0.7555596, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4620683493221004266}
+  m_Father: {fileID: 4275577522730643857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3630,6 +3628,44 @@ Transform:
   - {fileID: 2894965024098842632}
   m_Father: {fileID: 2691217379134931775}
   m_LocalEulerAnglesHint: {x: -22.957317, y: -91.11352, z: -27.23559}
+--- !u!1 &7415299875867046693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4275577522730643857}
+  m_Layer: 7
+  m_Name: HPGraphics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4275577522730643857
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415299875867046693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6698460233207032724}
+  - {fileID: 300027099204269799}
+  - {fileID: 630507787253398034}
+  m_Father: {fileID: 4620683493221004266}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7489143825401330811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4077,6 +4113,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4280dffb-8d51-4801-b26e-a70ec862af8b
     m_ActionName: Player/Special[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 588c6214-5389-4956-ac96-18b5ace6d519
+    m_ActionName: Player/Options[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -4118,7 +4158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 6168271605904460606}
-  imageHPUI: {fileID: 0}
+  imageHPUI: {fileID: 7415299875867046693}
 --- !u!114 &779515513592733021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4427,10 +4467,10 @@ RectTransform:
   m_GameObject: {fileID: 8754453231268184425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.96481484, y: 0.75555956, z: 1}
+  m_LocalScale: {x: 0.96481484, y: 0.7555596, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4620683493221004266}
+  m_Father: {fileID: 4275577522730643857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}

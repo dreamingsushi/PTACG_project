@@ -274,6 +274,12 @@ public class PlayerController : MonoBehaviour
     {
         velocity.y = jumpForce;
     }
+
+    public void JumpWithForce(float jumpMultiplier)
+    {
+        velocity.y = jumpForce*jumpMultiplier;
+    }
+
     private void ResetJump()
     {
         readyToJump = true;

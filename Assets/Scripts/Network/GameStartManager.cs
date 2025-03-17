@@ -16,8 +16,12 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public TMP_Text TimeUIText;
     public static GameStartManager instance = null;
     public bool canStartGame;
-    public float timeLeft = 600f;
+    public float setTimeLimit = 300f;
+    public float timeLeft;
     public TMP_Text timerDown;
+    public GameObject Victory;
+    public GameObject Defeat;
+    public bool gameResulted;
     private string currentTimer;
 
     void Awake()
@@ -42,7 +46,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeLeft = setTimeLimit;
         if (PhotonNetwork.IsConnectedAndReady)
         {
             object playerSelectionNumber;
@@ -75,10 +79,15 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     void Update()
     {
         
-        if(PhotonNetwork.LocalPlayer.IsMasterClient)
+        if(PhotonNetwork.LocalPlayer.IsMasterClient && !gameResulted && timeLeft > 0)
         {
             TimerDownForGame();
             photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, currentTimer);
+        }
+
+        if(timeLeft <= 0)
+        {
+            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, "Sudden Death");
         }
         
     }
@@ -96,7 +105,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             float minutes = Mathf.FloorToInt(timeLeft / 60);
             float seconds = Mathf.FloorToInt(timeLeft % 60);
 
-            if(timeLeft < 600/2)
+            if(timeLeft < setTimeLimit/2)
             {
                 Debug.Log("time left is halved");
                 

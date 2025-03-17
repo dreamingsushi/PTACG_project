@@ -5,22 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: aee79968e3f79804597700a3506585b8
   - enabled: 1
     path: Assets/Scenes/LobbyScene.unity
     guid: 3adb158719a2fde47b23f83f67d010c9
   - enabled: 1
+    path: Assets/Scenes/Alvin_Scene.unity
+    guid: be3359578a56ded489807bcadefba48b
+  - enabled: 1
+    path: Assets/Scenes/Alvin_Scene 2.unity
+    guid: c3e231e9a5e99b2429ffc8f77ef8c741
+  - enabled: 1
+    path: Assets/Scenes/Damian_Castle.unity
+    guid: 3d4a9d65bffe04c4c9dbef564d1551cc
+  - enabled: 1
+    path: Assets/Scenes/Damian_Space.unity
+    guid: 805bf81e40d515f438fe099b8e3c3738
+  - enabled: 1
     path: Assets/Scenes/Beach.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Snow.unity
+    guid: 967ca49ce4bceb7448bd40c34f19732e
   - enabled: 1
     path: Assets/Ruins_Level/Ruins.unity
     guid: ebc96c155a000694798318c1419d3508
   - enabled: 1
-    path: Assets/Scenes/Alvin_Scene.unity
-    guid: be3359578a56ded489807bcadefba48b
-  - enabled: 0
-    path: Assets/Scenes/Candyland.unity
-    guid: b60ade0789f7a31409cab9831258fc89
-  - enabled: 1
-    path: Assets/Scenes/Snow.unity
-    guid: 967ca49ce4bceb7448bd40c34f19732e
+    path: Assets/Ruins_Level/Stronghold.unity
+    guid: 9bb3f1808bb0b994d8d485158e550b6a
   m_configObjects: {}

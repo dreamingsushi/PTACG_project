@@ -10,5 +10,11 @@ public class JumpPad : MonoBehaviour
         {
             other.gameObject.GetComponent<BossMovement>().JumpingWithForce(1.8f);
         }
+        
+        if(other.gameObject.GetComponent<PlayerController>())
+        {
+            other.gameObject.GetComponent<PlayerController>().JumpWithForce(3.8f);
+
+        }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using TMPro;
+using Photon.Realtime;
 
 public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
 {
@@ -19,7 +20,13 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
     {
         
         
-
+        // foreach(Player player in PhotonNetwork.PlayerList)
+        // {
+        //     if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+        //     {
+        //         photonView.RPC("ChangeClassName", RpcTarget.AllBuffered, FindObjectOfType<PlayerSelection>().SelectablePlayers[FindObjectOfType<PlayerSelection>().playerSelectionNumber].name);
+        //     }
+        // }
         
     }
 
@@ -38,7 +45,6 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
             
             PlayerReadyButton.onClick.AddListener(() =>
             {
-                photonView.RPC("ChangeClassName", RpcTarget.AllBuffered, SelectedClass.text);
                 isPlayerReady = !isPlayerReady;
                 SetPlayerReady(isPlayerReady);
 
@@ -67,6 +73,7 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
     [PunRPC]
     public void ChangeClassName(string classText)
     {
+        
         SelectedClass.text = classText;
             // object playerSelectionNumber;
             // if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNumber))
