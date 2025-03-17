@@ -29,7 +29,6 @@ public class PlayerSelection : MonoBehaviour
         ExitGames.Client.Photon.Hashtable playerSelectionProp = new ExitGames.Client.Photon.Hashtable()   
              { {CharacterSelect.PLAYER_SELECTION_NUMBER, playerSelectionNumber } };
         PhotonNetwork.LocalPlayer.SetCustomProperties(playerSelectionProp); 
-    
     }
 
     public void NextPlayer()

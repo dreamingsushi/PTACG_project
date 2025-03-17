@@ -4845,6 +4845,7 @@ GameObject:
   - component: {fileID: 1536173901191392163}
   - component: {fileID: -8220303205982476158}
   - component: {fileID: 3202493385392170876}
+  - component: {fileID: 60487377948465341}
   m_Layer: 0
   m_Name: vfx_Fireball_Homing
   m_TagString: Untagged
@@ -9752,3 +9753,19 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &60487377948465341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186387438034119615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a937ee5f7e2dd4d4d89aea0f0b1e9143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentFire: 0
+  dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
+  speed: 1.7
+  players: []

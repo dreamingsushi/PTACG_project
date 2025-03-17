@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Photon.Pun;
 using UnityEngine;
 
@@ -9,9 +10,13 @@ public class BossHealth : MonoBehaviour
     public float maxBossHP;
     public float currentBossHP;
     public DragonScaling dragonNumbers;
-    private float armor = 10f;
-    public event Action<float> OnHealthChanged;
     
+    public event Action<float> OnHealthChanged;
+    public CinemachineVirtualCamera deathCam;
+    public GameObject changeSphere;
+    public Material dragonDeathMat;
+    private float armor = 10f;
+    private bool dragonFade;
     [SerializeField] private HealthBar healthBar;
 
     void Awake()
@@ -31,13 +36,26 @@ public class BossHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        dragonDeathMat.color = new Color(1,1,1,1);
+        StartCoroutine(StartDying());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(dragonFade)
+        {
+            Color dragonColor = dragonDeathMat.color;
+            float fadeAmount = dragonColor.a - (0.2f*Time.deltaTime);
+            
+            dragonColor = new Color(dragonColor.r,dragonColor.g,dragonColor.b, fadeAmount);
+            dragonDeathMat.color = dragonColor;
+            Debug.Log(dragonColor.a);
+            if(dragonColor.a <= 0)
+            {
+                dragonFade = false;
+            }
+        }
     }
 
     public void TakeDamage(float damage)
@@ -72,6 +90,37 @@ public class BossHealth : MonoBehaviour
 
     public void BossDie()
     {
+        GameStartManager.instance.gameResulted = true;
         Debug.Log("Boss is Dead");
+    }
+
+    public IEnumerator StartDying()
+    {
+        yield return new WaitForSeconds(2);
+        deathCam.enabled = true;
+        deathCam.Priority = 50;
+        if(GetComponentInChildren<BossController>() != null )
+        {
+            changeSphere.SetActive(true);
+        }
+        else if(GetComponent<BossControllerDos>() != null)
+        {
+            GetComponent<Animator>().SetBool("Death", true);
+            yield return new WaitForSeconds(2);
+            dragonFade = true;
+            
+        }
+
+        yield return new WaitForSeconds(4.4f);
+        if(GetComponent<PhotonView>().IsMine)
+        {
+            GameStartManager.instance.Defeat.SetActive(true);
+        }
+        else
+            GameStartManager.instance.Victory.SetActive(true);
+
+        yield return new WaitForSeconds(7f);
+        Debug.Log("Go To Scene");
+
     }
 }

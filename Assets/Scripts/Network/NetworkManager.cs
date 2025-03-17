@@ -58,6 +58,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     private float timeLeft = 10f;
     private int highestVotes;
     private int highestVotedMap;
+    private string highestVotedMapText;
 
 
     public enum Maps {
@@ -86,9 +87,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             TimerDownForMapSelect();
         }
-        if(PhotonNetwork.LocalPlayer.IsMasterClient)
+        if(PhotonNetwork.LocalPlayer.IsMasterClient && timeLeft > 0)
         {
             photonView.RPC("SyncTimerForMapSelect", RpcTarget.AllBuffered, timeLeft.ToString("F1"));
+        }
+        else if(timeLeft <= 0)
+        {
+            photonView.RPC("SyncTimerForMapSelect", RpcTarget.AllBuffered, highestVotedMapText);
+
         }
     }
 
@@ -284,7 +290,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                         }
 
                         playerListGameObjects.Add(player.ActorNumber, playerListGameObject);
-                        Debug.Log(playerListGameObjects.Count);
+                        Debug.Log("Players in Lobby" + playerListGameObjects.Count);
                   
                 
             }              
@@ -303,7 +309,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         playerListGameObject.transform.SetParent(PlayerListContent.transform);
         playerListGameObject.transform.localScale = Vector3.one;
         playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(newPlayer.ActorNumber, newPlayer.NickName);
-        //playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
+        //playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[GetComponent<PlayerSelection>().playerSelectionNumber].name);
         playerListGameObjects.Add(newPlayer.ActorNumber, playerListGameObject);
         StartGameButton.SetActive(CheckPlayersReady());
     }
@@ -377,12 +383,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameObject playerListGameObject;
         if (playerListGameObjects.TryGetValue(target.ActorNumber,out playerListGameObject ))
         {
-            playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[GetComponent<PlayerSelection>().playerSelectionNumber].name);
+            object playerSelectionNo;
+            if(changedProps.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
+            {
+                playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[(int)playerSelectionNo].name);
+            }
+            
             object isPlayerReady;
             if (changedProps.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady ))
             {
                 playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
-                //playerListGameObject.GetComponent<PlayerListEntryInitializer>().ChangeClassName();
             }
         }  
         StartGameButton.SetActive(CheckPlayersReady());      
@@ -652,8 +662,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 highestVotes = voteCounts[0];
                 highestVotedMap = 0;
 
+                List<int> sameVotes = new List<int>();
                 for(int i = 0; i<voteCounts.Count; i++)
                 {
+                    
                     if(voteCounts[i] > highestVotes)
                     {
                         highestVotes = voteCounts[i];
@@ -662,12 +674,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     }
                     else if(voteCounts[i] == highestVotes)
                     {
-                        List<int> sameVotes = new List<int>();
-                        sameVotes.Add(voteCounts[i]);
                         
-                        highestVotedMap = Random.Range(sameVotes[0], sameVotes.Count);
+                        sameVotes.Add(voteCounts[i]);    
                     }
+                    
                 }
+                
+                highestVotedMap = Random.Range(sameVotes[0], sameVotes.Count);
                 
             }
             timerText.text = timeLeft.ToString("F1");
@@ -685,26 +698,31 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         if(timeLeft < 0)
         {
+            
             switch(highestVotedMap)
             {
                 case 0:
-                    timerText.text = "Voted Map: Cave";
+                    highestVotedMapText = "Voted Map: Cave";
                     yield return new WaitForSeconds(4f);
                     Debug.Log("Go to Cave Scene");
-                    // SceneManager.LoadScene("Cave");
+                    SceneManager.LoadScene("Alvin_Scene");
                     break; 
                 case 1:
-                    timerText.text = "Voted Map: Beach";
+                    highestVotedMapText = "Voted Map: Beach";
                     yield return new WaitForSeconds(4f);
                     Debug.Log("Go to Beach Scene");
-                    //SceneManager.LoadScene("Beach");
+                    SceneManager.LoadScene("Beach");
                     break; 
                 case 2:
-                    timerText.text = "Voted Map: Candy";
-                    Debug.Log("Go to Candy Scene");
+                    highestVotedMapText = "Voted Map: Candy";
+                    yield return new WaitForSeconds(4f);
+                    Debug.Log("Go to Castle Scene");
+                    SceneManager.LoadScene("Castle");
                     break; 
                 case 3:
-                    timerText.text = "Voted Map: Ruins";
+                    highestVotedMapText = "Voted Map: Ruins";
+                    yield return new WaitForSeconds(4f);
+                    Debug.Log("Go to Ruins Scene");
                     SceneManager.LoadScene("Ruins");
                     break; 
             }

@@ -8,7 +8,7 @@ public class HomingFire : MonoBehaviour
     public DragonScaling dragonNumbers;
 
     [SerializeField] private float speed;
-    public object[] players;
+    public PlayerHealth[] players;
 
     void Start()
     {
@@ -59,8 +59,8 @@ public class HomingFire : MonoBehaviour
 
     private void HomingFlames()
     {
-        GameObject player = (GameObject) players[currentFire];
-        this.transform.position = Vector3.Lerp(transform.position, player.transform.position, Time.time);
+        GameObject player = players[currentFire].gameObject;
+        this.transform.position = Vector3.Lerp(transform.position, player.transform.position, speed*Time.deltaTime);
 
         
     }
