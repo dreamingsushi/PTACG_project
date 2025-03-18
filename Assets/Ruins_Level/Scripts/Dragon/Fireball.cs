@@ -28,6 +28,7 @@ public class Fireball : MonoBehaviour
         
         if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {
+            //other.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, (int)dragonNumbers.fireballDamage, this.transform.position);
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)dragonNumbers.fireballDamage, this.transform.position);
             dragonPowers.dragonMeter ++;
 

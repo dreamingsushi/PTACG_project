@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 2457382553592926136}
   - component: {fileID: 8416165602971435170}
   - component: {fileID: 2166649355557338025}
+  - component: {fileID: 8078016934637791335}
   m_Layer: 7
   m_Name: Player Canvas New
   m_TagString: Untagged
@@ -595,6 +596,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8078016934637791335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412899466012304719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e2de871ad60194fb1bab50ab9110cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragonPhase2: {fileID: 4968032821069845799}
 --- !u!1 &455992093989718914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,7 +1295,7 @@ GameObject:
   - component: {fileID: 7293804232551298776}
   m_Layer: 7
   m_Name: Player (Mage)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1372,7 +1386,7 @@ MonoBehaviour:
   currentClass: 1
   orientation: {fileID: 5062426139282173279}
   cam: {fileID: 5866570600252652318}
-  moveSpeed: 10
+  moveSpeed: 9
   rotationSpeed: 5
   gravity: -15
   jumpForce: 7
@@ -1391,8 +1405,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2831442389130056590, guid: 2f0475491cb18194aa5421d0a2467dfc,
     type: 3}
   staffTip: {fileID: 5654043987905009084}
-  teleportCooldown: 1.5
-  teleportDistance: 5
+  teleportCooldown: 10
+  teleportDistance: 10
   mageShift_CD: {fileID: 1774492791603604816}
   mageM1_CD: {fileID: 5967216187795641878}
   supportProjectilePrefab: {fileID: 1470278565100588117, guid: 58fb82a9b7595714ea4db165bffdaf27,
@@ -1534,11 +1548,35 @@ MonoBehaviour:
     m_ActionId: 4280dffb-8d51-4801-b26e-a70ec862af8b
     m_ActionName: Player/Special[/Mouse/rightButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 597832666997368370}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnOption
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 588c6214-5389-4956-ac96-18b5ace6d519
     m_ActionName: Player/Options[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 597832666997368370}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDodge
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 29bc1be4-2141-4b56-9b47-7fe01bca410c
     m_ActionName: Player/Dodge[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
@@ -9182,6 +9220,12 @@ PrefabInstance:
 --- !u!224 &2324551689861089745 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4623223651811716578, guid: 86c48940a96d94849bb04ea76914ee9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6947517213865649203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4968032821069845799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2637831336257532180, guid: 86c48940a96d94849bb04ea76914ee9c,
     type: 3}
   m_PrefabInstance: {fileID: 6947517213865649203}
   m_PrefabAsset: {fileID: 0}

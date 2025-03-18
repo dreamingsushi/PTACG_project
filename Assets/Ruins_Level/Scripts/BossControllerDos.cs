@@ -13,6 +13,8 @@ public class BossControllerDos : MonoBehaviour
     public float maxAngle;
     public float minAngle;
     public GameObject healthBar;
+
+    public GameObject mySkills;
     private bool cursorLocked;
     private Vector3 relativeVector;
 
@@ -22,17 +24,17 @@ public class BossControllerDos : MonoBehaviour
         {
             GetComponent<DragonPowersDos>().enabled = true;
             
-            healthBar.GetComponentInParent<Image>().enabled = true;
-            healthBar.SetActive(true);
+            
+            mySkills.SetActive(true);
 
         }
         else
         {
             GetComponent<DragonPowersDos>().enabled = false;
-            healthBar.GetComponentInParent<Image>().enabled = false;
-            healthBar.SetActive(false);
+            
+            mySkills.SetActive(false);
             this.enabled = false;
-            return;
+            
 
         }
 

@@ -13,7 +13,8 @@ public class BossHealth : MonoBehaviour
     
     public event Action<float> OnHealthChanged;
     public CinemachineVirtualCamera deathCam;
-    public GameObject changeSphere;
+
+    public GameObject deathVFX;
     public Material dragonDeathMat;
     private float armor = 10f;
     private bool dragonFade;
@@ -103,11 +104,12 @@ public class BossHealth : MonoBehaviour
         deathCam.Priority = 50;
         if(GetComponentInChildren<BossController>() != null )
         {
-            changeSphere.SetActive(true);
+            deathVFX.SetActive(true);
         }
         else if(GetComponent<BossControllerDos>() != null)
         {
             GetComponent<Animator>().SetBool("Death", true);
+            deathVFX.SetActive(true);
             yield return new WaitForSeconds(2);
             dragonFade = true;
             

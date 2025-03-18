@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ChangeBossIcon : MonoBehaviour
 {
-    public Sprite dragonPhase2;
+    public GameObject dragonPhase2;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,7 @@ public class ChangeBossIcon : MonoBehaviour
     {
         if(GameStartManager.instance.isSecondPhase)
         {
-            this.GetComponent<Image>().sprite = dragonPhase2;
+            dragonPhase2.SetActive(false);
         }
     }
 }

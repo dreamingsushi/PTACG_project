@@ -35,32 +35,39 @@ public class HealthBar : MonoBehaviourPunCallbacks
 
     public void SyncStartUI()
     {
-        nicknames.Add(PhotonNetwork.LocalPlayer.NickName);
-        //playerNumber = PhotonNetwork.LocalPlayer.ActorNumber;
-
-        var allPlayers = GameObject.FindObjectsOfType<PlayerHealth>();    
-        warriorHealth.Add(this.GetComponentInParent<PlayerHealth>());
-        
-        foreach(PlayerHealth plyr in allPlayers)
-        {
-            if(plyr.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName)
-            {
-                nicknames.Add(plyr.GetComponent<PhotonView>().Owner.NickName);
-                warriorHealth.Add(plyr.GetComponent<PlayerHealth>());
-            }
-
-        }
-
-        nicknames.Add(FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName);
-
-
-        playerName.text = nicknames[playerNumber -1];
         if(playerNumber == 4)
         {
-            photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, FindObjectOfType<BossSetup>().GetComponent<BossHealth>().currentBossHP);
+            playerName.text = PhotonNetwork.LocalPlayer.NickName;
+            photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, GetComponentInParent<BossHealth>().currentBossHP);
+            return;
+            
         }
         else
+        {
+            nicknames.Add(PhotonNetwork.LocalPlayer.NickName);
+        
+
+            var allPlayers = GameObject.FindObjectsOfType<PlayerHealth>();    
+            warriorHealth.Add(this.GetComponentInParent<PlayerHealth>());
+            
+            foreach(PlayerHealth plyr in allPlayers)
+            {
+                if(plyr.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName && plyr != null)
+                {
+                    nicknames.Add(plyr.GetComponent<PhotonView>().Owner.NickName);
+                    warriorHealth.Add(plyr.GetComponent<PlayerHealth>());
+                }
+
+            }
+
+            nicknames.Add(FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName);
+
+
+            playerName.text = nicknames[playerNumber -1];
+            
             photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, warriorHealth[playerNumber -1].currentHealth);
+        }
+        
         
     }
 
