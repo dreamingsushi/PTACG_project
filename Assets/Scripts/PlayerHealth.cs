@@ -129,6 +129,7 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(respawnTime);
         isInvincible = false;
         playerController.isDead = false;
+        GameStartManager.instance.currentDeaths -= 1;
         Heal(75);
     }
 
@@ -144,6 +145,7 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player Died");
+        GameStartManager.instance.currentDeaths += 1;
         playerController.isDead = true;
         OnPlayerDeath?.Invoke();
         StartCoroutine(Respawning(15f));

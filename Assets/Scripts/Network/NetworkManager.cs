@@ -11,6 +11,8 @@ using System.Linq;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    public UITransitionManager UItransition;
+    public GameObject optionsPanel;
     [Header("Login UI")] 
     public GameObject LoginUIPanel;   
     public InputField PlayerNameInput;
@@ -32,6 +34,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     [Header("Inside Room Panel")]
     public GameObject InsideRoomUIPanel; 
     public Text RoomInfoText;   
+    public Text roomInfoText2;
     public GameObject PlayerListPrefab;
     public GameObject BossListContent;
     public GameObject PlayerListContent;
@@ -49,20 +52,23 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public TMP_Text timerText;
     private List<int> voteCounts = new List<int>();
     private bool isMapSelecting;
+    private float timeDelayToStartGame = 5f;
+    private bool voted;
+    private int lastVotedMap;
 
 
     // public DeathRacePlayer[] DeathRacePlayers;
     // public RacingPlayer[] RacingPlayers;
     //public GameObject[] PlayerSelectionUIGameObjects;
     private Dictionary<int, GameObject> playerListGameObjects;
-    private float timeLeft = 10f;
+    private float timeLeft = 20f;
     private int highestVotes;
     private int highestVotedMap;
     private string highestVotedMapText;
 
 
     public enum Maps {
-        Cave, Beach, Candy, Ruins
+        Island = 1, Ship = 2, Ruins = 3, Volcano = 4, Mines = 5, Space = 6, Beach = 7, Ice = 8
     }
     
     #region UNITY Methods
@@ -96,6 +102,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             photonView.RPC("SyncTimerForMapSelect", RpcTarget.AllBuffered, highestVotedMapText);
 
         }
+
+        if(isMapSelecting)
+        {
+            ActivatePanel(MapSelectUIRoomPanel.name);
+            UItransition.UpdateCamera(UItransition.mapCamera);
+        }
     }
 
 
@@ -111,6 +123,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             ActivatePanel(ConnectingInfoUIPanel.name);
             if (!PhotonNetwork.IsConnected)
             {   
+                
                 PhotonNetwork.LocalPlayer.NickName = playerName;
                 PhotonNetwork.ConnectUsingSettings();
             } 
@@ -120,6 +133,28 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             Debug.Log("Player name is invalid");
         }
     } 
+
+    public void OnLogoutButtonClicked()
+    {
+        if(PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.Disconnect();
+            
+            ActivatePanel(LoginUIPanel.name);
+        }
+    }
+
+    public void OnOptionsButtonClicked()
+    {
+        UItransition.UpdateCamera(UItransition.optionsCamera);
+        ActivatePanel(optionsPanel.name);
+    }
+
+    public void OnReturnToGameOptionsClicked()
+    {
+        UItransition.UpdateCamera(UItransition.createRoomCamera);
+        ActivatePanel(GameOptionsUIPanel.name);
+    }
 
     public void QuitButton()
 	{
@@ -214,6 +249,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
  
     public override void OnConnectedToMaster()
     {        
+        UItransition.UpdateCamera(UItransition.createRoomCamera);
         ActivatePanel(GameOptionsUIPanel.name);
         Debug.Log(PhotonNetwork.LocalPlayer.NickName+" is connected to Photon.");
     } 
@@ -225,14 +261,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
  
     public override void OnJoinedRoom()
     {
-        
+        UItransition.UpdateCamera(UItransition.lobbyCamera);
         Debug.Log(PhotonNetwork.LocalPlayer.NickName + " joined to "+ PhotonNetwork.CurrentRoom.Name+ "Player count:"+   
                    PhotonNetwork.CurrentRoom.PlayerCount);
 
         ActivatePanel(InsideRoomUIPanel.name);
                  
-        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name + " " +
-                " Players " +
+        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name;
+        roomInfoText2.text =  " Players " +
                 PhotonNetwork.CurrentRoom.PlayerCount + " / " +
                 PhotonNetwork.CurrentRoom.MaxPlayers;  
 
@@ -305,10 +341,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name + " " +
-                  " Players/Max.Players: " +
-                  PhotonNetwork.CurrentRoom.PlayerCount + " / " +
-                  PhotonNetwork.CurrentRoom.MaxPlayers;
+        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name;
+        roomInfoText2.text =  " Players " +
+                PhotonNetwork.CurrentRoom.PlayerCount + " / " +
+                PhotonNetwork.CurrentRoom.MaxPlayers; 
 
         GameObject playerListGameObject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
         playerListGameObject.transform.SetParent(PlayerListContent.transform);
@@ -321,10 +357,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name + " " +
-                " Players/Max.Players: " +
+        RoomInfoText.text = "Room name: " + PhotonNetwork.CurrentRoom.Name;
+        roomInfoText2.text =  " Players " +
                 PhotonNetwork.CurrentRoom.PlayerCount + " / " +
-                PhotonNetwork.CurrentRoom.MaxPlayers;
+                PhotonNetwork.CurrentRoom.MaxPlayers; 
 
         Destroy(playerListGameObjects[otherPlayer.ActorNumber].gameObject);
         playerListGameObjects.Remove(otherPlayer.ActorNumber);  
@@ -333,6 +369,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
+        UItransition.UpdateCamera(UItransition.createRoomCamera);
+        
         ActivatePanel(GameOptionsUIPanel.name);
 
         foreach (GameObject playerListGameobject in playerListGameObjects.Values)
@@ -407,7 +445,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #endregion 
 
     #region Public Methods
-    [PunRPC]
+
     public void ActivatePanel(string panelNameToBeActivated)
     {
         LoginUIPanel.SetActive(LoginUIPanel.name.Equals(panelNameToBeActivated));
@@ -422,8 +460,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void GoToMapSelect()
     {
-        photonView.RPC("ActivatePanel", RpcTarget.AllBuffered, "MapSelectUIRoomPanel");
-        isMapSelecting = true;
+        
+        photonView.RPC("SyncMapSelect", RpcTarget.AllBuffered, true);
+        
+    }
+
+    [PunRPC]
+    public void SyncMapSelect(bool isTrue)
+    {
+        isMapSelecting = isTrue;
     }
     
 
@@ -520,95 +565,289 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     //     photonView.RPC("JoinBossTeam", RpcTarget.AllBuffered);
     // }
 
-    public void SelectMap(string map)
+    public void SelectMap(int mapIndex)
     {
+        
         
         for(int i = 0; i<voteCounts.Count; i++)
         {
-            mapSelection[i].SetActive(true);
-            
-                       
+            mapSelection[i].SetActive(true);                     
             
         }
 
-        switch(map)
+
+
+        switch((Maps)mapIndex)
         {
-            case "Cave":
-                voteCounts[0]++;
-                voteCounts[1]--;
-                voteCounts[2]--;
-                voteCounts[3]--;
+            case Maps.Island:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                    
+                }
                 
                 foreach(Player player in PhotonNetwork.PlayerList)
                 {
                     if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
                     {
-                        mapSelection[0].SetActive(false);
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
                     }
                 }
                 
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+                    Debug.Log(voteCounts[j]);
+                }
                 break;
             
-            case "Beach":
-                voteCounts[1]++;
-                voteCounts[0]--;
-                voteCounts[2]--;
-                voteCounts[3]--;
+            case Maps.Ship:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                }
                 
                 foreach(Player player in PhotonNetwork.PlayerList)
                 {
                     if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
                     {
-                        mapSelection[1].SetActive(false);
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
                     }
                 }
                 
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+                    Debug.Log(voteCounts[j]);
+                }
                 break;
             
-            case "Candy":
-                voteCounts[2]++;
-                voteCounts[1]--;
-                voteCounts[0]--;
-                voteCounts[3]--;
+            case Maps.Ruins:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                }
                 
                 foreach(Player player in PhotonNetwork.PlayerList)
                 {
                     if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
                     {
-                        mapSelection[2].SetActive(false);
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
                     }
                 }
                 
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+                    Debug.Log(voteCounts[j]);
+                }
                 break;
 
-            case "Ruins":
-                voteCounts[3]++;
-                voteCounts[1]--;
-                voteCounts[2]--;
-                voteCounts[0]--;
-                Debug.Log(voteCounts[3]);
+            case Maps.Volcano:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                }
                 
                 foreach(Player player in PhotonNetwork.PlayerList)
                 {
                     if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
                     {
-                        
-                        mapSelection[3].SetActive(false);
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
                     }
                 }
                 
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+
+                }
+                break;
+
+            case Maps.Mines:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                }
                 
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
+                    }
+                }
+                
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+
+                }
+                break;
+            
+            case Maps.Space:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                }
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
+                    }
+                }
+                
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+
+                }
+                break;
+            
+            case Maps.Beach:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                }
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
+                    }
+                }
+                
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+
+                }
+                break;
+
+            case Maps.Ice:
+                for(int i = 0; i< voteCounts.Count; i++)
+                {
+                    if(mapIndex-1 == i)
+                    {
+                        voteCounts[i]++;
+                    }
+                    
+                }
+                
+                foreach(Player player in PhotonNetwork.PlayerList)
+                {
+                    if(player.ActorNumber == PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        mapSelection[mapIndex-1].SetActive(false);
+                        if(voted)
+                        {
+                            voteCounts[lastVotedMap-1] --;
+                        }
+                    }
+                }
+                
+                for(int j = 0; j<voteCounts.Count; j++)
+                {
+                    if(voteCounts[j] <0)
+                    {
+                        voteCounts[j] = 0;
+                    }
+                    photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
+
+                }
                 break;
         }
-        for(int j = 0; j<voteCounts.Count; j++)
-        {
-            if(voteCounts[j] <0)
-            {
-                voteCounts[j] = 0;
-            }
-            photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
-
-        }
+        
+        lastVotedMap = mapIndex;
+        Debug.Log(lastVotedMap);
+        voted = true;
         
     }
 
@@ -675,20 +914,25 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     {
                         highestVotes = voteCounts[i];
                         highestVotedMap = i;
-
+                        sameVotes.Clear();
+                        sameVotes.Add(i);
                     }
                     else if(voteCounts[i] == highestVotes)
                     {
                         
-                        sameVotes.Add(voteCounts[i]);    
-                        highestVotedMap = Random.Range(sameVotes[0], sameVotes.Count);
+                        sameVotes.Add(i);    
+                        
                     }
                     
-                }
-                
-                
+                }   
+
+                if(sameVotes.Count > 1)
+                {
+                    highestVotedMap = Random.Range(0, sameVotes.Count);
+                }    
                 
             }
+            
             timerText.text = timeLeft.ToString("F1");
             StartCoroutine(SelectMapStartGame());
         }   
@@ -708,27 +952,51 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             switch(highestVotedMap)
             {
                 case 0:
-                    highestVotedMapText = "Voted Map: Cave";
-                    yield return new WaitForSeconds(4f);
-                    Debug.Log("Go to Cave Scene");
-                    SceneManager.LoadScene("Alvin_Scene");
+                    highestVotedMapText = "Voted Map: Island";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+                    
+                    SceneManager.LoadScene("Ruins");
                     break; 
                 case 1:
-                    highestVotedMapText = "Voted Map: Beach";
-                    yield return new WaitForSeconds(4f);
-                    Debug.Log("Go to Beach Scene");
-                    SceneManager.LoadScene("Beach");
+                    highestVotedMapText = "Voted Map: Ship";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+                    
+                    SceneManager.LoadScene("Ruins");
                     break; 
                 case 2:
-                    highestVotedMapText = "Voted Map: Candy";
-                    yield return new WaitForSeconds(4f);
-                    Debug.Log("Go to Castle Scene");
-                    SceneManager.LoadScene("Castle");
+                    highestVotedMapText = "Voted Map: Ruins";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+                    
+                    SceneManager.LoadScene("Stronghold");
                     break; 
                 case 3:
-                    highestVotedMapText = "Voted Map: Ruins";
-                    yield return new WaitForSeconds(4f);
-                    Debug.Log("Go to Ruins Scene");
+                    highestVotedMapText = "Voted Map: Volcano";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+                    
+                    SceneManager.LoadScene("Ruins");
+                    break; 
+                case 4:
+                    highestVotedMapText = "Voted Map: Mines";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+                   
+                    SceneManager.LoadScene("Ruins");
+                    break; 
+                case 5:
+                    highestVotedMapText = "Voted Map: Space";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+                  
+                    SceneManager.LoadScene("Ruins");
+                    break; 
+                case 6:
+                    highestVotedMapText = "Voted Map: Beach";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+      
+                    SceneManager.LoadScene("Ruins");
+                    break; 
+                case 7:
+                    highestVotedMapText = "Voted Map: Ice Cliffs";
+                    yield return new WaitForSeconds(timeDelayToStartGame);
+   
                     SceneManager.LoadScene("Ruins");
                     break; 
             }
