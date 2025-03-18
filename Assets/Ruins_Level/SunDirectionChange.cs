@@ -11,7 +11,7 @@ public class SunDirectionChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.eulerAngles = new Vector3(startAngle, -262.04f, 0);
+        transform.eulerAngles = new Vector3(startAngle, 5.46f, 0);
     
     }
 
@@ -21,7 +21,7 @@ public class SunDirectionChange : MonoBehaviour
         counter += Time.deltaTime;
         float currentAngle = Mathf.Lerp(startAngle, endAngle, counter/GameStartManager.instance.setTimeLimit*2/3);
         
-        transform.eulerAngles = new Vector3(currentAngle, -262.04f, 0);
+        transform.eulerAngles = new Vector3(currentAngle, 5.46f, 0);
 
         if(GameStartManager.instance.timeLeft < GameStartManager.instance.setTimeLimit/2)
         {

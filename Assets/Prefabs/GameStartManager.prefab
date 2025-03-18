@@ -371,6 +371,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   bossInstantiatePosition: {fileID: 0}
   bossNextPhaseInstantiatePosition: {fileID: 0}
   TimeUIText: {fileID: 2669037712599873163}
@@ -382,8 +383,7 @@ MonoBehaviour:
   Defeat: {fileID: 4448709994628956532}
   isSecondPhase: 0
   gameResulted: 0
-  warriors: []
-  bossPlayer: {fileID: 0}
+  currentDeaths: 0
 --- !u!114 &3380547251300941353
 MonoBehaviour:
   m_ObjectHideFlags: 0

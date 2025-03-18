@@ -126,7 +126,7 @@ public class BossHealth : MonoBehaviour
         }
 
         yield return new WaitForSeconds(4.4f);
-        if(GetComponent<PhotonView>().IsMine)
+        if(GetComponentInChildren<PhotonView>().IsMine)
         {
             GameStartManager.instance.Defeat.SetActive(true);
         }

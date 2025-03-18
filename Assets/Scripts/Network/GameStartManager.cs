@@ -59,6 +59,10 @@ public class GameStartManager : MonoBehaviourPunCallbacks
                     Debug.Log((int)playerSelectionNumber);
                 
                     int actorNumber = PhotonNetwork.LocalPlayer.ActorNumber;
+                    if(actorNumber > 3)
+                    {
+                        actorNumber = 3;
+                    }
                     Vector3 instantiatePosition = InstantiatePositions[actorNumber-1].position;
 
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);

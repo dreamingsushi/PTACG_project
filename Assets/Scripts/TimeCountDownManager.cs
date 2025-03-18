@@ -37,8 +37,7 @@ public class TimeCountDownManager : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
+        
             if (timeToStartRace >= 0.0f)
             {
                 timeToStartRace -= Time.deltaTime;
@@ -50,7 +49,7 @@ public class TimeCountDownManager : MonoBehaviourPun
                 timerDone = true;
                 photonView.RPC("StartTheGame", RpcTarget.AllBuffered, timerDone);
             }
-        }
+        
 
         
     }
