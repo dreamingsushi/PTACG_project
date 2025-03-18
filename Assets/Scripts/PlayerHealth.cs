@@ -75,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         
         StartCoroutine(DamageEffect());
-        DamagePopUpText.Instance.ShowDamageNumber(transform.position, damage.ToString());
+        DamagePopUpText.Instance.ShowDamageNumber(transform.position, effectiveDamage.ToString());
 
         if (currentHealth <= 0)
         {

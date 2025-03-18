@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 7293804232551298776}
   m_Layer: 7
   m_Name: Player (Mage)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   currentClass: 1
   orientation: {fileID: 5062426139282173279}
   cam: {fileID: 5866570600252652318}
-  moveSpeed: 10
+  moveSpeed: 9
   rotationSpeed: 5
   gravity: -15
   jumpForce: 7
@@ -1391,8 +1391,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2831442389130056590, guid: 2f0475491cb18194aa5421d0a2467dfc,
     type: 3}
   staffTip: {fileID: 5654043987905009084}
-  teleportCooldown: 1.5
-  teleportDistance: 5
+  teleportCooldown: 10
+  teleportDistance: 10
   mageShift_CD: {fileID: 1774492791603604816}
   mageM1_CD: {fileID: 5967216187795641878}
   supportProjectilePrefab: {fileID: 1470278565100588117, guid: 58fb82a9b7595714ea4db165bffdaf27,
@@ -1534,11 +1534,35 @@ MonoBehaviour:
     m_ActionId: 4280dffb-8d51-4801-b26e-a70ec862af8b
     m_ActionName: Player/Special[/Mouse/rightButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 597832666997368370}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnOption
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 588c6214-5389-4956-ac96-18b5ace6d519
     m_ActionName: Player/Options[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 597832666997368370}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDodge
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 29bc1be4-2141-4b56-9b47-7fe01bca410c
     m_ActionName: Player/Dodge[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0

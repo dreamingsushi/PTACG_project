@@ -288,6 +288,10 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 0
+  playerName: {fileID: 0}
+  nicknames: []
+  warriorHealth: []
 --- !u!1 &263460700148608207
 GameObject:
   m_ObjectHideFlags: 0

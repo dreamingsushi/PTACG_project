@@ -1801,7 +1801,7 @@ GameObject:
   - component: {fileID: 3622836604632522683}
   m_Layer: 7
   m_Name: Player (Support)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1893,7 +1893,7 @@ MonoBehaviour:
   currentClass: 2
   orientation: {fileID: 2641716311893466605}
   cam: {fileID: 3462306491486447374}
-  moveSpeed: 10
+  moveSpeed: 11
   rotationSpeed: 5
   gravity: -15
   jumpForce: 7
@@ -2056,11 +2056,35 @@ MonoBehaviour:
     m_ActionId: 4280dffb-8d51-4801-b26e-a70ec862af8b
     m_ActionName: Player/Special[/Mouse/rightButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5399087933681727931}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnOption
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 588c6214-5389-4956-ac96-18b5ace6d519
     m_ActionName: Player/Options[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5399087933681727931}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDodge
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 29bc1be4-2141-4b56-9b47-7fe01bca410c
     m_ActionName: Player/Dodge[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
