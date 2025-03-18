@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 using Photon.Pun;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealthOld : MonoBehaviour
 {
     [Header("Health Settings")]
     public int maxHealth = 100;

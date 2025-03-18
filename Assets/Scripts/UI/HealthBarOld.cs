@@ -7,7 +7,7 @@ using TMPro;
 using Photon.Pun.UtilityScripts;
 using System.Collections.Generic;
 
-public class HealthBar : MonoBehaviourPunCallbacks
+public class HealthBarOld : MonoBehaviourPunCallbacks
 {
     [Header("Health Bar Components")]
     [SerializeField] private Image mainHealthFill;    // Red bar (actual HP)
