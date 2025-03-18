@@ -20,6 +20,12 @@ public class BossHealth : MonoBehaviour
     private bool dragonFade;
     [SerializeField] private HealthBar healthBar;
 
+    [Header("Poison Damage Settings")]
+    public bool isPoisoned = false;
+    public int poisonDamage = 2;
+    public float poisonInterval = 1f;
+    public float poisonDuration = 5f;
+
     void Awake()
     {
         dragonNumbers.takenDamage = 0f;
@@ -127,4 +133,28 @@ public class BossHealth : MonoBehaviour
         Debug.Log("Go To Scene");
 
     }
+
+    public void ApplyPoison()
+    {
+        if (!isPoisoned)
+        {
+            isPoisoned = true;
+            StartCoroutine(PoisonEffect());
+        }
+    }
+
+    private IEnumerator PoisonEffect()
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < poisonDuration)
+        {
+            yield return new WaitForSeconds(poisonInterval);
+            TakeDamage(poisonDamage);
+            elapsedTime += poisonInterval;
+        }
+
+        isPoisoned = false;
+    }
+
 }
