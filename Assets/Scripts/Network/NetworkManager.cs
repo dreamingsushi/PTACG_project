@@ -991,7 +991,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     highestVotedMapText = "Voted Map: Beach";
                     yield return new WaitForSeconds(timeDelayToStartGame);
       
-                    SceneManager.LoadScene("Ruins");
+                    SceneManager.LoadScene("Beach");
                     break; 
                 case 7:
                     highestVotedMapText = "Voted Map: Ice Cliffs";
