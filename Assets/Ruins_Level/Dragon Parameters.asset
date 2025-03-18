@@ -18,4 +18,4 @@ MonoBehaviour:
   punchDamage: 3
   flamethrowerDamage: 2
   meteorDamage: 8
-  takenDamage: 0
+  takenDamage: 30

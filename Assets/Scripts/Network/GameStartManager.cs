@@ -94,10 +94,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, "Sudden Death", 0);
         }
         
-        if(isSecondPhase)
-        {
-            FindObjectOfType<DragonPowers>().gameObject.SetActive(false);
-        }
+
 
         if(currentDeaths >= 3)
         {
@@ -144,8 +141,15 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     public void BossNextPhase()
     {
-        isSecondPhase = true;
+        
         PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
+    }
+
+    [PunRPC]
+    public void SyncBossPhase(bool secondPhase)
+    {
+        isSecondPhase = secondPhase;
+        FindObjectOfType<DragonPowers>().gameObject.SetActive(false);
     }
 
     

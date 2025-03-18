@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7686917347119947488}
   - component: {fileID: 789227819591026329}
   - component: {fileID: 3103883049034366988}
+  - component: {fileID: 4787063509254095052}
   m_Layer: 0
   m_Name: vfx_Flamethrower
   m_TagString: Untagged
@@ -30,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -51.88, y: 31.97, z: -17.34}
-  m_LocalScale: {x: 20, y: 20, z: 20}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 20, y: 20, z: 34}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3190307211237674167}
   - {fileID: 4906326978541014248}
@@ -4874,6 +4875,20 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &4787063509254095052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243328023640914615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03a156993be6d34ebe87e4c584dbb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragonNumber: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
+  focusPointCamera: {fileID: 0}
 --- !u!1 &6525516737548152638
 GameObject:
   m_ObjectHideFlags: 0

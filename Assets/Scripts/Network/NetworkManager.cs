@@ -52,7 +52,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public TMP_Text timerText;
     private List<int> voteCounts = new List<int>();
     private bool isMapSelecting;
-    private float timeDelayToStartGame = 5f;
+    private float timeDelayToStartGame = 3f;
     private bool voted;
     private int lastVotedMap;
 

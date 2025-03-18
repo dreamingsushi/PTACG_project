@@ -18,7 +18,7 @@ public class Crystal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 5f*Time.deltaTime, transform.eulerAngles.z);
+        this.transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 50f*Time.deltaTime, transform.eulerAngles.z);
 
         if(GameStartManager.instance.isSecondPhase)
         {

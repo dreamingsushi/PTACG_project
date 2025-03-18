@@ -36,8 +36,8 @@ public class BossHealth : MonoBehaviour
         }
         else if(GetComponent<BossControllerDos>() != null)
         {
-            maxBossHP = 1000f;
-            currentBossHP = 1000f - dragonNumbers.takenDamage;
+            maxBossHP = 900f;
+            currentBossHP = 900f - dragonNumbers.takenDamage;
         }
     }
     // Start is called before the first frame update
@@ -65,34 +65,38 @@ public class BossHealth : MonoBehaviour
         }
     }
 
+    
     public void TakeDamage(float damage)
     {
         
         float damageReductionPercent = armor*0.01f;
-        float effectiveDamage = Mathf.Max(0, damage * armor);
+        float effectiveDamage = Mathf.Max(0, damage);
         effectiveDamage = Mathf.RoundToInt(effectiveDamage * (1 - damageReductionPercent));
 
         currentBossHP -= effectiveDamage;
-        dragonNumbers.takenDamage += effectiveDamage;
+        
         OnHealthChanged?.Invoke(currentBossHP);
 
         
-
-        healthBar.SetHealth(currentBossHP);
+        healthBar.GetComponent<PhotonView>().RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, currentBossHP);
+        //healthBar.SetHealth(currentBossHP);
         
-        if(GetComponentInChildren<BossController>() != null && GetComponentInChildren<PhotonView>().IsMine)
+        if(GetComponentInChildren<BossController>() != null)
         {
-            DamagePopUpText.Instance.ShowDamageNumber(GetComponentInChildren<BossController>().transform.position, effectiveDamage.ToString());
+            GetComponentInChildren<BossDamageTaken>().photonView.RPC("SyncDamageTaken", RpcTarget.AllBuffered, effectiveDamage);
+            DamagePopUpText.Instance.ShowDamageNumber(GetComponentInChildren<BossController>().gameObject.transform.position, effectiveDamage.ToString());
         }
-        else if(GetComponent<BossController>() != null && GetComponent<PhotonView>().IsMine)
+        else if(GetComponent<BossController>() != null)
         {
-            DamagePopUpText.Instance.ShowDamageNumber(GetComponent<BossControllerDos>().transform.position, effectiveDamage.ToString());
+            DamagePopUpText.Instance.ShowDamageNumber(GetComponent<BossControllerDos>().gameObject.transform.position, effectiveDamage.ToString());
         }
 
         if (currentBossHP <= 0)
         {
             BossDie();
         }
+
+
     }
 
     public void BossDie()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using Photon.Pun;
 using Unity.Mathematics;
 using UnityEngine;
@@ -15,14 +16,16 @@ public class DragonPowers : MonoBehaviour
 
 
     public int dragonMeter;
-    public GameObject evolveText;
+    public GameObject evolveUI;
     
     public int evolveRequirement = 2;
+
+    public Image fireballIcon;
     private bool canEvolve;
     private Animator animator;
     private GameStartManager gameManager;
-    private bool canFireball;
-    private float fireballCD = 0f;
+    private bool canFireball = true;
+    public float fireballCD = 3f;
     private bool canClaw;
     
     
@@ -41,6 +44,7 @@ public class DragonPowers : MonoBehaviour
             canEvolve = true;
         }
         if(Input.GetKeyDown(KeyCode.F) && canFireball){
+            
             FireBallAttack();
         }
 
@@ -56,14 +60,14 @@ public class DragonPowers : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R) && canEvolve)
         {
-            evolveText.SetActive(false);
+            
             ChangePhase();
             
         }
 
         if(canEvolve)
         {
-            evolveText.SetActive(true);
+            evolveUI.SetActive(true);
         }
 
         if(cutscenePhase3.state == PlayState.Playing)
@@ -74,12 +78,7 @@ public class DragonPowers : MonoBehaviour
 
         if(canFireball == false)
         {
-            fireballCD += Time.deltaTime;
-            if(fireballCD > 3f)
-            {
-                fireballCD = 0f;
-                canFireball = true;
-            }
+            StartCoroutine(FireballCooldown());
         }
 
         if(GetComponentInChildren<BossMovement>().isGrounded)
@@ -89,6 +88,10 @@ public class DragonPowers : MonoBehaviour
         else
         {
             canClaw = false;
+        }
+        if(GameStartManager.instance.isSecondPhase)
+        {
+            StopAllCoroutines();
         }
     }
 
@@ -107,14 +110,18 @@ public class DragonPowers : MonoBehaviour
         PhotonNetwork.Instantiate(fireball.name, _firePoint.position, fireballAngle);
         // GameObject fireProjectile = Instantiate(fireball, _firePoint.position, fireballAngle);
         //fireProjectile.transform.up = _hit.normal;
+        canFireball = false;
     }
 
     public void ChangePhase()
     {
+        cutscenePhase3.Play();
         gameManager.BossNextPhase();
         animator.SetTrigger("Phase");
-        cutscenePhase3.Play();
+        
         this.gameObject.GetComponentInChildren<BossMovement>().enabled = false;
+        GameStartManager.instance.photonView.RPC("SyncBossPhase", RpcTarget.AllBuffered, true); 
+        
     }
 
     public void ClawAttack()
@@ -125,5 +132,20 @@ public class DragonPowers : MonoBehaviour
     public void ClawAttack2()
     {
         animator.SetTrigger("swipe2");
+    }
+
+    private IEnumerator FireballCooldown()
+    {
+        float elapsedTime = 0f;
+        fireballIcon.fillAmount = 1f;
+
+        while (elapsedTime < fireballCD)
+        {
+            elapsedTime += Time.deltaTime;
+            fireballIcon.fillAmount = 1f - (elapsedTime / fireballCD);
+            yield return null;
+        }
+        fireballIcon.fillAmount = 0f;
+        canFireball = true;
     }
 }

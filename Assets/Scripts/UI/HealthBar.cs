@@ -6,6 +6,7 @@ using Photon.Realtime;
 using TMPro;
 using Photon.Pun.UtilityScripts;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class HealthBar : MonoBehaviourPunCallbacks
 {
@@ -44,9 +45,10 @@ public class HealthBar : MonoBehaviourPunCallbacks
         
         if(playerNumber == 4)
         {          
-            playerName.text = FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName;
+            playerName.text = GameObject.FindGameObjectWithTag("Dragon").GetComponent<PhotonView>().Owner.NickName;
+            //playerName.text = FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName;
             
-            return;
+            
             
         }
         else
@@ -69,8 +71,11 @@ public class HealthBar : MonoBehaviourPunCallbacks
 
             //nicknames.Add(FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName);
 
+            if(nicknames.Count > 2)
+            {
+                playerName.text = nicknames[playerNumber -1];
 
-            playerName.text = nicknames[playerNumber -1];
+            }
             
             
         }
@@ -86,20 +91,33 @@ public class HealthBar : MonoBehaviourPunCallbacks
         }
         else
         {
-            if(playerNumber == 4)
+            if(playerNumber == 4 && this != null)
             {
                 bossHealth = FindObjectOfType<BossHealth>();
                 float bossCurrentHP = bossHealth.currentBossHP;
                 maxHealth = bossHealth.maxBossHP;
                 photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, bossCurrentHP);
-                Debug.Log(bossCurrentHP);
+                
             }
-            else if(playerNumber != 4)
+            else if(playerNumber != 4 && this != null)
             {
-                maxHealth = 100;
-                photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, (float)warriorHealth[playerNumber -1].currentHealth);
+                if(warriorHealth.Count > 2)
+                {
+                    float thisPlayerCurrentHP = (float)warriorHealth[playerNumber -1].currentHealth;
+                    maxHealth = 100;
+                    photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, thisPlayerCurrentHP);
+                }
+                
             }
         }
+        if(playerNumber == 4)
+        {
+            if(GameStartManager.instance.isSecondPhase)
+            {
+                StopAllCoroutines();
+            }
+        }
+        
         
         // for(int i = 0; i<GameStartManager.instance.warriors.Count; i++)
         // {
@@ -183,7 +201,8 @@ public class HealthBar : MonoBehaviourPunCallbacks
             StopCoroutine(delayedBarRoutine);
         StartCoroutine(SmoothHealthUpdate(mainHealthFill, targetFill, smoothSpeed));
 
-        delayedBarRoutine = StartCoroutine(DelayedHealthUpdate(targetFill));
+        if(this.enabled)
+            delayedBarRoutine = StartCoroutine(DelayedHealthUpdate(targetFill));
 
         UpdateHealthBarColor(targetFill);
     }

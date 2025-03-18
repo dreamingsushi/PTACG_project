@@ -3,20 +3,26 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 public class DragonPowersDos : MonoBehaviour
 {
-    public GameObject flamethrowerPrefab;
+    public GameObject flamethrower;
     public GameObject flamePoint;
     public GameObject fireball;
 
     public GameObject[] fireballSpawnPoints = new GameObject[3];
 
-    private float cd1 = 0.85f;
-    private float cd2 = 13f;
+    private float cd1 = 1.25f;
+    private float cd2 = 12f;
 
-    private bool canFlamethrower = true;
-    private bool canSpawnHoming = true;
+    public Image flamethrowerIcon;
+    public Image homingIcon;
+
+    public bool canFlamethrower = true;
+    public bool canSpawnHoming = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +33,9 @@ public class DragonPowersDos : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F) && canFlamethrower)
-        {
-            canFlamethrower = false;
-            GameObject flaming = Instantiate(flamethrowerPrefab, flamePoint.transform.position, flamePoint.transform.rotation);
-            flaming.transform.parent = this.transform;
+        {        
+            GetComponent<PhotonView>().RPC("EnableFlamethrower", RpcTarget.AllBuffered, true); 
+            
         }
 
         if(Input.GetKeyDown(KeyCode.G) && canSpawnHoming)
@@ -41,22 +46,12 @@ public class DragonPowersDos : MonoBehaviour
 
         if(canFlamethrower == false)
         {
-            cd1 -= Time.deltaTime;
-            if(cd1 < 0)
-            {
-                cd1 = 0.85f;
-                canFlamethrower = true;
-            }
+            StartCoroutine(FlamethrowerCooldown());
         }
 
         if(canSpawnHoming == false)
         {
-            cd2 -= Time.deltaTime;
-            if(cd2 < 0)
-            {
-                cd2 = 13f;
-                canSpawnHoming = true;
-            }
+            StartCoroutine(HomingCooldown());
         }
 
         
@@ -73,6 +68,42 @@ public class DragonPowersDos : MonoBehaviour
             i++;
         }
         
+    }
+
+    private IEnumerator FlamethrowerCooldown()
+    {
+        float elapsedTime = 0f;
+        flamethrowerIcon.fillAmount = 1f;
+
+        while (elapsedTime < cd1)
+        {
+            elapsedTime += Time.deltaTime;
+            flamethrowerIcon.fillAmount = 1f - (elapsedTime / cd1);
+            yield return null;
+        }
+        flamethrowerIcon.fillAmount = 0f;
+        canFlamethrower = true;
+    }
+
+    private IEnumerator HomingCooldown()
+    {
+        float elapsedTime = 0f;
+        homingIcon.fillAmount = 1f;
+
+        while (elapsedTime < cd2)
+        {
+            elapsedTime += Time.deltaTime;
+            homingIcon.fillAmount = 1f - (elapsedTime / cd2);
+            yield return null;
+        }
+        homingIcon.fillAmount = 0f;
+        canSpawnHoming = true;
+    }
+
+    [PunRPC]
+    public void EnableFlamethrower(bool canFlameNow)
+    {
+        flamethrower.SetActive(canFlameNow);
     }
 
     

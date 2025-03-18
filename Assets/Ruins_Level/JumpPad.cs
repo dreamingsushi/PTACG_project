@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
-    public float powerMultiplier;
+    public float powerMultiplier = 2;
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.GetComponent<BossMovement>())

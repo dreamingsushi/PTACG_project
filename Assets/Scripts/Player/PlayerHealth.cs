@@ -78,7 +78,9 @@ public class PlayerHealth : MonoBehaviour
 
         ApplyKnockback(hitDirection);
 
-        healthBar.SetHealth(currentHealth);
+        float currentPlayerHP = currentHealth;
+        healthBar.GetComponent<PhotonView>().RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, currentPlayerHP);
+        // healthBar.SetHealth(currentHealth);
         
         StartCoroutine(DamageEffect());
         DamagePopUpText.Instance.ShowDamageNumber(transform.position, effectiveDamage.ToString());

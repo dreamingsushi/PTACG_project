@@ -15,6 +15,7 @@ public class BossControllerDos : MonoBehaviour
     
 
     public GameObject mySkills;
+    public GameObject myCrossHair;
     private bool cursorLocked;
     private Vector3 relativeVector;
 
@@ -26,6 +27,7 @@ public class BossControllerDos : MonoBehaviour
             
             
             mySkills.SetActive(true);
+            myCrossHair.SetActive(true);
 
         }
         else
@@ -33,6 +35,8 @@ public class BossControllerDos : MonoBehaviour
             GetComponent<DragonPowersDos>().enabled = false;
             
             mySkills.SetActive(false);
+            myCrossHair.SetActive(false);
+
             this.enabled = false;
             
 
@@ -60,14 +64,15 @@ public class BossControllerDos : MonoBehaviour
 
         //vert
         focusPoint.transform.eulerAngles = new Vector3(focusPoint.transform.eulerAngles.x + -Input.GetAxis("Mouse Y"), focusPoint.transform.eulerAngles.y,0);
-        if(focusPoint.transform.eulerAngles.x > 35)
+        if(focusPoint.transform.eulerAngles.x > 75)
         {
-            focusPoint.transform.eulerAngles = new Vector3(35,focusPoint.transform.eulerAngles.y,0);
+            focusPoint.transform.eulerAngles = new Vector3(75,focusPoint.transform.eulerAngles.y,0);
         }
 
-        if(focusPoint.transform.eulerAngles.x < 1)
+        if (focusPoint.transform.rotation.eulerAngles.x <10)
         {
-            focusPoint.transform.eulerAngles = new Vector3(1,focusPoint.transform.eulerAngles.y,0);
+            float clampedX = Mathf.Clamp(focusPoint.transform.rotation.eulerAngles.x, 10, 360);
+            focusPoint.transform.rotation = Quaternion.Euler(clampedX, focusPoint.transform.rotation.eulerAngles.y, 0);
         }
 
 
@@ -75,14 +80,14 @@ public class BossControllerDos : MonoBehaviour
         
         focusPoint.transform.parent.Rotate(transform.up*Input.GetAxis("Mouse X")*Time.deltaTime*sens);
         
-        if(focusPoint.transform.parent.eulerAngles.y > maxAngle)
-        {
-            focusPoint.transform.parent.eulerAngles = new Vector3(0,maxAngle,0);
-        }
-        if(focusPoint.transform.parent.eulerAngles.y < minAngle)
-        {
-            focusPoint.transform.parent.eulerAngles = new Vector3(0,minAngle,0);
-        }
+        // if(focusPoint.transform.parent.eulerAngles.y > maxAngle)
+        // {
+        //     focusPoint.transform.parent.eulerAngles = new Vector3(0,maxAngle,0);
+        // }
+        // if(focusPoint.transform.parent.eulerAngles.y < minAngle)
+        // {
+        //     focusPoint.transform.parent.eulerAngles = new Vector3(0,minAngle,0);
+        // }
         
         
     }
