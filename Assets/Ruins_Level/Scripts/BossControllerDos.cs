@@ -12,7 +12,7 @@ public class BossControllerDos : MonoBehaviour
     public float sens = 1f;
     public float maxAngle;
     public float minAngle;
-    public GameObject healthBar;
+    
 
     public GameObject mySkills;
     private bool cursorLocked;

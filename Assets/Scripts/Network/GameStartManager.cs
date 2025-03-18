@@ -23,8 +23,6 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public GameObject Defeat;
     public bool isSecondPhase;
     public bool gameResulted = false;
-    public List<GameObject> warriors;
-    public GameObject bossPlayer;
     public int currentDeaths;
     private string currentTimer;
 
@@ -88,12 +86,12 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         if(PhotonNetwork.LocalPlayer.IsMasterClient && !gameResulted && timeLeft > 0)
         {
             TimerDownForGame();
-            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, currentTimer);
+            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, currentTimer, timeLeft);
         }
 
         if(timeLeft <= 0)
         {
-            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, "Sudden Death");
+            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, "Sudden Death", 0);
         }
         
         if(isSecondPhase)
@@ -138,8 +136,9 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void SyncCountdownTimer(string timer)
+    public void SyncCountdownTimer(string timer, float timeRemaining)
     {
+        timeRemaining = timeLeft;
         timerDown.text = timer;
     }
 

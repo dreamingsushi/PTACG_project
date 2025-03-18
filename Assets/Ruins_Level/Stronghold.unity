@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 93300899}
   - component: {fileID: 93300898}
   - component: {fileID: 93300897}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,6 +615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf2c33d247034644b77e1e99090185a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purple: {fileID: 2100000, guid: 6dec86a0dd54c064c92e4a9c2080074a, type: 2}
+  red: {fileID: 2100000, guid: 1a51bac84e550684b8ac232fae0d2b59, type: 2}
+  blue: {fileID: 2100000, guid: f142073e7d99c7747a8b35e654e8518a, type: 2}
 --- !u!1 &415507326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,7 +5542,7 @@ GameObject:
   - component: {fileID: 441035883}
   - component: {fileID: 441035882}
   - component: {fileID: 441035881}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5759,7 +5762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580657960}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platformwalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5821,8 +5824,8 @@ Camera:
   m_GameObject: {fileID: 595943133}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.21509439, g: 0.21509439, b: 0.21509439, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -10798,7 +10801,7 @@ GameObject:
   - component: {fileID: 637138406}
   - component: {fileID: 637138405}
   - component: {fileID: 637138404}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10903,7 +10906,7 @@ GameObject:
   - component: {fileID: 711565108}
   - component: {fileID: 711565107}
   - component: {fileID: 711565106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11008,7 +11011,7 @@ GameObject:
   - component: {fileID: 746519004}
   - component: {fileID: 746519003}
   - component: {fileID: 746519002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE.005 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11190,7 +11193,7 @@ GameObject:
   - component: {fileID: 815314377}
   - component: {fileID: 815314376}
   - component: {fileID: 815314375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11295,7 +11298,7 @@ GameObject:
   - component: {fileID: 918534127}
   - component: {fileID: 918534126}
   - component: {fileID: 918534125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11400,7 +11403,7 @@ GameObject:
   - component: {fileID: 953982257}
   - component: {fileID: 953982256}
   - component: {fileID: 953982255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16481,7 +16484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1218480437}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platformwalls (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21583,6 +21586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42efd5298b170b24e8bcdb6ca00e58fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerMultiplier: 0
 --- !u!65 &1410735965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21616,7 +21620,7 @@ GameObject:
   - component: {fileID: 1453001879}
   - component: {fileID: 1453001878}
   - component: {fileID: 1453001877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21721,7 +21725,7 @@ GameObject:
   - component: {fileID: 1462190873}
   - component: {fileID: 1462190872}
   - component: {fileID: 1462190871}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21826,7 +21830,7 @@ GameObject:
   - component: {fileID: 1532567273}
   - component: {fileID: 1532567272}
   - component: {fileID: 1532567271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE.005 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21963,7 +21967,7 @@ GameObject:
   - component: {fileID: 1565162134}
   - component: {fileID: 1565162133}
   - component: {fileID: 1565162132}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22099,7 +22103,7 @@ GameObject:
   - component: {fileID: 1945695004}
   - component: {fileID: 1945695003}
   - component: {fileID: 1945695002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22201,7 +22205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2031106585}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platformwalls (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22238,7 +22242,7 @@ GameObject:
   - component: {fileID: 2047163261}
   - component: {fileID: 2047163260}
   - component: {fileID: 2047163259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27173,7 +27177,7 @@ GameObject:
   - component: {fileID: 2112308218}
   - component: {fileID: 2112308217}
   - component: {fileID: 2112308216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27279,7 +27283,7 @@ GameObject:
   - component: {fileID: 3435998611270130524}
   - component: {fileID: 4386651914094487867}
   - component: {fileID: 4386651914094487868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32754,7 +32758,7 @@ GameObject:
   - component: {fileID: 4517685280342876089}
   - component: {fileID: 3005382163713718685}
   - component: {fileID: 8820827865002277432}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32773,7 +32777,7 @@ GameObject:
   - component: {fileID: 2593050663725243884}
   - component: {fileID: 1023118257121921443}
   - component: {fileID: 4616870544144354458}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32792,7 +32796,7 @@ GameObject:
   - component: {fileID: 2253670186391822444}
   - component: {fileID: 5391899298085739167}
   - component: {fileID: 8393794994785636890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42597,7 +42601,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 75238a72e299c4f40a8ead5789b5ef85, type: 2}
+  - {fileID: 2100000, guid: 5145815c426af6349a8138e682fad0bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47476,7 +47480,7 @@ GameObject:
   - component: {fileID: 4903506575285568430}
   - component: {fileID: 6063372716441625500}
   - component: {fileID: 6075996874270263823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47531,7 +47535,7 @@ GameObject:
   - component: {fileID: 1961655148454885828}
   - component: {fileID: 6061220122744337916}
   - component: {fileID: 573090340424744995}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TEMPLE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47558,7 +47562,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5145815c426af6349a8138e682fad0bf, type: 2}
+  - {fileID: 2100000, guid: f142073e7d99c7747a8b35e654e8518a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52521,7 +52525,8 @@ GameObject:
   - component: {fileID: 8850111447606839463}
   - component: {fileID: 1089949497856401405}
   - component: {fileID: 6696009529152585550}
-  m_Layer: 0
+  - component: {fileID: 8850111447606839464}
+  m_Layer: 6
   m_Name: TEMPLE.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52651,6 +52656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42efd5298b170b24e8bcdb6ca00e58fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerMultiplier: 0
 --- !u!65 &8539868352312506729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52729,6 +52735,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 543450652628183033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8850111447606839464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367436755557119224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf2c33d247034644b77e1e99090185a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purple: {fileID: 2100000, guid: 6dec86a0dd54c064c92e4a9c2080074a, type: 2}
+  red: {fileID: 2100000, guid: 1a51bac84e550684b8ac232fae0d2b59, type: 2}
+  blue: {fileID: 2100000, guid: f142073e7d99c7747a8b35e654e8518a, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

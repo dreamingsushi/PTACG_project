@@ -5,12 +5,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerSetup : MonoBehaviourPunCallbacks
 {
     
     public CinemachineVirtualCamera playerCamera;
     public Canvas hpUI;
+    public Canvas WorldSpaceHP;
+    public TMP_Text nameOfWarrior;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,9 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             // imageHPUI.SetActive(true);
             //GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
             playerCamera.enabled = true;
+
+            WorldSpaceHP.enabled = false;
+            
         }
         else
         {
@@ -40,6 +46,9 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             // imageHPUI.SetActive(false);
             //GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
             playerCamera.enabled = false;
+
+            WorldSpaceHP.enabled = true;
+            nameOfWarrior.text = GetComponent<PhotonView>().Owner.NickName;
         }
     }
 

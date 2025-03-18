@@ -6010,7 +6010,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 64.28928, y: 42.49, z: 153.75458}
-  m_LocalScale: {x: 7.69, y: 7.69, z: 7.69}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1434564164995816122}
@@ -6059,7 +6059,11 @@ MonoBehaviour:
   deathCam: {fileID: 8857152214413109987}
   deathVFX: {fileID: 5571015360581967548}
   dragonDeathMat: {fileID: 2100000, guid: 7d35aa2051994934abc62682e8e79657, type: 2}
-  healthBar: {fileID: 1998573567251989643}
+  healthBar: {fileID: 7595631451524835233}
+  isPoisoned: 0
+  poisonDamage: 2
+  poisonInterval: 1
+  poisonDuration: 5
 --- !u!1 &6755992475604559000
 GameObject:
   m_ObjectHideFlags: 0
@@ -8578,3 +8582,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8812230759260293225}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7595631451524835233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1378751986229784520, guid: 86c48940a96d94849bb04ea76914ee9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8812230759260293225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f319baf873dcbc54fa6b60992de63c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -35,7 +35,7 @@ public class PlayerHealthOld : MonoBehaviour
     private PlayerController playerController;
 
     [Header("HealthBar Assign tooooooo <3")]
-    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private HealthBarSyncTest healthBar;
 
 
     void Start()

@@ -82,11 +82,11 @@ public class BossHealth : MonoBehaviour
         
         if(GetComponentInChildren<BossController>() != null && GetComponentInChildren<PhotonView>().IsMine)
         {
-            DamagePopUpText.Instance.ShowDamageNumber(GetComponentInChildren<BossController>().transform.position, damage.ToString());
+            DamagePopUpText.Instance.ShowDamageNumber(GetComponentInChildren<BossController>().transform.position, effectiveDamage.ToString());
         }
         else if(GetComponent<BossController>() != null && GetComponent<PhotonView>().IsMine)
         {
-            DamagePopUpText.Instance.ShowDamageNumber(GetComponent<BossControllerDos>().transform.position, damage.ToString());
+            DamagePopUpText.Instance.ShowDamageNumber(GetComponent<BossControllerDos>().transform.position, effectiveDamage.ToString());
         }
 
         if (currentBossHP <= 0)

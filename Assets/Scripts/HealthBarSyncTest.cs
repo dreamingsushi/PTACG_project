@@ -7,7 +7,7 @@ using TMPro;
 using Photon.Pun.UtilityScripts;
 using System.Collections.Generic;
 
-public class HealthBarOld : MonoBehaviourPunCallbacks
+public class HealthBarSyncTest : MonoBehaviourPunCallbacks
 {
     [Header("Health Bar Components")]
     [SerializeField] private Image mainHealthFill;    // Red bar (actual HP)
@@ -22,23 +22,30 @@ public class HealthBarOld : MonoBehaviourPunCallbacks
     [SerializeField] private int playerNumber;
     [SerializeField] private TMP_Text playerName;
     private float maxHealth = 100f;
+    private bool canSync;
     private Coroutine delayedBarRoutine;
+
+    [Header("All Player Health UI")]    
     public List<string> nicknames = new List<string>();
     public List<PlayerHealth> warriorHealth = new List<PlayerHealth>();
+    public BossHealth bossHealth;
 
     
     void Start()
     {
         Invoke("SyncStartUI", 4f);
         
+        
     }
 
     public void SyncStartUI()
     {
+        
+        
         if(playerNumber == 4)
-        {
-            playerName.text = PhotonNetwork.LocalPlayer.NickName;
-            photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, GetComponentInParent<BossHealth>().currentBossHP);
+        {          
+            playerName.text = FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName;
+            
             return;
             
         }
@@ -52,7 +59,7 @@ public class HealthBarOld : MonoBehaviourPunCallbacks
             
             foreach(PlayerHealth plyr in allPlayers)
             {
-                if(plyr.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName)
+                if(plyr.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName && plyr != null)
                 {
                     nicknames.Add(plyr.GetComponent<PhotonView>().Owner.NickName);
                     warriorHealth.Add(plyr.GetComponent<PlayerHealth>());
@@ -60,21 +67,39 @@ public class HealthBarOld : MonoBehaviourPunCallbacks
 
             }
 
-            nicknames.Add(FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName);
+            //nicknames.Add(FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName);
 
 
             playerName.text = nicknames[playerNumber -1];
             
-            photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, warriorHealth[playerNumber -1].currentHealth);
+            
         }
         
-        
+        canSync = true;
     }
 
     void Update()
     {   
-        
-        
+        if(!canSync)
+        {
+            return;
+        }
+        else
+        {
+            if(playerNumber == 4)
+            {
+                bossHealth = FindObjectOfType<BossHealth>();
+                float bossCurrentHP = bossHealth.currentBossHP;
+                maxHealth = bossHealth.maxBossHP;
+                photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, bossCurrentHP);
+                Debug.Log(bossCurrentHP);
+            }
+            else if(playerNumber != 4)
+            {
+                maxHealth = 100;
+                photonView.RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, (float)warriorHealth[playerNumber -1].currentHealth);
+            }
+        }
         
         // for(int i = 0; i<GameStartManager.instance.warriors.Count; i++)
         // {
@@ -191,7 +216,7 @@ public class HealthBarOld : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public void SyncAllHealthBarUI(int hp)
+    public void SyncAllHealthBarUI(float hp)
     {
         
         
