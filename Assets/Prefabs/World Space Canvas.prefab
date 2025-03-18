@@ -159,7 +159,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7876477972344549774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +424,10 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  playerNumber: 0
+  playerName: {fileID: 0}
+  nicknames: []
+  warriorHealth: []
 --- !u!114 &7039248965387914324
 MonoBehaviour:
   m_ObjectHideFlags: 0

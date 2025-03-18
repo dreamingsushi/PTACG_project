@@ -1984,6 +1984,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!1 &1860626574077173554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -42.74, y: 40.660004}
+  m_AnchoredPosition: {x: -316, y: 131}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &5579199179646864951
@@ -4407,6 +4408,7 @@ MonoBehaviour:
   playerName: {fileID: 4872580077231893320}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!114 &7337344854818010007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6329,6 +6331,7 @@ MonoBehaviour:
   playerName: {fileID: 8129867820982071746}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!114 &2885444604483595447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7323,6 +7326,7 @@ MonoBehaviour:
   playerName: {fileID: 2435883201147379114}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!114 &5257145455845592225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8201,7 +8205,7 @@ PrefabInstance:
     - target: {fileID: 938763110637355180, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -166
+      value: -466
       objectReference: {fileID: 0}
     - target: {fileID: 938763110637355180, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
@@ -8361,7 +8365,7 @@ PrefabInstance:
     - target: {fileID: 4307977742154952531, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -299.99994
       objectReference: {fileID: 0}
     - target: {fileID: 4307977742154952531, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
@@ -8511,7 +8515,7 @@ PrefabInstance:
     - target: {fileID: 7325972020084101093, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -180
+      value: -479.99994
       objectReference: {fileID: 0}
     - target: {fileID: 7325972020084101093, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}

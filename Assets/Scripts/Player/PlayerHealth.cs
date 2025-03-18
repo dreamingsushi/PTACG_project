@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject regenVFX;
     [Header("Health Settings")]
     public int maxHealth = 100;
     public int currentHealth;
@@ -37,6 +38,11 @@ public class PlayerHealth : MonoBehaviour
     [Header("HealthBar Assign tooooooo <3")]
     [SerializeField] private HealthBar healthBar;
 
+    [Header("Poison Damage Settings")]
+    public bool isPoisoned = false;
+    public int healAmount = 1;
+    public float healInterval = 1f;
+    public float healDuration = 5f;
 
     void Start()
     {
@@ -129,7 +135,6 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(respawnTime);
         isInvincible = false;
         playerController.isDead = false;
-        GameStartManager.instance.currentDeaths -= 1;
         Heal(75);
     }
 
@@ -145,9 +150,26 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player Died");
-        GameStartManager.instance.currentDeaths += 1;
         playerController.isDead = true;
         OnPlayerDeath?.Invoke();
         StartCoroutine(Respawning(15f));
+    }
+
+    private IEnumerator HealingEffect(float duration)
+    {
+        float elapsedTime = 0f;
+        regenVFX.SetActive(true);
+        while (elapsedTime < duration)
+        {
+            yield return new WaitForSeconds(healInterval);
+            Heal(healAmount);
+            elapsedTime += healInterval;
+        }
+        regenVFX.SetActive(false);
+    }
+
+    public void ApplyHealingRegen()
+    {
+        StartCoroutine(HealingEffect(healDuration));
     }
 }

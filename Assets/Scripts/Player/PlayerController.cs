@@ -7,9 +7,11 @@ using Unity.VisualScripting;
 // using UnityEditor.Rendering.LookDev;
 using UnityEngine.UI;
 using Photon.Pun;
+using Unity.Mathematics;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Variables
     public PlayerClass currentClass;
     public enum PlayerClass
     {
@@ -18,23 +20,7 @@ public class PlayerController : MonoBehaviour
     [Header("Components to Assign")]
     public Transform orientation;
     public CinemachineVirtualCamera cam;
-    
-    [Header("Movement Settings")]
-    public float moveSpeed = 10;
-    public float rotationSpeed = 5;
-    public float gravity = -9.81f;
-    
-    [Header("Jump Settings")]
-    public float jumpForce = 4;
-    public float jumpCooldown = 0.2f;
-    public float airMultiplier = 1;
 
-    [Header("Ground Check")]
-    public LayerMask groundLayer;
-
-    [Header("Attack Settings")]
-    public float attackDuration = 0.2f;
-    
     [Header("Knight Settings")]
     [SerializeField] private float sprintSpeedMultiplier = 2f;
     [SerializeField] private float sprintDuration = 3f;
@@ -53,6 +39,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float teleportDistance = 5f;
     [SerializeField] private Image mageShift_CD;
     [SerializeField] private Image mageM1_CD;
+    [SerializeField] private GameObject tpVFX;
 
     [Header("Support Settings")]
     [SerializeField] private GameObject supportProjectilePrefab;
@@ -63,6 +50,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject healingCircle;
     [SerializeField] private bool canPlaceHealingCircle = true;
     [SerializeField] public Transform supportLeg;
+    
+    [Header("Movement Settings")]
+    public float moveSpeed = 10;
+    public float rotationSpeed = 5;
+    public float gravity = -9.81f;
+    
+    [Header("Jump Settings")]
+    public float jumpForce = 4;
+    public float jumpCooldown = 0.2f;
+    public float airMultiplier = 1;
+
+    [Header("Ground Check")]
+    public LayerMask groundLayer;
+
+    [Header("Attack Settings")]
+    public float attackDuration = 0.2f;
 
     [Header ("Zhe King Ice Map Exclusive Settings")]
     public bool isOnIce;
@@ -89,35 +92,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 velocity;
     private PlayerInputs inputActions;
-    // public event Action OnJumpEvent;
-    // public event Action OnAttackEvent;
-    
-    public void Shoot()
-    {
-        if (currentClass == PlayerClass.Mage)
-        {
-            if (projectilePrefab == null || staffTip == null) return;
-            Vector3 shootDirection = cameraManager.GetAimDirection();
-            GameObject projectile = Instantiate(projectilePrefab, staffTip.position, Quaternion.LookRotation(shootDirection));
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.velocity = shootDirection * projectileSpeed;
-            }
-        }
-        if (currentClass == PlayerClass.Support)
-        {
-            if (supportProjectilePrefab == null || supportHand == null) return;
-            Vector3 shootDirection = cameraManager.GetAimDirection();
-            GameObject projectile = Instantiate(supportProjectilePrefab, supportHand.position, Quaternion.LookRotation(shootDirection));
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.velocity = shootDirection * projectileSpeed;
-            }
-        }
 
-    }
+    #endregion
+
+#region Inputs
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -216,6 +194,9 @@ public class PlayerController : MonoBehaviour
         inputActions.Player.Disable();
     }
 
+#endregion
+
+#region PlayerController
     private void Awake()
     {
         inputActions = new PlayerInputs();
@@ -323,6 +304,35 @@ public class PlayerController : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+#endregion
+
+#region Player Attack
+    public void Shoot()
+    {
+        if (currentClass == PlayerClass.Mage)
+        {
+            if (projectilePrefab == null || staffTip == null) return;
+            Vector3 shootDirection = cameraManager.GetAimDirection();
+            GameObject projectile = Instantiate(projectilePrefab, staffTip.position, Quaternion.LookRotation(shootDirection));
+            Rigidbody rb = projectile.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.velocity = shootDirection * projectileSpeed;
+            }
+        }
+        if (currentClass == PlayerClass.Support)
+        {
+            if (supportProjectilePrefab == null || supportHand == null) return;
+            Vector3 shootDirection = cameraManager.GetAimDirection();
+            GameObject projectile = Instantiate(supportProjectilePrefab, supportHand.position, Quaternion.LookRotation(shootDirection));
+            Rigidbody rb = projectile.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.velocity = shootDirection * projectileSpeed;
+            }
+        }
+
     }
 
     private void Attack()
@@ -436,6 +446,7 @@ public class PlayerController : MonoBehaviour
 
         cam.m_Lens.FieldOfView = targetFOV;
     }
+#endregion
 
     private IEnumerator DisableRotationTemporarily(float duration)
     {
@@ -444,6 +455,7 @@ public class PlayerController : MonoBehaviour
         canRotate = true;
     }
 
+#region IceMap
     private void HandleIceMovement(float speed)
     {
         if (moveDirection != Vector3.zero)
@@ -453,6 +465,9 @@ public class PlayerController : MonoBehaviour
         iceVelocity *= iceFriction; 
         controller.Move(iceVelocity * Time.deltaTime);
     }
+#endregion
+
+#region Player Ability
 
     public void Teleport(Vector3 targetPosition)
     {
@@ -466,11 +481,12 @@ public class PlayerController : MonoBehaviour
         if (!canTeleport) return;
 
         Vector3 teleportPosition = transform.position + transform.forward * teleportDistance;
-
+        Vector3 effectPosition = teleportPosition + Vector3.down * 1f;
         if (!Physics.Raycast(transform.position, transform.forward, teleportDistance))
         {
             controller.enabled = false;
             transform.position = teleportPosition;
+            Instantiate(tpVFX, effectPosition, Quaternion.Euler(-90, 0, 0));
             controller.enabled = true;
         }
         canTeleport = false;
@@ -546,6 +562,7 @@ public class PlayerController : MonoBehaviour
         canPlaceHealingCircle = true;
     }
 
+#endregion
 
     public void ResetJump2() => isJumping = false;
     public void ResetAttack() => isAttacking = false;
