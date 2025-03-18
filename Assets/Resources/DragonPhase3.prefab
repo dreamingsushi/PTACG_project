@@ -9833,7 +9833,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.92082167, z: 0, w: 0.38998386}
   m_LocalPosition: {x: -81, y: -73, z: 10.6}
-  m_LocalScale: {x: 265.5618, y: 265.5618, z: 265.5618}
+  m_LocalScale: {x: 106, y: 106, z: 106}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 768581358711858764}

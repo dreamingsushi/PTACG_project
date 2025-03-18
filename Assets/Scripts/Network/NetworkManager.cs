@@ -609,7 +609,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                         voteCounts[j] = 0;
                     }
                     photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
-                    Debug.Log(voteCounts[j]);
+                    
                 }
                 break;
             
@@ -642,7 +642,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                         voteCounts[j] = 0;
                     }
                     photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
-                    Debug.Log(voteCounts[j]);
+                    
                 }
                 break;
             
@@ -675,7 +675,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                         voteCounts[j] = 0;
                     }
                     photonView.RPC("SyncVotes", RpcTarget.AllBuffered, j, voteCounts[j]);    
-                    Debug.Log(voteCounts[j]);
+                    
                 }
                 break;
 
@@ -846,7 +846,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         
         lastVotedMap = mapIndex;
-        Debug.Log(lastVotedMap);
+        
         voted = true;
         
     }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class DragonPowersDos : MonoBehaviour
 {
     public GameObject flamethrower;
-    public GameObject flamePoint;
+
     public GameObject fireball;
 
     public GameObject[] fireballSpawnPoints = new GameObject[3];

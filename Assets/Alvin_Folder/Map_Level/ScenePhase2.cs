@@ -27,5 +27,17 @@ public class ScenePhase2 : MonoBehaviour
                 //Invoke("FSEAnimation", delaytime);
             }
         }
+
+        if(GameStartManager.instance.isSecondPhase)
+        {
+         
+            foreach (Animator anim in animators)
+            {
+                anim.SetBool("Phase2", true);
+                anim.SetTrigger("Phase2");
+                //Invoke("FSEAnimation", delaytime);
+            }
+        
+        }
     }
 }

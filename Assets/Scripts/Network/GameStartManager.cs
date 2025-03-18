@@ -54,23 +54,25 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             object playerSelectionNumber;
             if (PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNumber ))
             {
+                
                 if((int) playerSelectionNumber != 3)
                 {
-                    Debug.Log((int)playerSelectionNumber);
+                    Vector3 adjustSpawn = new Vector3(0,0,0);
                 
                     int actorNumber = PhotonNetwork.LocalPlayer.ActorNumber;
                     if(actorNumber > 3)
                     {
+                        adjustSpawn = new Vector3(0,5,0);
                         actorNumber = 3;
                     }
-                    Vector3 instantiatePosition = InstantiatePositions[actorNumber-1].position;
+                    Vector3 instantiatePosition = InstantiatePositions[actorNumber-1].position + adjustSpawn;
 
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
                     
                 }
                 else if((int) playerSelectionNumber == 3)
                 {
-                    Debug.Log((int)playerSelectionNumber);
+                    
                     Vector3 instantiatePosition = bossInstantiatePosition.position;
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
 

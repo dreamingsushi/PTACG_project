@@ -31,13 +31,13 @@ public class BossHealth : MonoBehaviour
         dragonNumbers.takenDamage = 0f;
         if(GetComponentInChildren<BossController>() != null)
         {
-            maxBossHP = 300f;
+            maxBossHP = 200f;
             currentBossHP = maxBossHP;
         }
         else if(GetComponent<BossControllerDos>() != null)
         {
-            maxBossHP = 900f;
-            currentBossHP = 900f - dragonNumbers.takenDamage;
+            maxBossHP = 500f;
+            currentBossHP = 500f - dragonNumbers.takenDamage;
         }
     }
     // Start is called before the first frame update
