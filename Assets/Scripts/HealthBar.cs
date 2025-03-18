@@ -52,7 +52,7 @@ public class HealthBar : MonoBehaviourPunCallbacks
             
             foreach(PlayerHealth plyr in allPlayers)
             {
-                if(plyr.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName)
+                if(plyr.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName && plyr != null)
                 {
                     nicknames.Add(plyr.GetComponent<PhotonView>().Owner.NickName);
                     warriorHealth.Add(plyr.GetComponent<PlayerHealth>());

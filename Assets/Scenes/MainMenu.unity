@@ -547,19 +547,6 @@ MonoBehaviour:
           m_StringArgument: MapSelectUIRoomPanel
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1445654490}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 667150058}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &22167056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3811,8 +3798,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218950237}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08261433, y: 0.004815737, z: 0.0003992182, w: 0.99656993}
-  m_LocalPosition: {x: 0.213, y: 2.206, z: -15.68}
+  m_LocalRotation: {x: 0.17125078, y: 0.0085811345, z: -0.0014916182, w: 0.985189}
+  m_LocalPosition: {x: 0.23, y: 1.85, z: 10.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4214,7 +4201,7 @@ GameObject:
   - component: {fileID: 227937236}
   - component: {fileID: 227937235}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: The Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5193,11 +5180,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: Damian_Space
           m_BoolArgument: 0
@@ -6724,6 +6711,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383679283}
   m_CullTransparentMesh: 1
+--- !u!1 &386748728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386748729}
+  - component: {fileID: 386748731}
+  - component: {fileID: 386748730}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &386748729
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386748728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 814408416}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &386748730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386748728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.75686276}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &386748731
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386748728}
+  m_CullTransparentMesh: 1
 --- !u!1 &393058204
 GameObject:
   m_ObjectHideFlags: 0
@@ -6830,7 +6892,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
-        m_MethodName: QuitButton
+        m_MethodName: OnOptionsButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6838,19 +6900,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: JoinRandomRoomPanel
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1445654490}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1226515222}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &393058208
@@ -7624,7 +7673,7 @@ GameObject:
   - component: {fileID: 432079093}
   - component: {fileID: 432079092}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Ruins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9475,6 +9524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebcf957d36daa9d40b7b525f10dee38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UItransition: {fileID: 1445654490}
+  optionsPanel: {fileID: 151134649}
   LoginUIPanel: {fileID: 1570801483}
   PlayerNameInput: {fileID: 1400043196}
   ConnectingInfoUIPanel: {fileID: 352930575}
@@ -9485,6 +9536,7 @@ MonoBehaviour:
   CreatingRoomInfoUIPanel: {fileID: 814408415}
   InsideRoomUIPanel: {fileID: 737059145}
   RoomInfoText: {fileID: 1839473720}
+  roomInfoText2: {fileID: 1841440911}
   PlayerListPrefab: {fileID: 4811202766086252374, guid: cf0024c89521cc94c9d0efbe77be91fc,
     type: 3}
   BossListContent: {fileID: 93913257}
@@ -10107,6 +10159,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1725316040}
   - {fileID: 307085136}
   m_Father: {fileID: 1570801484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10166,19 +10219,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 1445654490}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 332558060}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10378,7 +10418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &580332280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10392,6 +10432,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCamera: {fileID: 1854292749}
+  loginCamera: {fileID: 0}
+  createRoomCamera: {fileID: 0}
+  optionsCamera: {fileID: 0}
+  lobbyCamera: {fileID: 0}
+  mapCamera: {fileID: 0}
 --- !u!114 &580332281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11749,6 +11794,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 647415161}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &650608925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650608926}
+  - component: {fileID: 650608928}
+  - component: {fileID: 650608927}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &650608926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650608925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1400043195}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -114.3}
+  m_SizeDelta: {x: 600, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &650608927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650608925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.645283, g: 0.645283, b: 0.645283, a: 0.19215687}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &650608928
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650608925}
+  m_CullTransparentMesh: 1
 --- !u!1001 &652978108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12708,11 +12828,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: Alvin_Scene
           m_BoolArgument: 0
@@ -12844,10 +12964,10 @@ RectTransform:
   - {fileID: 1308907500}
   m_Father: {fileID: 151134650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 177.75, y: -106.98589}
-  m_SizeDelta: {x: 355.5, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &709476593
 CanvasRenderer:
@@ -13135,7 +13255,7 @@ GameObject:
   - component: {fileID: 725363202}
   - component: {fileID: 725363201}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Volcano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13447,10 +13567,10 @@ RectTransform:
   - {fileID: 1958000246}
   m_Father: {fileID: 151134650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 177.75, y: -188.97179}
-  m_SizeDelta: {x: 355.5, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &728147545
 CanvasRenderer:
@@ -13690,6 +13810,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1839473719}
+  - {fileID: 1841440910}
   - {fileID: 1274774331}
   - {fileID: 103438111}
   - {fileID: 93913258}
@@ -13745,6 +13866,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737059145}
   m_CullTransparentMesh: 0
+--- !u!1 &742275406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742275407}
+  - component: {fileID: 742275409}
+  - component: {fileID: 742275408}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &742275407
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742275406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1400043195}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 83}
+  m_SizeDelta: {x: 800, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &742275408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742275406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Eternal glory is found in the <color=red>Colosseum</color>
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: f8b0b97ddd665e54a8a9e0f6837ffb46, type: 2}
+  m_sharedMaterial: {fileID: -1743239135253095619, guid: f8b0b97ddd665e54a8a9e0f6837ffb46,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &742275409
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742275406}
+  m_CullTransparentMesh: 1
 --- !u!1001 &742733016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13951,7 +14207,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The glory is found in the Colosseum.
+  m_Text: '
 
 
     Sign your name..'
@@ -15223,6 +15479,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 386748729}
   - {fileID: 688127538}
   m_Father: {fileID: 1092370834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16398,7 +16655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &889687992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16562,7 +16819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &891100949
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17359,19 +17616,6 @@ MonoBehaviour:
           m_StringArgument: JoinRandomRoomPanel
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1445654490}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 772409782}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &941776351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17887,7 +18131,7 @@ GameObject:
   - component: {fileID: 977351171}
   - component: {fileID: 977351170}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: Ice Cliff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19395,11 +19639,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: Damian_Castle
           m_BoolArgument: 0
@@ -19878,19 +20122,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: CreateRoomPanel
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 1445654490}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 772409782}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -21808,11 +22039,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: Cave
           m_BoolArgument: 0
@@ -22936,7 +23167,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return
+  m_Text: Logout
 --- !u!222 &1231033500
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24585,11 +24816,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: Snow
           m_BoolArgument: 0
@@ -25686,11 +25917,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: Beach
           m_BoolArgument: 0
@@ -26094,7 +26325,7 @@ GameObject:
   - component: {fileID: 1362546202}
   - component: {fileID: 1362546201}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26617,8 +26848,10 @@ RectTransform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 650608926}
   - {fileID: 750424998}
   - {fileID: 2131518868}
+  - {fileID: 742275407}
   m_Father: {fileID: 1570801484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -26688,10 +26921,10 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
+  m_SelectionColor: {r: 0, g: 0, b: 0, a: 0.7529412}
   m_Text: 
-  m_CaretBlinkRate: 0.85
-  m_CaretWidth: 1
+  m_CaretBlinkRate: 1
+  m_CaretWidth: 3
   m_ReadOnly: 0
   m_ShouldActivateOnSelect: 1
 --- !u!114 &1400043197
@@ -27123,11 +27356,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: Ruins
           m_BoolArgument: 0
@@ -27606,6 +27839,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCamera: {fileID: 1854292749}
+  loginCamera: {fileID: 1854292749}
+  createRoomCamera: {fileID: 332558060}
+  optionsCamera: {fileID: 1226515222}
+  lobbyCamera: {fileID: 772409782}
+  mapCamera: {fileID: 667150058}
 --- !u!114 &1445654491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31604,10 +31842,10 @@ RectTransform:
   - {fileID: 2074070222}
   m_Father: {fileID: 151134650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 177.75, y: -25}
-  m_SizeDelta: {x: 355.5, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1700104697
 CanvasRenderer:
@@ -31813,6 +32051,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1725316039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725316040}
+  - component: {fileID: 1725316042}
+  - component: {fileID: 1725316041}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1725316040
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725316039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 560330537}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1725316041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725316039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.2679245, g: 0.2679245, b: 0.2679245, a: 0.27450982}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1725316042
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725316039}
+  m_CullTransparentMesh: 1
 --- !u!4 &1728863098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8965008891541275473, guid: 141849fb1b5198e458320e76f9438d68,
@@ -32422,7 +32735,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
-        m_MethodName: QuitButton
+        m_MethodName: OnLogoutButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32430,19 +32743,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: JoinRandomRoomPanel
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1445654490}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1854292749}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1771919749
@@ -33094,7 +33394,7 @@ GameObject:
   - component: {fileID: 1813379147}
   - component: {fileID: 1813379146}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33730,27 +34030,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
-        m_MethodName: ActivatePanel
-        m_Mode: 5
+        m_MethodName: OnLeaveGameButtonClicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GameOptionsPanel
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1445654490}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 332558060}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1831681668
@@ -33900,11 +34187,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 737059146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -120}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1839473720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33932,7 +34219,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 285
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -34112,11 +34399,11 @@ MonoBehaviour:
       - m_Target: {fileID: 533612164}
         m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
         m_MethodName: SelectMap
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: Alvin_Scene 2
           m_BoolArgument: 0
@@ -34159,6 +34446,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840391274}
   m_CullTransparentMesh: 1
+--- !u!1 &1841440909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841440910}
+  - component: {fileID: 1841440912}
+  - component: {fileID: 1841440911}
+  m_Layer: 5
+  m_Name: RoomInfoText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1841440910
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841440909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 737059146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 40}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1841440911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841440909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 495c9e2a934bcc640a8d7427b13cb680, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 285
+    m_Alignment: 8
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Players  1 / 4
+--- !u!222 &1841440912
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841440909}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1843264743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35285,10 +35651,10 @@ RectTransform:
   - {fileID: 383679284}
   m_Father: {fileID: 151134650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 177.75, y: -270.9577}
-  m_SizeDelta: {x: 355.5, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909636965
 MonoBehaviour:
@@ -35334,14 +35700,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580332280}
-        m_TargetAssemblyTypeName: UITransitionManager, Assembly-CSharp
-        m_MethodName: UpdateCamera
-        m_Mode: 2
+      - m_Target: {fileID: 533612164}
+        m_TargetAssemblyTypeName: NetworkManager, Assembly-CSharp
+        m_MethodName: OnReturnToGameOptionsClicked
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 332558060}
-          m_ObjectArgumentAssemblyTypeName: Cinemachine.CinemachineVirtualCamera,
-            Cinemachine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -37714,7 +38079,7 @@ GameObject:
   - component: {fileID: 2080518149}
   - component: {fileID: 2080518148}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37854,7 +38219,7 @@ GameObject:
   - component: {fileID: 2102081451}
   - component: {fileID: 2102081450}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38384,7 +38749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 0, y: -135}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2131518869
@@ -38409,11 +38774,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 495c9e2a934bcc640a8d7427b13cb680, type: 3}
-    m_FontSize: 40
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0

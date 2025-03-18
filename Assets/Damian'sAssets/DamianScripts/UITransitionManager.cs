@@ -6,11 +6,17 @@ using UnityEngine;
 public class UITransitionManager : MonoBehaviour
 {
     public CinemachineVirtualCamera currentCamera;
-    
+    public CinemachineVirtualCamera loginCamera;
+    public CinemachineVirtualCamera createRoomCamera;
+    public CinemachineVirtualCamera optionsCamera;
+    public CinemachineVirtualCamera lobbyCamera;
+    public CinemachineVirtualCamera mapCamera;
+
+
 
     public void Start()
     {
-        currentCamera.Priority++;
+        ///currentCamera.Priority++;
     }
 
     public void UpdateCamera(CinemachineVirtualCamera target)
@@ -21,6 +27,6 @@ public class UITransitionManager : MonoBehaviour
 
         currentCamera.Priority++;
 
-        Debug.Log (target);
+        //Debug.Log (target);
     }
 }
