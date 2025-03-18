@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2433067083055074902}
   - component: {fileID: 8655841870374147754}
   - component: {fileID: 3858385604341712538}
-  - component: {fileID: 861595720092383052}
-  - component: {fileID: 5331603777831402907}
   - component: {fileID: 4223632083692524196}
+  - component: {fileID: 861595720092383052}
+  - component: {fileID: -924996539647539623}
   - component: {fileID: -8985145769300647287}
   - component: {fileID: 3944589481396111825}
   m_Layer: 0
@@ -117,32 +117,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &861595720092383052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470278565100588117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 651e5f78c2add1b4cbd76e4e46349fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5331603777831402907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470278565100588117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3422ac48ea6ab2409553b0d65216225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 10
-  canHitPlayer: 0
 --- !u!65 &4223632083692524196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -164,6 +138,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019481324, y: 0.019481331, z: 0.02776922}
   m_Center: {x: -0.00000003301616, y: -0.0000000040077923, z: 0.0061458135}
+--- !u!114 &861595720092383052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470278565100588117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651e5f78c2add1b4cbd76e4e46349fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-924996539647539623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470278565100588117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86454c49e39e2a94ab7b9e5915cc32e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poisonVFX: {fileID: 1331089708476439879, guid: 65f2b983983966b46ad1c7b54b8a2c91,
+    type: 3}
+  vfxLifetime: 3
+  rotationSpeed: 10
 --- !u!114 &-8985145769300647287
 MonoBehaviour:
   m_ObjectHideFlags: 0
