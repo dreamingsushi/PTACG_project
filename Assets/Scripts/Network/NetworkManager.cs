@@ -961,7 +961,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     highestVotedMapText = "Voted Map: Ship";
                     yield return new WaitForSeconds(timeDelayToStartGame);
                     
-                    SceneManager.LoadScene("Ruins");
+                    SceneManager.LoadScene("Damian_Castle");
                     break; 
                 case 2:
                     highestVotedMapText = "Voted Map: Ruins";
@@ -973,19 +973,19 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     highestVotedMapText = "Voted Map: Volcano";
                     yield return new WaitForSeconds(timeDelayToStartGame);
                     
-                    SceneManager.LoadScene("Ruins");
+                    SceneManager.LoadScene("Alvin_Scene 2");
                     break; 
                 case 4:
                     highestVotedMapText = "Voted Map: Mines";
                     yield return new WaitForSeconds(timeDelayToStartGame);
                    
-                    SceneManager.LoadScene("Ruins");
+                    SceneManager.LoadScene("Alvin_Scene");
                     break; 
                 case 5:
                     highestVotedMapText = "Voted Map: Space";
                     yield return new WaitForSeconds(timeDelayToStartGame);
                   
-                    SceneManager.LoadScene("Ruins");
+                    SceneManager.LoadScene("Damian_Space");
                     break; 
                 case 6:
                     highestVotedMapText = "Voted Map: Beach";
@@ -997,7 +997,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     highestVotedMapText = "Voted Map: Ice Cliffs";
                     yield return new WaitForSeconds(timeDelayToStartGame);
    
-                    SceneManager.LoadScene("Ruins");
+                    SceneManager.LoadScene("Snow");
                     break; 
             }
 

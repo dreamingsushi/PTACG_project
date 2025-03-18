@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Damian_Space.unity
     guid: 805bf81e40d515f438fe099b8e3c3738
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Beach.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
