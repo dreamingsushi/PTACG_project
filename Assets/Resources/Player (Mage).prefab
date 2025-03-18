@@ -3570,6 +3570,7 @@ MonoBehaviour:
   playerName: {fileID: 6815280945233708375}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!114 &1801125500209180796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5392,6 +5393,7 @@ MonoBehaviour:
   playerName: {fileID: 3707857770634980443}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!114 &687643854775115403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5542,6 +5544,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!1 &5452929680972118508
 GameObject:
   m_ObjectHideFlags: 0
@@ -7493,6 +7496,7 @@ MonoBehaviour:
   playerName: {fileID: 7989447154390956536}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!114 &2193867901002842226
 MonoBehaviour:
   m_ObjectHideFlags: 0

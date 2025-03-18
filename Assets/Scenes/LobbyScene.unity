@@ -7415,6 +7415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebcf957d36daa9d40b7b525f10dee38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UItransition: {fileID: 0}
+  optionsPanel: {fileID: 0}
   LoginUIPanel: {fileID: 1898342735}
   PlayerNameInput: {fileID: 237746957}
   ConnectingInfoUIPanel: {fileID: 751703433}
@@ -7425,6 +7427,7 @@ MonoBehaviour:
   CreatingRoomInfoUIPanel: {fileID: 346571420}
   InsideRoomUIPanel: {fileID: 1598625407}
   RoomInfoText: {fileID: 314537884}
+  roomInfoText2: {fileID: 0}
   PlayerListPrefab: {fileID: 4811202766086252374, guid: cf0024c89521cc94c9d0efbe77be91fc,
     type: 3}
   BossListContent: {fileID: 716084931}

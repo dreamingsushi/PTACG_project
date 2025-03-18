@@ -82,7 +82,7 @@ public class DragonPowers : MonoBehaviour
             }
         }
 
-        if(GetComponent<BossMovement>().isGrounded)
+        if(GetComponentInChildren<BossMovement>().isGrounded)
         {
             canClaw = true;
         }

@@ -61,7 +61,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // public RacingPlayer[] RacingPlayers;
     //public GameObject[] PlayerSelectionUIGameObjects;
     private Dictionary<int, GameObject> playerListGameObjects;
-    private float timeLeft = 20f;
+    private float timeLeft = 5f;
     private int highestVotes;
     private int highestVotedMap;
     private string highestVotedMapText;
