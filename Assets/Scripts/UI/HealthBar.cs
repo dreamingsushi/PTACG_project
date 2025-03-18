@@ -31,6 +31,7 @@ public class HealthBar : MonoBehaviourPunCallbacks
     public List<PlayerHealth> warriorHealth = new List<PlayerHealth>();
     public BossHealth bossHealth;
 
+    private bool stopOnce;
     
     void Start()
     {
@@ -110,13 +111,13 @@ public class HealthBar : MonoBehaviourPunCallbacks
                 
             }
         }
-        if(playerNumber == 4)
+        
+        if(GameStartManager.instance.isSecondPhase && stopOnce == false)
         {
-            if(GameStartManager.instance.isSecondPhase)
-            {
-                StopAllCoroutines();
-            }
+            stopOnce = true;
+            StopAllCoroutines();
         }
+        
         
         
         // for(int i = 0; i<GameStartManager.instance.warriors.Count; i++)

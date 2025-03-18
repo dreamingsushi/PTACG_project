@@ -149,7 +149,9 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public void SyncBossPhase(bool secondPhase)
     {
         isSecondPhase = secondPhase;
+        Destroy(FindObjectOfType<DragonPowers>().gameObject.GetComponentInChildren<HealthBar>().gameObject);
         FindObjectOfType<DragonPowers>().gameObject.SetActive(false);
+
     }
 
     
