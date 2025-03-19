@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Flames : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class Flames : MonoBehaviour
 
     private IEnumerator TakingFireDamage()
     {
-        playerEntered.TakeDamage(flameDamage, playerEntered.transform.position);
+        int dragonDamage = (int)dragonNumbers.flamesDamage; 
+        playerEntered.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, dragonDamage, this.transform.position);
         canFlameDamage = false;
         yield return new WaitForSeconds(1.5f);
         canFlameDamage = true;

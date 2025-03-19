@@ -9,7 +9,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Unity.Mathematics;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerPlus : MonoBehaviour
 {
     #region Variables
     public PlayerClass currentClass;

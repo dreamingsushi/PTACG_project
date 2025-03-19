@@ -23,7 +23,7 @@ public class TimeCountDownManager : MonoBehaviourPun
         
         if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
         {
-            GetComponent<PlayerController>().enabled = false;
+            GetComponent<PlayerControllerPlus>().enabled = false;
         }
 
         if(GetComponent<BossSetup>() != null && photonView.IsMine)
@@ -82,7 +82,7 @@ public class TimeCountDownManager : MonoBehaviourPun
     {
         if(GetComponent<PlayerSetup>() != null && photonView.IsMine)
         {
-            GetComponent<PlayerController>().enabled = true;
+            GetComponent<PlayerControllerPlus>().enabled = true;
         }
 
         if(GetComponent<BossSetup>() != null && photonView.IsMine)

@@ -10,7 +10,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] Transform camFollowPos;
     [SerializeField] private Transform orientation;
     [SerializeField] private Transform characterBody;
-    private PlayerController controller;
+    private PlayerControllerPlus controller;
 
 
 
@@ -23,7 +23,7 @@ public class CameraManager : MonoBehaviour
     }
     void Start()
     {
-        controller = GetComponent<PlayerController>();
+        controller = GetComponent<PlayerControllerPlus>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -40,7 +40,7 @@ public class CameraManager : MonoBehaviour
         xAxis.Update(Time.deltaTime);
         yAxis.Update(Time.deltaTime);
 
-        if (controller.currentClass == PlayerController.PlayerClass.Mage || controller.currentClass == PlayerController.PlayerClass.Support)
+        if (controller.currentClass == PlayerControllerPlus.PlayerClass.Mage || controller.currentClass == PlayerControllerPlus.PlayerClass.Support)
         {
             GetAimDirection();
         }
@@ -66,7 +66,7 @@ public class CameraManager : MonoBehaviour
         Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f);
         Ray ray = cam.ScreenPointToRay(screenCenter);
         
-        if (controller.currentClass == PlayerController.PlayerClass.Mage)
+        if (controller.currentClass == PlayerControllerPlus.PlayerClass.Mage)
         {
             if (Physics.Raycast(ray, out RaycastHit hit, 999f, aimColliderLayerMask))
             {
@@ -74,7 +74,7 @@ public class CameraManager : MonoBehaviour
             }
         }
 
-        if (controller.currentClass == PlayerController.PlayerClass.Support)
+        if (controller.currentClass == PlayerControllerPlus.PlayerClass.Support)
         {
             if (Physics.Raycast(ray, out RaycastHit hit, 999f, aimColliderLayerMask))
             {

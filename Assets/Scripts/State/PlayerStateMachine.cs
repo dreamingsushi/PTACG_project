@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
-    public PlayerController controller;
+    public PlayerControllerPlus controller;
     public PlayerHealth health;
     public Animator animator;
     private BaseState currentState;

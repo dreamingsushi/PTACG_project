@@ -24,6 +24,10 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public bool isSecondPhase;
     public bool gameResulted = false;
     public int currentDeaths;
+
+    [Header("Stand or No Stand")]
+    public bool standingPhase2;
+    
     private string currentTimer;
 
     void Awake()
@@ -74,6 +78,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
                 {
                     
                     Vector3 instantiatePosition = bossInstantiatePosition.position;
+                    
                     PhotonNetwork.Instantiate(PlayerPrefabs[(int)playerSelectionNumber].name,instantiatePosition,Quaternion.identity);
 
                 }    
@@ -106,7 +111,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         {
             gameResulted = true;
             //play timeline cutscene
-            if(GetComponent<PlayerController>().gameObject.GetComponent<PhotonView>().IsMine)
+            if(GetComponent<PlayerControllerPlus>().gameObject.GetComponent<PhotonView>().IsMine)
             {
                 Defeat.SetActive(true);
             }
@@ -147,8 +152,12 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     public void BossNextPhase()
     {
-        
-        PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
+        if(standingPhase2)
+        {
+            PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-1].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
+        }
+        else
+            PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-2].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
     }
 
     [PunRPC]
@@ -158,6 +167,12 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         Destroy(FindObjectOfType<DragonPowers>().gameObject.GetComponentInChildren<HealthBar>().gameObject);
         FindObjectOfType<DragonPowers>().gameObject.SetActive(false);
 
+    }
+
+    [PunRPC]
+    public void IncreasePlayerDeathCount(int count)
+    {
+        currentDeaths = currentDeaths + count;
     }
 
     

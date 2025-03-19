@@ -32,7 +32,7 @@ public class PlayerHealthOld : MonoBehaviour
     [SerializeField] private GameObject bloodEffect;
     private Coroutine regenCoroutine;
     private CharacterController characterController;
-    private PlayerController playerController;
+    private PlayerControllerPlus playerController;
 
     [Header("HealthBar Assign tooooooo <3")]
     [SerializeField] private HealthBarSyncTest healthBar;
@@ -41,7 +41,7 @@ public class PlayerHealthOld : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerControllerPlus>();
         characterController = GetComponent<CharacterController>();
         //healthBar.SetHealth(currentHealth);
 

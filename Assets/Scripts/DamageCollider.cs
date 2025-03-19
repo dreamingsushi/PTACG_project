@@ -14,8 +14,8 @@ public class DamageCollider : MonoBehaviour
         if (health != null)
         {
             Vector3 hitDirection = (other.transform.position - transform.position).normalized;
-            health.TakeDamage((float)damageAmount);
-            // health.GetComponentInChildren<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, (float)damageAmount);
+            float theDamageAmount = damageAmount;
+            health.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, theDamageAmount);
         }
     }
 
@@ -25,7 +25,9 @@ public class DamageCollider : MonoBehaviour
         if (health != null)
         {
             Vector3 hitDirection = collision.contacts[0].normal;
-            health.TakeDamage((float)damageAmount);
+            float theDamageAmount = damageAmount;
+            health.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, theDamageAmount);
+            //health.TakeDamage((float)damageAmount);
 
             // health.GetComponentInChildren<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, (float)damageAmount);
         }
@@ -37,7 +39,8 @@ public class DamageCollider : MonoBehaviour
         if (playerHealth != null)
         {
             Vector3 hitDirection = (collider.transform.position - transform.position).normalized;
-            playerHealth.TakeDamage(damageAmount, hitDirection);
+            playerHealth.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, damageAmount, hitDirection);
+            // playerHealth.TakeDamage(damageAmount, hitDirection);
         }
     }
 
@@ -47,7 +50,7 @@ public class DamageCollider : MonoBehaviour
         if (playerHealth != null)
         {
             Vector3 hitDirection = collision.contacts[0].normal;
-            playerHealth.TakeDamage(damageAmount, hitDirection);
+            playerHealth.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, damageAmount, hitDirection);
         }
     }
 

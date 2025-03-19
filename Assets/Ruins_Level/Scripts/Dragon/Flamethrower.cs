@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Flamethrower : MonoBehaviour
@@ -26,7 +27,9 @@ public class Flamethrower : MonoBehaviour
     {
         if(other.GetComponent<PlayerHealth>() != null)
         {
-            other.GetComponent<PlayerHealth>().TakeDamage((int)dragonNumber.flamethrowerDamage, this.transform.position);
+            int dragonDamage = (int)dragonNumber.flamethrowerDamage;
+            other.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, dragonDamage, this.transform.position);
+            //other.GetComponent<PlayerHealth>().TakeDamage((int)dragonNumber.flamethrowerDamage, this.transform.position);
         }
     }
 

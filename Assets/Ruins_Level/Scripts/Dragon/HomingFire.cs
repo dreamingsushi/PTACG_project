@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class HomingFire : MonoBehaviour
@@ -7,8 +8,9 @@ public class HomingFire : MonoBehaviour
     public int currentFire;
     public DragonScaling dragonNumbers;
 
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 0.12f;
     public PlayerHealth[] players;
+    [SerializeField] private float activeDuration = 15f;
 
     void Start()
     {
@@ -18,12 +20,13 @@ public class HomingFire : MonoBehaviour
     void OnEnable()
     {
         
-        Invoke("DisappearAfterTime", 16);
+        Invoke("DisappearAfterTime", activeDuration);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         Invoke("HomingFlames", 3);
     }
 
@@ -31,7 +34,10 @@ public class HomingFire : MonoBehaviour
         
         if(other.gameObject.GetComponent<PlayerHealth>() != null)
         {
-            other.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)dragonNumbers.fireballDamage, this.transform.position);
+            int dragonDamage = (int)dragonNumbers.fireballDamage*2;
+            other.gameObject.GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, dragonDamage, this.transform.position);
+
+            //other.gameObject.GetComponent<PlayerHealth>().TakeDamage((int)dragonNumbers.fireballDamage, this.transform.position);
             
 
             
@@ -60,7 +66,8 @@ public class HomingFire : MonoBehaviour
     private void HomingFlames()
     {
         GameObject player = players[currentFire].gameObject;
-        this.transform.position = Vector3.Lerp(transform.position, player.transform.position, speed*Time.deltaTime);
+        float counter = speed*Time.deltaTime;
+        this.transform.position = Vector3.Lerp(transform.position, player.transform.position, counter/activeDuration);
 
         
     }

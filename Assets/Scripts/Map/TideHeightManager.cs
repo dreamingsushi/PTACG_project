@@ -34,7 +34,7 @@ public class TideHeightManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3)) TurnToHighTide();
 
         // Check game time and force high tide when timeLeft <= 300s
-        if (GameStartManager.instance.timeLeft <= 60f && !hasTriggeredHighTide)
+        if (GameStartManager.instance.timeLeft <= 300f && !hasTriggeredHighTide)
         {
             hasTriggeredHighTide = true;
             StopAllCoroutines();

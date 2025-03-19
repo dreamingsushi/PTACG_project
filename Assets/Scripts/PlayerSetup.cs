@@ -21,7 +21,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
         if(photonView.IsMine)
         {
             GetComponent<CameraManager>().enabled = true;
-            GetComponent<PlayerController>().enabled = true;
+            GetComponent<PlayerControllerPlus>().enabled = true;
             // GetComponent<PlayerHealth>().enabled = true;
             GetComponent<PlayerInput>().enabled = true;
             GetComponent<TimeCountDownManager>().enabled = true;
@@ -37,7 +37,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
         else
         {
             GetComponent<CameraManager>().enabled = false;
-            GetComponent<PlayerController>().enabled = false;
+            GetComponent<PlayerControllerPlus>().enabled = false;
             // GetComponent<PlayerHealth>().enabled = false;
             GetComponent<PlayerInput>().enabled = false;
             GetComponent<TimeCountDownManager>().enabled = false;

@@ -12,9 +12,9 @@ public class JumpPad : MonoBehaviour
             other.gameObject.GetComponent<BossMovement>().JumpingWithForce(powerMultiplier);
         }
         
-        if(other.gameObject.GetComponent<PlayerController>())
+        if(other.gameObject.GetComponent<PlayerControllerPlus>())
         {
-            other.gameObject.GetComponent<PlayerController>().JumpWithForce(powerMultiplier);
+            other.gameObject.GetComponent<PlayerControllerPlus>().JumpWithForce(powerMultiplier);
 
         }
     }

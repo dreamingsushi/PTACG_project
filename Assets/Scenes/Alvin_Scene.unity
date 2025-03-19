@@ -2058,11 +2058,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 60.000004
+  near clip plane: 0.3
+  far clip plane: 7000
+  field of view: 90
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2086,8 +2086,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402865153}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -85.6, y: 48.9, z: 16.357618}
+  m_LocalRotation: {x: 0, y: 0.9208217, z: 0, w: 0.3899839}
+  m_LocalPosition: {x: -55.459026, y: 61.96447, z: 8.4035425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5024,6 +5024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
         type: 3}
+      propertyPath: standingPhase2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
+        type: 3}
       propertyPath: bossInstantiatePosition
       value: 
       objectReference: {fileID: 1516092781}
@@ -7214,7 +7219,7 @@ Transform:
   m_GameObject: {fileID: 1516092780}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60.645, y: 76.274, z: 15.805}
+  m_LocalPosition: {x: -60.645, y: 74.08, z: 15.805}
   m_LocalScale: {x: 0.40849695, y: 0.40849695, z: 0.40849695}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8809,7 +8814,7 @@ Transform:
   m_GameObject: {fileID: 1776622714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -61.033, y: 47.585, z: 7.3081}
+  m_LocalPosition: {x: -61.15, y: 43.900875, z: 7.12}
   m_LocalScale: {x: 0.40849695, y: 0.40849695, z: 0.40849695}
   m_ConstrainProportionsScale: 1
   m_Children: []

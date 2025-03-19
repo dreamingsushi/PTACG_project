@@ -367,8 +367,8 @@ MonoBehaviour:
   - {fileID: 2251843879296387744, guid: 251eedbfa5e46f74a91c5adbad43eb7d, type: 3}
   - {fileID: 6689456769447807126, guid: e45a2ae88b4206d4098cd1449b4491fc, type: 3}
   - {fileID: 6593632499581016028, guid: c72d07f09e12d3f40a3b0ed2eb5fb7e5, type: 3}
+  - {fileID: 8334378518472895369, guid: 93b22a62dc51cd249aa972e5f85a05cb, type: 3}
   InstantiatePositions:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

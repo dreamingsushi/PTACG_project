@@ -5099,7 +5099,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c254c141c621e904183701280360fab2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 820
+      value: 1491
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c254c141c621e904183701280360fab2,
         type: 3}
@@ -5109,7 +5109,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c254c141c621e904183701280360fab2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 300
+      value: 186
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c254c141c621e904183701280360fab2,
         type: 3}
@@ -27719,11 +27719,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 7000
-  field of view: 60.000004
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 100
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -27747,8 +27747,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532988418}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.69851, y: 44.374783, z: 146.30461}
+  m_LocalRotation: {x: -0.46999085, y: -0.13438721, z: -0.07271859, w: 0.869345}
+  m_LocalPosition: {x: 39.533207, y: 60.5, z: -129.03217}
   m_LocalScale: {x: 2.7354631, y: 2.735462, z: 2.7354627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38640,8 +38640,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007657455}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.36392263, y: -0.39014614, z: 0.17136328, w: 0.82823974}
-  m_LocalPosition: {x: 148.7154, y: 195.90027, z: -111.95399}
+  m_LocalRotation: {x: -0.28301874, y: 0.31240794, z: -0.0980724, w: -0.9014896}
+  m_LocalPosition: {x: 49.243393, y: 55.036667, z: -45.26097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44573,6 +44573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneViewId
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 386121073630404416, guid: e45a2ae88b4206d4098cd1449b4491fc,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1180743227216956005, guid: e45a2ae88b4206d4098cd1449b4491fc,
         type: 3}

@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject bloodEffect;
     private Coroutine regenCoroutine;
     private CharacterController characterController;
-    private PlayerController playerController;
+    private PlayerControllerPlus playerController;
 
     [Header("HealthBar Assign tooooooo <3")]
     [SerializeField] private HealthBar healthBar;
@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        playerController = GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerControllerPlus>();
         characterController = GetComponent<CharacterController>();
         //healthBar.SetHealth(currentHealth);
 
@@ -133,8 +133,10 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator Respawning(float respawnTime)
     {
+        
         isInvincible = true;
         yield return new WaitForSeconds(respawnTime);
+        GameStartManager.instance.GetComponent<PhotonView>().RPC("IncreasePlayerDeathCount", RpcTarget.AllBuffered, -1);
         isInvincible = false;
         playerController.isDead = false;
         Heal(75);
@@ -149,8 +151,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
+        GameStartManager.instance.GetComponent<PhotonView>().RPC("IncreasePlayerDeathCount", RpcTarget.AllBuffered, 1);
         Debug.Log("Player Died");
         playerController.isDead = true;
         OnPlayerDeath?.Invoke();

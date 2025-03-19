@@ -1910,7 +1910,7 @@ MonoBehaviour:
   mageShift_CD: {fileID: 0}
   mageM1_CD: {fileID: 0}
   tpVFX: {fileID: 0}
-  supportProjectilePrefab: {fileID: 1470278565100588117, guid: 58fb82a9b7595714ea4db165bffdaf27,
+  supportProjectilePrefab: {fileID: 1470278565100588117, guid: f4e263cf4f4e5ca45a500809718c782d,
     type: 3}
   supportHand: {fileID: 7036262121539234471}
   projectileSpeed: 20

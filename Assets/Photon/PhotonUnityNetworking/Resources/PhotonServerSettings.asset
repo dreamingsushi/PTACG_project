@@ -61,6 +61,8 @@ MonoBehaviour:
   - SyncBossPhase
   - SyncDamageTaken
   - EnableFlamethrower
+  - BossDie
+  - IncreasePlayerDeathCount
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

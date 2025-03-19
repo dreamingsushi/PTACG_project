@@ -65,7 +65,7 @@ public class BossHealth : MonoBehaviour
         }
     }
 
-    
+    [PunRPC]
     public void TakeDamage(float damage)
     {
         
@@ -77,6 +77,7 @@ public class BossHealth : MonoBehaviour
         
         OnHealthChanged?.Invoke(currentBossHP);
 
+        
         
         healthBar.GetComponent<PhotonView>().RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, currentBossHP);
         //healthBar.SetHealth(currentBossHP);
@@ -93,16 +94,18 @@ public class BossHealth : MonoBehaviour
 
         if (currentBossHP <= 0)
         {
-            BossDie();
+            GetComponent<PhotonView>().RPC("BossDie", RpcTarget.AllBuffered, true);
+           
         }
 
 
     }
 
-    public void BossDie()
+    [PunRPC]
+    public void BossDie(bool canDieNow)
     {
         Debug.Log("Boss is Dead");
-        GameStartManager.instance.gameResulted = true;
+        GameStartManager.instance.gameResulted = canDieNow;
         StartCoroutine(StartDying());
         
     }

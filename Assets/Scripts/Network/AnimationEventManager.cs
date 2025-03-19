@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimationEventManager : MonoBehaviour
 {
-    public PlayerController playerController;
+    public PlayerControllerPlus playerController;
     public void MagicAttack()
     {
         playerController.Shoot();
