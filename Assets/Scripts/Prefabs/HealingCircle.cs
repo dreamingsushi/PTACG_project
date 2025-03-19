@@ -11,6 +11,11 @@ public class HealingCircle : MonoBehaviour
     [Header("Effect Settings")]
     [SerializeField] private GameObject healEffect;
 
+    void Start()
+    {
+        Invoke("DestroyThisHealingObject", 10);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out PlayerHealth playerHealth))
@@ -34,5 +39,10 @@ public class HealingCircle : MonoBehaviour
             playerHealth.Heal(healAmount);
             yield return new WaitForSeconds(healInterval);
         }
+    }
+
+    public void DestroyThisHealingObject()
+    {
+        Destroy(gameObject);
     }
 }

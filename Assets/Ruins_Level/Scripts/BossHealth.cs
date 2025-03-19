@@ -68,6 +68,10 @@ public class BossHealth : MonoBehaviour
             }
         }
 
+        if(!this.enabled)
+        {
+            StopAllCoroutines();
+        }
         
     }
 

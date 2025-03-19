@@ -19,7 +19,7 @@ public class SunDirectionChange : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
-        float currentAngle = Mathf.Lerp(startAngle, endAngle, counter/GameStartManager.instance.setTimeLimit*2/3);
+        float currentAngle = Mathf.Lerp(startAngle, endAngle, counter/GameStartManager.instance.setTimeLimit*1/2);
         
         transform.eulerAngles = new Vector3(currentAngle, 5.46f, 0);
 

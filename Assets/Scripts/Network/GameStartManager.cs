@@ -6,7 +6,7 @@ using TMPro;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
+
 
 public class GameStartManager : MonoBehaviourPunCallbacks
 {
@@ -132,7 +132,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             restartPanel.SetActive(true);
         }
 
-        if(SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount) || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount -1))
+        if(SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "WarriorVictory" || SceneManager.GetActiveScene().name == "WarriorDefeat")
         {
             Destroy(gameObject);
         }

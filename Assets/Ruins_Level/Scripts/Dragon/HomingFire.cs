@@ -47,6 +47,8 @@ public class HomingFire : MonoBehaviour
         if(!other.gameObject.CompareTag("Dragon"))
             this.gameObject.SetActive(false);
 
+        if(!other.gameObject.CompareTag("Flames"))
+            this.gameObject.SetActive(false);
         
     }
 
