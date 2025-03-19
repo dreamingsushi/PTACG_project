@@ -63,7 +63,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 12
   m_TargetDisplay: 0
 --- !u!114 &88966106746558838
 MonoBehaviour:
@@ -384,6 +384,7 @@ MonoBehaviour:
   isSecondPhase: 0
   gameResulted: 0
   currentDeaths: 0
+  standingPhase2: 0
 --- !u!114 &3380547251300941353
 MonoBehaviour:
   m_ObjectHideFlags: 0

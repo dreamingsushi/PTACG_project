@@ -27,6 +27,8 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     [Header("Stand or No Stand")]
     public bool standingPhase2;
+
+    public GameObject DragonVictory;
     
     private string currentTimer;
 
@@ -109,8 +111,9 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         if(currentDeaths >= 3)
         {
             gameResulted = true;
-            //play timeline cutscene
-            if(GetComponent<PlayerControllerPlus>().gameObject.GetComponent<PhotonView>().IsMine)
+            DragonVictory.SetActive(true);
+            
+            if(FindObjectOfType<BossHealth>().gameObject.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName)
             {
                 Defeat.SetActive(true);
             }
