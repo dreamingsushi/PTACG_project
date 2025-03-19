@@ -37,12 +37,8 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     void Awake()
     {
-        if(SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount) || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount -1))
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
+        
+        
             //check if instance already exists
             if (instance == null)
             {
@@ -58,7 +54,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
             //Don't destroy when reloading scene
             DontDestroyOnLoad(gameObject);
-        }
+        
         
     }
 
@@ -135,6 +131,11 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         {
             restartPanel.SetActive(true);
         }
+
+        if(SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount) || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount -1))
+        {
+            Destroy(gameObject);
+        }
     }
 
 
@@ -209,7 +210,17 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     
     public void RestartGame()
     {
-        restartPanel.SetActive(false);
+
+        
+        PhotonNetwork.LeaveRoom();
+        
+        
+        
+    }
+
+    public override void OnLeftRoom()
+    {
         SceneManager.LoadScene(0);
+        base.OnLeftRoom();
     }
 }
