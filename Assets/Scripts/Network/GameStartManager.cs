@@ -6,7 +6,6 @@ using TMPro;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
 
 public class GameStartManager : MonoBehaviourPunCallbacks
 {
