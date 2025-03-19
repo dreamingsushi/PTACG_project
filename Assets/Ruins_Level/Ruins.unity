@@ -45693,6 +45693,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d6431be55dcffe4d9138c31bbe42827, type: 3}
+--- !u!1 &5427647588910662139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1684041077401715895, guid: 1d6431be55dcffe4d9138c31bbe42827,
+    type: 3}
+  m_PrefabInstance: {fileID: 5427647588910662138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5508403202927612811
 GameObject:
   m_ObjectHideFlags: 0
@@ -47555,6 +47561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStartManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
+        type: 3}
+      propertyPath: DragonVictory
+      value: 
+      objectReference: {fileID: 5427647588910662139}
     - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
         type: 3}
       propertyPath: bossInstantiatePosition

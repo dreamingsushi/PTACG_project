@@ -5,6 +5,7 @@ using Photon.Pun;
 using TMPro;
 using System.Linq;
 using Unity.Mathematics;
+using UnityEngine.SceneManagement;
 
 public class GameStartManager : MonoBehaviourPunCallbacks
 {
@@ -27,6 +28,8 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     [Header("Stand or No Stand")]
     public bool standingPhase2;
+
+    public GameObject DragonVictory;
     
     private string currentTimer;
 
@@ -109,13 +112,9 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         if(currentDeaths >= 3)
         {
             gameResulted = true;
-            //play timeline cutscene
-            if(GetComponent<PlayerControllerPlus>().gameObject.GetComponent<PhotonView>().IsMine)
-            {
-                Defeat.SetActive(true);
-            }
-            else
-                Victory.SetActive(true);
+            DragonVictory.SetActive(true);
+            StartCoroutine(EndingScreen());
+            
         }
 
         
@@ -159,6 +158,20 @@ public class GameStartManager : MonoBehaviourPunCallbacks
         }
         else
             PhotonNetwork.Instantiate(PlayerPrefabs[PlayerPrefabs.Length-2].name, bossNextPhaseInstantiatePosition.transform.position, quaternion.identity);
+    }
+
+    public IEnumerator EndingScreen()
+    {
+        yield return new WaitForSeconds(6f);
+        if(FindObjectOfType<BossHealth>().gameObject.GetComponent<PhotonView>().Owner.NickName != PhotonNetwork.LocalPlayer.NickName)
+        {
+            Defeat.SetActive(true);
+        }
+        else
+            Victory.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("WarriorDefeat");    
     }
 
     [PunRPC]
