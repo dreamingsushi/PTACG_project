@@ -44,6 +44,12 @@ public class CameraManager : MonoBehaviour
         {
             GetAimDirection();
         }
+
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     private void LateUpdate()

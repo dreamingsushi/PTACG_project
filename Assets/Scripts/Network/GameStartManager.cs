@@ -118,7 +118,11 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && restartPanel.activeInHierarchy)
+        {
+            restartPanel.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && !restartPanel.activeInHierarchy)
         {
             restartPanel.SetActive(true);
         }
@@ -196,6 +200,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     
     public void RestartGame()
     {
+        restartPanel.SetActive(false);
         SceneManager.LoadScene(0);
     }
 }
