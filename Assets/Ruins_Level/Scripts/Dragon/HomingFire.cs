@@ -12,6 +12,7 @@ public class HomingFire : MonoBehaviour
     public PlayerHealth[] players;
     [SerializeField] private float activeDuration = 15f;
 
+    float counter;
     void Start()
     {
         AudioManager.Instance.PlaySFX("HomingFire");
@@ -24,7 +25,7 @@ public class HomingFire : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         
         Invoke("HomingFlames", 3);
@@ -44,11 +45,11 @@ public class HomingFire : MonoBehaviour
         }
         
 
-        if(!other.gameObject.CompareTag("Dragon"))
-            this.gameObject.SetActive(false);
+        // if(!other.gameObject.CompareTag("Dragon"))
+        //     this.gameObject.SetActive(false);
 
-        if(!other.gameObject.CompareTag("Flames"))
-            this.gameObject.SetActive(false);
+        // if(!other.gameObject.CompareTag("Flames"))
+        //     this.gameObject.SetActive(false);
         
     }
 
@@ -67,9 +68,18 @@ public class HomingFire : MonoBehaviour
 
     private void HomingFlames()
     {
-        GameObject player = players[currentFire].gameObject;
-        float counter = speed*Time.deltaTime;
-        this.transform.position = Vector3.Lerp(transform.position, player.transform.position, counter/activeDuration);
+        if(players.Length < 3)
+        {
+            this.transform.eulerAngles = new Vector3(0, 2f*Time.deltaTime, 0);
+            
+        }
+        else
+        {
+            GameObject player = players[currentFire].gameObject;
+            counter = speed*Time.deltaTime;
+            this.transform.position = Vector3.Lerp(transform.position, player.transform.position, counter/activeDuration);
+        }
+        
 
         
     }

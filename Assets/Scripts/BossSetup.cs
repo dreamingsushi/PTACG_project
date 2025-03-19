@@ -11,6 +11,7 @@ public class BossSetup : MonoBehaviourPunCallbacks
 {
     public CinemachineVirtualCamera PlayerCamera;
     public GameObject skillCanvas;
+    public GameObject crosshair;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class BossSetup : MonoBehaviourPunCallbacks
             GetComponentInParent<DragonPowers>().enabled = true;
             GetComponent<BossController>().enabled = true;
             skillCanvas.SetActive(true);
+            crosshair.SetActive(true);
             // imageHPUI.GetComponentInParent<Image>().enabled = true;
             // imageHPUI.SetActive(true);
             //transform.parent.gameObject.GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
@@ -34,6 +36,7 @@ public class BossSetup : MonoBehaviourPunCallbacks
             GetComponentInParent<DragonPowers>().enabled = false;
             GetComponent<BossController>().enabled = false;
             skillCanvas.SetActive(false);
+            crosshair.SetActive(false);
             // imageHPUI.GetComponentInParent<Image>().enabled = false;
             // imageHPUI.SetActive(false);
             //transform.parent.gameObject.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);

@@ -17231,6 +17231,95 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 248746004}
   m_SourcePrefab: {fileID: 100100000, guid: 83efecd5a3cf02f4fb1a9471822f8a37, type: 3}
+--- !u!1001 &802946066
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1420865183619688158, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420865183619688158, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684041077401715895, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_Name
+      value: BossWinPackage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684041077401715895, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -201.02672
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -217.99191
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 215.27158
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430084044422326284, guid: 1d6431be55dcffe4d9138c31bbe42827,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d6431be55dcffe4d9138c31bbe42827, type: 3}
+--- !u!1 &802946067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1684041077401715895, guid: 1d6431be55dcffe4d9138c31bbe42827,
+    type: 3}
+  m_PrefabInstance: {fileID: 802946066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &806485710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4142855762402242, guid: acbba44ba06dd4a0b8c736731541ee67,
@@ -21814,6 +21903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStartManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
+        type: 3}
+      propertyPath: DragonVictory
+      value: 
+      objectReference: {fileID: 802946067}
     - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
         type: 3}
       propertyPath: standingPhase2
@@ -46129,3 +46223,4 @@ SceneRoots:
   - {fileID: 474740563}
   - {fileID: 1630416766}
   - {fileID: 1718474369}
+  - {fileID: 802946066}

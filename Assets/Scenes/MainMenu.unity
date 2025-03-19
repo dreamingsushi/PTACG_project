@@ -16047,7 +16047,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 83}
+  m_AnchoredPosition: {x: 0, y: 135.93}
   m_SizeDelta: {x: 800, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742275408
@@ -16070,7 +16070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eternal glory is found in the <color=red>Colosseum</color>
+  m_text: Eternal glory is found in the <color=yellow>Colosseum</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8b0b97ddd665e54a8a9e0f6837ffb46, type: 2}
   m_sharedMaterial: {fileID: -1743239135253095619, guid: f8b0b97ddd665e54a8a9e0f6837ffb46,
@@ -16110,7 +16110,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 95.92
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

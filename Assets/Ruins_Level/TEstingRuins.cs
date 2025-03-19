@@ -31,7 +31,7 @@ public class TEstingRuins : MonoBehaviour
         // {
         //     crystal.GetComponent<MeshRenderer>().material = purple;
         // }
-        counter += 0.2f*Time.deltaTime;
-        transform.position = Vector3.Lerp(transform.position, crystal.transform.position, counter/100);
+        counter += 1f*Time.deltaTime;
+        transform.position = Vector3.Lerp(transform.position, crystal.transform.position, counter/15);
     }
 }

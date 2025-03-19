@@ -45,7 +45,13 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
             
             PlayerReadyButton.onClick.AddListener(() =>
             {
+                
+                
+                
+                
                 isPlayerReady = !isPlayerReady;
+                
+                
                 SetPlayerReady(isPlayerReady);
 
                 ExitGames.Client.Photon.Hashtable newProps = new ExitGames.Client.Photon.Hashtable(){{CharacterSelect.PLAYER_READY,isPlayerReady}};

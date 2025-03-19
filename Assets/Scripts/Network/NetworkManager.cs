@@ -68,7 +68,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // public RacingPlayer[] RacingPlayers;
     //public GameObject[] PlayerSelectionUIGameObjects;
     private Dictionary<int, GameObject> playerListGameObjects;
-    private float timeLeft = 5f;
+    private float timeLeft = 15f;
     private int highestVotes;
     private int highestVotedMap;
     private string highestVotedMapText;
@@ -896,12 +896,25 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     #region Private Methods
     private bool CheckPlayersReady()
     {
+        int sameDragon = 0;
         if (!PhotonNetwork.IsMasterClient)
         {
             return false;
         }
         foreach (Player player in PhotonNetwork.PlayerList)
         {
+            object playerSelectionNo;
+                
+            if(player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
+            {
+                if((int)playerSelectionNo == 3)
+                {
+                    sameDragon++;
+                    
+                }
+            }
+        
+
             object isPlayerReady;
             if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady ))
             {
@@ -914,8 +927,20 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             {
                 return false;
             }
+            
         }
-         return true;
+
+        if(sameDragon == 0)
+        {
+            Debug.Log("Need at Least 1 Dragon");
+            return false;
+        }
+        else if(sameDragon > 1)
+        {
+            Debug.Log("Can only have 1 Dragon");
+            return false;
+        }
+        return true;      
     }
 
     [PunRPC]

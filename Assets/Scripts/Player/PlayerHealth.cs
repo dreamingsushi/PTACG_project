@@ -125,7 +125,7 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator DamageEffect()
     {
-        if(GetComponent<PhotonView>().IsMine)
+        if(!GetComponent<PhotonView>().IsMine)
         {
             bloodEffect.SetActive(true);
             yield return new WaitForSeconds(0.25f);
