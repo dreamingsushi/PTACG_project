@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
@@ -154,8 +155,9 @@ public class BossHealth : MonoBehaviour
         else
             GameStartManager.instance.Victory.SetActive(true);
 
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
         Debug.Log("Go To Scene");
+        SceneManager.LoadScene("WarriorVictory");
 
     }
 
