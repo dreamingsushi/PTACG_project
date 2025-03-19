@@ -33,6 +33,7 @@ public class PlayerSelection : MonoBehaviour
 
     public void NextPlayer()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         playerSelectionNumber += 1;
         if (playerSelectionNumber>=SelectablePlayers.Length)
         {
@@ -43,6 +44,7 @@ public class PlayerSelection : MonoBehaviour
 
     public void PreviousPlayer()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         playerSelectionNumber -= 1;
         if (playerSelectionNumber<0)
         {
@@ -53,6 +55,7 @@ public class PlayerSelection : MonoBehaviour
 
     public void LockedChampionIn()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         ExitGames.Client.Photon.Hashtable playerSelectionProp = new ExitGames.Client.Photon.Hashtable()   
              { {CharacterSelect.PLAYER_SELECTION_NUMBER, playerSelectionNumber } };
         PhotonNetwork.LocalPlayer.SetCustomProperties(playerSelectionProp); 

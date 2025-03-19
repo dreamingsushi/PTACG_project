@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,11 +11,17 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
+    private float masterVolume = 1.0f; // Default full volume
+    private float musicVolume = 1.0f;
+    private float sfxVolume = 1.0f;
+
+    public Slider masterSlider, musicSlider, sfxSlider;
+
     public void Awake()
     {
         if (Instance == null)
         {
-            Instance = this;    
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -26,7 +33,12 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("BGM");
+
+        if (masterSlider) masterSlider.value = masterVolume;
+        if (musicSlider) musicSlider.value = musicVolume;
+        if (sfxSlider) sfxSlider.value = sfxVolume;
     }
+
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(musicSounds, x => x.name == name);
@@ -38,6 +50,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             musicSource.clip = s.clip;
+            musicSource.volume = musicVolume * masterVolume; // Apply master volume
             musicSource.Play();
         }
     }
@@ -51,16 +64,26 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            sfxSource.PlayOneShot(s.clip, sfxVolume * masterVolume); // Apply master volume
         }
     }
 
-    public void MusicVolume(float volume)
+    public void SetMusicVolume(float volume)
     {
-        musicSource.volume = volume;
+        musicVolume = volume;
+        musicSource.volume = musicVolume * masterVolume;
     }
-    public void SFXVolume(float volume)
+
+    public void SetSFXVolume(float volume)
     {
-        sfxSource.volume = volume;
+        sfxVolume = volume;
+        sfxSource.volume = sfxVolume * masterVolume;
+    }
+
+    public void SetMasterVolume(float volume)
+    {
+        masterVolume = volume;
+        musicSource.volume = musicVolume * masterVolume;
+        sfxSource.volume = sfxVolume * masterVolume;
     }
 }

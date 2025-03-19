@@ -12,7 +12,14 @@ using System.Linq;
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
     public UITransitionManager UItransition;
+    [Header("Options Panel")]
     public GameObject optionsPanel;
+    public GameObject settingsPanel;
+
+    [Header("Volume Panel")]
+    public GameObject volumePanel;
+    public GameObject graphicsPanel;
+
     [Header("Login UI")] 
     public GameObject LoginUIPanel;   
     public InputField PlayerNameInput;
@@ -117,9 +124,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void OnLoginButtonClicked()
     {
         string playerName = PlayerNameInput.text;
+        AudioManager.Instance.PlaySFX("MenuSound");
 
         if (!string.IsNullOrEmpty(playerName))
-        { 
+        {
             ActivatePanel(ConnectingInfoUIPanel.name);
             if (!PhotonNetwork.IsConnected)
             {   
@@ -139,21 +147,39 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if(PhotonNetwork.IsConnected)
         {
             PhotonNetwork.Disconnect();
-            
+            AudioManager.Instance.PlaySFX("MenuSound");
             ActivatePanel(LoginUIPanel.name);
         }
     }
 
     public void OnOptionsButtonClicked()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         UItransition.UpdateCamera(UItransition.optionsCamera);
         ActivatePanel(optionsPanel.name);
     }
 
+    public void OnVolumeButtonClicked()
+    {
+        OptionPanel(volumePanel.name);
+        AudioManager.Instance.PlaySFX("MenuSound");
+    }
+    public void OnGraphicButtonClicked()
+    {
+        OptionPanel(graphicsPanel.name);
+        AudioManager.Instance.PlaySFX("MenuSound");
+    }
+    public void OnLmaoButtonClicked()
+    {
+        AudioManager.Instance.PlaySFX("MenuSound");
+    }
+
     public void OnReturnToGameOptionsClicked()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         UItransition.UpdateCamera(UItransition.createRoomCamera);
         ActivatePanel(GameOptionsUIPanel.name);
+        settingsPanel.SetActive(false);
     }
 
     public void QuitButton()
@@ -166,11 +192,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void OnCancelButtonClicked()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         ActivatePanel(GameOptionsUIPanel.name);
     } 
 
     public void OnCreateRoomButtonClicked()
-    {  
+    {
+        AudioManager.Instance.PlaySFX("MenuSound");
         ActivatePanel(CreatingRoomInfoUIPanel.name);
         if(GameMode != null)
         {
@@ -202,17 +230,19 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public void OnJoinRandomRoomButtonClicked()
     {
-        
+        AudioManager.Instance.PlaySFX("MenuSound");
         //ExitGames.Client.Photon.Hashtable expectedCustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "gm", _gameMode }  };
         PhotonNetwork.JoinRandomRoom();
     }
 
     public void OnBackButtonClicked()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         ActivatePanel(GameOptionsUIPanel.name);
     }
     public void OnLeaveGameButtonClicked()
     {
+        AudioManager.Instance.PlaySFX("MenuSound");
         PhotonNetwork.LeaveRoom();
     }
 
@@ -458,9 +488,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MapSelectUIRoomPanel.SetActive(MapSelectUIRoomPanel.name.Equals(panelNameToBeActivated));
     }
 
+    public void OptionPanel(string settingsToBeActivated)
+    {
+        volumePanel.SetActive(volumePanel.name.Equals(settingsToBeActivated));
+        graphicsPanel.SetActive(graphicsPanel.name.Equals(settingsToBeActivated));
+    }
+
     public void GoToMapSelect()
     {
-        
+        AudioManager.Instance.PlaySFX("MenuSound");
         photonView.RPC("SyncMapSelect", RpcTarget.AllBuffered, true);
         
     }
@@ -1001,7 +1037,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     break; 
             }
 
-            
+            AudioManager.Instance.PlayMusic("BattleBGM");
         }
     }
 
