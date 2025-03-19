@@ -288,6 +288,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnCreatedRoom()
     {
         Debug.Log(PhotonNetwork.CurrentRoom.Name+ " is created.");
+        PhotonNetwork.EnableCloseConnection = true;
     } 
  
     public override void OnJoinedRoom()

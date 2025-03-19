@@ -68,7 +68,7 @@ public class BossHealth : MonoBehaviour
             }
         }
 
-        Debug.Log(currentBossHP);
+        
     }
 
     [PunRPC]
@@ -155,7 +155,7 @@ public class BossHealth : MonoBehaviour
             GameStartManager.instance.Victory.SetActive(true);
 
         yield return new WaitForSeconds(5f);
-        Debug.Log("Go To Scene");
+        
         SceneManager.LoadScene("WarriorVictory");
 
     }
