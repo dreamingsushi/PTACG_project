@@ -48,6 +48,12 @@ public class BossControllerDos : MonoBehaviour
         mouseLook();
 
         transform.rotation = Quaternion.Euler(this.transform.rotation.eulerAngles.x,focusPoint.transform.parent.eulerAngles.y,this.transform.rotation.eulerAngles.z);
+
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
     private void mouseLook()

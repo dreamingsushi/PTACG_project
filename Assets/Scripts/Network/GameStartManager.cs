@@ -6,6 +6,7 @@ using TMPro;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 
 public class GameStartManager : MonoBehaviourPunCallbacks
 {
@@ -36,21 +37,29 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     void Awake()
     {
-        //check if instance already exists
-        if (instance == null)
+        if(SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount) || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCount -1))
         {
-            instance = this;
-        }
-
-        //If not
-        else if (instance != this)
-        {
-            //Then, destroy this. This enforces our singleton pattern, meaning that there can only ever be one instance of a GameManager
             Destroy(gameObject);
         }
+        else
+        {
+            //check if instance already exists
+            if (instance == null)
+            {
+                instance = this;
+            }
 
-        //Don't destroy when reloading scene
-        DontDestroyOnLoad(gameObject);
+            //If not
+            else if (instance != this)
+            {
+                //Then, destroy this. This enforces our singleton pattern, meaning that there can only ever be one instance of a GameManager
+                Destroy(gameObject);
+            }
+
+            //Don't destroy when reloading scene
+            DontDestroyOnLoad(gameObject);
+        }
+        
     }
 
     // Start is called before the first frame update
