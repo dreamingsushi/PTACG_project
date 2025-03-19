@@ -549,7 +549,7 @@ public class PlayerControllerPlus : MonoBehaviour
         yield return new WaitForSeconds(sprintDuration);
 
         //SYnc to all
-        GetComponent<PhotonView>().RPC("SyncSprintEffect", RpcTarget.AllBuffered, true);
+        GetComponent<PhotonView>().RPC("SyncSprintEffect", RpcTarget.AllBuffered, false);
         //speedEffect.SetActive(false);
 
         moveSpeed = normalSpeed;
@@ -576,7 +576,7 @@ public class PlayerControllerPlus : MonoBehaviour
         AudioManager.Instance.PlaySFX("SupportHeal");
         yield return new WaitForSeconds(10f);
 
-        Destroy(healingCircleInstance);
+        // Destroy(healingCircleInstance);
 
         float elapsedTime = 0f;
         supportShift_CD.fillAmount = 1f;

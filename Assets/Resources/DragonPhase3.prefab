@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4616966362260109483}
   m_Layer: 0
   m_Name: l_fingerC_03.85_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5669178031818622344}
   m_Layer: 7
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 3737272955789655474}
   m_Layer: 7
   m_Name: DecayedHealthBar
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 6155786494402728746}
   m_Layer: 0
   m_Name: r_hand.116
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 3259468312542378548}
   m_Layer: 0
   m_Name: r_neckSpikeUp_07.71_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 5650265070086028401}
   m_Layer: 0
   m_Name: r_fingerA_03.120
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 7023136971192316389}
   m_Layer: 0
   m_Name: l_handMid.76
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 4476474471029057735}
   m_Layer: 0
   m_Name: l_browIn.42_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 1025406271705141221}
   m_Layer: 0
   m_Name: l_neckSpikeUp_03.55_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 1924227885310670111}
   m_Layer: 7
   m_Name: Icon
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 5615739661510288058}
   m_Layer: 0
   m_Name: spine_07.12
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 9033501839166875437}
   m_Layer: 7
   m_Name: flamethrower_CD
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 7174858122517786651}
   m_Layer: 0
   m_Name: r_wingFlapA_01.131
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 2536254799794427575}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_05.66_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -707,7 +707,7 @@ GameObject:
   - component: {fileID: 6193161461325520903}
   m_Layer: 0
   m_Name: l_upperLid.38_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 7846912039756311139}
   m_Layer: 0
   m_Name: l_neckSpikeUp_07.70_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 3550654158129420255}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_02.52
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,7 +801,7 @@ GameObject:
   - component: {fileID: 452166503456259839}
   m_Layer: 0
   m_Name: l_wingFlapA_02.91
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 5356450094371670144}
   m_Layer: 0
   m_Name: l_neckSpikeUp_02.48
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 3941173571630729135}
   m_Layer: 0
   m_Name: tail_12.194
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 5958722036376194969}
   m_Layer: 0
   m_Name: tail_13.195
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 7974263981902928669}
   m_Layer: 0
   m_Name: wing1
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 6966589080584147446}
   m_Layer: 0
   m_Name: r_fingerG_03.151_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 6385206843786320086}
   m_Layer: 0
   m_Name: tailSpike_04.214_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 7630463216482466908}
   m_Layer: 0
   m_Name: tailSpike_03.215
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1079,7 +1079,7 @@ GameObject:
   - component: {fileID: 3505894707049099880}
   m_Layer: 0
   m_Name: l_fingerG_02.109
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: 1693358634701746806}
   m_Layer: 0
   m_Name: l_fingerF_02.103
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 1196839507436903569}
   m_Layer: 0
   m_Name: tail_21.203
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1176,7 +1176,7 @@ GameObject:
   - component: {fileID: 1590169294190235430}
   m_Layer: 0
   m_Name: l_neckSpikeUp_05.63_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 4193570154961055235}
   m_Layer: 0
   m_Name: tongue_02.30
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 1643639045997476128}
   m_Layer: 0
   m_Name: l_wingFlapD_01.111
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 531598609324799551}
   m_Layer: 0
   m_Name: r_ball.175
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 8500579188050602051}
   m_Layer: 0
   m_Name: neck_11.24
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 3095840485585622491}
   m_Layer: 0
   m_Name: r_dewclaw.182
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 3071679167551700611}
   m_Layer: 0
   m_Name: jaw_02.27_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1472,7 +1472,7 @@ GameObject:
   - component: {fileID: 6721164021577025660}
   m_Layer: 0
   m_Name: l_browOut.43_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1503,7 +1503,7 @@ GameObject:
   - component: {fileID: 6221859787585945746}
   m_Layer: 0
   m_Name: tail_11.193
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1535,7 +1535,7 @@ GameObject:
   - component: {fileID: 6187007960095131823}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_03.57_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1566,7 +1566,7 @@ GameObject:
   - component: {fileID: 3158870658200273597}
   m_Layer: 0
   m_Name: tail_09.191
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1599,7 +1599,7 @@ GameObject:
   - component: {fileID: 5710494975964466930}
   m_Layer: 0
   m_Name: l_fingerE_03.96
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 2006474026007150804}
   m_Layer: 0
   m_Name: tailBaseSpike_03.222
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1663,7 +1663,7 @@ GameObject:
   - component: {fileID: 4616710655850280504}
   m_Layer: 0
   m_Name: r_neckSpikeUp_04.60
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1695,7 +1695,7 @@ GameObject:
   - component: {fileID: 6528738946872226920}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_05.66
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1727,7 +1727,7 @@ GameObject:
   - component: {fileID: 8837778586667590535}
   m_Layer: 0
   m_Name: r_neckSpikeUp_03.56_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 2437712272452165263}
   m_Layer: 0
   m_Name: r_wingFlapB_04.142_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1789,7 +1789,7 @@ GameObject:
   - component: {fileID: 8004846089312049519}
   m_Layer: 0
   m_Name: r_dewclaw.182_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 3291168806440170040}
   m_Layer: 0
   m_Name: l_toeA.164
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1852,7 +1852,7 @@ GameObject:
   - component: {fileID: 2347554658437162515}
   m_Layer: 0
   m_Name: neck_07.20
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1889,7 +1889,7 @@ GameObject:
   - component: {fileID: 5534926375220492639}
   m_Layer: 0
   m_Name: r_lowerLid.41_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1920,7 +1920,7 @@ GameObject:
   - component: {fileID: 8843713493283962494}
   m_Layer: 0
   m_Name: l_fingerC_02.84
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1952,7 +1952,7 @@ GameObject:
   - component: {fileID: 5008499530974171059}
   m_Layer: 0
   m_Name: neck_05.18
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1987,7 +1987,7 @@ GameObject:
   - component: {fileID: 117995093425348}
   m_Layer: 0
   m_Name: l_eye.37
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2019,7 +2019,7 @@ GameObject:
   - component: {fileID: 972565795712307008}
   m_Layer: 0
   m_Name: r_eye.36
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2086,7 +2086,7 @@ GameObject:
   - component: {fileID: 3246756360804285828}
   m_Layer: 0
   m_Name: tail_03.185
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2118,7 +2118,7 @@ GameObject:
   - component: {fileID: 1899246923426427129}
   m_Layer: 0
   m_Name: l_neckSpikeUp_04.58
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2150,7 +2150,7 @@ GameObject:
   - component: {fileID: 7872415063508204448}
   m_Layer: 0
   m_Name: tail_24.206
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 8335374814699617313}
   m_Layer: 0
   m_Name: l_wingFlapB_03.100
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2214,7 +2214,7 @@ GameObject:
   - component: {fileID: 3335428754552270688}
   m_Layer: 0
   m_Name: r_fingerC_01.124
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2246,7 +2246,7 @@ GameObject:
   - component: {fileID: 6836015284059862036}
   m_Layer: 0
   m_Name: l_toeOutA.166
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2278,7 +2278,7 @@ GameObject:
   - component: {fileID: 4450655753243487618}
   m_Layer: 0
   m_Name: r_fingerF_01.143
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2311,7 +2311,7 @@ GameObject:
   - component: {fileID: 5867519850489224293}
   m_Layer: 0
   m_Name: spineSpike_03.156
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2343,7 +2343,7 @@ GameObject:
   - component: {fileID: 7398798683988271570}
   m_Layer: 0
   m_Name: l_fingerF_03.104
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 9085042947874752194}
   m_Layer: 0
   m_Name: l_browIn.42
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2407,7 +2407,7 @@ GameObject:
   - component: {fileID: 7149637866342703810}
   m_Layer: 0
   m_Name: l_upperLid.38
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2439,7 +2439,7 @@ GameObject:
   - component: {fileID: 1808432188631457559}
   m_Layer: 0
   m_Name: l_forearm.74
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2473,7 +2473,7 @@ GameObject:
   - component: {fileID: 3975172557164263900}
   m_Layer: 0
   m_Name: tailSpike_02.217
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2505,7 +2505,7 @@ GameObject:
   - component: {fileID: 3594330509442171755}
   m_Layer: 0
   m_Name: spine_06.11
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2538,7 +2538,7 @@ GameObject:
   - component: {fileID: 2191874586972126194}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_02.49_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2601,7 +2601,7 @@ GameObject:
   - component: {fileID: 3599490351931309556}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_06.65_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2634,7 +2634,7 @@ GameObject:
   - component: {fileID: 4577284551439555035}
   m_Layer: 7
   m_Name: Mask
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2693,7 +2693,7 @@ GameObject:
   - component: {fileID: 3959843152851983973}
   m_Layer: 0
   m_Name: r_browOut.45
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 1619600645760782676}
   m_Layer: 0
   m_Name: r_wingFlapC_02.148
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2757,7 +2757,7 @@ GameObject:
   - component: {fileID: 6042913480319378773}
   m_Layer: 0
   m_Name: r_forearm.115
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2791,7 +2791,7 @@ GameObject:
   - component: {fileID: 2323335787383027918}
   m_Layer: 0
   m_Name: r_fingerE_04.138
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2823,7 +2823,7 @@ GameObject:
   - component: {fileID: 7768234967021436716}
   m_Layer: 0
   m_Name: r_lowerLid.41
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2855,7 +2855,7 @@ GameObject:
   - component: {fileID: 6822707859909600179}
   m_Layer: 0
   m_Name: spineSpike_02.155
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2887,7 +2887,7 @@ GameObject:
   - component: {fileID: 1829821358191258486}
   m_Layer: 0
   m_Name: neck_03.16
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2920,7 +2920,7 @@ GameObject:
   - component: {fileID: 6154978628757168323}
   m_Layer: 0
   m_Name: r_neckSpikeUp_02.53_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2951,7 +2951,7 @@ GameObject:
   - component: {fileID: 554157106052810419}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_02.49
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2983,7 +2983,7 @@ GameObject:
   - component: {fileID: 7836545784191387772}
   m_Layer: 0
   m_Name: l_wingFlapC_02.107_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3014,7 +3014,7 @@ GameObject:
   - component: {fileID: 7408123617159156115}
   m_Layer: 0
   m_Name: r_toeOutB.179
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3046,7 +3046,7 @@ GameObject:
   - component: {fileID: 3560978897809613433}
   m_Layer: 0
   m_Name: l_neckSpikeUp_07.70
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3078,7 +3078,7 @@ GameObject:
   - component: {fileID: 1639946461233306641}
   m_Layer: 0
   m_Name: l_browOut.43
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3110,7 +3110,7 @@ GameObject:
   - component: {fileID: 100197817535978200}
   m_Layer: 0
   m_Name: r_neckSpikeUp_06.69_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3141,7 +3141,7 @@ GameObject:
   - component: {fileID: 107966328416177544}
   m_Layer: 0
   m_Name: r_shoulderTwist.153_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3174,7 +3174,7 @@ GameObject:
   - component: {fileID: 5542452030634716418}
   m_Layer: 7
   m_Name: F
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3249,7 +3249,7 @@ GameObject:
   - component: {fileID: 1937951383401394536}
   m_Layer: 0
   m_Name: tailSpike_05.213_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3280,7 +3280,7 @@ GameObject:
   - component: {fileID: 6056687315343029327}
   m_Layer: 0
   m_Name: spine_08.13
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3314,7 +3314,7 @@ GameObject:
   - component: {fileID: 6481808739449453282}
   m_Layer: 0
   m_Name: l_ankle.162
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3378,7 +3378,7 @@ GameObject:
   - component: {fileID: 5874680028773848092}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_02.52_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3409,7 +3409,7 @@ GameObject:
   - component: {fileID: 330901762123142671}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_03.57
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3441,7 +3441,7 @@ GameObject:
   - component: {fileID: 5773114414458593486}
   m_Layer: 0
   m_Name: tailBaseSpike_03.222_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3472,7 +3472,7 @@ GameObject:
   - component: {fileID: 5678343803584154589}
   m_Layer: 0
   m_Name: tail_14.196
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3505,7 +3505,7 @@ GameObject:
   - component: {fileID: 8556663053590820348}
   m_Layer: 0
   m_Name: r_toeInB.181_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3536,7 +3536,7 @@ GameObject:
   - component: {fileID: 6457441251080897416}
   m_Layer: 0
   m_Name: l_shoulderTwist.112_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3567,7 +3567,7 @@ GameObject:
   - component: {fileID: 2151179846138356749}
   m_Layer: 0
   m_Name: r_toeOutB.179_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3598,7 +3598,7 @@ GameObject:
   - component: {fileID: 4827468525895425867}
   m_Layer: 0
   m_Name: l_eye.37_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3629,7 +3629,7 @@ GameObject:
   - component: {fileID: 4085554946000683699}
   m_Layer: 0
   m_Name: r_fingerG_02.150
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3663,7 +3663,7 @@ GameObject:
   - component: {fileID: 219016895691693984}
   m_Layer: 7
   m_Name: Name
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3795,7 +3795,7 @@ GameObject:
   - component: {fileID: 4290678037857924948}
   m_Layer: 0
   m_Name: r_fingerD_02.128
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3827,7 +3827,7 @@ GameObject:
   - component: {fileID: 154249938391104593}
   m_Layer: 0
   m_Name: r_wingFlapB_02.140
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3862,7 +3862,7 @@ GameObject:
   - component: {fileID: 7844739227893884760}
   m_Layer: 0
   m_Name: cm
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3954,7 +3954,7 @@ GameObject:
   - component: {fileID: 3154418135640469853}
   m_Layer: 0
   m_Name: r_toeA.176
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3986,7 +3986,7 @@ GameObject:
   - component: {fileID: 1458443961671556827}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_05.62_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4017,7 +4017,7 @@ GameObject:
   - component: {fileID: 6070587505842450162}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_06.68
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4051,7 +4051,7 @@ GameObject:
   - component: {fileID: 6030175126598545887}
   m_Layer: 7
   m_Name: BlackBorder
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4124,7 +4124,7 @@ GameObject:
   - component: {fileID: 4665902893987897253}
   m_Layer: 0
   m_Name: l_wingFlapB_04.101_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4155,7 +4155,7 @@ GameObject:
   - component: {fileID: 6566120011663811054}
   m_Layer: 0
   m_Name: spineSpike_03.156_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4186,7 +4186,7 @@ GameObject:
   - component: {fileID: 7613364303305821883}
   m_Layer: 0
   m_Name: r_fingerB_01.121
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4218,7 +4218,7 @@ GameObject:
   - component: {fileID: 3507251713284026632}
   m_Layer: 0
   m_Name: r_toeB.177
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4250,7 +4250,7 @@ GameObject:
   - component: {fileID: 342040029572327650}
   m_Layer: 0
   m_Name: l_dewclaw.170_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4284,7 +4284,7 @@ GameObject:
   - component: {fileID: 8501846374556932269}
   m_Layer: 7
   m_Name: HealthBarUI
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4405,7 +4405,7 @@ GameObject:
   - component: {fileID: 7936741005535524148}
   m_Layer: 0
   m_Name: l_toeB.165_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4436,7 +4436,7 @@ GameObject:
   - component: {fileID: 1848030334339746785}
   m_Layer: 0
   m_Name: r_fingerF_04.146
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4468,7 +4468,7 @@ GameObject:
   - component: {fileID: 6120180797215366444}
   m_Layer: 0
   m_Name: r_fingerE_01.135
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4501,7 +4501,7 @@ GameObject:
   - component: {fileID: 8620755126225532894}
   m_Layer: 0
   m_Name: spine_05.10
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4534,7 +4534,7 @@ GameObject:
   - component: {fileID: 8566591000483351441}
   m_Layer: 0
   m_Name: tail_28.210
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4566,7 +4566,7 @@ GameObject:
   - component: {fileID: 8194015317620748915}
   m_Layer: 0
   m_Name: r_fingerF_03.145
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4598,7 +4598,7 @@ GameObject:
   - component: {fileID: 4707049431454242465}
   m_Layer: 0
   m_Name: tail_26.208
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4630,7 +4630,7 @@ GameObject:
   - component: {fileID: 5557548864949834144}
   m_Layer: 0
   m_Name: l_wingFlapC_01.106
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4662,7 +4662,7 @@ GameObject:
   - component: {fileID: 535036665934632016}
   m_Layer: 0
   m_Name: tail_15.197
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4698,7 +4698,7 @@ GameObject:
   - component: {fileID: 3986432856496740922}
   m_Layer: 7
   m_Name: Icon
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4785,7 +4785,7 @@ GameObject:
   - component: {fileID: 7384949507274022484}
   m_Layer: 0
   m_Name: r_shoulderTwist.153
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 8896245516873316734}
   m_Layer: 0
   m_Name: l_wingFlapA_03.92
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4849,7 +4849,7 @@ GameObject:
   - component: {fileID: 8063936180804717661}
   m_Layer: 0
   m_Name: l_fingerC_01.83
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4882,7 +4882,7 @@ GameObject:
   - component: {fileID: 6746614168818644318}
   m_Layer: 0
   m_Name: headcollider
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4936,7 +4936,7 @@ GameObject:
   - component: {fileID: 519837079936983658}
   m_Layer: 0
   m_Name: tailSpike_01.216_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4967,7 +4967,7 @@ GameObject:
   - component: {fileID: 2457733346600689513}
   m_Layer: 7
   m_Name: PlayerCards
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5006,7 +5006,7 @@ GameObject:
   - component: {fileID: 3216090211253159242}
   m_Layer: 0
   m_Name: r_neckSpikeUp_03.56
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5041,7 +5041,7 @@ GameObject:
   - component: {fileID: 1931980213624092772}
   m_Layer: 0
   m_Name: cm
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5133,7 +5133,7 @@ GameObject:
   - component: {fileID: 3492157140728528150}
   m_Layer: 0
   m_Name: l_fingerD_04.89_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5164,7 +5164,7 @@ GameObject:
   - component: {fileID: 6023579552745498497}
   m_Layer: 0
   m_Name: spine_02.7
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5196,7 +5196,7 @@ GameObject:
   - component: {fileID: 5302050737019318714}
   m_Layer: 0
   m_Name: l_fingerE_04.97_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5227,7 +5227,7 @@ GameObject:
   - component: {fileID: 1252914626999696157}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_01.47
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5259,7 +5259,7 @@ GameObject:
   - component: {fileID: 4064252587646762572}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_03.54
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5291,7 +5291,7 @@ GameObject:
   - component: {fileID: 5348851284923019220}
   m_Layer: 0
   m_Name: r_fingerD_04.130_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5322,7 +5322,7 @@ GameObject:
   - component: {fileID: 5380199905362383842}
   m_Layer: 0
   m_Name: r_toeB.177_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5355,7 +5355,7 @@ GameObject:
   - component: {fileID: 1540036152082889478}
   m_Layer: 7
   m_Name: Name
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5487,7 +5487,7 @@ GameObject:
   - component: {fileID: 6496512305811805608}
   m_Layer: 0
   m_Name: r_neckSpikeUp_01.51
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5519,7 +5519,7 @@ GameObject:
   - component: {fileID: 3139576708576938695}
   m_Layer: 0
   m_Name: l_fingerA_03.79
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5551,7 +5551,7 @@ GameObject:
   - component: {fileID: 7542287936266447357}
   m_Layer: 0
   m_Name: l_wingFlapA_04.93_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5582,7 +5582,7 @@ GameObject:
   - component: {fileID: 7996486648536866961}
   m_Layer: 0
   m_Name: r_wingFlapA_02.132
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5614,7 +5614,7 @@ GameObject:
   - component: {fileID: 2571195795635532295}
   m_Layer: 0
   m_Name: tail_05.187
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5646,7 +5646,7 @@ GameObject:
   - component: {fileID: 5538432761426562880}
   m_Layer: 0
   m_Name: tail_25.207
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5679,7 +5679,7 @@ GameObject:
   - component: {fileID: 8975704479965354556}
   m_Layer: 0
   m_Name: tail_22.204
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5711,7 +5711,7 @@ GameObject:
   - component: {fileID: 1282140720074949767}
   m_Layer: 0
   m_Name: l_fingerF_04.105_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5742,7 +5742,7 @@ GameObject:
   - component: {fileID: 3313244930181086025}
   m_Layer: 0
   m_Name: l_fingerB_02.81
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5776,7 +5776,7 @@ GameObject:
   - component: {fileID: 7303073370902893236}
   m_Layer: 7
   m_Name: Mask
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5835,7 +5835,7 @@ GameObject:
   - component: {fileID: 3636593396613431882}
   m_Layer: 7
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5871,7 +5871,7 @@ GameObject:
   - component: {fileID: 9097724641367632227}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_05.62
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5903,7 +5903,7 @@ GameObject:
   - component: {fileID: 5519287953208946087}
   m_Layer: 0
   m_Name: l_fingerF_01.102
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5936,7 +5936,7 @@ GameObject:
   - component: {fileID: 136141017937794559}
   m_Layer: 0
   m_Name: neck_01.14
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5968,7 +5968,7 @@ GameObject:
   - component: {fileID: 4422043568534437319}
   m_Layer: 0
   m_Name: spine_01.6
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6000,7 +6000,7 @@ GameObject:
   - component: {fileID: 407186853623605202}
   m_Layer: 0
   m_Name: r_browIn.44_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6031,7 +6031,7 @@ GameObject:
   - component: {fileID: 3662090794291048003}
   m_Layer: 0
   m_Name: tongue_03.31
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6063,7 +6063,7 @@ GameObject:
   - component: {fileID: 440154657659762208}
   m_Layer: 0
   m_Name: l_hand.75
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6095,7 +6095,7 @@ GameObject:
   - component: {fileID: 7330514092160716873}
   m_Layer: 0
   m_Name: r_upperLid.40
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6127,7 +6127,7 @@ GameObject:
   - component: {fileID: 8074838965373306388}
   m_Layer: 0
   m_Name: tail_20.202
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6160,7 +6160,7 @@ GameObject:
   - component: {fileID: 7321523441805553958}
   m_Layer: 0
   m_Name: l_toeOutB.167_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6191,7 +6191,7 @@ GameObject:
   - component: {fileID: 3356560807366391950}
   m_Layer: 0
   m_Name: tail_04.186
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6223,7 +6223,7 @@ GameObject:
   - component: {fileID: 8738307749881216216}
   m_Layer: 0
   m_Name: r_toeOutA.178
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6255,7 +6255,7 @@ GameObject:
   - component: {fileID: 8542010545856992797}
   m_Layer: 0
   m_Name: l_neckSpikeUp_01.46
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6289,7 +6289,7 @@ GameObject:
   - component: {fileID: 7470284966533412616}
   m_Layer: 7
   m_Name: flamethrower
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6364,7 +6364,7 @@ GameObject:
   - component: {fileID: 8070177483923408290}
   m_Layer: 0
   m_Name: tail_07.189
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6396,7 +6396,7 @@ GameObject:
   - component: {fileID: 4548516347248508192}
   m_Layer: 0
   m_Name: r_neckSpikeUp_05.67
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6428,7 +6428,7 @@ GameObject:
   - component: {fileID: 3947706090765628305}
   m_Layer: 0
   m_Name: tail_01.183
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6461,7 +6461,7 @@ GameObject:
   - component: {fileID: 8550128948114736623}
   m_Layer: 0
   m_Name: l_toeOutB.167
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6493,7 +6493,7 @@ GameObject:
   - component: {fileID: 6765079264940079441}
   m_Layer: 0
   m_Name: tail_29.211
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6525,7 +6525,7 @@ GameObject:
   - component: {fileID: 2540540905990286007}
   m_Layer: 0
   m_Name: l_hipClav.159
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6557,7 +6557,7 @@ GameObject:
   - component: {fileID: 1627733488673988294}
   m_Layer: 0
   m_Name: l_knee.161
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6589,7 +6589,7 @@ GameObject:
   - component: {fileID: 5265637330564905644}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_01.47_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6622,7 +6622,7 @@ GameObject:
   - component: {fileID: 3291751460615142775}
   m_Layer: 7
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6695,7 +6695,7 @@ GameObject:
   - component: {fileID: 1407602619871312907}
   m_Layer: 0
   m_Name: l_hip.160
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6727,7 +6727,7 @@ GameObject:
   - component: {fileID: 884688895485203643}
   m_Layer: 7
   m_Name: Teammate Info
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6765,7 +6765,7 @@ GameObject:
   - component: {fileID: 2601822843110239053}
   m_Layer: 0
   m_Name: tailSpike_04.214
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6797,7 +6797,7 @@ GameObject:
   - component: {fileID: 9093786029080101213}
   m_Layer: 0
   m_Name: r_fingerD_04.130
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6829,7 +6829,7 @@ GameObject:
   - component: {fileID: 2966887667231971163}
   m_Layer: 0
   m_Name: r_fingerD_01.127
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6862,7 +6862,7 @@ GameObject:
   - component: {fileID: 5173219707709641503}
   m_Layer: 0
   m_Name: r_wingFlapD_01.152_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6893,7 +6893,7 @@ GameObject:
   - component: {fileID: 856696237261671344}
   m_Layer: 0
   m_Name: l_fingerA_01.77
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6925,7 +6925,7 @@ GameObject:
   - component: {fileID: 5983867643229507054}
   m_Layer: 0
   m_Name: tongue_01.29
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6957,7 +6957,7 @@ GameObject:
   - component: {fileID: 3750568077484270601}
   m_Layer: 0
   m_Name: r_shoulder.114
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7021,7 +7021,7 @@ GameObject:
   - component: {fileID: 3924343151909072927}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_04.61
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7055,7 +7055,7 @@ GameObject:
   - component: {fileID: 2143067833543624332}
   m_Layer: 7
   m_Name: DecayedHealthBar
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7128,7 +7128,7 @@ GameObject:
   - component: {fileID: 7342172007665258692}
   m_Layer: 0
   m_Name: flamepoint
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7161,7 +7161,7 @@ GameObject:
   - component: {fileID: 8881735520784408120}
   m_Layer: 7
   m_Name: HealthBarBg
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7234,7 +7234,7 @@ GameObject:
   - component: {fileID: 4317083868825342472}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_03.54_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7265,7 +7265,7 @@ GameObject:
   - component: {fileID: 3830905345120774798}
   m_Layer: 0
   m_Name: tail_19.201
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7299,7 +7299,7 @@ GameObject:
   - component: {fileID: 52186013436787485}
   m_Layer: 7
   m_Name: DecayedHealthBar
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7374,7 +7374,7 @@ GameObject:
   - component: {fileID: 4097509932215506987}
   m_Layer: 7
   m_Name: Mask
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7433,7 +7433,7 @@ GameObject:
   - component: {fileID: 7199641591637315023}
   m_Layer: 0
   m_Name: jaw_02.27
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7465,7 +7465,7 @@ GameObject:
   - component: {fileID: 2312358258444671830}
   m_Layer: 0
   m_Name: l_neckSpikeUp_04.58_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7496,7 +7496,7 @@ GameObject:
   - component: {fileID: 4206975701289329335}
   m_Layer: 0
   m_Name: l_dewclaw.170
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7528,7 +7528,7 @@ GameObject:
   - component: {fileID: 1057287707440239692}
   m_Layer: 0
   m_Name: l_fingerG_03.110_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7559,7 +7559,7 @@ GameObject:
   - component: {fileID: 7382827705136477684}
   m_Layer: 0
   m_Name: l_shoulderTwist.112
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7593,7 +7593,7 @@ GameObject:
   - component: {fileID: 6559893678472305182}
   m_Layer: 7
   m_Name: Shift_CD
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7666,7 +7666,7 @@ GameObject:
   - component: {fileID: 5785748435595221709}
   m_Layer: 0
   m_Name: spineSpike_02.155_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7697,7 +7697,7 @@ GameObject:
   - component: {fileID: 5078845528950999032}
   m_Layer: 0
   m_Name: spine_03.8
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7730,7 +7730,7 @@ GameObject:
   - component: {fileID: 4598668262902974684}
   m_Layer: 0
   m_Name: tail_06.188
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7762,7 +7762,7 @@ GameObject:
   - component: {fileID: 597248763489685225}
   m_Layer: 0
   m_Name: r_wingFlapC_01.147
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7796,7 +7796,7 @@ GameObject:
   - component: {fileID: 3788264961930453964}
   m_Layer: 7
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8198,7 +8198,7 @@ GameObject:
   - component: {fileID: 4292450038763492257}
   m_Layer: 0
   m_Name: r_neckSpikeUp_07.71
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8230,7 +8230,7 @@ GameObject:
   - component: {fileID: 5372299827025504966}
   m_Layer: 0
   m_Name: r_fingerB_02.122
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8262,7 +8262,7 @@ GameObject:
   - component: {fileID: 5061830260023871031}
   m_Layer: 0
   m_Name: r_neckSpikeUp_01.51_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8295,7 +8295,7 @@ GameObject:
   - component: {fileID: 1472347407828151586}
   m_Layer: 7
   m_Name: Blood Effect
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8368,7 +8368,7 @@ GameObject:
   - component: {fileID: 387753721778796797}
   m_Layer: 0
   m_Name: r_wingFlapB_03.141
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8400,7 +8400,7 @@ GameObject:
   - component: {fileID: 4388946257321365038}
   m_Layer: 0
   m_Name: r_wingFlapB_04.142
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8432,7 +8432,7 @@ GameObject:
   - component: {fileID: 1176344923613045186}
   m_Layer: 0
   m_Name: root.4
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8464,7 +8464,7 @@ GameObject:
   - component: {fileID: 5568668056960314992}
   m_Layer: 0
   m_Name: r_eye.36_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8495,7 +8495,7 @@ GameObject:
   - component: {fileID: 4511514137991830306}
   m_Layer: 0
   m_Name: spineSpike_01.154
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8527,7 +8527,7 @@ GameObject:
   - component: {fileID: 7875213043166869348}
   m_Layer: 0
   m_Name: r_wingFlapA_04.134_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8630,7 +8630,7 @@ GameObject:
   - component: {fileID: 6215950714100620003}
   m_Layer: 0
   m_Name: l_toeInB.169_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8661,7 +8661,7 @@ GameObject:
   - component: {fileID: 428976460188383571}
   m_Layer: 0
   m_Name: l_fingerE_01.94
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8694,7 +8694,7 @@ GameObject:
   - component: {fileID: 6454856851638391502}
   m_Layer: 0
   m_Name: l_fingerD_03.88
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8726,7 +8726,7 @@ GameObject:
   - component: {fileID: 1126991824081406909}
   m_Layer: 0
   m_Name: r_fingerA_01.118
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8758,7 +8758,7 @@ GameObject:
   - component: {fileID: 1769987607528357267}
   m_Layer: 0
   m_Name: r_fingerG_01.149
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8791,7 +8791,7 @@ GameObject:
   - component: {fileID: 8026458050463485167}
   m_Layer: 0
   m_Name: r_fingerE_02.136
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8823,7 +8823,7 @@ GameObject:
   - component: {fileID: 4109469621619702999}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_01.50
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8855,7 +8855,7 @@ GameObject:
   - component: {fileID: 4092818634108504047}
   m_Layer: 0
   m_Name: tail_02.184
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8890,7 +8890,7 @@ GameObject:
   - component: {fileID: 6218449887081397745}
   m_Layer: 7
   m_Name: homing_CD
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8963,7 +8963,7 @@ GameObject:
   - component: {fileID: 5292106297439326618}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_04.61_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8994,7 +8994,7 @@ GameObject:
   - component: {fileID: 1139341535326724367}
   m_Layer: 0
   m_Name: l_toeInB.169
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9026,7 +9026,7 @@ GameObject:
   - component: {fileID: 8817774651410093473}
   m_Layer: 0
   m_Name: r_wingFlapA_03.133
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9058,7 +9058,7 @@ GameObject:
   - component: {fileID: 5312567980306892106}
   m_Layer: 0
   m_Name: r_browOut.45_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9089,7 +9089,7 @@ GameObject:
   - component: {fileID: 6077816867407813717}
   m_Layer: 0
   m_Name: hips.158
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9126,7 +9126,7 @@ GameObject:
   - component: {fileID: 1910125382522870975}
   m_Layer: 0
   m_Name: tailSpike_02.217_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9157,7 +9157,7 @@ GameObject:
   - component: {fileID: 3659418474441777516}
   m_Layer: 0
   m_Name: r_fingerD_03.129
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9189,7 +9189,7 @@ GameObject:
   - component: {fileID: 41013858238982984}
   m_Layer: 0
   m_Name: r_fingerC_03.126_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9220,7 +9220,7 @@ GameObject:
   - component: {fileID: 6185017000858707098}
   m_Layer: 0
   m_Name: r_upperLid.40_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9251,7 +9251,7 @@ GameObject:
   - component: {fileID: 4051851483163353984}
   m_Layer: 0
   m_Name: pelvis.5
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9284,7 +9284,7 @@ GameObject:
   - component: {fileID: 8639947896316104854}
   m_Layer: 0
   m_Name: spine_04.9
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9316,7 +9316,7 @@ GameObject:
   - component: {fileID: 6196303372074270998}
   m_Layer: 0
   m_Name: l_nose.35_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9347,7 +9347,7 @@ GameObject:
   - component: {fileID: 6958329405061601521}
   m_Layer: 0
   m_Name: l_neckSpikeUp_06.64
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9379,7 +9379,7 @@ GameObject:
   - component: {fileID: 85761193670292281}
   m_Layer: 0
   m_Name: tail_23.205
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9412,7 +9412,7 @@ GameObject:
   - component: {fileID: 7579734643316739302}
   m_Layer: 7
   m_Name: Teammate Info (1)
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9450,7 +9450,7 @@ GameObject:
   - component: {fileID: 6924507478454888819}
   m_Layer: 0
   m_Name: tongue_05.33
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9482,7 +9482,7 @@ GameObject:
   - component: {fileID: 3253429675356508585}
   m_Layer: 7
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9518,7 +9518,7 @@ GameObject:
   - component: {fileID: 295315308185729178}
   m_Layer: 0
   m_Name: l_fingerD_04.89
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9550,7 +9550,7 @@ GameObject:
   - component: {fileID: 7159300345448507342}
   m_Layer: 0
   m_Name: r_fingerA_02.119
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9582,7 +9582,7 @@ GameObject:
   - component: {fileID: 8114386043125807345}
   m_Layer: 0
   m_Name: r_fingerF_02.144
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9614,7 +9614,7 @@ GameObject:
   - component: {fileID: 7731954500370943738}
   m_Layer: 0
   m_Name: l_lowerLid.39_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9645,7 +9645,7 @@ GameObject:
   - component: {fileID: 1735777053648578702}
   m_Layer: 0
   m_Name: r_neckSpikeUp_06.69
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9679,7 +9679,7 @@ GameObject:
   - component: {fileID: 1611350931932815123}
   m_Layer: 7
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10009,7 +10009,7 @@ GameObject:
   - component: {fileID: 5720774252962478034}
   m_Layer: 0
   m_Name: r_toeInA.180
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10041,7 +10041,7 @@ GameObject:
   - component: {fileID: 3688748375987368762}
   m_Layer: 0
   m_Name: r_fingerE_04.138_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10073,7 +10073,7 @@ GameObject:
   - component: {fileID: 3957247545456338750}
   m_Layer: 7
   m_Name: Skills
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10140,7 +10140,7 @@ GameObject:
   - component: {fileID: 3269401766438068135}
   m_Layer: 7
   m_Name: HealthBarUI
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10261,7 +10261,7 @@ GameObject:
   - component: {fileID: 3701967422174398847}
   m_Layer: 0
   m_Name: neck_02.15
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10293,7 +10293,7 @@ GameObject:
   - component: {fileID: 8827045329481955233}
   m_Layer: 0
   m_Name: l_wingFlapB_01.98
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10325,7 +10325,7 @@ GameObject:
   - component: {fileID: 9216228179084982828}
   m_Layer: 0
   m_Name: r_fingerF_04.146_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10356,7 +10356,7 @@ GameObject:
   - component: {fileID: 5014418106176487252}
   m_Layer: 0
   m_Name: l_wingFlapB_04.101
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10388,7 +10388,7 @@ GameObject:
   - component: {fileID: 36482723294876070}
   m_Layer: 0
   m_Name: l_neckSpikeUp_06.64_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10419,7 +10419,7 @@ GameObject:
   - component: {fileID: 6626983829535697514}
   m_Layer: 0
   m_Name: l_fingerB_03.82
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10482,7 +10482,7 @@ GameObject:
   - component: {fileID: 39443850199445528}
   m_Layer: 0
   m_Name: Focus
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10514,7 +10514,7 @@ GameObject:
   - component: {fileID: 7723930169199398734}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_04.59_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10547,7 +10547,7 @@ GameObject:
   - component: {fileID: 1166347522717038396}
   m_Layer: 7
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10620,7 +10620,7 @@ GameObject:
   - component: {fileID: 6904612276496544814}
   m_Layer: 0
   m_Name: r_fingerB_03.123
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10652,7 +10652,7 @@ GameObject:
   - component: {fileID: 4894494644138993232}
   m_Layer: 0
   m_Name: tail_18.200
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10687,7 +10687,7 @@ GameObject:
   - component: {fileID: 5884197309782893752}
   m_Layer: 7
   m_Name: Icon
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10776,7 +10776,7 @@ GameObject:
   - component: {fileID: 8174812309990169453}
   m_Layer: 7
   m_Name: homing flame
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10851,7 +10851,7 @@ GameObject:
   - component: {fileID: 5450159530842575059}
   m_Layer: 0
   m_Name: l_fingerB_03.82_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10882,7 +10882,7 @@ GameObject:
   - component: {fileID: 5730119098154452466}
   m_Layer: 0
   m_Name: tail_08.190
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10914,7 +10914,7 @@ GameObject:
   - component: {fileID: 5935830155268503056}
   m_Layer: 0
   m_Name: r_fingerC_02.125
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10946,7 +10946,7 @@ GameObject:
   - component: {fileID: 260734344514342105}
   m_Layer: 0
   m_Name: tailSpike_01.216
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10978,7 +10978,7 @@ GameObject:
   - component: {fileID: 4315445262448597100}
   m_Layer: 0
   m_Name: l_toeB.165
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11010,7 +11010,7 @@ GameObject:
   - component: {fileID: 1667699231578876619}
   m_Layer: 0
   m_Name: l_fingerE_02.95
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11042,7 +11042,7 @@ GameObject:
   - component: {fileID: 1836185222435990665}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_06.65
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11074,7 +11074,7 @@ GameObject:
   - component: {fileID: 4571751027264659857}
   m_Layer: 0
   m_Name: r_fingerG_03.151
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11106,7 +11106,7 @@ GameObject:
   - component: {fileID: 2340353358638889827}
   m_Layer: 0
   m_Name: tail_30.212_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11137,7 +11137,7 @@ GameObject:
   - component: {fileID: 6541560964055005835}
   m_Layer: 0
   m_Name: tailBaseSpike_05.218
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11171,7 +11171,7 @@ GameObject:
   - component: {fileID: 4621722709981015598}
   m_Layer: 7
   m_Name: BlackBorder
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11244,7 +11244,7 @@ GameObject:
   - component: {fileID: 469128878843136927}
   m_Layer: 0
   m_Name: l_fingerA_03.79_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11275,7 +11275,7 @@ GameObject:
   - component: {fileID: 8072973230392787831}
   m_Layer: 0
   m_Name: r_wingFlapD_01.152
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11307,7 +11307,7 @@ GameObject:
   - component: {fileID: 4491950693460829843}
   m_Layer: 0
   m_Name: tongue_05.33_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11340,7 +11340,7 @@ GameObject:
   - component: {fileID: 1954883288113720959}
   m_Layer: 7
   m_Name: Crosshair
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11413,7 +11413,7 @@ GameObject:
   - component: {fileID: 6524297116588394637}
   m_Layer: 0
   m_Name: tongue_04.32
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11445,7 +11445,7 @@ GameObject:
   - component: {fileID: 516495773628390135}
   m_Layer: 0
   m_Name: tailBaseSpike_02.221
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11477,7 +11477,7 @@ GameObject:
   - component: {fileID: 6266991778880944138}
   m_Layer: 0
   m_Name: tail_16.198
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11509,7 +11509,7 @@ GameObject:
   - component: {fileID: 7953120350588937722}
   m_Layer: 0
   m_Name: l_fingerF_04.105
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11541,7 +11541,7 @@ GameObject:
   - component: {fileID: 6428210516281283055}
   m_Layer: 0
   m_Name: fireBreath.28
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11573,7 +11573,7 @@ GameObject:
   - component: {fileID: 8337714898807021526}
   m_Layer: 0
   m_Name: r_fingerC_03.126
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11605,7 +11605,7 @@ GameObject:
   - component: {fileID: 8875317447197814151}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_01.50_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11636,7 +11636,7 @@ GameObject:
   - component: {fileID: 7580513420907215862}
   m_Layer: 0
   m_Name: l_wingFlapA_01.90
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11668,7 +11668,7 @@ GameObject:
   - component: {fileID: 5534489430106695145}
   m_Layer: 0
   m_Name: r_nose.34_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11699,7 +11699,7 @@ GameObject:
   - component: {fileID: 2399211559831850563}
   m_Layer: 0
   m_Name: r_wingFlapB_01.139
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11731,7 +11731,7 @@ GameObject:
   - component: {fileID: 5592742222393682181}
   m_Layer: 0
   m_Name: r_neckSpikeUp_05.67_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11762,7 +11762,7 @@ GameObject:
   - component: {fileID: 6966433507989561385}
   m_Layer: 0
   m_Name: r_hip.172
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11796,7 +11796,7 @@ GameObject:
   - component: {fileID: 1941911201763974562}
   m_Layer: 7
   m_Name: Name
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11928,7 +11928,7 @@ GameObject:
   - component: {fileID: 3563227542876680542}
   m_Layer: 0
   m_Name: tailBaseSpike_04.219
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11960,7 +11960,7 @@ GameObject:
   - component: {fileID: 3775066930982257854}
   m_Layer: 0
   m_Name: neck_04.17
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11992,7 +11992,7 @@ GameObject:
   - component: {fileID: 4074020626426325072}
   m_Layer: 0
   m_Name: l_neckSpikeDwn_04.59
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12024,7 +12024,7 @@ GameObject:
   - component: {fileID: 864671476146092822}
   m_Layer: 0
   m_Name: r_neckSpikeUp_02.53
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12056,7 +12056,7 @@ GameObject:
   - component: {fileID: 8575595977418507934}
   m_Layer: 0
   m_Name: r_wingFlapC_02.148_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12087,7 +12087,7 @@ GameObject:
   - component: {fileID: 173297029310270273}
   m_Layer: 0
   m_Name: l_wingFlapA_04.93
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12119,7 +12119,7 @@ GameObject:
   - component: {fileID: 6571335843601135914}
   m_Layer: 0
   m_Name: r_clavicle.113
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12151,7 +12151,7 @@ GameObject:
   - component: {fileID: 4401579651630228157}
   m_Layer: 0
   m_Name: tailSpike_05.213
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12183,7 +12183,7 @@ GameObject:
   - component: {fileID: 5628348411550524653}
   m_Layer: 0
   m_Name: l_toeInA.168
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12215,7 +12215,7 @@ GameObject:
   - component: {fileID: 6751511188513734140}
   m_Layer: 0
   m_Name: jaw_01.26
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12249,7 +12249,7 @@ GameObject:
   - component: {fileID: 7090790963209121807}
   m_Layer: 0
   m_Name: r_neckSpikeDwn_06.68_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12280,7 +12280,7 @@ GameObject:
   - component: {fileID: 2416777780622182315}
   m_Layer: 0
   m_Name: l_lowerLid.39
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12312,7 +12312,7 @@ GameObject:
   - component: {fileID: 26577750305605083}
   m_Layer: 0
   m_Name: neck_09.22
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12353,7 +12353,7 @@ GameObject:
   - component: {fileID: 8230013222224328184}
   m_Layer: 0
   m_Name: r_ankle.174
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12386,7 +12386,7 @@ GameObject:
   - component: {fileID: 7022917049796824783}
   m_Layer: 0
   m_Name: tailBaseSpike_01.220_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12417,7 +12417,7 @@ GameObject:
   - component: {fileID: 4136891625708008332}
   m_Layer: 0
   m_Name: tail_17.199
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12449,7 +12449,7 @@ GameObject:
   - component: {fileID: 8521225635675233356}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Dragon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12481,7 +12481,7 @@ GameObject:
   - component: {fileID: 917084574244789169}
   m_Layer: 0
   m_Name: tailBaseSpike_05.218_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12515,7 +12515,7 @@ GameObject:
   - component: {fileID: 807350299434478484}
   m_Layer: 7
   m_Name: Player Canvas New
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12617,7 +12617,7 @@ GameObject:
   - component: {fileID: 7283867509558640506}
   m_Layer: 0
   m_Name: l_fingerG_01.108
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12650,7 +12650,7 @@ GameObject:
   - component: {fileID: 1660982664256183445}
   m_Layer: 0
   m_Name: r_hipClav.171
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12682,7 +12682,7 @@ GameObject:
   - component: {fileID: 6422055917048582966}
   m_Layer: 0
   m_Name: r_knee.173
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12714,7 +12714,7 @@ GameObject:
   - component: {fileID: 3379618790398551358}
   m_Layer: 0
   m_Name: tailSpike_03.215_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12776,7 +12776,7 @@ GameObject:
   - component: {fileID: 5368869783293020198}
   m_Layer: 0
   m_Name: r_handMid.117
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12815,7 +12815,7 @@ GameObject:
   - component: {fileID: 1793984789494369136}
   m_Layer: 7
   m_Name: HealthBarBg
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12888,7 +12888,7 @@ GameObject:
   - component: {fileID: 7751118854441503007}
   m_Layer: 0
   m_Name: r_fingerB_03.123_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12921,7 +12921,7 @@ GameObject:
   - component: {fileID: 6144880507833555180}
   m_Layer: 7
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12994,7 +12994,7 @@ GameObject:
   - component: {fileID: 6480104825660265571}
   m_Layer: 0
   m_Name: r_browIn.44
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13026,7 +13026,7 @@ GameObject:
   - component: {fileID: 8636186273847641549}
   m_Layer: 0
   m_Name: r_nose.34
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13058,7 +13058,7 @@ GameObject:
   - component: {fileID: 1351647715149178184}
   m_Layer: 0
   m_Name: tail_27.209
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13092,7 +13092,7 @@ GameObject:
   - component: {fileID: 8087754921907219889}
   m_Layer: 7
   m_Name: HealthBarBg
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13165,7 +13165,7 @@ GameObject:
   - component: {fileID: 1995278598557915594}
   m_Layer: 0
   m_Name: l_fingerB_01.80
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13197,7 +13197,7 @@ GameObject:
   - component: {fileID: 3791968939554620464}
   m_Layer: 0
   m_Name: l_fingerD_01.86
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13230,7 +13230,7 @@ GameObject:
   - component: {fileID: 2964248471573723990}
   m_Layer: 0
   m_Name: r_toeInB.181
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13262,7 +13262,7 @@ GameObject:
   - component: {fileID: 3152387963386968248}
   m_Layer: 0
   m_Name: spineSpike_01.154_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13293,7 +13293,7 @@ GameObject:
   - component: {fileID: 5320273801646710092}
   m_Layer: 0
   m_Name: l_neckSpikeUp_01.46_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13324,7 +13324,7 @@ GameObject:
   - component: {fileID: 284815473212704195}
   m_Layer: 7
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13360,7 +13360,7 @@ GameObject:
   - component: {fileID: 1998786177783303283}
   m_Layer: 0
   m_Name: l_fingerD_02.87
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13392,7 +13392,7 @@ GameObject:
   - component: {fileID: 2415700970222729206}
   m_Layer: 0
   m_Name: neck_08.21
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13428,7 +13428,7 @@ GameObject:
   - component: {fileID: 6693097070567481931}
   m_Layer: 0
   m_Name: r_fingerA_03.120_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13459,7 +13459,7 @@ GameObject:
   - component: {fileID: 2721204514687449960}
   m_Layer: 0
   m_Name: fireBreath.28_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13492,7 +13492,7 @@ GameObject:
   - component: {fileID: 1150590809734841709}
   m_Layer: 7
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13565,7 +13565,7 @@ GameObject:
   - component: {fileID: 6877597897658338669}
   m_Layer: 0
   m_Name: l_fingerG_03.110
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13597,7 +13597,7 @@ GameObject:
   - component: {fileID: 551092445544838640}
   m_Layer: 0
   m_Name: l_fingerE_04.97
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13632,7 +13632,7 @@ GameObject:
   - component: {fileID: 8467827428260166323}
   m_Layer: 7
   m_Name: HealthBarUI
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13753,7 +13753,7 @@ GameObject:
   - component: {fileID: 8809256514379828663}
   m_Layer: 0
   m_Name: tailBaseSpike_04.219_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13784,7 +13784,7 @@ GameObject:
   - component: {fileID: 9138300848534975227}
   m_Layer: 0
   m_Name: tailBaseSpike_02.221_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13815,7 +13815,7 @@ GameObject:
   - component: {fileID: 7543195080469874425}
   m_Layer: 0
   m_Name: l_wingFlapD_01.111_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13846,7 +13846,7 @@ GameObject:
   - component: {fileID: 483220955852246718}
   m_Layer: 0
   m_Name: r_neckSpikeUp_04.60_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13877,7 +13877,7 @@ GameObject:
   - component: {fileID: 1267236976258996754}
   m_Layer: 0
   m_Name: l_fingerC_03.85
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13909,7 +13909,7 @@ GameObject:
   - component: {fileID: 4732650874805027923}
   m_Layer: 0
   m_Name: l_clavicle.72
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13941,7 +13941,7 @@ GameObject:
   - component: {fileID: 5942676567751569245}
   m_Layer: 0
   m_Name: l_ball.163
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13975,7 +13975,7 @@ GameObject:
   - component: {fileID: 6271851074027521506}
   m_Layer: 0
   m_Name: neck_06.19
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14015,7 +14015,7 @@ GameObject:
   - component: {fileID: 1269824631135190525}
   m_Layer: 0
   m_Name: l_neckSpikeUp_02.48_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14046,7 +14046,7 @@ GameObject:
   - component: {fileID: 3017240253573456106}
   m_Layer: 0
   m_Name: tail_10.192
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14079,7 +14079,7 @@ GameObject:
   - component: {fileID: 8477527753807908599}
   m_Layer: 0
   m_Name: wing2
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14131,7 +14131,7 @@ GameObject:
   - component: {fileID: 8464459735090834690}
   m_Layer: 0
   m_Name: l_nose.35
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14163,7 +14163,7 @@ GameObject:
   - component: {fileID: 1703564080543177771}
   m_Layer: 0
   m_Name: l_wingFlapB_02.99
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14195,7 +14195,7 @@ GameObject:
   - component: {fileID: 8293015919375798358}
   m_Layer: 7
   m_Name: PlayerInfo
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14233,7 +14233,7 @@ GameObject:
   - component: {fileID: 2551020918758049490}
   m_Layer: 0
   m_Name: r_wingFlapA_04.134
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14265,7 +14265,7 @@ GameObject:
   - component: {fileID: 6612380187208026407}
   m_Layer: 0
   m_Name: tail_30.212
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14297,7 +14297,7 @@ GameObject:
   - component: {fileID: 2683902668964965161}
   m_Layer: 0
   m_Name: l_shoulder.73
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14330,7 +14330,7 @@ GameObject:
   - component: {fileID: 6348152389642551598}
   m_Layer: 0
   m_Name: r_fingerE_03.137
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14364,7 +14364,7 @@ GameObject:
   - component: {fileID: 4647956311368351279}
   m_Layer: 7
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14437,7 +14437,7 @@ GameObject:
   - component: {fileID: 6673129084101399025}
   m_Layer: 0
   m_Name: l_neckSpikeUp_05.63
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14469,7 +14469,7 @@ GameObject:
   - component: {fileID: 3036358617812446246}
   m_Layer: 0
   m_Name: l_wingFlapC_02.107
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14503,7 +14503,7 @@ GameObject:
   - component: {fileID: 7935153921988024981}
   m_Layer: 7
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14635,7 +14635,7 @@ GameObject:
   - component: {fileID: 3105850151268571360}
   m_Layer: 0
   m_Name: tailBaseSpike_01.220
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14669,7 +14669,7 @@ GameObject:
   - component: {fileID: 3689185766148969082}
   m_Layer: 7
   m_Name: BlackBorder
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14742,7 +14742,7 @@ GameObject:
   - component: {fileID: 2562034886892276222}
   m_Layer: 0
   m_Name: neck_10.23
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14775,7 +14775,7 @@ GameObject:
   - component: {fileID: 166746323832426844}
   m_Layer: 0
   m_Name: head.25
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14819,7 +14819,7 @@ GameObject:
   - component: {fileID: 4682134924282901997}
   m_Layer: 0
   m_Name: l_neckSpikeUp_03.55
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14851,7 +14851,7 @@ GameObject:
   - component: {fileID: 5313536084083266111}
   m_Layer: 0
   m_Name: spineSpike_04.157_end
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14882,7 +14882,7 @@ GameObject:
   - component: {fileID: 5738614482453413436}
   m_Layer: 0
   m_Name: spineSpike_04.157
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14914,7 +14914,7 @@ GameObject:
   - component: {fileID: 3328351788925737196}
   m_Layer: 0
   m_Name: l_fingerA_02.78
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15013,6 +15013,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: death_Smoke
       objectReference: {fileID: 0}
+    - target: {fileID: 3666302185388324233, guid: 8742dd12800c5fc4ca447f94963775b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15102,6 +15107,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: death_Smoke (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3666302185388324233, guid: 8742dd12800c5fc4ca447f94963775b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15176,6 +15186,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -47
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462698502982881893, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
       objectReference: {fileID: 0}
     - target: {fileID: 1758624320260936232, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
@@ -15297,10 +15312,25 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2529327494462196262, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629189817763628071, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     - target: {fileID: 2637831336257532180, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
       propertyPath: m_Name
       value: BossUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637831336257532180, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
       objectReference: {fileID: 0}
     - target: {fileID: 3506349422704679944, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
@@ -15311,6 +15341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -96.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000194458290614768, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
       objectReference: {fileID: 0}
     - target: {fileID: 4307977742154952531, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
@@ -15467,6 +15502,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5030421738849649123, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5084965735684319090, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     - target: {fileID: 5978930804238581566, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
       propertyPath: m_fontSize
@@ -15476,6 +15521,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592841702440681979, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971344348886840656, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251715268425242508, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
       objectReference: {fileID: 0}
     - target: {fileID: 7325972020084101093, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
@@ -15562,6 +15622,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8711549212539103836, guid: 86c48940a96d94849bb04ea76914ee9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15611,7 +15676,7 @@ PrefabInstance:
     - target: {fileID: 3243328023640914615, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
         type: 3}
       propertyPath: m_TagString
-      value: Dragon
+      value: Flames
       objectReference: {fileID: 0}
     - target: {fileID: 4787063509254095052, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
         type: 3}
@@ -15623,6 +15688,11 @@ PrefabInstance:
       propertyPath: focusPointCamera
       value: 
       objectReference: {fileID: 6987045484917183014}
+    - target: {fileID: 6525516737548152638, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     - target: {fileID: 6961363379052203433, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -15692,6 +15762,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7052839108325826829, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292906642771626557, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6151190266064709901, guid: adfcd1aa38d5c8c4fac0b3bba25dc724, type: 3}
@@ -15814,6 +15894,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: death_Smoke (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3666302185388324233, guid: 8742dd12800c5fc4ca447f94963775b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15902,6 +15987,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: death_Smoke (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666302185388324233, guid: 8742dd12800c5fc4ca447f94963775b1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
