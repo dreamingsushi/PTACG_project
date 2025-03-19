@@ -91,12 +91,12 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             }
         }
         isSecondPhase = false;
-       
+        currentDeaths = 0;
     }
 
     void Update()
     {
-        
+        Debug.Log(currentDeaths);
         if(PhotonNetwork.LocalPlayer.IsMasterClient && !gameResulted && timeLeft > 0)
         {
             TimerDownForGame();

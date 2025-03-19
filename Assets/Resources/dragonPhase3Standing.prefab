@@ -7060,7 +7060,7 @@ Transform:
   m_GameObject: {fileID: 1439274953608876415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.18, z: 0.09}
+  m_LocalPosition: {x: -0, y: 0.158, z: 0.017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8044,7 +8044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005430334377247650}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.15567233, z: -0, w: 0.98780876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.03275912, y: 0.056599066, z: 0.010404114}
   m_LocalScale: {x: 0.6322898, y: 0.63228995, z: 0.6322898}
   m_ConstrainProportionsScale: 0
@@ -27354,7 +27354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8334378518472895369}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.97030544, z: -0, w: 0.24188302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -95.2, y: 9.4, z: 8}
   m_LocalScale: {x: 106.00001, y: 106.00001, z: 106.00001}
   m_ConstrainProportionsScale: 1
@@ -27371,7 +27371,7 @@ Transform:
   - {fileID: 2077598865530278716}
   - {fileID: 6734735541638446848}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 152.005, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &858220028664485126
 Animator:
   serializedVersion: 5
@@ -27494,8 +27494,8 @@ MonoBehaviour:
   focusPoint: {fileID: 1439274953608876415}
   turnDirection: 0
   sens: 1
-  maxAngle: 200
-  minAngle: 60
+  maxAngle: 299
+  minAngle: 1
   mySkills: {fileID: 8683608228255821491}
   myCrossHair: {fileID: 6442218585351995635}
 --- !u!114 &2178440603905506205
