@@ -6506,7 +6506,7 @@ MonoBehaviour:
   _firePoint: {fileID: 4053150012349937117}
   cutscenePhase3: {fileID: 1180743227216956005}
   focusPointCamera: {fileID: 7851448437348521733}
-  dragonMeter: 0
+  dragonMeter: 4
   evolveUI: {fileID: 2619871181860578541}
   evolveRequirement: 2
   fireballIcon: {fileID: 3503162077010597514}

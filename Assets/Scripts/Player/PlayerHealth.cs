@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
     public Canvas worldCanvasHP;
     private bool damagePersisted = true;
     private float damagePersistenceInterval = 5.5f;
+    
 
     void Start()
     {
@@ -102,7 +103,7 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(DamageEffect());
         DamagePopUpText.Instance.ShowDamageNumber(transform.position, effectiveDamage.ToString());
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !playerController.isDead)
         {
             Die();
         }
@@ -158,6 +159,7 @@ public class PlayerHealth : MonoBehaviour
         GameStartManager.instance.GetComponent<PhotonView>().RPC("IncreasePlayerDeathCount", RpcTarget.AllBuffered, -1);
         isInvincible = false;
         playerController.isDead = false;
+        
         Heal(75);
         AudioManager.Instance.PlaySFX("Respawn");
     }
@@ -173,9 +175,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
+        playerController.isDead = true;
         GameStartManager.instance.GetComponent<PhotonView>().RPC("IncreasePlayerDeathCount", RpcTarget.AllBuffered, 1);
         Debug.Log("Player Died");
-        playerController.isDead = true;
+        
         OnPlayerDeath?.Invoke();
         StartCoroutine(Respawning(15f));
     }
