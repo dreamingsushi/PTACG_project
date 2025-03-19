@@ -584,6 +584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.1
@@ -652,6 +656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.7
@@ -719,6 +727,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalScale.z
@@ -907,6 +919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-room (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2920198851070488232, guid: 07cbeed01f73b8e4698bc2009981bc6a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -923,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1520,6 +1541,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
       propertyPath: m_Enabled
@@ -1775,6 +1801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
@@ -2305,6 +2336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -127.7
@@ -2372,6 +2407,10 @@ PrefabInstance:
     - target: {fileID: 1291641267741850, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
       propertyPath: m_Name
       value: terrain-plane-plain (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291641267741850, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4733648253010772, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
       propertyPath: m_LocalScale.x
@@ -2565,6 +2604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 139.6
@@ -2633,6 +2676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 170.9
@@ -2700,6 +2747,10 @@ PrefabInstance:
     - target: {fileID: 1291641267741850, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
       propertyPath: m_Name
       value: terrain-plane-plain (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291641267741850, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4733648253010772, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
       propertyPath: m_LocalScale.x
@@ -2944,7 +2995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 94925187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3429,6 +3480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13
@@ -3535,6 +3590,10 @@ PrefabInstance:
     - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_Name
       value: terrain-mountain-range (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3786,6 +3845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -93.3
@@ -3851,7 +3914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 161220642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallDragonHill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4127,6 +4190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55.3
@@ -4194,6 +4261,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4571,6 +4642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -99.1
@@ -4935,6 +5010,10 @@ PrefabInstance:
     - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_Name
       value: terrain-mountain-range (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5533,6 +5612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 58.6
@@ -6037,6 +6120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 100.59999
@@ -6104,6 +6191,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6173,6 +6264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: island-sand-tiny (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306792026156782039, guid: e3abd832686f12e4fb3a4fa7f258e199,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7939036966451612525, guid: e3abd832686f12e4fb3a4fa7f258e199,
         type: 3}
@@ -6633,6 +6729,10 @@ PrefabInstance:
     - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_Name
       value: terrain-mountain-range (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7176,6 +7276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -162.2
@@ -7426,6 +7530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.53
@@ -7662,6 +7770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-room
+      objectReference: {fileID: 0}
+    - target: {fileID: 2920198851070488232, guid: 07cbeed01f73b8e4698bc2009981bc6a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7996,6 +8109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 163.52736
@@ -8235,6 +8352,10 @@ PrefabInstance:
     - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_Name
       value: terrain-mountain-range
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8899,6 +9020,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-room (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2920198851070488232, guid: 07cbeed01f73b8e4698bc2009981bc6a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9387,6 +9513,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
       propertyPath: m_Enabled
@@ -9841,6 +9972,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10561,6 +10696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -100.9
@@ -10628,6 +10767,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10785,6 +10928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -63.3
@@ -10852,6 +10999,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11083,6 +11234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
@@ -11344,6 +11500,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12140,6 +12300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-plain (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1291641267741850, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4733648253010772, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -12223,6 +12387,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12578,6 +12746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 135.1
@@ -12719,6 +12891,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12946,6 +13122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -87.3
@@ -13132,6 +13312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
@@ -13481,6 +13666,10 @@ PrefabInstance:
     - target: {fileID: 1000011335768494, guid: eaaf35a4da309294d98a941c21e3f8a5, type: 3}
       propertyPath: m_Name
       value: mountain-desert
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011335768494, guid: eaaf35a4da309294d98a941c21e3f8a5, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013044457202, guid: eaaf35a4da309294d98a941c21e3f8a5, type: 3}
       propertyPath: m_LocalScale.x
@@ -13956,6 +14145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -103.1
@@ -14111,6 +14304,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14615,6 +14812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 181.1
@@ -14682,6 +14883,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14830,6 +15035,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15661,6 +15870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.6
@@ -15729,6 +15942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: island-sand-tiny
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306792026156782039, guid: e3abd832686f12e4fb3a4fa7f258e199,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7939036966451612525, guid: e3abd832686f12e4fb3a4fa7f258e199,
         type: 3}
@@ -15899,7 +16117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874712996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SlopeAround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16252,6 +16470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 97.6
@@ -16561,6 +16783,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16890,6 +17116,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17315,6 +17545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.1
@@ -17633,6 +17867,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
@@ -18284,6 +18523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -73.799995
@@ -18462,6 +18705,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18722,6 +18969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 151.5
@@ -18958,6 +19209,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-start (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840135784315243630, guid: 7ec0f2c25eead884c88669af5f927725,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6505313464743368404, guid: 7ec0f2c25eead884c88669af5f927725,
         type: 3}
@@ -19280,6 +19536,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
@@ -19614,6 +19875,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20158,6 +20423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -92
@@ -20298,6 +20567,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20632,6 +20905,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21146,6 +21423,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
       propertyPath: m_Enabled
@@ -21401,6 +21683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 143.18
@@ -21543,6 +21829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -114.81401
@@ -21682,6 +21972,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-connector-tri (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7987743428031235777, guid: d8992959838f6db48b1e88b78ac796b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21702,7 +21997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1176281012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OuterWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22237,6 +22532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
       propertyPath: m_Enabled
@@ -22759,6 +23059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -94
@@ -22921,6 +23225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -75.7
@@ -22988,6 +23296,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23244,6 +23556,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23689,6 +24005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72.9
@@ -23850,6 +24170,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24080,6 +24404,10 @@ PrefabInstance:
     - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_Name
       value: terrain-mountain-range (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25162,6 +25490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-mountain-range (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.3
@@ -26135,6 +26467,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-greenhouse
       objectReference: {fileID: 0}
+    - target: {fileID: 7794737330395120631, guid: a5b956ba9912cc549893c328125c8980,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26191,7 +26528,7 @@ GameObject:
   - component: {fileID: 1431745814}
   - component: {fileID: 1431745813}
   - component: {fileID: 1431745812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Middle_Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26297,6 +26634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098909539950067040, guid: dccc14d2f946a544f9a1529fff6841af,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5587040357325121498, guid: dccc14d2f946a544f9a1529fff6841af,
         type: 3}
@@ -26466,6 +26808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-generator-big
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071063592941389672, guid: 32495fdc67c047342a5215e0b9d69aa1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 152075069641538052, guid: 32495fdc67c047342a5215e0b9d69aa1, type: 3}
@@ -26749,6 +27096,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
@@ -27264,6 +27616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-planet-base-connector-tri
       objectReference: {fileID: 0}
+    - target: {fileID: 7987743428031235777, guid: d8992959838f6db48b1e88b78ac796b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27605,6 +27962,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29124,6 +29485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 138.6
@@ -29580,6 +29945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -63.06
@@ -29647,6 +30016,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30797,6 +31170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -116.8
@@ -30864,6 +31241,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31027,6 +31408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -117.2
@@ -31127,6 +31512,10 @@ PrefabInstance:
     - target: {fileID: 1291641267741850, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
       propertyPath: m_Name
       value: terrain-plane-plain (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291641267741850, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4733648253010772, guid: 5391a36fb631c4c5995bfb4ac56a2758, type: 3}
       propertyPath: m_LocalScale.x
@@ -31440,6 +31829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -96
@@ -31749,7 +32142,7 @@ GameObject:
   - component: {fileID: 1760055058}
   - component: {fileID: 1760055057}
   - component: {fileID: 1760055056}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31854,6 +32247,10 @@ PrefabInstance:
     - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_Name
       value: terrain-mountain-range (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570147927363894, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4099447961065320, guid: d0fb19b74a6974b988756d6b0c6351e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32085,6 +32482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-start
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840135784315243630, guid: 7ec0f2c25eead884c88669af5f927725,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6505313464743368404, guid: 7ec0f2c25eead884c88669af5f927725,
         type: 3}
@@ -32420,6 +32822,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32784,6 +33190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-turret-head-sniper-small
       objectReference: {fileID: 0}
+    - target: {fileID: 6047170498728962331, guid: 7808b7e688b190d408b289596420a00c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6386118750386942881, guid: 7808b7e688b190d408b289596420a00c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -32901,6 +33312,10 @@ PrefabInstance:
     - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_Name
       value: terrain-plane-slope1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33151,6 +33566,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34205,6 +34624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 147.7
@@ -34273,6 +34696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: scifi-planet-base-hall-two-middle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819897052692907913, guid: 273f012ae48c55340915402623046524,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4162005487780346599, guid: 273f012ae48c55340915402623046524,
         type: 3}
@@ -34729,10 +35157,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 320357975984108735, guid: a42272363fb491c4782cbe676c54470e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 424839526562421234, guid: a42272363fb491c4782cbe676c54470e,
         type: 3}
       propertyPath: m_Name
       value: scifi-satelit-big
+      objectReference: {fileID: 0}
+    - target: {fileID: 424839526562421234, guid: a42272363fb491c4782cbe676c54470e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1057930163657638728, guid: a42272363fb491c4782cbe676c54470e,
         type: 3}
@@ -34803,6 +35241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527797921564871088, guid: a42272363fb491c4782cbe676c54470e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37312,6 +37755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terrain-plane-slope1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1798317928602244, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4939072448064222, guid: 02832652fe96841fdbe4b4a09f1b9218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 98.5
@@ -38030,7 +38477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2133611991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpaceRoom (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38107,6 +38554,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x

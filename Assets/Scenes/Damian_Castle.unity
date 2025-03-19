@@ -402,6 +402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -768,6 +772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.554356
@@ -909,6 +917,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -1695,6 +1707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -2052,7 +2068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 104280228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MountainTrees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,6 +2306,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -2651,6 +2671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -2828,6 +2852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -2922,6 +2950,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -3684,7 +3716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205375816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MountainTrees (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4443,6 +4475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -4526,7 +4562,7 @@ GameObject:
   - component: {fileID: 327976239}
   - component: {fileID: 327976238}
   - component: {fileID: 327976237}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MidPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5845,6 +5881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 73.1
@@ -5901,6 +5941,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -6417,6 +6461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floe-long (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010020798942, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010654524184, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -6574,6 +6622,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -6931,6 +6983,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -7879,6 +7935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -8469,7 +8529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 589831329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MountainTrees (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8515,6 +8575,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -9412,6 +9476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floe
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012306888746, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010403741208, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -9496,6 +9564,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9639,6 +9711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -9727,6 +9803,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -9925,6 +10005,10 @@ PrefabInstance:
     - target: {fileID: 1000012306888746, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
       propertyPath: m_Name
       value: floe (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012306888746, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000010403741208, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
       propertyPath: m_LocalScale.x
@@ -10463,6 +10547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -10566,6 +10654,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -10722,6 +10814,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -11260,6 +11356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.554356
@@ -11340,6 +11440,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -11423,6 +11527,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -11827,6 +11935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -12219,6 +12331,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -12626,6 +12742,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -14259,6 +14379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -14672,6 +14796,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -15505,6 +15633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -15579,7 +15711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1094554162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MountainTrees (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15910,6 +16042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fountain
       objectReference: {fileID: 0}
+    - target: {fileID: 8903871579243155412, guid: fa8b6462509296d48a9a2d8bcbfa0e1b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16127,6 +16264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -16325,6 +16466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.9
@@ -16492,6 +16637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -16580,6 +16729,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -16851,6 +17004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -17034,6 +17191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -17204,6 +17365,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -17709,6 +17874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -17797,6 +17966,10 @@ PrefabInstance:
     - target: {fileID: 1000012306888746, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
       propertyPath: m_Name
       value: floe (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012306888746, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000010403741208, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
       propertyPath: m_LocalScale.x
@@ -18107,6 +18280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -18273,6 +18450,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18518,6 +18699,10 @@ PrefabInstance:
     - target: {fileID: 1000010020798942, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
       propertyPath: m_Name
       value: floe-long
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010020798942, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000010654524184, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
       propertyPath: m_LocalScale.x
@@ -19426,6 +19611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8
@@ -19482,6 +19671,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -19863,6 +20056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.554356
@@ -20239,6 +20436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -20427,6 +20628,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -20927,6 +21132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -21307,6 +21516,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -21829,6 +22042,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -22374,6 +22591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -22635,6 +22856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.554356
@@ -22697,6 +22922,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -22802,6 +23031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.5
@@ -22858,6 +23091,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -22975,6 +23212,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -23436,6 +23677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -23539,6 +23784,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23691,6 +23940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -23794,6 +24047,10 @@ PrefabInstance:
     - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_Name
       value: mountains (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24073,6 +24330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -24262,7 +24523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1671154498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MoutainGarden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24460,6 +24721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.554356
@@ -24522,6 +24787,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -24720,6 +24989,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -25268,7 +25541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1755951733}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MountainTrees (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25502,6 +25775,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -26171,6 +26448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -26362,6 +26643,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -26868,6 +27153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floe (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012306888746, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010403741208, guid: b1b3d848107ee194998adaa448f37b6a, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -27035,6 +27324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -27138,6 +27431,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -27341,6 +27638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.554356
@@ -27524,6 +27825,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
@@ -27949,6 +28254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -28135,6 +28444,10 @@ PrefabInstance:
     - target: {fileID: 1000010020798942, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
       propertyPath: m_Name
       value: floe-long (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010020798942, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000010654524184, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
       propertyPath: m_LocalScale.x
@@ -28547,6 +28860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 77.6
@@ -28785,6 +29102,10 @@ PrefabInstance:
     - target: {fileID: 1000010020798942, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
       propertyPath: m_Name
       value: floe-long (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010020798942, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000010654524184, guid: 0ab98986ff5493d458eda562324ab054, type: 3}
       propertyPath: m_LocalScale.x
@@ -30368,6 +30689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -30723,6 +31048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -31051,6 +31380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -31183,7 +31516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2084671292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MountainTrees (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31384,6 +31717,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountains (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010667862826, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013070176524, guid: dd28cee60ff222848ada1197745eb6d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -144.4
@@ -31562,6 +31899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree-conifer (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -31665,6 +32006,10 @@ PrefabInstance:
     - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_Name
       value: tree-conifer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013928841562, guid: 3c60c62241840d84d85c98238c067920, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011069621734, guid: 3c60c62241840d84d85c98238c067920, type: 3}
       propertyPath: m_LocalScale.x
