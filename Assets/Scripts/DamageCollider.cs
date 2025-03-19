@@ -11,7 +11,6 @@ public class DamageCollider : MonoBehaviour
     private void ApplyDamage(Collider other)
     {
         BossHealth health = other.GetComponentInParent<BossHealth>();
-        AudioManager.Instance.PlaySFX("HitDragon");
         if (health != null)
         {
             Vector3 hitDirection = (other.transform.position - transform.position).normalized;
@@ -23,7 +22,6 @@ public class DamageCollider : MonoBehaviour
     private void ApplyDamage(Collision collision)
     {
         BossHealth health = collision.gameObject.GetComponentInParent<BossHealth>();
-        AudioManager.Instance.PlaySFX("HitDragon");
         if (health != null)
         {
             Vector3 hitDirection = collision.contacts[0].normal;

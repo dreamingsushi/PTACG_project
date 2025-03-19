@@ -985,7 +985,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         if(timeLeft < 0)
         {
-            
+            AudioManager.Instance.PlayMusic("BattleBGM");
             switch(highestVotedMap)
             {
                 case 0:
@@ -1037,8 +1037,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     SceneManager.LoadScene("Snow");
                     break; 
             }
-
-            AudioManager.Instance.PlayMusic("BattleBGM");
         }
     }
 

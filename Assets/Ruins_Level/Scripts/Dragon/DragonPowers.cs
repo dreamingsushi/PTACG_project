@@ -120,7 +120,7 @@ public class DragonPowers : MonoBehaviour
         } 
         
         Quaternion fireballAngle = Quaternion.Euler(-focusPointCamera.transform.rotation.eulerAngles.x,focusPointCamera.transform.parent.rotation.eulerAngles.y - 180, fireball.transform.rotation.eulerAngles.z);
-
+        AudioManager.Instance.PlaySFX("FireBall");
         PhotonNetwork.Instantiate(fireball.name, _firePoint.position, fireballAngle);
         // GameObject fireProjectile = Instantiate(fireball, _firePoint.position, fireballAngle);
         //fireProjectile.transform.up = _hit.normal;

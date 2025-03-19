@@ -75,7 +75,6 @@ public class BossHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if(isInvincible) return;
-        
         float damageReductionPercent = armor*0.01f;
         float effectiveDamage = Mathf.Max(0, damage);
         effectiveDamage = Mathf.RoundToInt(effectiveDamage * (1 - damageReductionPercent));

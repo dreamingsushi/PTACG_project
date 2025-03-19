@@ -10,6 +10,11 @@ public class Flamethrower : MonoBehaviour
 
     public GameObject headPosition;
     // Start is called before the first frame update
+
+    void Awake()
+    {
+        AudioManager.Instance.PlaySFX("FlameThrower");
+    }
     void OnEnable()
     {
         Invoke("DisappearAfterTime", 8);

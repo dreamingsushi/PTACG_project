@@ -11,9 +11,9 @@ public class AudioManager : MonoBehaviour
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
-    private float masterVolume = 0.5f; // Default full volume
+    private float masterVolume = 0.4f; // Default full volume
     private float musicVolume = 0.2f;
-    private float sfxVolume = 1.0f;
+    private float sfxVolume = 0.5f;
 
     public Slider masterSlider, musicSlider, sfxSlider;
 

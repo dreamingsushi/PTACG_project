@@ -14,6 +14,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     public Transform bossInstantiatePosition;
     public Transform bossNextPhaseInstantiatePosition;
 
+    public GameObject restartPanel;
     public TMP_Text TimeUIText;
     public static GameStartManager instance = null;
     public bool canStartGame;
@@ -117,7 +118,10 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            restartPanel.SetActive(true);
+        }
     }
 
 
@@ -190,5 +194,8 @@ public class GameStartManager : MonoBehaviourPunCallbacks
     }
 
     
-
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
