@@ -5,6 +5,7 @@ using Photon.Pun;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Playables;
+using Unity.VisualScripting;
 
 public class DragonPowers : MonoBehaviour
 {
@@ -25,13 +26,14 @@ public class DragonPowers : MonoBehaviour
     private Animator animator;
     private GameStartManager gameManager;
     private bool canFireball = true;
-    public float fireballCD = 3f;
+    public float fireballCD = 0f;
     private bool canClaw;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        
         gameManager = GameStartManager.instance;
         animator = GetComponentInChildren<Animator>();
     }
@@ -43,10 +45,25 @@ public class DragonPowers : MonoBehaviour
         {
             canEvolve = true;
         }
-        if(Input.GetKeyDown(KeyCode.F) && canFireball){
-            
+        if(Input.GetKeyDown(KeyCode.F) && canFireball)
+        {
+            canFireball = false;
             FireBallAttack();
         }
+
+        if(canFireball == false)
+        {
+            fireballCD += Time.deltaTime;
+            fireballIcon.fillAmount = 1f;
+            if(fireballCD > 1.1f)
+            {
+                fireballIcon.fillAmount = 1f - (fireballCD / 1.1f);
+                fireballCD = 0;
+                canFireball = true;
+            }
+        }
+
+        
 
         if(Input.GetMouseButtonDown(0) && canClaw)
         {
@@ -76,10 +93,7 @@ public class DragonPowers : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
-        if(canFireball == false)
-        {
-            StartCoroutine(FireballCooldown());
-        }
+        
 
         if(GetComponentInChildren<BossMovement>().isGrounded)
         {
@@ -110,7 +124,7 @@ public class DragonPowers : MonoBehaviour
         PhotonNetwork.Instantiate(fireball.name, _firePoint.position, fireballAngle);
         // GameObject fireProjectile = Instantiate(fireball, _firePoint.position, fireballAngle);
         //fireProjectile.transform.up = _hit.normal;
-        canFireball = false;
+        
     }
 
     public void ChangePhase()
@@ -134,18 +148,19 @@ public class DragonPowers : MonoBehaviour
         animator.SetTrigger("swipe2");
     }
 
-    private IEnumerator FireballCooldown()
-    {
-        float elapsedTime = 0f;
-        fireballIcon.fillAmount = 1f;
+    // private IEnumerator FireballCooldown()
+    // {
+    //     float elapsedTime = 0f;
+    //     fireballIcon.fillAmount = 1f;
 
-        while (elapsedTime < fireballCD)
-        {
-            elapsedTime += Time.deltaTime;
-            fireballIcon.fillAmount = 1f - (elapsedTime / fireballCD);
-            yield return null;
-        }
-        fireballIcon.fillAmount = 0f;
-        canFireball = true;
-    }
+    //     while (elapsedTime < fireballCD)
+    //     {
+    //         elapsedTime += Time.deltaTime;
+    //         fireballIcon.fillAmount = 1f - (elapsedTime / fireballCD);
+    //         yield return null;
+    //     }
+    //     fireballIcon.fillAmount = 0f;
+    //     canFireball = true;
+    //     yield return null;
+    // }
 }

@@ -14,6 +14,9 @@ public class BossHealth : MonoBehaviour
     public event Action<float> OnHealthChanged;
     public CinemachineVirtualCamera deathCam;
 
+    public bool isInvincible = false;
+    public float invincibilityDuration = 0.75f;
+
     public GameObject deathVFX;
     public Material dragonDeathMat;
     private float armor = 10f;
@@ -31,13 +34,13 @@ public class BossHealth : MonoBehaviour
         dragonNumbers.takenDamage = 0f;
         if(GetComponentInChildren<BossController>() != null)
         {
-            maxBossHP = 200f;
+            maxBossHP = dragonNumbers.MaxHealthPoints1;
             currentBossHP = maxBossHP;
         }
         else if(GetComponent<BossControllerDos>() != null)
         {
-            maxBossHP = 500f;
-            currentBossHP = 500f - dragonNumbers.takenDamage;
+            maxBossHP = dragonNumbers.MaxHealthPoints1;
+            currentBossHP = dragonNumbers.MaxHealthPoints1 - dragonNumbers.takenDamage;
         }
     }
     // Start is called before the first frame update
@@ -63,11 +66,14 @@ public class BossHealth : MonoBehaviour
                 dragonFade = false;
             }
         }
+
+        Debug.Log(currentBossHP);
     }
 
     [PunRPC]
     public void TakeDamage(float damage)
     {
+        if(isInvincible) return;
         
         float damageReductionPercent = armor*0.01f;
         float effectiveDamage = Mathf.Max(0, damage);
@@ -84,6 +90,7 @@ public class BossHealth : MonoBehaviour
         
         if(GetComponentInChildren<BossController>() != null)
         {
+            //scriptable object
             GetComponentInChildren<BossDamageTaken>().photonView.RPC("SyncDamageTaken", RpcTarget.AllBuffered, effectiveDamage);
             DamagePopUpText.Instance.ShowDamageNumber(GetComponentInChildren<BossController>().gameObject.transform.position, effectiveDamage.ToString());
         }
@@ -97,8 +104,18 @@ public class BossHealth : MonoBehaviour
             GetComponent<PhotonView>().RPC("BossDie", RpcTarget.AllBuffered, true);
            
         }
+        else
+        {
+            StartCoroutine(InvincibilityFrames());
+        }
 
+    }
 
+    private IEnumerator InvincibilityFrames()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(invincibilityDuration);
+        isInvincible = false;
     }
 
     [PunRPC]
@@ -118,6 +135,7 @@ public class BossHealth : MonoBehaviour
         if(GetComponentInChildren<BossController>() != null )
         {
             deathVFX.SetActive(true);
+            PhotonNetwork.Instantiate("winning_Explosion", GetComponentInChildren<BossController>().transform.position, Quaternion.identity);
         }
         else if(GetComponent<BossControllerDos>() != null)
         {
@@ -157,7 +175,9 @@ public class BossHealth : MonoBehaviour
         while (elapsedTime < poisonDuration)
         {
             yield return new WaitForSeconds(poisonInterval);
-            TakeDamage(poisonDamage);
+            //TakeDamage(poisonDamage);
+            float poison = (float)poisonDamage;
+            GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, poison);
             elapsedTime += poisonInterval;
         }
 

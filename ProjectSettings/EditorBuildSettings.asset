@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LobbyScene.unity
     guid: 3adb158719a2fde47b23f83f67d010c9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Alvin_Scene.unity
     guid: be3359578a56ded489807bcadefba48b
   - enabled: 1
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Damian_Castle.unity
     guid: 3d4a9d65bffe04c4c9dbef564d1551cc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Damian_Space.unity
     guid: 805bf81e40d515f438fe099b8e3c3738
   - enabled: 1
@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ruins_Level/Ruins.unity
     guid: ebc96c155a000694798318c1419d3508
-  - enabled: 0
+  - enabled: 1
     path: Assets/Ruins_Level/Stronghold.unity
     guid: 9bb3f1808bb0b994d8d485158e550b6a
   m_configObjects: {}

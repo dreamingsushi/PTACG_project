@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Dragon Parameters", menuName = "ScriptableObjects/Boss Scaling", order = 1)]
 public class DragonScaling : ScriptableObject
 {
+    public float MaxHealthPoints1;
+    public float MaxHealthPoints2;
     public float fireballDamage;
     public float flamesDamage;
     public float clawDamage;

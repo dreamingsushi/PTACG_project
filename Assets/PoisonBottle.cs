@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class PoisonBottle : MonoBehaviour
@@ -18,7 +19,7 @@ public class PoisonBottle : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag != "Player")
         {
-            GameObject vfxInstance = Instantiate(poisonVFX, transform.position, Quaternion.identity);
+            GameObject vfxInstance = PhotonNetwork.Instantiate(poisonVFX.name, transform.position, Quaternion.identity);
             Destroy(vfxInstance, vfxLifetime);
             Destroy(gameObject);
         }

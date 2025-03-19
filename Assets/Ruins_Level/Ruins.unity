@@ -1732,13 +1732,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96276305}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.87448, z: 0, w: 0.4850615}
-  m_LocalPosition: {x: -26.02, y: -37.8, z: 6.9}
+  m_LocalRotation: {x: 0, y: 0.92050487, z: 0, w: 0.39073122}
+  m_LocalPosition: {x: -26.02, y: -36.7, z: 6.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1468894359}
-  m_LocalEulerAnglesHint: {x: 0, y: 121.967, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 134, z: 0}
 --- !u!4 &99273194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2887783377230210846, guid: e84c40719cee66744925cce01bef28fc,
@@ -4589,17 +4589,17 @@ PrefabInstance:
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.8624067
+      value: 1.8562341
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.8624063
+      value: 1.8562338
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.362753
+      value: 1.6980269
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
@@ -4703,7 +4703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42efd5298b170b24e8bcdb6ca00e58fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerMultiplier: 3
+  powerMultiplier: 2
 --- !u!4 &291472171 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
@@ -11304,17 +11304,17 @@ PrefabInstance:
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.8624067
+      value: 1.8562341
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.8624063
+      value: 1.8562338
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.362753
+      value: 1.6980269
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
@@ -11418,7 +11418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42efd5298b170b24e8bcdb6ca00e58fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerMultiplier: 3
+  powerMultiplier: 2
 --- !u!4 &716608916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
@@ -24221,17 +24221,17 @@ PrefabInstance:
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.8624067
+      value: 1.2664909
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.8624063
+      value: 1.2664909
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.362753
+      value: 1.1585478
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
@@ -24335,7 +24335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42efd5298b170b24e8bcdb6ca00e58fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerMultiplier: 3
+  powerMultiplier: 2
 --- !u!4 &1346918961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
@@ -27719,11 +27719,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 100
+  near clip plane: 0.3
+  far clip plane: 7000
+  field of view: 90
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -27747,8 +27747,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532988418}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.46999085, y: -0.13438721, z: -0.07271859, w: 0.869345}
-  m_LocalPosition: {x: 39.533207, y: 60.5, z: -129.03217}
+  m_LocalRotation: {x: 0, y: 0.92082167, z: 0, w: 0.38998386}
+  m_LocalPosition: {x: -21.315144, y: 24.7588, z: 2.3417888}
   m_LocalScale: {x: 2.7354631, y: 2.735462, z: 2.7354627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31044,17 +31044,17 @@ PrefabInstance:
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.8624067
+      value: 1.8562341
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.8624063
+      value: 1.8562338
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.362753
+      value: 1.6980269
       objectReference: {fileID: 0}
     - target: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,
         type: 3}
@@ -31158,7 +31158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42efd5298b170b24e8bcdb6ca00e58fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerMultiplier: 3
+  powerMultiplier: 2
 --- !u!4 &1648045599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8709216932701153501, guid: 460babe280fe4aa41adc3fefd46f0c0b,

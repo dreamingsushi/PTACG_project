@@ -7,7 +7,7 @@ public class PoisonCollider : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-        BossHealth bossHealth = other.GetComponent<BossHealth>();
+        BossHealth bossHealth = other.GetComponentInParent<BossHealth>();
 
         if (playerHealth != null)
         {

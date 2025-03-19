@@ -8,6 +8,7 @@ TagManager:
   - Dragon
   - IcyGround
   - Water
+  - Flames
   layers:
   - Default
   - TransparentFX

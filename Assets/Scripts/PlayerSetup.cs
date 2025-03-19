@@ -14,6 +14,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
     public Canvas hpUI;
     public Canvas WorldSpaceHP;
     public TMP_Text nameOfWarrior;
+    public Canvas WorldSpaceName;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             playerCamera.enabled = true;
 
             WorldSpaceHP.enabled = false;
+            WorldSpaceName.enabled = false;
             
         }
         else
@@ -48,6 +50,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             playerCamera.enabled = false;
 
             WorldSpaceHP.enabled = true;
+            WorldSpaceName.enabled = true;
             nameOfWarrior.text = GetComponent<PhotonView>().Owner.NickName;
         }
     }

@@ -4848,7 +4848,7 @@ GameObject:
   - component: {fileID: 3202493385392170876}
   m_Layer: 0
   m_Name: vfx_Flames
-  m_TagString: Untagged
+  m_TagString: Flames
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

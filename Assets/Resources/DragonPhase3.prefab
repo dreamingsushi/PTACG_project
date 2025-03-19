@@ -1370,7 +1370,7 @@ GameObject:
   - component: {fileID: 1295270921564955247}
   m_Layer: 0
   m_Name: deathcam
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2051,7 +2051,7 @@ GameObject:
   - component: {fileID: 8034334397765514567}
   m_Layer: 0
   m_Name: DeathVFX
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2569,7 +2569,7 @@ GameObject:
   - component: {fileID: 8581697955140213893}
   m_Layer: 0
   m_Name: skeletal.3
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3347,7 +3347,7 @@ GameObject:
   - component: {fileID: 770636153144904855}
   m_Layer: 0
   m_Name: flameSpawn1 (1)
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6990,7 +6990,7 @@ GameObject:
   - component: {fileID: 2022326372209441747}
   m_Layer: 0
   m_Name: flameSpawn1 (2)
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7871,7 +7871,7 @@ GameObject:
   - component: {fileID: 3426168931902171216}
   m_Layer: 0
   m_Name: dragon_wings2.2
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9902,7 +9902,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flamethrower: {fileID: 381575173416176651}
-  flamePoint: {fileID: 5332624511540476508}
   fireball: {fileID: 6186387438034119615, guid: 26289874f8890034f89fa6c360c89ba7,
     type: 3}
   fireballSpawnPoints:
@@ -9969,6 +9968,8 @@ MonoBehaviour:
   currentBossHP: 0
   dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
   deathCam: {fileID: 1295270921564955247}
+  isInvincible: 0
+  invincibilityDuration: 0.2
   deathVFX: {fileID: 1745573184028188245}
   dragonDeathMat: {fileID: 2100000, guid: 7d35aa2051994934abc62682e8e79657, type: 2}
   healthBar: {fileID: 4012759565895860286}
@@ -10450,7 +10451,7 @@ GameObject:
   - component: {fileID: 8630560750814239680}
   m_Layer: 0
   m_Name: flameSpawn1
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10481,7 +10482,7 @@ GameObject:
   - component: {fileID: 39443850199445528}
   m_Layer: 0
   m_Name: Focus
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12448,7 +12449,7 @@ GameObject:
   - component: {fileID: 8521225635675233356}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12744,7 +12745,7 @@ GameObject:
   - component: {fileID: 3911401438935608550}
   m_Layer: 0
   m_Name: DragonFlying
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15592,6 +15593,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2484550644327083039}
     m_Modifications:
+    - target: {fileID: 789227819591026329, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
+        type: 3}
+      propertyPath: m_UseLocal
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3243328023640914615, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
         type: 3}
       propertyPath: m_Name
@@ -15601,6 +15607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243328023640914615, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dragon
       objectReference: {fileID: 0}
     - target: {fileID: 4787063509254095052, guid: adfcd1aa38d5c8c4fac0b3bba25dc724,
         type: 3}

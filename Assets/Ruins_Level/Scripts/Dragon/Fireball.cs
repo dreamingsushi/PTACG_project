@@ -37,8 +37,14 @@ public class Fireball : MonoBehaviour
         }
         
 
-        if(!other.gameObject.CompareTag("Dragon") || other.gameObject.GetComponent<Flames>() != null)
-            this.gameObject.SetActive(false);
+        // if(!other.gameObject.CompareTag("Dragon"))
+        //     this.gameObject.SetActive(false);
+
+
+        // if(!other.gameObject.CompareTag("Flames"))
+        // {
+        //     this.gameObject.SetActive(false);
+        // }
 
         if(other.gameObject.layer == 6)
         {

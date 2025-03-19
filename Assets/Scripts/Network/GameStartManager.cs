@@ -87,7 +87,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
             }
         }
-
+        isSecondPhase = false;
        
     }
 
@@ -99,10 +99,9 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             TimerDownForGame();
             photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, currentTimer, timeLeft);
         }
-
-        if(timeLeft <= 0)
+        else if(PhotonNetwork.LocalPlayer.IsMasterClient && timeLeft <= 0)
         {
-            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, "Sudden Death", 0);
+            photonView.RPC("SyncCountdownTimer", RpcTarget.AllBuffered, "Sudden Death", 0f);
         }
         
 
@@ -118,6 +117,8 @@ public class GameStartManager : MonoBehaviourPunCallbacks
             else
                 Victory.SetActive(true);
         }
+
+        
     }
 
 

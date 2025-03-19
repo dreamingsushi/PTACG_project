@@ -8,7 +8,7 @@ public class HomingFire : MonoBehaviour
     public int currentFire;
     public DragonScaling dragonNumbers;
 
-    [SerializeField] private float speed = 0.12f;
+    [SerializeField] private float speed = 1.5f;
     public PlayerHealth[] players;
     [SerializeField] private float activeDuration = 15f;
 

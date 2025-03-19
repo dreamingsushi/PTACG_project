@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4787063509254095052}
   m_Layer: 0
   m_Name: vfx_Flamethrower
-  m_TagString: Untagged
+  m_TagString: Flames
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4889,6 +4889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragonNumber: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
   focusPointCamera: {fileID: 0}
+  headPosition: {fileID: 0}
 --- !u!1 &6525516737548152638
 GameObject:
   m_ObjectHideFlags: 0

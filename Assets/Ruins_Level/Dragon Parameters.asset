@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab818eed95b819b44a9bd1ce303974b0, type: 3}
   m_Name: Dragon Parameters
   m_EditorClassIdentifier: 
+  MaxHealthPoints1: 20
+  MaxHealthPoints2: 30
   fireballDamage: 10
   flamesDamage: 5
   clawDamage: 10
   punchDamage: 3
   flamethrowerDamage: 2
   meteorDamage: 8
-  takenDamage: 30
+  takenDamage: 846

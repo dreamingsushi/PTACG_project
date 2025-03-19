@@ -486,7 +486,7 @@ public class PlayerControllerPlus : MonoBehaviour
         {
             controller.enabled = false;
             transform.position = teleportPosition;
-            Instantiate(tpVFX, effectPosition, Quaternion.Euler(-90, 0, 0));
+            PhotonNetwork.Instantiate(tpVFX.name, effectPosition, Quaternion.Euler(-90, 0, 0));
             controller.enabled = true;
         }
         canTeleport = false;
@@ -514,14 +514,21 @@ public class PlayerControllerPlus : MonoBehaviour
 
         isSprinting = true;
         canSprint = false;
-        speedEffect.SetActive(true);
+
+        //SYnc to all
+        GetComponent<PhotonView>().RPC("SyncSprintEffect", RpcTarget.AllBuffered, true);
+        //speedEffect.SetActive(true);
 
         normalSpeed = moveSpeed;
         moveSpeed *= sprintSpeedMultiplier;
         knightShift_CD.fillAmount = 1f;
 
         yield return new WaitForSeconds(sprintDuration);
-        speedEffect.SetActive(false);
+
+        //SYnc to all
+        GetComponent<PhotonView>().RPC("SyncSprintEffect", RpcTarget.AllBuffered, true);
+        //speedEffect.SetActive(false);
+
         moveSpeed = normalSpeed;
         isSprinting = false;
 
@@ -542,7 +549,7 @@ public class PlayerControllerPlus : MonoBehaviour
     {
         canPlaceHealingCircle = false;
 
-        GameObject healingCircleInstance = Instantiate(healingCircle, supportLeg.position, Quaternion.identity);
+        GameObject healingCircleInstance = PhotonNetwork.Instantiate(healingCircle.name, supportLeg.position, Quaternion.identity);
 
         yield return new WaitForSeconds(10f);
 
@@ -566,5 +573,16 @@ public class PlayerControllerPlus : MonoBehaviour
 
     public void ResetJump2() => isJumping = false;
     public void ResetAttack() => isAttacking = false;
+
+
+    #region RPC callbacks
+
+    [PunRPC]
+    public void SyncSprintEffect(bool hasBeenEnabled)
+    {
+        speedEffect.SetActive(hasBeenEnabled);
+    }
     
+
+    #endregion
 }

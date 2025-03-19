@@ -4848,7 +4848,7 @@ GameObject:
   - component: {fileID: 60487377948465341}
   m_Layer: 0
   m_Name: vfx_Fireball_Homing
-  m_TagString: Untagged
+  m_TagString: Flames
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9769,3 +9769,4 @@ MonoBehaviour:
   dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
   speed: 1.7
   players: []
+  activeDuration: 15

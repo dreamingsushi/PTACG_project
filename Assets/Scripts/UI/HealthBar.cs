@@ -46,7 +46,7 @@ public class HealthBar : MonoBehaviourPunCallbacks
         
         if(playerNumber == 4)
         {          
-            playerName.text = GameObject.FindGameObjectWithTag("Dragon").GetComponent<PhotonView>().Owner.NickName;
+            playerName.text = GameObject.FindObjectOfType<BossHealth>().GetComponent<PhotonView>().Owner.NickName;
             //playerName.text = FindObjectOfType<BossSetup>().GetComponent<PhotonView>().Owner.NickName;
             
             

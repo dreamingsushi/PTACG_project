@@ -44,6 +44,11 @@ public class PlayerHealth : MonoBehaviour
     public float healInterval = 1f;
     public float healDuration = 5f;
 
+    [Header("World Canvas")]
+    public Canvas worldCanvasHP;
+    private bool damagePersisted = true;
+    private float damagePersistenceInterval = 5.5f;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -63,6 +68,17 @@ public class PlayerHealth : MonoBehaviour
             //TakeDamage(10, transform.position);
             GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, 10, transform.position);
         }
+
+        // if(damagePersisted)
+        // {
+        //     damagePersisted = false;
+        //     float countdown = damagePersistenceInterval;
+        //     countdown-=Time.deltaTime;
+        //     if(countdown <= 0f)
+        //     {
+        //         GetComponent<PhotonView>().RPC("SyncWorldSpaceHP", RpcTarget.AllBuffered, true);
+        //     }
+        // }
     }
 
     [PunRPC]
@@ -70,6 +86,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isInvincible) return;
 
+        //GetComponent<PhotonView>().RPC("SyncWorldSpaceHP", RpcTarget.AllBuffered, true);
         int effectiveDamage = Mathf.Max(0, damage - armor);
         effectiveDamage = Mathf.RoundToInt(effectiveDamage * (1 - damageReductionPercent));
 
@@ -100,7 +117,9 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         OnHealthChanged?.Invoke(currentHealth);
 
-        healthBar.SetHealth(currentHealth);
+        float currentPlayerHP = currentHealth;
+        healthBar.GetComponent<PhotonView>().RPC("SyncAllHealthBarUI", RpcTarget.AllBuffered, currentPlayerHP);
+        //healthBar.SetHealth(currentHealth);
     }
 
     IEnumerator DamageEffect()
@@ -163,7 +182,7 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator HealingEffect(float duration)
     {
         float elapsedTime = 0f;
-        regenVFX.SetActive(true);
+        GetComponent<PhotonView>().RPC("SyncHealingEffect", RpcTarget.AllBuffered, true);
         while (elapsedTime < duration)
         {
             yield return new WaitForSeconds(healInterval);
@@ -176,5 +195,19 @@ public class PlayerHealth : MonoBehaviour
     public void ApplyHealingRegen()
     {
         StartCoroutine(HealingEffect(healDuration));
+    }
+
+    [PunRPC]
+    public void SyncHealingEffect(bool canHasEnabled)
+    {
+        regenVFX.SetActive(canHasEnabled);
+    }
+
+    [PunRPC]
+    public void SyncWorldSpaceHP(bool isDamagedBefore)
+    {
+        damagePersisted = isDamagedBefore;
+        if(!GetComponent<PhotonView>().IsMine)
+            worldCanvasHP.enabled = isDamagedBefore;
     }
 }
