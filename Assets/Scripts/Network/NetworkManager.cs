@@ -157,6 +157,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         AudioManager.Instance.PlaySFX("MenuSound");
         UItransition.UpdateCamera(UItransition.optionsCamera);
         ActivatePanel(optionsPanel.name);
+        settingsPanel.SetActive(true);
     }
 
     public void OnVolumeButtonClicked()
