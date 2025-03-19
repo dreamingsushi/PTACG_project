@@ -7,7 +7,6 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEngine.SceneManagement;
 
-
 public class GameStartManager : MonoBehaviourPunCallbacks
 {
     public GameObject[] PlayerPrefabs;   
