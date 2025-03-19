@@ -348,6 +348,7 @@ public class PlayerControllerPlus : MonoBehaviour
         if (currentClass == PlayerClass.Knight)
         {
             knightM1_CD.fillAmount = 1f;
+            AudioManager.Instance.PlaySFX("KnightAttack");
         }
         else if (currentClass == PlayerClass.Mage)
         {
@@ -467,14 +468,14 @@ public class PlayerControllerPlus : MonoBehaviour
     }
 #endregion
 
-#region Player Ability
-
     public void Teleport(Vector3 targetPosition)
     {
         controller.enabled = false;
         transform.position = targetPosition;
         controller.enabled = true;
     }
+
+#region Player Ability
 
     public void TeleportForward()
     {
@@ -484,6 +485,7 @@ public class PlayerControllerPlus : MonoBehaviour
         Vector3 effectPosition = teleportPosition + Vector3.down * 1f;
         if (!Physics.Raycast(transform.position, transform.forward, teleportDistance))
         {
+            AudioManager.Instance.PlaySFX("MageTP");
             controller.enabled = false;
             transform.position = teleportPosition;
             PhotonNetwork.Instantiate(tpVFX.name, effectPosition, Quaternion.Euler(-90, 0, 0));
@@ -511,7 +513,7 @@ public class PlayerControllerPlus : MonoBehaviour
     private IEnumerator Sprint()
     {
         if (!canSprint || isSprinting) yield break;
-
+        AudioManager.Instance.PlaySFX("KnightSpeed");
         isSprinting = true;
         canSprint = false;
 

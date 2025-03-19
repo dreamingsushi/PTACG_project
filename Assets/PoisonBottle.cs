@@ -19,6 +19,7 @@ public class PoisonBottle : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag != "Player")
         {
+            AudioManager.Instance.PlaySFX("SupportAttack");
             GameObject vfxInstance = PhotonNetwork.Instantiate(poisonVFX.name, transform.position, Quaternion.identity);
             Destroy(vfxInstance, vfxLifetime);
             Destroy(gameObject);

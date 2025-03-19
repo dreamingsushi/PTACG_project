@@ -427,6 +427,8 @@ MonoBehaviour:
   currentBossHP: 1000
   dragonNumbers: {fileID: 0}
   deathCam: {fileID: 0}
+  isInvincible: 0
+  invincibilityDuration: 0.75
   deathVFX: {fileID: 0}
   dragonDeathMat: {fileID: 0}
   healthBar: {fileID: 0}
@@ -667,6 +669,7 @@ MonoBehaviour:
   healAmount: 1
   healInterval: 1
   healDuration: 5
+  worldCanvasHP: {fileID: 0}
 --- !u!114 &77640218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,6 +2071,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!224 &201266054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6674,6 +6678,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!224 &608220478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7657,6 +7662,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!222 &675567865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9728,6 +9734,7 @@ MonoBehaviour:
   healAmount: 1
   healInterval: 1
   healDuration: 5
+  worldCanvasHP: {fileID: 0}
 --- !u!114 &804615356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14213,6 +14220,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!222 &1212690361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14703,6 +14711,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!222 &1250555137
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15765,6 +15774,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!222 &1325777889
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16394,6 +16404,7 @@ MonoBehaviour:
   healAmount: 1
   healInterval: 1
   healDuration: 5
+  worldCanvasHP: {fileID: 0}
 --- !u!114 &1368949348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19271,6 +19282,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!222 &1604207584
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20542,6 +20554,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!224 &1750734486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24589,6 +24602,7 @@ MonoBehaviour:
   playerName: {fileID: 0}
   nicknames: []
   warriorHealth: []
+  bossHealth: {fileID: 0}
 --- !u!222 &2093262199
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25649,6 +25663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307088087461337001, guid: 1e11e909a68f32040b3d9b4878b08b8e,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

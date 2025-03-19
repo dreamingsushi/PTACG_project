@@ -34066,6 +34066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flameDamage: 5
+  dragonNumbers: {fileID: 0}
 --- !u!1 &8829451551789304542
 GameObject:
   m_ObjectHideFlags: 0

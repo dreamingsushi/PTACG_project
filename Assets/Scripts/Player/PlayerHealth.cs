@@ -159,6 +159,7 @@ public class PlayerHealth : MonoBehaviour
         isInvincible = false;
         playerController.isDead = false;
         Heal(75);
+        AudioManager.Instance.PlaySFX("Respawn");
     }
 
     private IEnumerator HealthRegeneration()
