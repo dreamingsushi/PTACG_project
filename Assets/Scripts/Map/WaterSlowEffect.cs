@@ -5,14 +5,14 @@ using UnityEngine;
 public class WaterSlowEffect : MonoBehaviour
 {
     public float upwardForce = 5f;
-    public float playerLiftSpeed = 2f;
+    public float playerLiftSpeed = 10f;
     
     private HashSet<Rigidbody> affectedBodies = new HashSet<Rigidbody>();
     private HashSet<CharacterController> affectedPlayers = new HashSet<CharacterController>();
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Boss")) // Adjust tag if needed
+        if (other.CompareTag("Dragon")) // Adjust tag if needed
         {
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null)
@@ -32,7 +32,7 @@ public class WaterSlowEffect : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Boss"))
+        if (other.CompareTag("Dragon"))
         {
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null)

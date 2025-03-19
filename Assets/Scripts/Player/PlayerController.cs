@@ -74,6 +74,10 @@ public class PlayerControllerPlus : MonoBehaviour
     [SerializeField] private float iceFriction = 1f;
     [SerializeField] private float iceAcceleration = 0.05f;
 
+    [Header("Water Effect Settings")]
+    public bool isInWater = false;
+    public float waterGravity = -2f;
+
     [Header("Player Information (u dont have to edit :3)")]
     public bool isGrounded;
     public bool readyToJump;
@@ -274,9 +278,11 @@ public class PlayerControllerPlus : MonoBehaviour
 
     private void ApplyGravity()
     {
+        float currentGravity = isInWater ? waterGravity : gravity;
+
         if (!isGrounded)
         {
-            velocity.y += gravity * Time.deltaTime;
+            velocity.y += currentGravity * Time.deltaTime;
         }
         else if (velocity.y < 0)
         {
@@ -287,7 +293,7 @@ public class PlayerControllerPlus : MonoBehaviour
         {
             controller.Move(iceVelocity * Time.deltaTime);
         }
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime); ;
     }
 
 
@@ -457,6 +463,21 @@ public class PlayerControllerPlus : MonoBehaviour
     }
 
 #region IceMap
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            isInWater = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            isInWater = false;
+        }
+    }
     private void HandleIceMovement(float speed)
     {
         if (moveDirection != Vector3.zero)
@@ -552,7 +573,7 @@ public class PlayerControllerPlus : MonoBehaviour
         canPlaceHealingCircle = false;
 
         GameObject healingCircleInstance = PhotonNetwork.Instantiate(healingCircle.name, supportLeg.position, Quaternion.identity);
-
+        AudioManager.Instance.PlaySFX("SupportHeal");
         yield return new WaitForSeconds(10f);
 
         Destroy(healingCircleInstance);

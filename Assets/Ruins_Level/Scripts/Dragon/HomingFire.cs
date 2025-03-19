@@ -14,7 +14,7 @@ public class HomingFire : MonoBehaviour
 
     void Start()
     {
-        
+        AudioManager.Instance.PlaySFX("HomingFire");
         players = FindObjectsOfType<PlayerHealth>();
     }
     void OnEnable()
