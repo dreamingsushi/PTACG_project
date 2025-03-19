@@ -27470,6 +27470,8 @@ MonoBehaviour:
   currentBossHP: 900
   dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
   deathCam: {fileID: 2273122884018956900}
+  isInvincible: 0
+  invincibilityDuration: 0.2
   deathVFX: {fileID: 5691497079533175921}
   dragonDeathMat: {fileID: 2100000, guid: 7d35aa2051994934abc62682e8e79657, type: 2}
   healthBar: {fileID: 1709735121661821699}

@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ruins_Level/Stronghold.unity
     guid: 9bb3f1808bb0b994d8d485158e550b6a
+  - enabled: 1
+    path: Assets/Scenes/WarriorVictory.unity
+    guid: ba8c780f0743ca843835ad2166eb44f4
+  - enabled: 1
+    path: Assets/Scenes/WarriorDefeat.unity
+    guid: 7aa7890ed2403cf40907db29cc740ea1
   m_configObjects: {}
