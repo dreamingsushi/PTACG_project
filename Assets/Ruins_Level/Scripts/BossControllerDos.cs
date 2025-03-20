@@ -1,5 +1,6 @@
 
 using Photon.Pun;
+using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -59,6 +60,7 @@ public class BossControllerDos : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        myCrossHair.GetComponent<TMP_Text>().text = "Killed: " + GameStartManager.instance.currentDeaths.ToString();
     }
 
     private void mouseLook()

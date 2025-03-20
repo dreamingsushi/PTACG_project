@@ -5,6 +5,7 @@ using UnityEngine;
 using Photon.Realtime;
 using Cinemachine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class BossSetup : MonoBehaviourPunCallbacks
@@ -41,6 +42,11 @@ public class BossSetup : MonoBehaviourPunCallbacks
             // imageHPUI.SetActive(false);
             //transform.parent.gameObject.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
         }
+    }
+
+    void Update()
+    {
+        crosshair.GetComponent<TMP_Text>().text = "Killed: " + GameStartManager.instance.currentDeaths.ToString();
     }
 
 }
