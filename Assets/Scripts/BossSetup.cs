@@ -46,7 +46,7 @@ public class BossSetup : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        crosshair.GetComponent<TMP_Text>().text = "Killed: " + GameStartManager.instance.currentDeaths.ToString();
+        //crosshair.GetComponentInChildren<TMP_Text>().text = "Killed: " + GameStartManager.instance.currentDeaths.ToString();
     }
 
 }

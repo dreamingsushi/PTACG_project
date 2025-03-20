@@ -60,7 +60,7 @@ public class BossControllerDos : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        myCrossHair.GetComponentInChildren<TMP_Text>().text = "Killed: " + GameStartManager.instance.currentDeaths.ToString();
+        //myCrossHair.GetComponentInChildren<TMP_Text>().text = "Killed: " + GameStartManager.instance.currentDeaths.ToString();
     }
 
     private void mouseLook()
