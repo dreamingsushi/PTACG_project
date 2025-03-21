@@ -16,6 +16,12 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
 
     private bool isPlayerReady = false;
 
+
+    void Start()
+    {
+        PlayerReadyButton.GetComponent<Button>().interactable = false;
+    }
+    
     void Update()
     {
         
@@ -39,6 +45,7 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
         }
         else
         {
+            
             //I am the local player
             ExitGames.Client.Photon.Hashtable initialProps = new ExitGames.Client.Photon.Hashtable(){{CharacterSelect.PLAYER_READY,isPlayerReady}};
             PhotonNetwork.LocalPlayer.SetCustomProperties(initialProps);

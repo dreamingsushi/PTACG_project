@@ -70,6 +70,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // public RacingPlayer[] RacingPlayers;
     //public GameObject[] PlayerSelectionUIGameObjects;
     private Dictionary<int, GameObject> playerListGameObjects;
+    //private Dictionary<int, GameObject> bossListGameObjects;
     public float timeLeft = 3f;
     private int highestVotes;
     private int highestVotedMap;
@@ -342,6 +343,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             {
                 playerListGameObjects = new Dictionary<int, GameObject>();
             }
+
+            // if (bossListGameObjects==null)
+            // {
+            //     bossListGameObjects = new Dictionary<int, GameObject>();
+            // }
             
 
             foreach (Player player in PhotonNetwork.PlayerList)
@@ -351,6 +357,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                         playerListGameObject.transform.SetParent(PlayerListContent.transform);
                         playerListGameObject.transform.localScale = Vector3.one;
                         playerListGameObject.GetComponent<PlayerListEntryInitializer>().Initialize(player.ActorNumber, player.NickName);
+                        
                         //playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, playerListGameObject.GetComponent<PlayerListEntryInitializer>().SelectedClass.text);
                         object isPlayerReady;
                         if (player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_READY,out isPlayerReady))
@@ -359,6 +366,40 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                             if(player.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
                             {
                                 playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[(int)playerSelectionNo].name);
+
+                                if((int)playerSelectionNo == 3)
+                                {
+                                    // Debug.Log("someone picked dragon");
+                                    // Destroy(playerListGameObject);
+                                    // GameObject bossListGameobject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
+                                    playerListGameObject.transform.SetParent(BossListContent.transform);
+                                    playerListGameObject.transform.localScale = new Vector3(-1, 1,1);
+                                    foreach(Transform child in playerListGameObject.transform)
+                                    {
+                                        child.transform.eulerAngles = new Vector3(0,180,0);
+                                    }
+                                    //bossListGameObjects.Add(player.ActorNumber, bossListGameobject);
+                                }
+                                else
+                                {
+                                    playerListGameObject.transform.SetParent(PlayerListContent.transform);
+                                    playerListGameObject.transform.localScale = Vector3.one;
+                                    foreach(Transform child in playerListGameObject.transform)
+                                    {
+                                        child.transform.eulerAngles = new Vector3(0,0,0);
+                                    }
+                                    // GameObject bossSelectionGameobject;
+                                    // if(bossListGameObjects.TryGetValue(player.ActorNumber, out bossSelectionGameobject))
+                                    // {
+                                    //     if(bossSelectionGameobject != null)
+                                    //     {
+                                    //         Destroy(bossSelectionGameobject);
+                                    //         GameObject reselectPlayerListGameobject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
+                                    //         reselectPlayerListGameobject.transform.SetParent(PlayerListContent.transform);
+                                    //         reselectPlayerListGameobject.transform.localScale = Vector3.one;
+                                    //     }
+                                    // }
+                                }
                             }
                             playerListGameObject.GetComponent<PlayerListEntryInitializer>().SetPlayerReady((bool)isPlayerReady);
                             
@@ -461,13 +502,45 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         GameObject playerListGameObject;
         if (playerListGameObjects.TryGetValue(target.ActorNumber,out playerListGameObject ))
         {
+            
             object playerSelectionNo;
             if(changedProps.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
             {
+                playerListGameObject.GetComponentInChildren<Button>().interactable = true;
                 playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[(int)playerSelectionNo].name);
                 if((int)playerSelectionNo == 3)
                 {
-                    Debug.Log("u picked dragon");
+                    
+                    //Destroy(playerListGameObject);
+                    //GameObject bossListGameobject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
+                    playerListGameObject.transform.SetParent(BossListContent.transform);
+                    playerListGameObject.transform.localScale = new Vector3(-1, 1,1);
+                    foreach(Transform child in playerListGameObject.transform)
+                    {
+                        child.transform.eulerAngles = new Vector3(0,180,0);
+                    }
+                    //bossListGameObjects.Add(target.ActorNumber, bossListGameobject);
+                }
+                else
+                {
+
+                    playerListGameObject.transform.SetParent(PlayerListContent.transform);
+                    playerListGameObject.transform.localScale = Vector3.one;
+                    foreach(Transform child in playerListGameObject.transform)
+                    {
+                        child.transform.eulerAngles = new Vector3(0,0,0);
+                    }
+                    // GameObject bossSelectionGameobject;
+                    // if(bossListGameObjects.TryGetValue(target.ActorNumber, out bossSelectionGameobject))
+                    // {
+                    //     if(bossSelectionGameobject != null)
+                    //     {
+                    //         Destroy(bossSelectionGameobject);
+                    //         GameObject reselectPlayerListGameobject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
+                    //         reselectPlayerListGameobject.transform.SetParent(PlayerListContent.transform);
+                    //         reselectPlayerListGameobject.transform.localScale = Vector3.one;
+                    //     }
+                    // }
                 }
             }
             
