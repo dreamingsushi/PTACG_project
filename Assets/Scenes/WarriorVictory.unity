@@ -483,7 +483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.86, y: -0.96}
+  m_AnchoredPosition: {x: -1.69, y: -0.96}
   m_SizeDelta: {x: 197.36, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377221562
@@ -3115,70 +3115,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &597832667127621067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892799217182560867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43202a8bacdc1794c899591cc71664cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentClass: 1
-  orientation: {fileID: 5062426139412426406}
-  cam: {fileID: 5866570600374057191}
-  sprintSpeedMultiplier: 2
-  sprintDuration: 3
-  sprintCooldown: 10
-  knightShift_CD: {fileID: 0}
-  knightM1_CD: {fileID: 0}
-  speedEffect: {fileID: 0}
-  projectilePrefab: {fileID: 2831442389130056590, guid: 8b879a3035ed0f749835da5324335210,
-    type: 3}
-  staffTip: {fileID: 5654043988035262021}
-  teleportCooldown: 1.5
-  teleportDistance: 5
-  mageShift_CD: {fileID: 0}
-  mageM1_CD: {fileID: 0}
-  tpVFX: {fileID: 0}
-  supportProjectilePrefab: {fileID: 0}
-  supportHand: {fileID: 0}
-  projectileSpeed: 20
-  supportShift_CD: {fileID: 0}
-  supportM1_CD: {fileID: 0}
-  healingCircle: {fileID: 0}
-  canPlaceHealingCircle: 1
-  supportLeg: {fileID: 0}
-  moveSpeed: 10
-  rotationSpeed: 5
-  gravity: -15
-  jumpForce: 7
-  jumpCooldown: 0.2
-  airMultiplier: 0.8
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  attackDuration: 1
-  isOnIce: 0
-  iceMap: 0
-  iceFriction: 0.98
-  iceAcceleration: 0.05
-  isInWater: 0
-  waterGravity: -2
-  isGrounded: 0
-  readyToJump: 0
-  m_Direction: {x: 0, y: 0}
-  canAttack: 1
-  canRotate: 1
-  isAttacking: 0
-  isJumping: 0
-  isGuarding: 0
-  isAiming: 0
-  isFalling: 0
-  isDead: 0
 --- !u!1 &626513149392961310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,7 +3303,6 @@ GameObject:
   - component: {fileID: 3982858476218026277}
   - component: {fileID: 285281780348564952}
   - component: {fileID: 1886377406309538635}
-  - component: {fileID: 597832667127621067}
   - component: {fileID: 4604884306709497568}
   m_Layer: 7
   m_Name: Player (Mage)
@@ -5366,7 +5301,6 @@ GameObject:
   - component: {fileID: 6525295066874184258}
   - component: {fileID: 1615216382401488856}
   - component: {fileID: 2419900738200562753}
-  - component: {fileID: 5399087933802392825}
   - component: {fileID: 2672737094162769859}
   m_Layer: 7
   m_Name: Player (Support)
@@ -5705,7 +5639,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2529928003614554973}
   - component: {fileID: 7313885920585658129}
-  - component: {fileID: 4094877995460713094}
   - component: {fileID: 4785493224428567941}
   m_Layer: 7
   m_Name: Support_Anim
@@ -6001,7 +5934,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5399087933802392825}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -6017,7 +5950,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5399087933802392825}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnAttack
         m_Mode: 0
@@ -6033,7 +5966,7 @@ MonoBehaviour:
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5399087933802392825}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -6049,7 +5982,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5399087933802392825}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnSpecial
         m_Mode: 0
@@ -7325,7 +7258,7 @@ SkinnedMeshRenderer:
   m_DirtyAABB: 0
 --- !u!1 &3669980156816457472
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7726,7 +7659,7 @@ SkinnedMeshRenderer:
   m_DirtyAABB: 0
 --- !u!114 &3871012026176467237
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8121,21 +8054,6 @@ Transform:
   - {fileID: 3508252200010252905}
   m_Father: {fileID: 7574633981162561636}
   m_LocalEulerAnglesHint: {x: -60.84699, y: 14.35272, z: -29.179861}
---- !u!114 &4094877995460713094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2456940020953685375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b827167fbada14e8f99e4949b7486d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 5399087933802392825}
-  health: {fileID: 0}
-  animator: {fileID: 7313885920585658129}
 --- !u!1 &4107746115360656372
 GameObject:
   m_ObjectHideFlags: 0
@@ -8807,69 +8725,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4390803327832337665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7983749675328057978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43202a8bacdc1794c899591cc71664cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentClass: 0
-  orientation: {fileID: 2947159873010895214}
-  cam: {fileID: 6168271606656783133}
-  sprintSpeedMultiplier: 2
-  sprintDuration: 3
-  sprintCooldown: 10
-  knightShift_CD: {fileID: 0}
-  knightM1_CD: {fileID: 0}
-  speedEffect: {fileID: 0}
-  projectilePrefab: {fileID: 0}
-  staffTip: {fileID: 0}
-  teleportCooldown: 1.5
-  teleportDistance: 5
-  mageShift_CD: {fileID: 0}
-  mageM1_CD: {fileID: 0}
-  tpVFX: {fileID: 0}
-  supportProjectilePrefab: {fileID: 0}
-  supportHand: {fileID: 0}
-  projectileSpeed: 20
-  supportShift_CD: {fileID: 0}
-  supportM1_CD: {fileID: 0}
-  healingCircle: {fileID: 0}
-  canPlaceHealingCircle: 1
-  supportLeg: {fileID: 0}
-  moveSpeed: 10
-  rotationSpeed: 5
-  gravity: -15
-  jumpForce: 7
-  jumpCooldown: 0.2
-  airMultiplier: 0.8
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  attackDuration: 1
-  isOnIce: 0
-  iceMap: 0
-  iceFriction: 0.98
-  iceAcceleration: 0.05
-  isInWater: 0
-  waterGravity: -2
-  isGrounded: 0
-  readyToJump: 0
-  m_Direction: {x: 0, y: 0}
-  canAttack: 1
-  canRotate: 1
-  isAttacking: 0
-  isJumping: 0
-  isGuarding: 0
-  isAiming: 0
-  isFalling: 0
-  isDead: 0
 --- !u!114 &4392881500055889241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9070,7 +8925,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 597832667127621067}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -9086,7 +8941,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 597832667127621067}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnAttack
         m_Mode: 0
@@ -9102,7 +8957,7 @@ MonoBehaviour:
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 597832667127621067}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -9118,7 +8973,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 597832667127621067}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnSpecial
         m_Mode: 0
@@ -9961,21 +9816,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5185602460873749666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6475798828129811180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b827167fbada14e8f99e4949b7486d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 4390803327832337665}
-  health: {fileID: 0}
-  animator: {fileID: 1816482909436121284}
 --- !u!4 &5202346658525617377
 Transform:
   m_ObjectHideFlags: 0
@@ -10216,7 +10056,7 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &5367442240484188078
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10277,70 +10117,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5399087933802392825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2251843878578069474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43202a8bacdc1794c899591cc71664cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentClass: 2
-  orientation: {fileID: 2641716311974086831}
-  cam: {fileID: 3462306489795211852}
-  sprintSpeedMultiplier: 2
-  sprintDuration: 3
-  sprintCooldown: 10
-  knightShift_CD: {fileID: 0}
-  knightM1_CD: {fileID: 0}
-  speedEffect: {fileID: 0}
-  projectilePrefab: {fileID: 0}
-  staffTip: {fileID: 0}
-  teleportCooldown: 1.5
-  teleportDistance: 5
-  mageShift_CD: {fileID: 0}
-  mageM1_CD: {fileID: 0}
-  tpVFX: {fileID: 0}
-  supportProjectilePrefab: {fileID: 1470278565100588117, guid: 1b834201c45aeec439251b4dc1ea04db,
-    type: 3}
-  supportHand: {fileID: 7036262122257399781}
-  projectileSpeed: 20
-  supportShift_CD: {fileID: 0}
-  supportM1_CD: {fileID: 0}
-  healingCircle: {fileID: 0}
-  canPlaceHealingCircle: 1
-  supportLeg: {fileID: 0}
-  moveSpeed: 10
-  rotationSpeed: 5
-  gravity: -15
-  jumpForce: 7
-  jumpCooldown: 0.2
-  airMultiplier: 0.8
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  attackDuration: 1
-  isOnIce: 0
-  iceMap: 0
-  iceFriction: 0.98
-  iceAcceleration: 0.05
-  isInWater: 0
-  waterGravity: -2
-  isGrounded: 0
-  readyToJump: 0
-  m_Direction: {x: 0, y: 0}
-  canAttack: 1
-  canRotate: 1
-  isAttacking: 0
-  isJumping: 0
-  isGuarding: 0
-  isAiming: 0
-  isFalling: 0
-  isDead: 0
 --- !u!1 &5399604759572146546
 GameObject:
   m_ObjectHideFlags: 0
@@ -10908,7 +10684,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7573638585020761174}
   - component: {fileID: 3850220115754650289}
-  - component: {fileID: 8376523237822001775}
   - component: {fileID: 4869424475342203208}
   m_Layer: 7
   m_Name: Mage_Anim
@@ -11418,7 +11193,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4390803327832337665}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -11434,7 +11209,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4390803327832337665}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnAttack
         m_Mode: 0
@@ -11450,7 +11225,7 @@ MonoBehaviour:
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4390803327832337665}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnJump
         m_Mode: 0
@@ -11466,7 +11241,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4390803327832337665}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnSpecial
         m_Mode: 0
@@ -12170,7 +11945,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5243550315033461982}
   - component: {fileID: 1816482909436121284}
-  - component: {fileID: 5185602460873749666}
   m_Layer: 7
   m_Name: Knight_Anim
   m_TagString: Untagged
@@ -12321,7 +12095,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &6649474327549568738
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14253,7 +14027,6 @@ GameObject:
   - component: {fileID: 5153140447255984619}
   - component: {fileID: 5277857158526263456}
   - component: {fileID: 6562920644166681893}
-  - component: {fileID: 4390803327832337665}
   - component: {fileID: 6181821158239105171}
   m_Layer: 7
   m_Name: Player (Knight)
@@ -14938,21 +14711,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2529928003614554973}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8376523237822001775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5706058505651842361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b827167fbada14e8f99e4949b7486d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 597832667127621067}
-  health: {fileID: 0}
-  animator: {fileID: 3850220115754650289}
 --- !u!1 &8398699125646999464
 GameObject:
   m_ObjectHideFlags: 0

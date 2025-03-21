@@ -3644,7 +3644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -404, y: 131}
+  m_AnchoredPosition: {x: -393, y: 93}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &5579199179646864951
@@ -6669,6 +6669,7 @@ MonoBehaviour:
   deathVFX: {fileID: 5571015360581967548}
   dragonDeathMat: {fileID: 2100000, guid: 7d35aa2051994934abc62682e8e79657, type: 2}
   healthBar: {fileID: 7595631451524835233}
+  killCount: {fileID: 6852701245090808644}
   isPoisoned: 0
   poisonDamage: 2
   poisonInterval: 1
@@ -9167,12 +9168,12 @@ PrefabInstance:
     - target: {fileID: 4623223651811716578, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1620
+      value: 1619.53
       objectReference: {fileID: 0}
     - target: {fileID: 4623223651811716578, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -3.16008
       objectReference: {fileID: 0}
     - target: {fileID: 4623223651811716578, guid: 86c48940a96d94849bb04ea76914ee9c,
         type: 3}

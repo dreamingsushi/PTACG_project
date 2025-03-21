@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Realtime;
 
 public class PlayerSetup : MonoBehaviourPunCallbacks
 {
@@ -32,7 +33,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             //GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
             playerCamera.enabled = true;
 
-            WorldSpaceHP.enabled = false;
+            WorldSpaceHP.gameObject.SetActive(false);
             WorldSpaceName.enabled = false;
             
         }
@@ -49,9 +50,22 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
             //GetComponentInChildren<HealthBar>().gameObject.SetActive(false);
             playerCamera.enabled = false;
 
-            WorldSpaceHP.enabled = true;
+            
             WorldSpaceName.enabled = true;
             nameOfWarrior.text = GetComponent<PhotonView>().Owner.NickName;
+
+            object playerSelectionNo;
+            if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
+            {
+                if((int)playerSelectionNo == 3)
+                {
+                    WorldSpaceHP.enabled = true;
+                }
+                else
+                {
+                    WorldSpaceHP.gameObject.SetActive(false);
+                }
+            }
         }
     }
 

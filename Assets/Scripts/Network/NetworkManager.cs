@@ -29,6 +29,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     [Header("GameOptions Panel")]
     public GameObject GameOptionsUIPanel;
+    public TMP_Text nickname;
 
     [Header("Create Room Panel")]
     public GameObject CreateRoomUIPanel;
@@ -51,6 +52,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public GameObject bossSelectionPanel;
     public GameObject joinWarriorButton;
     public GameObject joinBossButton;
+    public TMP_Text requirementsText;
     
     [Header("Map Select Room Panel")]
     public GameObject MapSelectUIRoomPanel; 
@@ -68,7 +70,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // public RacingPlayer[] RacingPlayers;
     //public GameObject[] PlayerSelectionUIGameObjects;
     private Dictionary<int, GameObject> playerListGameObjects;
-    private float timeLeft = 15f;
+    public float timeLeft = 3f;
     private int highestVotes;
     private int highestVotedMap;
     private string highestVotedMapText;
@@ -282,6 +284,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {        
         UItransition.UpdateCamera(UItransition.createRoomCamera);
         ActivatePanel(GameOptionsUIPanel.name);
+        nickname.text = PhotonNetwork.LocalPlayer.NickName;
         Debug.Log(PhotonNetwork.LocalPlayer.NickName+" is connected to Photon.");
     } 
 
@@ -433,7 +436,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             string roomName = RoomNameInputField.text;
             if (string.IsNullOrEmpty(roomName))
             {
-                roomName = "Room" + Random.Range(1000, 10000);
+                roomName = "Colosseum" + Random.Range(1000, 10000);
             }
             RoomOptions roomOptions = new RoomOptions();
             roomOptions.MaxPlayers = 4;
@@ -462,6 +465,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             if(changedProps.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
             {
                 playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[(int)playerSelectionNo].name);
+                if((int)playerSelectionNo == 3)
+                {
+                    Debug.Log("u picked dragon");
+                }
             }
             
             object isPlayerReady;
@@ -933,13 +940,16 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if(sameDragon == 0)
         {
             Debug.Log("Need at Least 1 Dragon");
+            requirementsText.text = "One Dragon is required to start";
             return false;
         }
         else if(sameDragon > 1)
         {
             Debug.Log("Can only have 1 Dragon");
+            requirementsText.text = "There are too many dragons";
             return false;
         }
+        requirementsText.text = "";
         return true;      
     }
 

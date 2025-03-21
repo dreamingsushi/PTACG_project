@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
     public Canvas worldCanvasHP;
     private bool damagePersisted = true;
     private float damagePersistenceInterval = 5.5f;
+
     
 
     void Start()
@@ -70,16 +71,22 @@ public class PlayerHealth : MonoBehaviour
             GetComponent<PhotonView>().RPC("TakeDamage", RpcTarget.AllBuffered, 10, transform.position);
         }
 
-        // if(damagePersisted)
-        // {
-        //     damagePersisted = false;
-        //     float countdown = damagePersistenceInterval;
-        //     countdown-=Time.deltaTime;
-        //     if(countdown <= 0f)
-        //     {
-        //         GetComponent<PhotonView>().RPC("SyncWorldSpaceHP", RpcTarget.AllBuffered, true);
-        //     }
-        // }
+        
+        if(damagePersisted == true)
+        {
+            
+            
+            damagePersistenceInterval-=Time.unscaledDeltaTime;
+            Debug.Log("Thos os count" + damagePersistenceInterval);
+            
+            if(damagePersistenceInterval <= 0f)
+            {
+                Debug.Log("Done lol");
+                GetComponent<PhotonView>().RPC("SyncWorldSpaceHP", RpcTarget.AllBuffered, false);
+                damagePersisted = false;
+                damagePersistenceInterval = 5.5f;
+            }
+        }
     }
 
     [PunRPC]

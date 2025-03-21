@@ -44,7 +44,7 @@ public class PlayerControllerPlus : MonoBehaviour
     [Header("Support Settings")]
     [SerializeField] private GameObject supportProjectilePrefab;
     [SerializeField] public Transform supportHand;
-    [SerializeField] private float projectileSpeed = 20f;
+    [SerializeField] private float projectileSpeed = 30f;
     [SerializeField] private Image supportShift_CD;
     [SerializeField] private Image supportM1_CD;
     [SerializeField] private GameObject healingCircle;

@@ -27,13 +27,29 @@ public class EndScreen : MonoBehaviourPunCallbacks
                 {
                     
                     namess.Add(player.NickName);
-                    for(int i = 0; i<warriorsNickname.Count; i++)
-                    {
-                        warriorsNickname[i].text = namess[i];
-                    }
+                    
                 }
                 
             }
+        }
+
+        for(int i = 0; i<warriorsNickname.Count; i++)
+        {
+            warriorsNickname[i].text = namess[i];
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 

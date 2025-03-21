@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Photon.Pun;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,6 +24,7 @@ public class BossHealth : MonoBehaviour
     private float armor = 10f;
     private bool dragonFade;
     [SerializeField] private HealthBar healthBar;
+    public TMP_Text killCount;
 
     [Header("Poison Damage Settings")]
     public bool isPoisoned = false;
@@ -67,6 +69,8 @@ public class BossHealth : MonoBehaviour
                 dragonFade = false;
             }
         }
+
+        killCount.text = "Killed: " +  GameStartManager.instance.currentDeaths.ToString();       
 
         if(!this.enabled)
         {

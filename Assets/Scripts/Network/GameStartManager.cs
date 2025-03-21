@@ -101,7 +101,7 @@ public class GameStartManager : MonoBehaviourPunCallbacks
 
     void Update()
     {
-        Debug.Log(currentDeaths);
+        // Debug.Log(currentDeaths);
         if(PhotonNetwork.LocalPlayer.IsMasterClient && !gameResulted && timeLeft > 0)
         {
             TimerDownForGame();

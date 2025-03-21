@@ -46,9 +46,12 @@ public class Fireball : MonoBehaviour
         //     this.gameObject.SetActive(false);
         // }
 
+        
+
         if(other.gameObject.layer == 6)
         {
             PhotonNetwork.Instantiate(flamesPrefab.name, this.transform.position, quaternion.identity);
+            this.gameObject.SetActive(false);
         }
     }
 

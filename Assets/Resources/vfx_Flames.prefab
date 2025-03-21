@@ -4881,7 +4881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6695ad5608d66cf4eb83a634338fb5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 60
   dragonPowers: {fileID: 0}
   flamesPrefab: {fileID: 8829451551789304542, guid: 02180aff7bdaab84f9d1aa30a3ad1b9a,
     type: 3}

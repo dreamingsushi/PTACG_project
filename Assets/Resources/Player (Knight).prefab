@@ -1250,11 +1250,11 @@ RectTransform:
   - {fileID: 1913296325503299203}
   m_Father: {fileID: 7216205345478326692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100.025024, y: -62.872192}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -225}
   m_SizeDelta: {x: 517.95, y: 275.90002}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1 &933928272971460871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1696,7 @@ RectTransform:
   m_GameObject: {fileID: 1189238479950004641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5051828621165723017}
@@ -2252,7 +2252,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &2865956209752322822
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2629,7 +2629,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &223095337246595667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3891,7 +3891,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &7911849342294829056
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4853,11 +4853,11 @@ RectTransform:
   - {fileID: 4658806251478386009}
   m_Father: {fileID: 7216205345478326692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100.627686}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 517.95, y: 275.90002}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1 &4696983120803782160
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,11 +5932,11 @@ RectTransform:
   - {fileID: 7920394730444962404}
   m_Father: {fileID: 7216205345478326692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100.025024, y: -166.8722}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 24.99997, y: -338}
   m_SizeDelta: {x: 517.95, y: 275.90002}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1 &5811346801403280472
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,16 +6754,16 @@ RectTransform:
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1797807701099127697}
-  - {fileID: 202086995761184022}
   - {fileID: 1253223302879084622}
+  - {fileID: 202086995761184022}
+  - {fileID: 1797807701099127697}
   m_Father: {fileID: 9123943336770910173}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460, y: -440}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -85, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &714648686591751319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6777,11 +6777,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: -334
     m_Right: 0
     m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
+    m_Bottom: 70
+  m_ChildAlignment: 8
   m_Spacing: 50
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -8430,7 +8430,7 @@ MonoBehaviour:
   moveSpeed: 10
   rotationSpeed: 5
   gravity: -15
-  jumpForce: 7
+  jumpForce: 8
   jumpCooldown: 0.2
   airMultiplier: 0.8
   groundLayer:
@@ -8467,9 +8467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regenVFX: {fileID: 4908158427283372846}
-  maxHealth: 100
+  maxHealth: 120
   currentHealth: 0
-  armor: 2
+  armor: 3
   damageReductionPercent: 0.1
   isInvincible: 0
   invincibilityDuration: 1

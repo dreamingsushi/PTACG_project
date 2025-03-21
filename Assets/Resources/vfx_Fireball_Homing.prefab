@@ -9767,6 +9767,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentFire: 0
   dragonNumbers: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
-  speed: 3.47
+  speed: 5.65
   players: []
   activeDuration: 15
