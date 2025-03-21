@@ -506,7 +506,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             object playerSelectionNo;
             if(changedProps.TryGetValue(CharacterSelect.PLAYER_SELECTION_NUMBER, out playerSelectionNo))
             {
-                playerListGameObject.GetComponentInChildren<Button>().interactable = true;
+                if(playerListGameObject.GetPhotonView().OwnerActorNr == target.ActorNumber)
+                {
+                    Debug.Log("THis will work");
+                    playerListGameObject.GetComponentInChildren<Button>().interactable = true;
+                }
                 playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[(int)playerSelectionNo].name);
                 if((int)playerSelectionNo == 3)
                 {
@@ -515,6 +519,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                     //GameObject bossListGameobject = PhotonNetwork.Instantiate(PlayerListPrefab.name, Vector3.zero, Quaternion.identity);
                     playerListGameObject.transform.SetParent(BossListContent.transform);
                     playerListGameObject.transform.localScale = new Vector3(-1, 1,1);
+                    
                     foreach(Transform child in playerListGameObject.transform)
                     {
                         child.transform.eulerAngles = new Vector3(0,180,0);
@@ -526,6 +531,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
                     playerListGameObject.transform.SetParent(PlayerListContent.transform);
                     playerListGameObject.transform.localScale = Vector3.one;
+                    
                     foreach(Transform child in playerListGameObject.transform)
                     {
                         child.transform.eulerAngles = new Vector3(0,0,0);

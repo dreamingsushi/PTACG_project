@@ -19,9 +19,9 @@ public class PlayerListEntryInitializer : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        PlayerReadyButton.GetComponent<Button>().interactable = false;
+        //PlayerReadyButton.GetComponent<Button>().interactable = false;
     }
-    
+
     void Update()
     {
         
