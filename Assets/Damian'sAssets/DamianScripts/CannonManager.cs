@@ -26,10 +26,11 @@ public class CannonManager : MonoBehaviour
         Debug.Log("aobin");
         foreach (Animator anim in Cannonset1)
         {
-
+            
             anim.SetTrigger("Fall");
-            Invoke("Cannonattack2", delaytime);
+            
         }
+        Invoke("Cannonattack2", delaytime);
     }
 
     void Cannonattack2()
@@ -38,8 +39,9 @@ public class CannonManager : MonoBehaviour
         {
 
             anim.SetTrigger("Fall");
-            Invoke("Cannonattack3", delaytime);
+            
         }
+        Invoke("Cannonattack3", delaytime);
     }
 
     void Cannonattack3()
@@ -48,8 +50,9 @@ public class CannonManager : MonoBehaviour
         {
 
             anim.SetTrigger("Fall");
-            Invoke("Cannonattack1", delaytime);
+            
         }
+        Invoke("Cannonattack1", delaytime);
     }
 
 }

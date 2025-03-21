@@ -35,8 +35,9 @@ public class FireStoneController : MonoBehaviour
         foreach (Animator anim in animators)
         {
             anim.SetTrigger("Start");
-            Invoke("FSEAnimation", delaytime);
+            
         }
+        Invoke("FSEAnimation", delaytime);
     }
 
     void FSEAnimation()

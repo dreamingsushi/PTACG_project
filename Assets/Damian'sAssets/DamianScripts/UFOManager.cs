@@ -28,8 +28,9 @@ public class UFOManager : MonoBehaviour
         {
             
             anim.SetTrigger("Attack");
-            Invoke("UFOattack2", delaytime);
+            
         }
+        Invoke("UFOattack2", delaytime);
     }
 
     void UFOattack2()
@@ -38,8 +39,9 @@ public class UFOManager : MonoBehaviour
         {
             
             anim.SetTrigger("Attack");
-            Invoke("UFOattack3", delaytime);
+            
         }
+        Invoke("UFOattack3", delaytime);
     }
 
     void UFOattack3()
@@ -48,8 +50,9 @@ public class UFOManager : MonoBehaviour
         {
             
             anim.SetTrigger("Attack");
-            Invoke("UFOattack4", delaytime);
+            
         }
+        Invoke("UFOattack4", delaytime);
     }
 
     void UFOattack4()
@@ -58,7 +61,8 @@ public class UFOManager : MonoBehaviour
         {
             
             anim.SetTrigger("Attack");
-            Invoke("UFOattack1", delaytime);
+            
         }
+        Invoke("UFOattack1", delaytime);
     }
 }
