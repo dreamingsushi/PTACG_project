@@ -10,6 +10,7 @@ public class DragonPowersDos : MonoBehaviour
     public GameObject flamethrower;
 
     public GameObject fireball;
+    public DragonScaling dragonScales;
 
     public GameObject[] fireballSpawnPoints = new GameObject[3];
 
@@ -64,6 +65,7 @@ public class DragonPowersDos : MonoBehaviour
         {
             
             GameObject fireballNew = PhotonNetwork.Instantiate(fireball.name, obj.transform.position, obj.transform.rotation);
+            fireballNew.GetComponent<HomingFire>().dragonNumbers = dragonScales;
             fireballNew.GetComponent<HomingFire>().currentFire = i;
             i++;
         }

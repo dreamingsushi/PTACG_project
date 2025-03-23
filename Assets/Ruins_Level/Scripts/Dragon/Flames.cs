@@ -13,7 +13,7 @@ public class Flames : MonoBehaviour
 
     void OnEnable()
     {
-        Invoke("DisappearAfterTime", 7);
+        Invoke("DisappearAfterTime", 6.4f);
         flameDamage = (int)dragonNumbers.flamesDamage;
     }
 

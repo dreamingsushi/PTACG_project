@@ -12,6 +12,8 @@ public class HomingFire : MonoBehaviour
     public PlayerHealth[] players;
     [SerializeField] private float activeDuration = 15f;
 
+    private float count;
+
     float counter;
     void Start()
     {
@@ -20,14 +22,14 @@ public class HomingFire : MonoBehaviour
     }
     void OnEnable()
     {
-        
+    
         Invoke("DisappearAfterTime", activeDuration);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        count += Time.deltaTime;
         Invoke("HomingFlames", 3);
     }
 
@@ -70,7 +72,7 @@ public class HomingFire : MonoBehaviour
     {
         if(players.Length < 3)
         {
-            this.transform.eulerAngles = new Vector3(0, 2f*Time.deltaTime, 0);
+            this.transform.eulerAngles = new Vector3(0, count*speed*6f, 0);
             
         }
         else

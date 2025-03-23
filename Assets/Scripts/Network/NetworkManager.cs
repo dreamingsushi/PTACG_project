@@ -508,7 +508,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             {
                 if(playerListGameObject.GetPhotonView().OwnerActorNr == target.ActorNumber)
                 {
-                    Debug.Log("THis will work");
+                    
                     playerListGameObject.GetComponentInChildren<Button>().interactable = true;
                 }
                 playerListGameObject.GetComponent<PhotonView>().RPC("ChangeClassName", RpcTarget.AllBuffered, GetComponent<PlayerSelection>().SelectablePlayers[(int)playerSelectionNo].name);

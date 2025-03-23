@@ -11,6 +11,7 @@ public class DragonPowers : MonoBehaviour
 {
     public int currentPhase;
     public GameObject fireball;
+    public GameObject flamesObject;
     public Transform _firePoint;
     public PlayableDirector cutscenePhase3;
     public GameObject focusPointCamera;
@@ -27,6 +28,7 @@ public class DragonPowers : MonoBehaviour
     private GameStartManager gameManager;
     private bool canFireball = true;
     public float fireballCD = 0f;
+    public DragonScaling dragonScales;
     private bool canClaw;
     
     
@@ -121,7 +123,10 @@ public class DragonPowers : MonoBehaviour
         
         Quaternion fireballAngle = Quaternion.Euler(-focusPointCamera.transform.rotation.eulerAngles.x,focusPointCamera.transform.parent.rotation.eulerAngles.y - 180, fireball.transform.rotation.eulerAngles.z);
         AudioManager.Instance.PlaySFX("FireBall");
-        PhotonNetwork.Instantiate(fireball.name, _firePoint.position, fireballAngle);
+        GameObject fireb = PhotonNetwork.Instantiate(fireball.name, _firePoint.position, fireballAngle);
+        fireb.GetComponent<Fireball>().dragonNumbers = dragonScales;
+        fireb.GetComponent<Fireball>().dragonPowers = this;
+        fireb.GetComponent<Fireball>().flamesPrefab = flamesObject;
         // GameObject fireProjectile = Instantiate(fireball, _firePoint.position, fireballAngle);
         //fireProjectile.transform.up = _hit.normal;
         

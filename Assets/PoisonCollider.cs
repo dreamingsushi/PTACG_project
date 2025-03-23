@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PoisonCollider : MonoBehaviour
 {
+    void Start()
+    {
+        Invoke("RemoveSmoke", 5f);
+    }
     void OnTriggerEnter(Collider other)
     {
         PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
@@ -18,5 +22,10 @@ public class PoisonCollider : MonoBehaviour
         {
             bossHealth.ApplyPoison();
         }
+    }
+
+
+    public void RemoveSmoke(){
+        Destroy(gameObject);
     }
 }

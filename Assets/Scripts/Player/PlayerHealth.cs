@@ -72,21 +72,21 @@ public class PlayerHealth : MonoBehaviour
         }
 
         
-        if(damagePersisted == true)
-        {
+        // if(damagePersisted == true)
+        // {
             
             
-            damagePersistenceInterval-=Time.unscaledDeltaTime;
-            Debug.Log("Thos os count" + damagePersistenceInterval);
+        //     damagePersistenceInterval-=Time.unscaledDeltaTime;
+        //     Debug.Log("Thos os count" + damagePersistenceInterval);
             
-            if(damagePersistenceInterval <= 0f)
-            {
-                Debug.Log("Done lol");
-                GetComponent<PhotonView>().RPC("SyncWorldSpaceHP", RpcTarget.AllBuffered, false);
-                damagePersisted = false;
-                damagePersistenceInterval = 5.5f;
-            }
-        }
+        //     if(damagePersistenceInterval <= 0f)
+        //     {
+        //         Debug.Log("Done lol");
+        //         GetComponent<PhotonView>().RPC("SyncWorldSpaceHP", RpcTarget.AllBuffered, false);
+        //         damagePersisted = false;
+        //         damagePersistenceInterval = 5.5f;
+        //     }
+        // }
     }
 
     [PunRPC]

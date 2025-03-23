@@ -9905,6 +9905,7 @@ MonoBehaviour:
   flamethrower: {fileID: 381575173416176651}
   fireball: {fileID: 6186387438034119615, guid: 26289874f8890034f89fa6c360c89ba7,
     type: 3}
+  dragonScales: {fileID: 11400000, guid: 76bf2e539254a9648b7dc778f0a7740a, type: 2}
   fireballSpawnPoints:
   - {fileID: 6983564109409746626}
   - {fileID: 2485144389738255008}

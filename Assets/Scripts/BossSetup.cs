@@ -13,6 +13,8 @@ public class BossSetup : MonoBehaviourPunCallbacks
     public CinemachineVirtualCamera PlayerCamera;
     public GameObject skillCanvas;
     public GameObject crosshair;
+    public TMP_Text myName;
+    public Canvas worldSpaceNam;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,8 @@ public class BossSetup : MonoBehaviourPunCallbacks
             GetComponent<BossController>().enabled = true;
             skillCanvas.SetActive(true);
             crosshair.SetActive(true);
+            worldSpaceNam.enabled = false;
+            
             // imageHPUI.GetComponentInParent<Image>().enabled = true;
             // imageHPUI.SetActive(true);
             //transform.parent.gameObject.GetComponentInChildren<HealthBar>().gameObject.SetActive(true);
@@ -38,6 +42,8 @@ public class BossSetup : MonoBehaviourPunCallbacks
             GetComponent<BossController>().enabled = false;
             skillCanvas.SetActive(false);
             crosshair.SetActive(false);
+            worldSpaceNam.enabled = true;
+            myName.text = PhotonNetwork.LocalPlayer.NickName;
             // imageHPUI.GetComponentInParent<Image>().enabled = false;
             // imageHPUI.SetActive(false);
             //transform.parent.gameObject.GetComponentInChildren<HealthBar>().gameObject.SetActive(false);

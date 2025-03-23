@@ -11,10 +11,12 @@ public class Fireball : MonoBehaviour
     public DragonPowers dragonPowers;
     public GameObject flamesPrefab;
     public DragonScaling dragonNumbers;
+    private bool canFlames = true;
 
     void OnEnable()
     {
-        dragonPowers = GameObject.FindObjectOfType<DragonPowers>();
+        //dragonPowers = GameObject.FindObjectOfType<DragonPowers>();
+
         Invoke("DisappearAfterTime", 8);
     }
 
@@ -48,9 +50,11 @@ public class Fireball : MonoBehaviour
 
         
 
-        if(other.gameObject.layer == 6)
+        if(other.gameObject.layer == 6 && canFlames)
         {
-            PhotonNetwork.Instantiate(flamesPrefab.name, this.transform.position, quaternion.identity);
+            canFlames= false;
+            GameObject flam = PhotonNetwork.Instantiate(flamesPrefab.name, this.transform.position, quaternion.identity);
+            flam.GetComponentInChildren<Flames>().dragonNumbers = this.dragonNumbers;
             this.gameObject.SetActive(false);
         }
     }
