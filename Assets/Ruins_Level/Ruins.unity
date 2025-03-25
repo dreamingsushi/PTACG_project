@@ -28187,7 +28187,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 100
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -28213,8 +28213,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532988418}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.46999085, y: -0.13438721, z: -0.07271859, w: 0.869345}
-  m_LocalPosition: {x: 39.533203, y: 60.5, z: -129.03217}
+  m_LocalRotation: {x: -0.23067363, y: 0.21505807, z: -0.052344315, w: -0.947523}
+  m_LocalPosition: {x: 31.427568, y: 34.67416, z: -67.68941}
   m_LocalScale: {x: 2.7354631, y: 2.735462, z: 2.7354627}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48185,6 +48185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameStartManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
+        type: 3}
+      propertyPath: setTimeLimit
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 5447480469705970228, guid: af8577102d3345447a5cc9c52eed5f22,
         type: 3}
